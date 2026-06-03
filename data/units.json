@@ -1,0 +1,268 @@
+{
+  "_source": "FSTU Sarf 2023 Oct.pdf, Table of Contents pages 3-10, unit title pages",
+  "_note": "Page numbers refer to the book's own page numbering, which matches the PDF page numbers. Unit 4 is divided into two sections in the textbook. Unit 10 is titled 'Review of the Abwab' (page 297). Unit 11 is titled 'al-Mushtaqqat' (page 313). Unit 12 has no single Arabic title but covers the mansub/majzum mudari and related topics (page 323).",
+
+  "units": [
+    {
+      "id": "unit1",
+      "number": 1,
+      "arabic_title": "الأَفْعَال",
+      "english_title": "Verbs",
+      "pages": { "start": 15, "end": 74 },
+      "parts": [
+        { "number": null, "arabic": "مُقَدِّمَة", "english": "Introduction", "page": 16 },
+        { "number": 1, "arabic": "الْمَاضِي", "english": "The Past Tense", "page": 19 },
+        { "number": 2, "arabic": "الْمُضَارِع", "english": "The Present/Future Tense", "page": 24 },
+        { "number": 3, "arabic": "الأَبْوَاب", "english": "The Verb Patterns (Babs)", "page": 29 },
+        { "number": 4, "arabic": "الْفِعْل الْمَجْهُوْل", "english": "The Passive Voice", "page": 42 },
+        { "number": 5, "arabic": "إِعْرَاب الْفِعْل", "english": "Grammatical State of the Verb", "page": 51 },
+        { "number": 6, "arabic": "نَفْي الْفِعْل", "english": "Negation of the Verb", "page": 57 },
+        { "number": 7, "arabic": "الأَمْر وَالنَّهْي", "english": "The Imperative and Prohibition", "page": 60 },
+        { "number": 8, "arabic": "اِسْم الْفَاعِل وَاِسْم الْمَفْعُوْل", "english": "Active Participle and Passive Participle", "page": 65 },
+        { "number": 9, "arabic": "التَّصْرِيْف الصَّغِيْر", "english": "Short Conjugation", "page": 70 },
+        { "number": 10, "arabic": "التَّصْرِيْف الْكَبِيْر", "english": "Full Conjugation", "page": 71 }
+      ]
+    },
+    {
+      "id": "unit2",
+      "number": 2,
+      "arabic_title": "الْمَزِيْد فِيْهِ",
+      "english_title": "Augmented Verbs",
+      "pages": { "start": 75, "end": 108 },
+      "parts": [
+        { "number": null, "arabic": "مُقَدِّمَة", "english": "Introduction", "page": 76 },
+        { "number": 1, "arabic": "بَاب تَفْعِيْل (II)", "english": "Bab Taf'eel (II)", "page": 80 },
+        { "number": 2, "arabic": "بَاب مُفَاعَلَة (III)", "english": "Bab Mufa'ala (III)", "page": 82 },
+        { "number": 3, "arabic": "بَاب إِفْعَال (IV)", "english": "Bab If'al (IV)", "page": 84 },
+        { "number": 4, "arabic": "بَاب تَفَعُّل (V)", "english": "Bab Tafa''ul (V)", "page": 86 },
+        { "number": 5, "arabic": "بَاب تَفَاعُل (VI)", "english": "Bab Tafa'ul (VI)", "page": 88 },
+        { "number": 6, "arabic": "بَاب انْفِعَال (VII)", "english": "Bab Infi'al (VII)", "page": 90 },
+        { "number": 7, "arabic": "بَاب افْتِعَال (VIII)", "english": "Bab Ifti'al (VIII)", "page": 92 },
+        { "number": 8, "arabic": "بَاب اسْتِفْعَال (X)", "english": "Bab Istif'al (X)", "page": 94 },
+        { "number": 9, "arabic": "بَاب فَعْلَلَة", "english": "Bab Fa'lala (Quadrilateral Mujarrad)", "page": 96 },
+        { "number": 10, "arabic": "بَاب تَفَعْلُل (II)", "english": "Bab Tafa'lul (Quadrilateral Mazid, II)", "page": 98 }
+      ]
+    },
+    {
+      "id": "unit3",
+      "number": 3,
+      "arabic_title": "الْمَهْمُوْز",
+      "english_title": "Hamzated Verbs",
+      "pages": { "start": 109, "end": 132 },
+      "parts": [
+        { "number": null, "arabic": "مُقَدِّمَة", "english": "Introduction", "page": 110 },
+        { "number": 1, "arabic": "الْمَهْمُوْز مِن بَاب فَتَح يَفْتَح", "english": "Hamzated from Bab Fataha", "page": 113 },
+        { "number": 2, "arabic": "الْمَهْمُوْز مِن بَاب سَمِع يَسْمَع", "english": "Hamzated from Bab Sami'a", "page": 114 },
+        { "number": 3, "arabic": "الْمَهْمُوْز مِن بَاب ضَرَب يَضْرِب", "english": "Hamzated from Bab Daraba", "page": 115 },
+        { "number": 4, "arabic": "الْمَهْمُوْز مِن بَاب نَصَر يَنْصُر", "english": "Hamzated from Bab Nasara", "page": 116 },
+        { "number": 5, "arabic": "الْمَهْمُوْز مِن بَاب تَفْعِيْل (II)", "english": "Hamzated from Bab II", "page": 117 },
+        { "number": 6, "arabic": "الْمَهْمُوْز مِن بَاب مُفَاعَلَة (III)", "english": "Hamzated from Bab III", "page": 118 },
+        { "number": 7, "arabic": "الْمَهْمُوْز مِن بَاب إِفْعَال (IV)", "english": "Hamzated from Bab IV", "page": 119 },
+        { "number": 8, "arabic": "الْمَهْمُوْز مِن بَاب تَفَعُّل (V)", "english": "Hamzated from Bab V", "page": 120 },
+        { "number": 9, "arabic": "الْمَهْمُوْز مِن بَاب تَفَاعُل (VI)", "english": "Hamzated from Bab VI", "page": 121 },
+        { "number": 10, "arabic": "الْمَهْمُوْز مِن بَاب افْتِعَال (VIII)", "english": "Hamzated from Bab VIII", "page": 122 },
+        { "number": 11, "arabic": "الْمَهْمُوْز مِن بَاب اسْتِفْعَال (X)", "english": "Hamzated from Bab X", "page": 123 }
+      ]
+    },
+    {
+      "id": "unit4",
+      "number": 4,
+      "arabic_title": "الْمِثَال",
+      "english_title": "Assimilated Verbs",
+      "pages": { "start": 133, "end": 162 },
+      "sections": [
+        {
+          "id": "unit4_section1",
+          "arabic_title": "الْمِثَال الْوَاوِيّ",
+          "english_title": "Waw-Assimilated Verbs",
+          "pages": { "start": 133, "end": 148 },
+          "parts": [
+            { "number": null, "arabic": "مُقَدِّمَة", "english": "Introduction", "page": 134 },
+            { "number": 1, "arabic": "الْمِثَال الْوَاوِيّ مِن بَاب فَتَح يَفْتَح", "english": "Waw-Mithal from Bab Fataha", "page": 136 },
+            { "number": 2, "arabic": "الْمِثَال الْوَاوِيّ مِن بَاب سَمِع يَسْمَع", "english": "Waw-Mithal from Bab Sami'a", "page": 137 },
+            { "number": 3, "arabic": "الْمِثَال الْوَاوِيّ مِن بَاب ضَرَب يَضْرِب", "english": "Waw-Mithal from Bab Daraba", "page": 138 },
+            { "number": 4, "arabic": "الْمِثَال الْوَاوِيّ مِن بَاب حَسِب يَحْسِب", "english": "Waw-Mithal from Bab Hasiba", "page": 139 },
+            { "number": 5, "arabic": "الْمِثَال الْوَاوِيّ مِن بَاب تَفْعِيْل (II)", "english": "Waw-Mithal from Bab II", "page": 140 },
+            { "number": 6, "arabic": "الْمِثَال الْوَاوِيّ مِن بَاب مُفَاعَلَة (III)", "english": "Waw-Mithal from Bab III", "page": 141 },
+            { "number": 7, "arabic": "الْمِثَال الْوَاوِيّ مِن بَاب إِفْعَال (IV)", "english": "Waw-Mithal from Bab IV", "page": 142 },
+            { "number": 8, "arabic": "الْمِثَال الْوَاوِيّ مِن بَاب تَفَعُّل (V)", "english": "Waw-Mithal from Bab V", "page": 143 },
+            { "number": 9, "arabic": "الْمِثَال الْوَاوِيّ مِن بَاب تَفَاعُل (VI)", "english": "Waw-Mithal from Bab VI", "page": 144 },
+            { "number": 10, "arabic": "الْمِثَال الْوَاوِيّ مِن بَاب افْتِعَال (VIII)", "english": "Waw-Mithal from Bab VIII", "page": 145 },
+            { "number": 11, "arabic": "الْمِثَال الْوَاوِيّ مِن بَاب اسْتِفْعَال (X)", "english": "Waw-Mithal from Bab X", "page": 146 }
+          ]
+        },
+        {
+          "id": "unit4_section2",
+          "arabic_title": "الْمِثَال الْيَائِيّ",
+          "english_title": "Ya-Assimilated Verbs",
+          "pages": { "start": 149, "end": 162 },
+          "parts": [
+            { "number": 1, "arabic": "الْمِثَال الْيَائِيّ مِن بَاب فَتَح يَفْتَح", "english": "Ya-Mithal from Bab Fataha", "page": 150 },
+            { "number": 2, "arabic": "الْمِثَال الْيَائِيّ مِن بَاب سَمِع يَسْمَع", "english": "Ya-Mithal from Bab Sami'a", "page": 151 },
+            { "number": 3, "arabic": "الْمِثَال الْيَائِيّ مِن بَاب ضَرَب يَضْرِب", "english": "Ya-Mithal from Bab Daraba", "page": 152 },
+            { "number": 4, "arabic": "الْمِثَال الْيَائِيّ مِن بَاب تَفْعِيْل (II)", "english": "Ya-Mithal from Bab II", "page": 153 },
+            { "number": 5, "arabic": "الْمِثَال الْيَائِيّ مِن بَاب مُفَاعَلَة (III)", "english": "Ya-Mithal from Bab III", "page": 154 },
+            { "number": 6, "arabic": "الْمِثَال الْيَائِيّ مِن بَاب إِفْعَال (IV)", "english": "Ya-Mithal from Bab IV", "page": 155 },
+            { "number": 7, "arabic": "الْمِثَال الْيَائِيّ مِن بَاب تَفَعُّل (V)", "english": "Ya-Mithal from Bab V", "page": 156 },
+            { "number": 8, "arabic": "الْمِثَال الْيَائِيّ مِن بَاب تَفَاعُل (VI)", "english": "Ya-Mithal from Bab VI", "page": 157 },
+            { "number": 9, "arabic": "الْمِثَال الْيَائِيّ مِن بَاب افْتِعَال (VIII)", "english": "Ya-Mithal from Bab VIII", "page": 158 },
+            { "number": 10, "arabic": "الْمِثَال الْيَائِيّ مِن بَاب اسْتِفْعَال (X)", "english": "Ya-Mithal from Bab X", "page": 159 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unit5",
+      "number": 5,
+      "arabic_title": "الأَجْوَف",
+      "english_title": "Hollow Verbs",
+      "pages": { "start": 165, "end": 188 },
+      "parts": [
+        { "number": null, "arabic": "مُقَدِّمَة", "english": "Introduction", "page": 166 },
+        { "number": 1, "arabic": "الأَجْوَف مِن بَاب سَمِع يَسْمَع", "english": "Hollow from Bab Sami'a", "page": 168 },
+        { "number": 2, "arabic": "الأَجْوَف مِن بَاب ضَرَب يَضْرِب", "english": "Hollow from Bab Daraba", "page": 169 },
+        { "number": 3, "arabic": "الأَجْوَف مِن بَاب نَصَر يَنْصُر", "english": "Hollow from Bab Nasara", "page": 170 },
+        { "number": 4, "arabic": "الأَجْوَف مِن بَاب تَفْعِيْل (II)", "english": "Hollow from Bab II", "page": 176 },
+        { "number": 5, "arabic": "الأَجْوَف مِن بَاب مُفَاعَلَة (III)", "english": "Hollow from Bab III", "page": 177 },
+        { "number": 6, "arabic": "الأَجْوَف مِن بَاب إِفْعَال (IV)", "english": "Hollow from Bab IV", "page": 178 },
+        { "number": 7, "arabic": "الأَجْوَف مِن بَاب تَفَعُّل (V)", "english": "Hollow from Bab V", "page": 179 },
+        { "number": 8, "arabic": "الأَجْوَف مِن بَاب تَفَاعُل (VI)", "english": "Hollow from Bab VI", "page": 180 },
+        { "number": 9, "arabic": "الأَجْوَف مِن بَاب انْفِعَال (VII)", "english": "Hollow from Bab VII", "page": 181 },
+        { "number": 10, "arabic": "الأَجْوَف مِن بَاب افْتِعَال (VIII)", "english": "Hollow from Bab VIII", "page": 182 },
+        { "number": 11, "arabic": "الأَجْوَف مِن بَاب اسْتِفْعَال (X)", "english": "Hollow from Bab X", "page": 183 }
+      ]
+    },
+    {
+      "id": "unit6",
+      "number": 6,
+      "arabic_title": "النَّاقِص",
+      "english_title": "Defective Verbs",
+      "pages": { "start": 189, "end": 220 },
+      "parts": [
+        { "number": null, "arabic": "مُقَدِّمَة", "english": "Introduction", "page": 190 },
+        { "number": 1, "arabic": "النَّاقِص مِن بَاب فَتَح يَفْتَح", "english": "Defective from Bab Fataha", "page": 192 },
+        { "number": 2, "arabic": "النَّاقِص مِن بَاب سَمِع يَسْمَع", "english": "Defective from Bab Sami'a", "page": 193 },
+        { "number": 3, "arabic": "النَّاقِص مِن بَاب ضَرَب يَضْرِب", "english": "Defective from Bab Daraba", "page": 194 },
+        { "number": 4, "arabic": "النَّاقِص مِن بَاب نَصَر يَنْصُر", "english": "Defective from Bab Nasara", "page": 195 },
+        { "number": 5, "arabic": "النَّاقِص مِن بَاب تَفْعِيْل (II)", "english": "Defective from Bab II", "page": 202 },
+        { "number": 6, "arabic": "النَّاقِص مِن بَاب مُفَاعَلَة (III)", "english": "Defective from Bab III", "page": 203 },
+        { "number": 7, "arabic": "النَّاقِص مِن بَاب إِفْعَال (IV)", "english": "Defective from Bab IV", "page": 204 },
+        { "number": 8, "arabic": "النَّاقِص مِن بَاب تَفَعُّل (V)", "english": "Defective from Bab V", "page": 205 },
+        { "number": 9, "arabic": "النَّاقِص مِن بَاب تَفَاعُل (VI)", "english": "Defective from Bab VI", "page": 206 },
+        { "number": 10, "arabic": "النَّاقِص مِن بَاب انْفِعَال (VII)", "english": "Defective from Bab VII", "page": 207 },
+        { "number": 11, "arabic": "النَّاقِص مِن بَاب افْتِعَال (VIII)", "english": "Defective from Bab VIII", "page": 208 },
+        { "number": 12, "arabic": "النَّاقِص مِن بَاب اسْتِفْعَال (X)", "english": "Defective from Bab X", "page": 209 }
+      ]
+    },
+    {
+      "id": "unit7",
+      "number": 7,
+      "arabic_title": "اللَّفِيْف",
+      "english_title": "Doubly-Weak Verbs",
+      "pages": { "start": 221, "end": 238 },
+      "parts": [
+        { "number": null, "arabic": "مُقَدِّمَة", "english": "Introduction", "page": 222 },
+        { "number": 1, "arabic": "اللَّفِيف الْمَقْرُوْن مِن بَاب سَمِع يَسْمَع", "english": "Laqroon from Bab Sami'a", "page": 223 },
+        { "number": 2, "arabic": "اللَّفِيف الْمَقْرُوْن مِن بَاب ضَرَب يَضْرِب", "english": "Laqroon from Bab Daraba", "page": 224 },
+        { "number": 3, "arabic": "اللَّفِيف الْمَفْرُوْق مِن بَاب ضَرَب يَضْرِب", "english": "Lafrooq from Bab Daraba", "page": 225 },
+        { "number": 4, "arabic": "اللَّفِيف الْمَفْرُوْق مِن بَاب حَسِب يَحْسِب", "english": "Lafrooq from Bab Hasiba", "page": 226 },
+        { "number": 5, "arabic": "اللَّفِيف مِن بَاب تَفْعِيْل (II)", "english": "Lafeef from Bab II", "page": 227 },
+        { "number": 6, "arabic": "اللَّفِيف مِن بَاب مُفَاعَلَة (III)", "english": "Lafeef from Bab III", "page": 228 },
+        { "number": 7, "arabic": "اللَّفِيف مِن بَاب إِفْعَال (IV)", "english": "Lafeef from Bab IV", "page": 229 },
+        { "number": 8, "arabic": "اللَّفِيف مِن بَاب تَفَعُّل (V)", "english": "Lafeef from Bab V", "page": 230 },
+        { "number": 9, "arabic": "اللَّفِيف مِن بَاب تَفَاعُل (VI)", "english": "Lafeef from Bab VI", "page": 231 },
+        { "number": 10, "arabic": "اللَّفِيف مِن بَاب انْفِعَال (VII)", "english": "Lafeef from Bab VII", "page": 232 },
+        { "number": 11, "arabic": "اللَّفِيف مِن بَاب افْتِعَال (VIII)", "english": "Lafeef from Bab VIII", "page": 233 },
+        { "number": 12, "arabic": "اللَّفِيف مِن بَاب اسْتِفْعَال (X)", "english": "Lafeef from Bab X", "page": 234 }
+      ]
+    },
+    {
+      "id": "unit8",
+      "number": 8,
+      "arabic_title": "الْمُضَاعَف",
+      "english_title": "Doubled Verbs",
+      "pages": { "start": 239, "end": 262 },
+      "parts": [
+        { "number": null, "arabic": "مُقَدِّمَة", "english": "Introduction", "page": 240 },
+        { "number": 1, "arabic": "الْمُضَاعَف مِن بَاب سَمِع يَسْمَع", "english": "Doubled from Bab Sami'a", "page": 243 },
+        { "number": 2, "arabic": "الْمُضَاعَف مِن بَاب ضَرَب يَضْرِب", "english": "Doubled from Bab Daraba", "page": 244 },
+        { "number": 3, "arabic": "الْمُضَاعَف مِن بَاب نَصَر يَنْصُر", "english": "Doubled from Bab Nasara", "page": 245 },
+        { "number": 4, "arabic": "الْمُضَاعَف مِن بَاب تَفْعِيْل (II)", "english": "Doubled from Bab II", "page": 246 },
+        { "number": 5, "arabic": "الْمُضَاعَف مِن بَاب مُفَاعَلَة (III)", "english": "Doubled from Bab III", "page": 247 },
+        { "number": 6, "arabic": "الْمُضَاعَف مِن بَاب إِفْعَال (IV)", "english": "Doubled from Bab IV", "page": 248 },
+        { "number": 7, "arabic": "الْمُضَاعَف مِن بَاب تَفَعُّل (V)", "english": "Doubled from Bab V", "page": 249 },
+        { "number": 8, "arabic": "الْمُضَاعَف مِن بَاب تَفَاعُل (VI)", "english": "Doubled from Bab VI", "page": 250 },
+        { "number": 9, "arabic": "الْمُضَاعَف مِن بَاب انْفِعَال (VII)", "english": "Doubled from Bab VII", "page": 251 },
+        { "number": 10, "arabic": "الْمُضَاعَف مِن بَاب افْتِعَال (VIII)", "english": "Doubled from Bab VIII", "page": 252 },
+        { "number": 11, "arabic": "الْمُضَاعَف مِن بَاب افْعِلَل (IX)", "english": "Doubled from Bab IX", "page": 253 },
+        { "number": 12, "arabic": "الْمُضَاعَف مِن بَاب اسْتِفْعَال (X)", "english": "Doubled from Bab X", "page": 254 },
+        { "number": 13, "arabic": "الْمُضَاعَف مِن بَاب افْعِيْلَل (XI)", "english": "Doubled from Bab XI", "page": 255 },
+        { "number": 14, "arabic": "الْمُضَاعَف مِن بَاب اِفْعِلَّل (IV)", "english": "Doubled from Bab IV (quadrilateral mazid)", "page": 256 }
+      ]
+    },
+    {
+      "id": "unit9",
+      "number": 9,
+      "arabic_title": "الْمُرَكَّب",
+      "english_title": "Composite Verbs",
+      "pages": { "start": 263, "end": 296 },
+      "parts": [
+        { "number": null, "arabic": "مُقَدِّمَة", "english": "Introduction", "page": 264 },
+        { "number": 1, "arabic": "مِثَال وَمَهْمُوْز الْعَيْن", "english": "Mithal + Hamzated 'Ayn", "page": 266 },
+        { "number": 2, "arabic": "مِثَال وَمَهْمُوْز اللَّام", "english": "Mithal + Hamzated Lam", "page": 268 },
+        { "number": 3, "arabic": "مِثَال وَمُضَاعَف", "english": "Mithal + Doubled", "page": 270 },
+        { "number": 4, "arabic": "أَجْوَف وَمَهْمُوْز الْفَاء", "english": "Hollow + Hamzated Fa'", "page": 272 },
+        { "number": 5, "arabic": "أَجْوَف وَمَهْمُوْز اللَّام", "english": "Hollow + Hamzated Lam", "page": 274 },
+        { "number": 6, "arabic": "نَاقِص وَمَهْمُوْز الْفَاء", "english": "Defective + Hamzated Fa'", "page": 278 },
+        { "number": 7, "arabic": "نَاقِص وَمَهْمُوْز الْعَيْن", "english": "Defective + Hamzated 'Ayn", "page": 285 },
+        { "number": 8, "arabic": "لَفِيف مَقْرُوْن وَمَهْمُوْز الْفَاء", "english": "Laqroon + Hamzated Fa'", "page": 289 },
+        { "number": 9, "arabic": "لَفِيف مَفْرُوْق وَمَهْمُوْز الْعَيْن", "english": "Lafrooq + Hamzated 'Ayn", "page": 291 }
+      ]
+    },
+    {
+      "id": "unit10",
+      "number": 10,
+      "arabic_title": "مُرَاجَعَة الأَبْوَاب",
+      "english_title": "Review of the Babs",
+      "pages": { "start": 297, "end": 312 },
+      "parts": [
+        { "number": 1, "arabic": "الثُّلَاثِيّ الْمُجَرَّد", "english": "Thulathi Mujarrad", "page": 298 },
+        { "number": 2, "arabic": "الثُّلَاثِيّ الْمَزِيْد فِيْهِ", "english": "Thulathi Mazid Feeh", "page": 303 },
+        { "number": 3, "arabic": "الرُّبَاعِيّ", "english": "Quadrilateral Verbs", "page": 311 },
+        { "number": 4, "arabic": "الصَّحِيْح، الْمَهْمُوْز، الْمُعْتَل، الْمُضَاعَف، الْمُرَكَّب", "english": "Sound, Hamzated, Weak, Doubled, Composite", "page": 312 }
+      ]
+    },
+    {
+      "id": "unit11",
+      "number": 11,
+      "arabic_title": "الْمُشْتَقَّات",
+      "english_title": "Derived Nouns",
+      "pages": { "start": 313, "end": 322 },
+      "parts": [
+        { "number": null, "arabic": "مُقَدِّمَة", "english": "Introduction", "page": 314 },
+        { "number": 1, "arabic": "الصِّفَة الْمُشَبَّهَة بِاسْم الْفَاعِل", "english": "Adjective Resembling the Active Participle", "page": 315 },
+        { "number": 2, "arabic": "اِسْم التَّفْضِيْل", "english": "Ism al-Tafdheel (Comparative/Superlative)", "page": 318 },
+        { "number": 3, "arabic": "اِسْم الْمُبَالَغَة", "english": "Ism al-Mubalaghah (Intensive Adjective)", "page": 317 },
+        { "number": 4, "arabic": "اِسْم الظَّرْف", "english": "Ism al-Dharf (Noun of Place/Time)", "page": 319 },
+        { "number": 5, "arabic": "اِسْم الآلَة", "english": "Ism al-Aala (Noun of Instrument)", "page": 321 }
+      ],
+      "_note": "The TOC (p.3) lists parts 2 and 3 in different order than the actual unit page (p.313). The actual unit page order is: 1-Sifa Mushabbaha, 2-Ism Tafdheel, 3-Ism Mubalaghah, which differs from the TOC. This discrepancy is flagged."
+    },
+    {
+      "id": "unit12",
+      "number": 12,
+      "arabic_title": null,
+      "english_title": "Advanced Grammar Topics",
+      "_note": "Unit 12 has no single Arabic title on its title page. It covers several grammatical topics as listed in the parts.",
+      "pages": { "start": 323, "end": 355 },
+      "parts": [
+        { "number": 1, "arabic": "الْمُضَارِع الْمَنْصُوْب", "english": "Mudari' Mansub (Subjunctive)", "page": 324 },
+        { "number": 2, "arabic": "الْمُضَارِع الْمَجْزُوْم", "english": "Mudari' Majzum (Jussive)", "page": 327 },
+        { "number": 3, "arabic": "نُوْن التَّأْكِيْد", "english": "Nun al-Tawkeed (Emphatic Nun)", "page": 331 },
+        { "number": 4, "arabic": "الأَمْر لِلْغَائِب", "english": "Imperative for the Third Person", "page": 343 },
+        { "number": 5, "arabic": "أَبْوَاب إِضَافِيَّة", "english": "Additional Babs", "page": 345 },
+        { "number": 6, "arabic": "قَوَاعِد مُتَنَوِّعَة", "english": "Miscellaneous Rules", "page": 346 }
+      ]
+    }
+  ]
+}

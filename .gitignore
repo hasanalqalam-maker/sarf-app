@@ -1,0 +1,33 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# build output
+.next/
+out/
+
+# environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# development-only files
+/src/app/reference/fstu-sarf.pdf
+*.pdf
+pdf-extract.txt
+unit1.txt
+unit2.txt
+units10-12.txt
+toc.txt
+extract-pages.js
+extract-pdf.js
+scripts/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.claude/
+*.tsbuildinfo

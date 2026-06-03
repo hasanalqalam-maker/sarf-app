@@ -1,0 +1,379 @@
+{
+  "_source": "FSTU Sarf 2023 Oct.pdf, pages 17-18 (sigha names/table), pages 20 and 25 (madi/mudari conjugation tables), pages 60-62 (amr/nahy), pages 65-68 (ism fail/maful)",
+  "_note": "The textbook presents 14 sighas for madi/mudari, 6 muxatab sighas for amr/nahy, and 6 sighas for ism fail/maful. The user specification of '5 amr sighas' likely refers to the 5 unique surface forms (the dual form aِfʿalaa / laa tafʿalaa is identical for both m/d and f/d), but the textbook exercise tables explicitly list all 6 muxatab sighas.",
+
+  "madi_mudari": [
+    {
+      "id": "ghaib",
+      "arabic_name": "الغَائِبُ",
+      "pronoun": "هُوَ",
+      "english": "He / It (m/s)",
+      "person": "غَائِب",
+      "person_english": "third",
+      "gender": "مُذَكَّر",
+      "gender_english": "masculine",
+      "number": "مُفْرَد",
+      "number_english": "singular"
+    },
+    {
+      "id": "ghaibaan",
+      "arabic_name": "الْغَائِبَانِ",
+      "pronoun": "هُمَا",
+      "english": "They (m/d)",
+      "person": "غَائِب",
+      "person_english": "third",
+      "gender": "مُذَكَّر",
+      "gender_english": "masculine",
+      "number": "مُثَنًّى",
+      "number_english": "dual"
+    },
+    {
+      "id": "ghaiboon",
+      "arabic_name": "الْغَائِبُوْنَ",
+      "pronoun": "هُمْ",
+      "english": "They (m/p)",
+      "person": "غَائِب",
+      "person_english": "third",
+      "gender": "مُذَكَّر",
+      "gender_english": "masculine",
+      "number": "جَمْع",
+      "number_english": "plural"
+    },
+    {
+      "id": "ghaiba",
+      "arabic_name": "الْغَائِبَةُ",
+      "pronoun": "هِيَ",
+      "english": "She / It (f/s)",
+      "person": "غَائِب",
+      "person_english": "third",
+      "gender": "مُؤَنَّث",
+      "gender_english": "feminine",
+      "number": "مُفْرَد",
+      "number_english": "singular"
+    },
+    {
+      "id": "ghaibataan",
+      "arabic_name": "الْغَائِبَتَانِ",
+      "pronoun": "هُمَا",
+      "english": "They (f/d)",
+      "person": "غَائِب",
+      "person_english": "third",
+      "gender": "مُؤَنَّث",
+      "gender_english": "feminine",
+      "number": "مُثَنًّى",
+      "number_english": "dual"
+    },
+    {
+      "id": "ghaibaat",
+      "arabic_name": "الْغَائِبَاتُ",
+      "pronoun": "هُنَّ",
+      "english": "They (f/p)",
+      "person": "غَائِب",
+      "person_english": "third",
+      "gender": "مُؤَنَّث",
+      "gender_english": "feminine",
+      "number": "جَمْع",
+      "number_english": "plural"
+    },
+    {
+      "id": "muxatab",
+      "arabic_name": "الْمُخَاطَبُ",
+      "pronoun": "أَنْتَ",
+      "english": "You (m/s)",
+      "person": "مُخَاطَب",
+      "person_english": "second",
+      "gender": "مُذَكَّر",
+      "gender_english": "masculine",
+      "number": "مُفْرَد",
+      "number_english": "singular"
+    },
+    {
+      "id": "muxaatabaan",
+      "arabic_name": "الْمُخَاطَبَانِ",
+      "pronoun": "أَنْتُمَا",
+      "english": "You (m/d)",
+      "person": "مُخَاطَب",
+      "person_english": "second",
+      "gender": "مُذَكَّر",
+      "gender_english": "masculine",
+      "number": "مُثَنًّى",
+      "number_english": "dual"
+    },
+    {
+      "id": "muxaataboon",
+      "arabic_name": "الْمُخَاطَبُوْنَ",
+      "pronoun": "أَنْتُمْ",
+      "english": "You (m/p)",
+      "person": "مُخَاطَب",
+      "person_english": "second",
+      "gender": "مُذَكَّر",
+      "gender_english": "masculine",
+      "number": "جَمْع",
+      "number_english": "plural"
+    },
+    {
+      "id": "muxaataba",
+      "arabic_name": "الْمُخَاطَبَةُ",
+      "pronoun": "أَنْتِ",
+      "english": "You (f/s)",
+      "person": "مُخَاطَب",
+      "person_english": "second",
+      "gender": "مُؤَنَّث",
+      "gender_english": "feminine",
+      "number": "مُفْرَد",
+      "number_english": "singular"
+    },
+    {
+      "id": "muxaatabataan",
+      "arabic_name": "الْمُخَاطَبَتَانِ",
+      "pronoun": "أَنْتُمَا",
+      "english": "You (f/d)",
+      "person": "مُخَاطَب",
+      "person_english": "second",
+      "gender": "مُؤَنَّث",
+      "gender_english": "feminine",
+      "number": "مُثَنًّى",
+      "number_english": "dual"
+    },
+    {
+      "id": "muxaatabaat",
+      "arabic_name": "الْمُخَاطَبَاتُ",
+      "pronoun": "أَنْتُنَّ",
+      "english": "You (f/p)",
+      "person": "مُخَاطَب",
+      "person_english": "second",
+      "gender": "مُؤَنَّث",
+      "gender_english": "feminine",
+      "number": "جَمْع",
+      "number_english": "plural"
+    },
+    {
+      "id": "mutakallim",
+      "arabic_name": "الْمُتَكَلِّمُ",
+      "pronoun": "أَنَا",
+      "english": "I",
+      "person": "مُتَكَلِّم",
+      "person_english": "first",
+      "gender": "مُذَكَّر / مُؤَنَّث",
+      "gender_english": "masculine / feminine",
+      "number": "مُفْرَد",
+      "number_english": "singular"
+    },
+    {
+      "id": "mutakallimoon",
+      "arabic_name": "الْمُتَكَلِّمُوْنَ",
+      "pronoun": "نَحْنُ",
+      "english": "We",
+      "person": "مُتَكَلِّم",
+      "person_english": "first",
+      "gender": "مُذَكَّر / مُؤَنَّث",
+      "gender_english": "masculine / feminine",
+      "number": "مُثَنًّى / جَمْع",
+      "number_english": "dual / plural"
+    }
+  ],
+
+  "amr": [
+    {
+      "id": "muxatab",
+      "arabic_name": "الْمُخَاطَبُ",
+      "pronoun": "أَنْتَ",
+      "english": "You (m/s)",
+      "gender": "مُذَكَّر",
+      "number": "مُفْرَد"
+    },
+    {
+      "id": "muxaatabaan",
+      "arabic_name": "الْمُخَاطَبَانِ",
+      "pronoun": "أَنْتُمَا",
+      "english": "You (m/d)",
+      "gender": "مُذَكَّر",
+      "number": "مُثَنًّى"
+    },
+    {
+      "id": "muxaataboon",
+      "arabic_name": "الْمُخَاطَبُوْنَ",
+      "pronoun": "أَنْتُمْ",
+      "english": "You (m/p)",
+      "gender": "مُذَكَّر",
+      "number": "جَمْع"
+    },
+    {
+      "id": "muxaataba",
+      "arabic_name": "الْمُخَاطَبَةُ",
+      "pronoun": "أَنْتِ",
+      "english": "You (f/s)",
+      "gender": "مُؤَنَّث",
+      "number": "مُفْرَد"
+    },
+    {
+      "id": "muxaatabataan",
+      "arabic_name": "الْمُخَاطَبَتَانِ",
+      "pronoun": "أَنْتُمَا",
+      "english": "You (f/d)",
+      "gender": "مُؤَنَّث",
+      "number": "مُثَنًّى"
+    },
+    {
+      "id": "muxaatabaat",
+      "arabic_name": "الْمُخَاطَبَاتُ",
+      "pronoun": "أَنْتُنَّ",
+      "english": "You (f/p)",
+      "gender": "مُؤَنَّث",
+      "number": "جَمْع"
+    }
+  ],
+
+  "nahy": [
+    {
+      "id": "muxatab",
+      "arabic_name": "الْمُخَاطَبُ",
+      "pronoun": "أَنْتَ",
+      "english": "You (m/s)",
+      "gender": "مُذَكَّر",
+      "number": "مُفْرَد"
+    },
+    {
+      "id": "muxaatabaan",
+      "arabic_name": "الْمُخَاطَبَانِ",
+      "pronoun": "أَنْتُمَا",
+      "english": "You (m/d)",
+      "gender": "مُذَكَّر",
+      "number": "مُثَنًّى"
+    },
+    {
+      "id": "muxaataboon",
+      "arabic_name": "الْمُخَاطَبُوْنَ",
+      "pronoun": "أَنْتُمْ",
+      "english": "You (m/p)",
+      "gender": "مُذَكَّر",
+      "number": "جَمْع"
+    },
+    {
+      "id": "muxaataba",
+      "arabic_name": "الْمُخَاطَبَةُ",
+      "pronoun": "أَنْتِ",
+      "english": "You (f/s)",
+      "gender": "مُؤَنَّث",
+      "number": "مُفْرَد"
+    },
+    {
+      "id": "muxaatabataan",
+      "arabic_name": "الْمُخَاطَبَتَانِ",
+      "pronoun": "أَنْتُمَا",
+      "english": "You (f/d)",
+      "gender": "مُؤَنَّث",
+      "number": "مُثَنًّى"
+    },
+    {
+      "id": "muxaatabaat",
+      "arabic_name": "الْمُخَاطَبَاتُ",
+      "pronoun": "أَنْتُنَّ",
+      "english": "You (f/p)",
+      "gender": "مُؤَنَّث",
+      "number": "جَمْع"
+    }
+  ],
+
+  "ism_fail": [
+    {
+      "id": "mufrad",
+      "arabic_name": "الْمُفْرَد",
+      "pattern": "فَاعِل",
+      "english": "Doer (m/s)",
+      "gender": "مُذَكَّر",
+      "number": "مُفْرَد"
+    },
+    {
+      "id": "muthanna",
+      "arabic_name": "الْمُثَنَّى",
+      "pattern": "فَاعِلَانِ",
+      "english": "Doers (m/d)",
+      "gender": "مُذَكَّر",
+      "number": "مُثَنًّى"
+    },
+    {
+      "id": "jam_mudh",
+      "arabic_name": "جَمْعُ الْمُذَكَّرِ",
+      "pattern": "فَاعِلُوْنَ",
+      "english": "Doers (m/p)",
+      "gender": "مُذَكَّر",
+      "number": "جَمْع"
+    },
+    {
+      "id": "mufrada",
+      "arabic_name": "الْمُفْرَدَةُ",
+      "pattern": "فَاعِلَة",
+      "english": "Doer (f/s)",
+      "gender": "مُؤَنَّث",
+      "number": "مُفْرَد"
+    },
+    {
+      "id": "muthannaa",
+      "arabic_name": "الْمُثَنَّاةُ",
+      "pattern": "فَاعِلَتَانِ",
+      "english": "Doers (f/d)",
+      "gender": "مُؤَنَّث",
+      "number": "مُثَنًّى"
+    },
+    {
+      "id": "jam_muan",
+      "arabic_name": "جَمْعُ الْمُؤَنَّثِ",
+      "pattern": "فَاعِلَاتٌ",
+      "english": "Doers (f/p)",
+      "gender": "مُؤَنَّث",
+      "number": "جَمْع"
+    }
+  ],
+
+  "ism_maful": [
+    {
+      "id": "mufrad",
+      "arabic_name": "الْمُفْرَد",
+      "pattern": "مَفْعُوْل",
+      "english": "One acted upon (m/s)",
+      "gender": "مُذَكَّر",
+      "number": "مُفْرَد"
+    },
+    {
+      "id": "muthanna",
+      "arabic_name": "الْمُثَنَّى",
+      "pattern": "مَفْعُوْلَانِ",
+      "english": "Those acted upon (m/d)",
+      "gender": "مُذَكَّر",
+      "number": "مُثَنًّى"
+    },
+    {
+      "id": "jam_mudh",
+      "arabic_name": "جَمْعُ الْمُذَكَّرِ",
+      "pattern": "مَفْعُوْلُوْنَ",
+      "english": "Those acted upon (m/p)",
+      "gender": "مُذَكَّر",
+      "number": "جَمْع"
+    },
+    {
+      "id": "mufrada",
+      "arabic_name": "الْمُفْرَدَةُ",
+      "pattern": "مَفْعُوْلَة",
+      "english": "One acted upon (f/s)",
+      "gender": "مُؤَنَّث",
+      "number": "مُفْرَد"
+    },
+    {
+      "id": "muthannaa",
+      "arabic_name": "الْمُثَنَّاةُ",
+      "pattern": "مَفْعُوْلَتَانِ",
+      "english": "Those acted upon (f/d)",
+      "gender": "مُؤَنَّث",
+      "number": "مُثَنًّى"
+    },
+    {
+      "id": "jam_muan",
+      "arabic_name": "جَمْعُ الْمُؤَنَّثِ",
+      "pattern": "مَفْعُوْلَاتٌ",
+      "english": "Those acted upon (f/p)",
+      "gender": "مُؤَنَّث",
+      "number": "جَمْع"
+    }
+  ]
+}

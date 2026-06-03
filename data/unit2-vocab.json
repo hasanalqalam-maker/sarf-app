@@ -1,0 +1,123 @@
+{
+  "unit": 2,
+  "babs": [
+    {
+      "babId": "faʿʿala",
+      "page": 81,
+      "verbs": [
+        { "madi": "صَدَّقَ", "meaning": "to believe, to accept as true" },
+        { "madi": "عَلَّمَ", "meaning": "to teach" },
+        { "madi": "كَذَّبَ", "meaning": "to reject, to call a liar" },
+        { "madi": "نَزَّلَ", "meaning": "to reveal, to send down" },
+        { "madi": "عَذَّبَ", "meaning": "to punish" },
+        { "madi": "قَدَّمَ", "meaning": "to put forth, to present" }
+      ]
+    },
+    {
+      "babId": "faaʿala",
+      "page": 83,
+      "verbs": [
+        { "madi": "بَارَكَ", "meaning": "to bless" },
+        { "madi": "حَاسَبَ", "meaning": "to call to account" },
+        { "madi": "نَافَقَ", "meaning": "to act hypocritically" },
+        { "madi": "هَاجَرَ", "meaning": "to migrate" },
+        { "madi": "عَاقَبَ", "meaning": "to punish" },
+        { "madi": "جَادَلَ", "meaning": "to dispute, to argue" }
+      ]
+    },
+    {
+      "babId": "afʿala",
+      "page": 85,
+      "verbs": [
+        { "madi": "أَبْدَلَ", "meaning": "to replace" },
+        { "madi": "أَرْسَلَ", "meaning": "to send" },
+        { "madi": "أَسْلَمَ", "meaning": "to submit, to become Muslim" },
+        { "madi": "أَصْلَحَ", "meaning": "to rectify, to reform" },
+        { "madi": "أَكْرَمَ", "meaning": "to honour" },
+        { "madi": "أَنْزَلَ", "meaning": "to reveal, to send down" }
+      ]
+    },
+    {
+      "babId": "tafaʿʿala",
+      "page": 87,
+      "verbs": [
+        { "madi": "تَذَكَّرَ", "meaning": "to remember" },
+        { "madi": "تَعَلَّمَ", "meaning": "to learn" },
+        { "madi": "تَقَبَّلَ", "meaning": "to accept" },
+        { "madi": "تَكَلَّمَ", "meaning": "to speak, to talk" },
+        { "madi": "تَبَسَّمَ", "meaning": "to smile" },
+        { "madi": "تَصَدَّقَ", "meaning": "to donate, to give in charity" }
+      ]
+    },
+    {
+      "babId": "tafaaʿala",
+      "page": 89,
+      "verbs": [
+        { "madi": "تَشَابَهَ", "meaning": "to resemble one another" },
+        { "madi": "تَعَارَفَ", "meaning": "to know one another" },
+        { "madi": "تَنَازَعَ", "meaning": "to contend, to dispute" },
+        { "madi": "تَنَافَسَ", "meaning": "to compete" },
+        { "madi": "تَبَارَكَ", "meaning": "to be blessed" },
+        { "madi": "تَخَاصَمَ", "meaning": "to quarrel" }
+      ]
+    },
+    {
+      "babId": "infaʿala",
+      "page": 91,
+      "verbs": [
+        { "madi": "اِنْطَلَقَ", "meaning": "to walk, to set off" },
+        { "madi": "اِنْفَرَدَ", "meaning": "to be alone" },
+        { "madi": "اِنْفَصَلَ", "meaning": "to be separate" },
+        { "madi": "اِنْفَطَرَ", "meaning": "to split, to break" },
+        { "madi": "اِنْصَرَفَ", "meaning": "to turn away, to leave" },
+        { "madi": "اِنْقَلَبَ", "meaning": "to be turned, to return" }
+      ]
+    },
+    {
+      "babId": "iftaʿala",
+      "page": 93,
+      "verbs": [
+        { "madi": "اِجْتَنَبَ", "meaning": "to abstain from, to avoid" },
+        { "madi": "اِخْتَلَفَ", "meaning": "to differ, to disagree" },
+        { "madi": "اِسْتَمَعَ", "meaning": "to listen" },
+        { "madi": "اِعْتَرَفَ", "meaning": "to confess, to acknowledge" },
+        { "madi": "اِجْتَمَعَ", "meaning": "to come together, to gather" },
+        { "madi": "اِقْتَرَبَ", "meaning": "to approach, to draw near" }
+      ]
+    },
+    {
+      "babId": "istafʿala",
+      "page": 95,
+      "verbs": [
+        { "madi": "اِسْتَبْدَلَ", "meaning": "to replace" },
+        { "madi": "اِسْتَبْشَرَ", "meaning": "to be happy, to rejoice" },
+        { "madi": "اِسْتَغْفَرَ", "meaning": "to seek forgiveness" },
+        { "madi": "اِسْتَكْبَرَ", "meaning": "to act arrogantly" },
+        { "madi": "اِسْتَخْرَجَ", "meaning": "to take out, to extract" },
+        { "madi": "اِسْتَعْجَلَ", "meaning": "to hasten, to be hasty" }
+      ]
+    },
+    {
+      "babId": "faʿlala",
+      "page": 97,
+      "verbs": [
+        { "madi": "بَعْثَرَ", "meaning": "to scatter, to disperse" },
+        { "madi": "دَمْدَمَ", "meaning": "to mutter, to destroy utterly" },
+        { "madi": "زَلْزَلَ", "meaning": "to shake" },
+        { "madi": "سَلْسَلَ", "meaning": "to be continuous, to chain" },
+        { "madi": "بَسْمَلَ", "meaning": "to say bismillah" },
+        { "madi": "تَرْجَمَ", "meaning": "to translate" }
+      ]
+    },
+    {
+      "babId": "tafaʿlala",
+      "page": 99,
+      "verbs": [
+        { "madi": "تَزَلْزَلَ", "meaning": "to shake, to be shaken" },
+        { "madi": "تَسَلْسَلَ", "meaning": "to be continuous, to be chained" },
+        { "madi": "تَلَأْلَأَ", "meaning": "to shine, to glitter" },
+        { "madi": "تَمَضْمَضَ", "meaning": "to gargle" }
+      ]
+    }
+  ]
+}

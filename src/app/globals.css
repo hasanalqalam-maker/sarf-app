@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base resets ──────────────────────────────────────────────────────────── */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-parchment text-ink font-sans;
+    min-height: 100dvh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+/* ── Arabic utility classes ───────────────────────────────────────────────── */
+@layer utilities {
+  .arabic {
+    font-family: var(--font-arabic), 'Scheherazade New', 'Noto Naskh Arabic', serif;
+    direction: rtl;
+    unicode-bidi: embed;
+  }
+
+  .arabic-block {
+    font-family: var(--font-arabic), 'Scheherazade New', 'Noto Naskh Arabic', serif;
+    direction: rtl;
+    text-align: right;
+  }
+
+  /* Gold divider line */
+  .gold-divider {
+    @apply border-gold/30;
+  }
+
+  /* Parchment card */
+  .card-parchment {
+    @apply bg-parchment-dark border border-gold/20 rounded-xl shadow-sm;
+  }
+
+  /* Sidebar link active state */
+  .nav-active {
+    @apply bg-teal/10 text-teal border-r-2 border-teal;
+  }
+
+  /* Table row hover */
+  .conjugation-row:hover {
+    @apply bg-gold/5;
+  }
+}
+
+/* ── Scrollbar styling ────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #EDE8DC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B8860B44;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8860B88;
+}
