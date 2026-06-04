@@ -47,7 +47,7 @@ export default function Unit2GamesPage() {
         return (
           <section key={section} className="mb-8">
             <div className="flex items-center gap-3 mb-4">
-              <h2 className="arabic font-semibold text-xl text-ink" dir="rtl">
+              <h2 className="arabic font-semibold text-xl text-crimson" dir="rtl">
                 {section}
               </h2>
               <span className="text-xs font-sans text-ink-muted">

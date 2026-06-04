@@ -113,7 +113,7 @@ export default function SarfMapGrid() {
           <button key={u} onClick={() => changeUnit(u)}
             className={`text-xs font-sans font-semibold px-3 py-1 rounded-full transition-colors ${
               activeUnit === u
-                ? 'bg-ink text-parchment'
+                ? 'bg-crimson text-parchment'
                 : 'bg-parchment-dark text-ink-muted hover:text-ink'
             }`}>
             Unit {u}
@@ -127,7 +127,7 @@ export default function SarfMapGrid() {
           <button key={tab.key} onClick={() => changeTab(tab.key)}
             className={`arabic text-sm shrink-0 px-3 py-1.5 rounded-lg transition-colors ${
               activeTab === tab.key
-                ? 'bg-teal text-parchment'
+                ? 'bg-crimson text-parchment'
                 : 'bg-parchment-dark text-ink-muted hover:text-ink'
             }`}>
             {tab.label}

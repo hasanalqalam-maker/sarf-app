@@ -15,19 +15,24 @@ const config: Config = {
           darker: '#E0D9CC',
         },
         ink: {
-          DEFAULT: '#1A1208',
-          light: '#3D2E14',
-          muted: '#6B5B3E',
+          DEFAULT: '#052547',  // book cover navy
+          light: '#07325f',    // book body-text navy
+          muted: '#4a6a8a',    // muted steel blue
         },
         gold: {
-          DEFAULT: '#B8860B',
-          light: '#D4A017',
-          muted: '#8B6508',
+          DEFAULT: '#0e60ba',  // book grammar-heading blue
+          light: '#1a81ee',    // lighter blue
+          muted: '#07325f',    // dark navy-blue
         },
         teal: {
-          DEFAULT: '#1B6B5A',
-          light: '#2A9077',
-          dark: '#134E42',
+          DEFAULT: '#4e8542',  // book institution green
+          light: '#7c9163',    // book olive green
+          dark: '#2d5a25',     // deeper green
+        },
+        crimson: {
+          DEFAULT: '#a30000',  // book unit-banner red (dominant colour)
+          light: '#c00000',    // slightly lighter red
+          dark: '#7a0000',     // deeper red
         },
       },
       fontFamily: {

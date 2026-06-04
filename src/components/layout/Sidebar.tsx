@@ -67,8 +67,8 @@ export default function Sidebar() {
       {/* Logo */}
       <div className="px-6 py-5 border-b border-gold/10">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-gold flex items-center justify-center">
-            <span className="text-ink text-sm font-bold font-heading">ص</span>
+          <div className="w-8 h-8 rounded-lg bg-crimson flex items-center justify-center">
+            <span className="text-parchment text-sm font-bold font-heading">ص</span>
           </div>
           <div>
             <p className="text-parchment font-heading font-semibold text-sm leading-none">Sarf App</p>

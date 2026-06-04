@@ -52,7 +52,7 @@ export default function Unit1GamesPage() {
         return (
           <section key={section} className="mb-8">
             <div className="flex items-center gap-3 mb-4">
-              <h2 className={`font-semibold text-ink ${isArabic ? 'arabic text-xl' : 'font-heading text-lg'}`}
+              <h2 className={`font-semibold ${isArabic ? 'arabic text-xl text-crimson' : 'font-heading text-lg text-ink'}`}
                 dir={isArabic ? 'rtl' : undefined}>
                 {section}
               </h2>
