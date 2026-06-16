@@ -31,3 +31,5 @@ scripts/
 Thumbs.db
 .claude/
 *.tsbuildinfo
+
+.vercel

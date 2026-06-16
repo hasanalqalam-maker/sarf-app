@@ -2,6 +2,8 @@
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { UNIT1_GAMES } from './gameData';
+import { getAllExercises, computeUnit1ExerciseCompletion } from './exerciseData';
+import type { ExerciseSessionEntry } from './exerciseData';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -30,6 +32,7 @@ export interface GameSessionEntry {
 interface StoredState {
   sighaProgress: Record<string, SighaProgressEntry>;
   gameSessions: Record<string, GameSessionEntry>;
+  exerciseSessions: Record<string, ExerciseSessionEntry>;
   currentStreak: number;
   longestStreak: number;
   lastActivityDate: string;
@@ -39,13 +42,18 @@ interface StoredState {
   totalCorrect: number;
 }
 
+export type { ExerciseSessionEntry };
+
 export interface ProgressContextValue extends StoredState {
   hydrated: boolean;
   unit1Completion: number;
+  unit1ExerciseCompletion: number;
+  unit1CombinedCompletion: number;
   totalMastered: number;
   accuracy: number;
   recordAnswer: (babId: string, sighaId: string, paradigm: string, form: string, correct: boolean) => void;
   recordGameSession: (gameId: string, score: number) => void;
+  recordExerciseSession: (exerciseId: string, score: number, total: number) => void;
   resetAll: () => void;
 }
 
@@ -56,6 +64,7 @@ const STORAGE_KEY = 'sarf-progress-v1';
 const INITIAL: StoredState = {
   sighaProgress: {},
   gameSessions: {},
+  exerciseSessions: {},
   currentStreak: 0,
   longestStreak: 0,
   lastActivityDate: '',
@@ -152,6 +161,35 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
     });
   }, []);
 
+  const recordExerciseSession = useCallback((exerciseId: string, score: number, total: number) => {
+    setState((prev) => {
+      const existing = prev.exerciseSessions[exerciseId];
+      const pct = total > 0 ? Math.round((score / total) * 100) : 0;
+      const prevBest = existing?.bestPct ?? 0;
+      const { streak, longest } = computeStreak(prev.currentStreak, prev.longestStreak, prev.lastActivityDate);
+      const next: StoredState = {
+        ...prev,
+        exerciseSessions: {
+          ...prev.exerciseSessions,
+          [exerciseId]: {
+            score,
+            total,
+            completed: pct >= 70,
+            attempts: (existing?.attempts ?? 0) + 1,
+            bestPct: Math.max(pct, prevBest),
+          },
+        },
+        currentStreak: streak,
+        longestStreak: longest,
+        lastActivityDate: getToday(),
+        totalAnswered: prev.totalAnswered + total,
+        totalCorrect: prev.totalCorrect + score,
+      };
+      persist(next);
+      return next;
+    });
+  }, []);
+
   const resetAll = useCallback(() => {
     persist(INITIAL);
     setState(INITIAL);
@@ -162,6 +200,22 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
     const done = UNIT1_GAMES.filter((g) => state.gameSessions[g.id]?.completed).length;
     return total === 0 ? 0 : Math.round((done / total) * 100);
   }, [state.gameSessions]);
+
+  const unit1ExerciseCompletion = useMemo(
+    () => computeUnit1ExerciseCompletion(state.exerciseSessions),
+    [state.exerciseSessions],
+  );
+
+  const unit1CombinedCompletion = useMemo(() => {
+    const gameTotal = UNIT1_GAMES.length;
+    const exTotal = getAllExercises().filter((e) => e.exerciseType !== 'verbal-practice').length;
+    const gameDone = UNIT1_GAMES.filter((g) => state.gameSessions[g.id]?.completed).length;
+    const exDone = getAllExercises().filter(
+      (e) => e.exerciseType !== 'verbal-practice' && state.exerciseSessions[e.id]?.completed,
+    ).length;
+    const total = gameTotal + exTotal;
+    return total === 0 ? 0 : Math.round(((gameDone + exDone) / total) * 100);
+  }, [state.gameSessions, state.exerciseSessions]);
 
   const totalMastered = useMemo(
     () => Object.values(state.sighaProgress).filter((e) => e.mastered).length,
@@ -174,8 +228,9 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <ProgressContext.Provider value={{
-      ...state, hydrated, unit1Completion, totalMastered, accuracy,
-      recordAnswer, recordGameSession, resetAll,
+      ...state, hydrated, unit1Completion, unit1ExerciseCompletion, unit1CombinedCompletion,
+      totalMastered, accuracy,
+      recordAnswer, recordGameSession, recordExerciseSession, resetAll,
     }}>
       {children}
     </ProgressContext.Provider>

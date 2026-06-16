@@ -1,0 +1,848 @@
+{
+  "unit": 1,
+  "parts": [
+    "Part 8: اِسْمُ الْفَاعِل and اِسْمُ الْمَفْعُوْل",
+    "Part 9: التَّصْرِيفُ الصَّغِيْر",
+    "Part 10: التَّصْرِيفُ الْكَبِيْر"
+  ],
+  "pdfPages": "65-74",
+  "summaryPages": {
+    "keyTerms": 72,
+    "vocabulary": "73-74",
+    "note": "Pages 72-74 contain the Key Terms table and full Unit 1 vocabulary list. No exercises appear on these pages."
+  },
+  "exercises": [
+    {
+      "id": "u1-p8-ex1",
+      "exerciseNumber": 1,
+      "page": 66,
+      "unit": 1,
+      "part": "Part 8: اِسْمُ الْفَاعِل",
+      "instructionText": "Practice verbally conjugating the following اِسْمُ الْفَاعِل. Thereafter, fill in the table below.",
+      "exerciseType": "fill-table",
+      "note": "الْمُفْرَد row is given. Students fill الْمُثَنَّى (m/d), جَمْع الْمُذَكَّر (m/p), الْمُفْرَدَة (f/s), الْمُثَنَّاة (f/d), جَمْع الْمُؤَنَّث (f/p). Pattern: فَاعِل → فَاعِلَان → فَاعِلُوْن → فَاعِلَة → فَاعِلَتَان → فَاعِلَات. Note from book: words from بَاب كَرُم do not follow this pattern (e.g. كَرِيْم).",
+      "givenRow": {
+        "sigha": "الْمُفْرَد",
+        "verb1": "بَالِغ",
+        "verb2": "عَابِد",
+        "verb3": "ذَاكِر",
+        "verb4": "رَازِق"
+      },
+      "items": [
+        {
+          "number": 1,
+          "sigha": "الْمُثَنَّى",
+          "answer": {
+            "بَالِغ": "بَالِغَان",
+            "عَابِد": "عَابِدَان",
+            "ذَاكِر": "ذَاكِرَان",
+            "رَازِق": "رَازِقَان"
+          },
+          "unclear": false
+        },
+        {
+          "number": 2,
+          "sigha": "جَمْع الْمُذَكَّر",
+          "answer": {
+            "بَالِغ": "بَالِغُوْن",
+            "عَابِد": "عَابِدُوْن",
+            "ذَاكِر": "ذَاكِرُوْن",
+            "رَازِق": "رَازِقُوْن"
+          },
+          "unclear": false
+        },
+        {
+          "number": 3,
+          "sigha": "الْمُفْرَدَة",
+          "answer": {
+            "بَالِغ": "بَالِغَة",
+            "عَابِد": "عَابِدَة",
+            "ذَاكِر": "ذَاكِرَة",
+            "رَازِق": "رَازِقَة"
+          },
+          "unclear": false
+        },
+        {
+          "number": 4,
+          "sigha": "الْمُثَنَّاة",
+          "answer": {
+            "بَالِغ": "بَالِغَتَان",
+            "عَابِد": "عَابِدَتَان",
+            "ذَاكِر": "ذَاكِرَتَان",
+            "رَازِق": "رَازِقَتَان"
+          },
+          "unclear": false
+        },
+        {
+          "number": 5,
+          "sigha": "جَمْع الْمُؤَنَّث",
+          "answer": {
+            "بَالِغ": "بَالِغَات",
+            "عَابِد": "عَابِدَات",
+            "ذَاكِر": "ذَاكِرَات",
+            "رَازِق": "رَازِقَات"
+          },
+          "unclear": false
+        }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p8-ex2",
+      "exerciseNumber": 2,
+      "page": 67,
+      "unit": 1,
+      "part": "Part 8: اِسْمُ الْفَاعِل",
+      "instructionText": "Translate the following into English and write the صِيْغَة.",
+      "exerciseType": "translate-arabic-to-english",
+      "note": "All items are اِسْمُ الْفَاعِل (active participle). Translation uses: verbal meaning (is doing / going to do), noun meaning (the one who does / those who do), or adjective. Items with ال are typically used as nouns.",
+      "items": [
+        {
+          "number": 1,
+          "arabic": "قَاتِلَان",
+          "answer": {
+            "english": "Two killers / those who kill (m/d)",
+            "sigha": "الْمُثَنَّى الْمُذَكَّر",
+            "root": "قَتَلَ"
+          },
+          "unclear": true,
+          "unclearNote": "PDF shows قَاتِلَن — final letter unclear. Reconstructed as قَاتِلَان (m/d, الْمُثَنَّى) as it is the only form not represented by other items. Verify against book."
+        },
+        {
+          "number": 2,
+          "arabic": "صَابِرَات",
+          "answer": {
+            "english": "Those who bear patience (f/p) / patient women",
+            "sigha": "جَمْع الْمُؤَنَّث",
+            "root": "صَبَرَ"
+          },
+          "unclear": false
+        },
+        {
+          "number": 3,
+          "arabic": "رَازِق",
+          "answer": {
+            "english": "Provider / one who provides (m/s)",
+            "sigha": "الْمُفْرَد",
+            "root": "رَزَقَ"
+          },
+          "unclear": false
+        },
+        {
+          "number": 4,
+          "arabic": "ظَالِمَتَان",
+          "answer": {
+            "english": "Those who oppress (f/d) / two oppressing women",
+            "sigha": "الْمُثَنَّاة",
+            "root": "ظَلَمَ"
+          },
+          "unclear": false
+        },
+        {
+          "number": 5,
+          "arabic": "عَارِفَة",
+          "answer": {
+            "english": "One who recognises (f/s) / recognising",
+            "sigha": "الْمُفْرَدَة",
+            "root": "عَرَفَ"
+          },
+          "unclear": false
+        },
+        {
+          "number": 6,
+          "arabic": "شَاهِدُوْن",
+          "answer": {
+            "english": "Those who bear witness (m/p) / witnesses",
+            "sigha": "جَمْع الْمُذَكَّر",
+            "root": "شَهِدَ"
+          },
+          "unclear": false
+        },
+        {
+          "number": 7,
+          "arabic": "ذَاكِرَات",
+          "answer": {
+            "english": "Those who remember (f/p)",
+            "sigha": "جَمْع الْمُؤَنَّث",
+            "root": "ذَكَرَ"
+          },
+          "unclear": true,
+          "unclearNote": "PDF shows ات ذَاكِر (garbled RTL). Reconstructed as ذَاكِرَات."
+        },
+        {
+          "number": 8,
+          "arabic": "دَاخِلَة",
+          "answer": {
+            "english": "One who enters (f/s) / entering",
+            "sigha": "الْمُفْرَدَة",
+            "root": "دَخَلَ"
+          },
+          "unclear": false
+        },
+        {
+          "number": 9,
+          "arabic": "الْغَافِر",
+          "answer": {
+            "english": "The one who forgives (m/s) / the forgiving one",
+            "sigha": "الْمُفْرَد (with ال — used as noun/attribute)",
+            "root": "غَفَرَ"
+          },
+          "unclear": false
+        },
+        {
+          "number": 10,
+          "arabic": "الْقَادِرَتَان",
+          "answer": {
+            "english": "The two who have power (f/d)",
+            "sigha": "الْمُثَنَّاة (with ال)",
+            "root": "قَدَرَ"
+          },
+          "unclear": true,
+          "unclearNote": "PDF shows تَان القَادِر (garbled RTL). Reconstructed as الْقَادِرَتَان."
+        },
+        {
+          "number": 11,
+          "arabic": "الْكَاذِبُوْن",
+          "answer": {
+            "english": "The liars (m/p) / those who lie",
+            "sigha": "جَمْع الْمُذَكَّر (with ال — used as noun)",
+            "root": "كَذَبَ"
+          },
+          "unclear": false
+        },
+        {
+          "number": 12,
+          "arabic": "كَاسِبَان",
+          "answer": {
+            "english": "Two earners (m/d) / those who earn (m/d)",
+            "sigha": "الْمُثَنَّى الْمُذَكَّر",
+            "root": "كَسَبَ"
+          },
+          "unclear": false
+        },
+        {
+          "number": 13,
+          "arabic": "مَالِكَة",
+          "answer": {
+            "english": "One who owns (f/s) / one who has ability (f/s)",
+            "sigha": "الْمُفْرَدَة",
+            "root": "مَلَكَ"
+          },
+          "unclear": false
+        },
+        {
+          "number": 14,
+          "arabic": "الْخَالِق",
+          "answer": {
+            "english": "The Creator (m/s)",
+            "sigha": "الْمُفْرَد (with ال — used as Divine Name/noun)",
+            "root": "خَلَقَ"
+          },
+          "unclear": false
+        },
+        {
+          "number": 15,
+          "arabic": "عَابِدُوْن",
+          "answer": {
+            "english": "Those who worship (m/p) / worshippers",
+            "sigha": "جَمْع الْمُذَكَّر",
+            "root": "عَبَدَ"
+          },
+          "unclear": false
+        },
+        {
+          "number": 16,
+          "arabic": "خَارِجُوْن",
+          "answer": {
+            "english": "Those who come out (m/p)",
+            "sigha": "جَمْع الْمُذَكَّر",
+            "root": "خَرَجَ"
+          },
+          "unclear": false
+        },
+        {
+          "number": 17,
+          "arabic": "الْحَاكِم",
+          "answer": {
+            "english": "The judge / the one who judges (m/s)",
+            "sigha": "الْمُفْرَد (with ال — used as noun)",
+            "root": "حَكَمَ"
+          },
+          "unclear": false
+        },
+        {
+          "number": 18,
+          "arabic": "تَارِكُوْن",
+          "answer": {
+            "english": "Those who leave (m/p)",
+            "sigha": "جَمْع الْمُذَكَّر",
+            "root": "تَرَكَ"
+          },
+          "unclear": false
+        },
+        {
+          "number": 19,
+          "arabic": "بَالِغَة",
+          "answer": {
+            "english": "One who reaches (f/s) / reaching",
+            "sigha": "الْمُفْرَدَة",
+            "root": "بَلَغَ"
+          },
+          "unclear": false
+        },
+        {
+          "number": 20,
+          "arabic": "نَاصِرَتَان",
+          "answer": {
+            "english": "Those who help (f/d) / two helping women",
+            "sigha": "الْمُثَنَّاة",
+            "root": "نَصَرَ"
+          },
+          "unclear": false
+        }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p8-ex3",
+      "exerciseNumber": 3,
+      "page": 67,
+      "unit": 1,
+      "part": "Part 8: اِسْمُ الْفَاعِل",
+      "instructionText": "Translate the following into Arabic and write the صِيْغَة.",
+      "exerciseType": "translate-english-to-arabic",
+      "note": "All answers are اِسْمُ الْفَاعِل (فَاعِل pattern). Vocabulary from Unit 1.",
+      "items": [
+        {
+          "number": 1,
+          "english": "Guards (f/p)",
+          "answer": { "arabic": "حَافِظَات", "sigha": "جَمْع الْمُؤَنَّث", "root": "حَفِظَ" },
+          "unclear": false
+        },
+        {
+          "number": 2,
+          "english": "Readers (m/p)",
+          "answer": { "arabic": "قَارِئُوْن", "sigha": "جَمْع الْمُذَكَّر", "root": "قَرَأَ" },
+          "unclear": false
+        },
+        {
+          "number": 3,
+          "english": "Those who go (m/d)",
+          "answer": { "arabic": "ذَاهِبَان", "sigha": "الْمُثَنَّى الْمُذَكَّر", "root": "ذَهَبَ" },
+          "unclear": false
+        },
+        {
+          "number": 4,
+          "english": "Those who curse (f/d)",
+          "answer": { "arabic": "لَاعِنَتَان", "sigha": "الْمُثَنَّاة", "root": "لَعَنَ" },
+          "unclear": false
+        },
+        {
+          "number": 5,
+          "english": "The one who make (f/s)",
+          "answer": { "arabic": "جَاعِلَة", "sigha": "الْمُفْرَدَة", "root": "جَعَلَ" },
+          "unclear": false,
+          "note": "Instruction text reads 'make' — likely a typo for 'makes' in the book. Answer is the same."
+        },
+        {
+          "number": 6,
+          "english": "The one who asks (m/s)",
+          "answer": { "arabic": "سَائِل", "sigha": "الْمُفْرَد", "root": "سَأَلَ" },
+          "unclear": false
+        },
+        {
+          "number": 7,
+          "english": "Those who benefit (f/d)",
+          "answer": { "arabic": "نَافِعَتَان", "sigha": "الْمُثَنَّاة", "root": "نَفَعَ" },
+          "unclear": false
+        },
+        {
+          "number": 8,
+          "english": "Those who elevate (m/p)",
+          "answer": { "arabic": "رَافِعُوْن", "sigha": "جَمْع الْمُذَكَّر", "root": "رَفَعَ" },
+          "unclear": false
+        },
+        {
+          "number": 9,
+          "english": "Those who bewitch (m/d)",
+          "answer": { "arabic": "سَاحِرَان", "sigha": "الْمُثَنَّى الْمُذَكَّر", "root": "سَحَرَ" },
+          "unclear": false
+        },
+        {
+          "number": 10,
+          "english": "The one who resurrects (m/s)",
+          "answer": { "arabic": "بَاعِث", "sigha": "الْمُفْرَد", "root": "بَعَثَ" },
+          "unclear": false
+        }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p8-ex4",
+      "exerciseNumber": 4,
+      "page": 68,
+      "unit": 1,
+      "part": "Part 8: اِسْمُ الْمَفْعُوْل",
+      "instructionText": "Practice verbally conjugating the following اِسْمُ الْمَفْعُوْل. Thereafter, fill in the table below.",
+      "exerciseType": "fill-table",
+      "note": "الْمُفْرَد row is given. Students fill الْمُثَنَّى (m/d), جَمْع الْمُذَكَّر (m/p), الْمُفْرَدَة (f/s), الْمُثَنَّاة (f/d), جَمْع الْمُؤَنَّث (f/p). Pattern: مَفْعُوْل → مَفْعُوْلَان → مَفْعُوْلُوْن → مَفْعُوْلَة → مَفْعُوْلَتَان → مَفْعُوْلَات. Uses same 4 root verbs as Ex 1 (بَلَغَ، عَبَدَ، ذَكَرَ، رَزَقَ).",
+      "pdfExtractionWarning": "PDF extraction shows 'اِسْمُ الْفَاعِل' as column headers and 'بَالِغ، عَابِد، ذَاكِر، رَازِق' (اِسْمُ الْفَاعِل forms) in the given row — this is a known RTL table extraction error. The actual book table has اِسْمُ الْمَفْعُوْل headers and مَبْلُوغ، مَعْبُود، مَذْكُور، مَرْزُوق as the given الْمُفْرَد row. All items flagged unclear — verify against book.",
+      "givenRow": {
+        "sigha": "الْمُفْرَد",
+        "verb1": "مَبْلُوغ",
+        "verb2": "مَعْبُود",
+        "verb3": "مَذْكُور",
+        "verb4": "مَرْزُوق",
+        "unclear": true
+      },
+      "items": [
+        {
+          "number": 1,
+          "sigha": "الْمُثَنَّى",
+          "answer": {
+            "مَبْلُوغ": "مَبْلُوغَان",
+            "مَعْبُود": "مَعْبُودَان",
+            "مَذْكُور": "مَذْكُورَان",
+            "مَرْزُوق": "مَرْزُوقَان"
+          },
+          "unclear": true
+        },
+        {
+          "number": 2,
+          "sigha": "جَمْع الْمُذَكَّر",
+          "answer": {
+            "مَبْلُوغ": "مَبْلُوغُوْن",
+            "مَعْبُود": "مَعْبُودُوْن",
+            "مَذْكُور": "مَذْكُورُوْن",
+            "مَرْزُوق": "مَرْزُوقُوْن"
+          },
+          "unclear": true
+        },
+        {
+          "number": 3,
+          "sigha": "الْمُفْرَدَة",
+          "answer": {
+            "مَبْلُوغ": "مَبْلُوغَة",
+            "مَعْبُود": "مَعْبُودَة",
+            "مَذْكُور": "مَذْكُورَة",
+            "مَرْزُوق": "مَرْزُوقَة"
+          },
+          "unclear": true
+        },
+        {
+          "number": 4,
+          "sigha": "الْمُثَنَّاة",
+          "answer": {
+            "مَبْلُوغ": "مَبْلُوغَتَان",
+            "مَعْبُود": "مَعْبُودَتَان",
+            "مَذْكُور": "مَذْكُورَتَان",
+            "مَرْزُوق": "مَرْزُوقَتَان"
+          },
+          "unclear": true
+        },
+        {
+          "number": 5,
+          "sigha": "جَمْع الْمُؤَنَّث",
+          "answer": {
+            "مَبْلُوغ": "مَبْلُوغَات",
+            "مَعْبُود": "مَعْبُودَات",
+            "مَذْكُور": "مَذْكُورَات",
+            "مَرْزُوق": "مَرْزُوقَات"
+          },
+          "unclear": true
+        }
+      ],
+      "unclear": true,
+      "unclearNote": "Entire exercise flagged unclear due to PDF table extraction error on column headers and given row. Answers are computed correctly from the مَفْعُوْل pattern applied to بَلَغَ، عَبَدَ، ذَكَرَ، رَزَقَ. Verify given row (الْمُفْرَد) against book."
+    },
+    {
+      "id": "u1-p8-ex5",
+      "exerciseNumber": 5,
+      "page": 69,
+      "unit": 1,
+      "part": "Part 8: اِسْمُ الْمَفْعُوْل",
+      "instructionText": "Translate the verbs below into English and write the صِيْغَة.",
+      "exerciseType": "translate-arabic-to-english",
+      "note": "All items are اِسْمُ الْمَفْعُوْل (passive participle). Translation: 'one who is …-ed', 'those who are …-ed', or used verbally as 'is being …-ed / going to be …-ed'.",
+      "items": [
+        {
+          "number": 1,
+          "arabic": "مَنْصُور",
+          "answer": { "english": "One who is helped (m/s) / helped", "sigha": "الْمُفْرَد", "root": "نَصَرَ" },
+          "unclear": false
+        },
+        {
+          "number": 2,
+          "arabic": "مَتْرُوْكَان",
+          "answer": { "english": "Those who are left / abandoned (m/d)", "sigha": "الْمُثَنَّى الْمُذَكَّر", "root": "تَرَكَ" },
+          "unclear": false
+        },
+        {
+          "number": 3,
+          "arabic": "مَحْشُورَتَان",
+          "answer": { "english": "Those who are gathered (f/d)", "sigha": "الْمُثَنَّاة", "root": "حَشَرَ" },
+          "unclear": true,
+          "unclearNote": "PDF shows تَان مَحْشُوْر (garbled RTL). Reconstructed as مَحْشُورَتَان."
+        },
+        {
+          "number": 4,
+          "arabic": "مَحْكُوْمَة",
+          "answer": { "english": "One who is judged (f/s)", "sigha": "الْمُفْرَدَة", "root": "حَكَمَ" },
+          "unclear": false
+        },
+        {
+          "number": 5,
+          "arabic": "مَغْفُوْرُوْن",
+          "answer": { "english": "Those who are forgiven (m/p)", "sigha": "جَمْع الْمُذَكَّر", "root": "غَفَرَ" },
+          "unclear": false
+        },
+        {
+          "number": 6,
+          "arabic": "مَكْذُوْبَات",
+          "answer": { "english": "Those who are lied to (f/p)", "sigha": "جَمْع الْمُؤَنَّث", "root": "كَذَبَ" },
+          "unclear": false
+        },
+        {
+          "number": 7,
+          "arabic": "مَمْلُوْكَتَان",
+          "answer": { "english": "Those which are owned (f/d)", "sigha": "الْمُثَنَّاة", "root": "مَلَكَ" },
+          "unclear": false
+        },
+        {
+          "number": 8,
+          "arabic": "مَضْرُوْبَان",
+          "answer": { "english": "Those who are hit (m/d)", "sigha": "الْمُثَنَّى الْمُذَكَّر", "root": "ضَرَبَ" },
+          "unclear": false
+        },
+        {
+          "number": 9,
+          "arabic": "مَظْلُوْمُوْن",
+          "answer": { "english": "Those who are oppressed (m/p)", "sigha": "جَمْع الْمُذَكَّر", "root": "ظَلَمَ" },
+          "unclear": true,
+          "unclearNote": "PDF shows ظْلُوْمُوْن م (garbled). Reconstructed as مَظْلُوْمُوْن."
+        },
+        {
+          "number": 10,
+          "arabic": "مَعْرُوْف",
+          "answer": { "english": "One who is recognised (m/s) / known", "sigha": "الْمُفْرَد", "root": "عَرَفَ" },
+          "unclear": false
+        },
+        {
+          "number": 11,
+          "arabic": "مَعْقُوْلَات",
+          "answer": { "english": "Those which are understood (f/p)", "sigha": "جَمْع الْمُؤَنَّث", "root": "عَقَلَ" },
+          "unclear": true,
+          "unclearNote": "PDF shows مَعْقُوْلَت (missing final alif). Reconstructed as مَعْقُوْلَات."
+        },
+        {
+          "number": 12,
+          "arabic": "مَسْمُوْع",
+          "answer": { "english": "One who is heard (m/s) / heard", "sigha": "الْمُفْرَد", "root": "سَمِعَ" },
+          "unclear": false
+        },
+        {
+          "number": 13,
+          "arabic": "مَحْفُوْظَة",
+          "answer": { "english": "One who is protected / guarded (f/s)", "sigha": "الْمُفْرَدَة", "root": "حَفِظَ" },
+          "unclear": false
+        },
+        {
+          "number": 14,
+          "arabic": "مَرْحُوْمَتَان",
+          "answer": { "english": "Those who are shown mercy (f/d)", "sigha": "الْمُثَنَّاة", "root": "رَحِمَ" },
+          "unclear": false
+        },
+        {
+          "number": 15,
+          "arabic": "مَبْعُوْثُوْن",
+          "answer": { "english": "Those who are sent / resurrected (m/p)", "sigha": "جَمْع الْمُذَكَّر", "root": "بَعَثَ" },
+          "unclear": true,
+          "unclearNote": "PDF shows بْعُوْثُوْن م (garbled). Reconstructed as مَبْعُوْثُوْن."
+        },
+        {
+          "number": 16,
+          "arabic": "مَرْفُوْعَات",
+          "answer": { "english": "Those who are elevated (f/p)", "sigha": "جَمْع الْمُؤَنَّث", "root": "رَفَعَ" },
+          "unclear": false
+        },
+        {
+          "number": 17,
+          "arabic": "مَبْعُوْث",
+          "answer": { "english": "One who is sent / resurrected (m/s)", "sigha": "الْمُفْرَد", "root": "بَعَثَ" },
+          "unclear": false
+        },
+        {
+          "number": 18,
+          "arabic": "مَسْئُوْلُوْن",
+          "answer": { "english": "Those who are asked (m/p)", "sigha": "جَمْع الْمُذَكَّر", "root": "سَأَلَ" },
+          "unclear": false
+        },
+        {
+          "number": 19,
+          "arabic": "مَسْحُوْر",
+          "answer": { "english": "One who is bewitched (m/s) / bewitched", "sigha": "الْمُفْرَد", "root": "سَحَرَ" },
+          "unclear": false
+        },
+        {
+          "number": 20,
+          "arabic": "مَلْعُوْنَان",
+          "answer": { "english": "Those who are cursed (m/d)", "sigha": "الْمُثَنَّى الْمُذَكَّر", "root": "لَعَنَ" },
+          "unclear": false
+        }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p8-ex6",
+      "exerciseNumber": 6,
+      "page": 69,
+      "unit": 1,
+      "part": "Part 8: اِسْمُ الْمَفْعُوْل",
+      "instructionText": "Translate the verbs below into Arabic and write the صِيْغَة.",
+      "exerciseType": "translate-english-to-arabic",
+      "note": "All answers are اِسْمُ الْمَفْعُوْل (مَفْعُوْل pattern). 'Going to be asked' uses the verbal meaning of اِسْمُ الْمَفْعُوْل (near future with passive sense).",
+      "items": [
+        {
+          "number": 1,
+          "english": "Heard (f/d)",
+          "answer": { "arabic": "مَسْمُوْعَتَان", "sigha": "الْمُثَنَّاة", "root": "سَمِعَ" },
+          "unclear": false
+        },
+        {
+          "number": 2,
+          "english": "Read (m/s)",
+          "answer": { "arabic": "مَقْرُوء", "sigha": "الْمُفْرَد", "root": "قَرَأَ" },
+          "unclear": false
+        },
+        {
+          "number": 3,
+          "english": "Lifted (f/s)",
+          "answer": { "arabic": "مَرْفُوْعَة", "sigha": "الْمُفْرَدَة", "root": "رَفَعَ" },
+          "unclear": false
+        },
+        {
+          "number": 4,
+          "english": "Known (f/d)",
+          "answer": { "arabic": "مَعْلُوْمَتَان", "sigha": "الْمُثَنَّاة", "root": "عَلِمَ" },
+          "unclear": false
+        },
+        {
+          "number": 5,
+          "english": "Cursed (m/d)",
+          "answer": { "arabic": "مَلْعُوْنَان", "sigha": "الْمُثَنَّى الْمُذَكَّر", "root": "لَعَنَ" },
+          "unclear": false
+        },
+        {
+          "number": 6,
+          "english": "Bewitched (f/s)",
+          "answer": { "arabic": "مَسْحُوْرَة", "sigha": "الْمُفْرَدَة", "root": "سَحَرَ" },
+          "unclear": false
+        },
+        {
+          "number": 7,
+          "english": "Protected (f/p)",
+          "answer": { "arabic": "مَحْفُوْظَات", "sigha": "جَمْع الْمُؤَنَّث", "root": "حَفِظَ" },
+          "unclear": false
+        },
+        {
+          "number": 8,
+          "english": "Disliked (m/s)",
+          "answer": { "arabic": "مَكْرُوْه", "sigha": "الْمُفْرَد", "root": "كَرِهَ" },
+          "unclear": false
+        },
+        {
+          "number": 9,
+          "english": "Ridden (m/d)",
+          "answer": { "arabic": "مَرْكُوبَان", "sigha": "الْمُثَنَّى الْمُذَكَّر", "root": "رَكِبَ" },
+          "unclear": false
+        },
+        {
+          "number": 10,
+          "english": "Understood (m/p)",
+          "answer": { "arabic": "مَعْقُوْلُوْن", "sigha": "جَمْع الْمُذَكَّر", "root": "عَقَلَ" },
+          "unclear": false
+        },
+        {
+          "number": 11,
+          "english": "Going to be asked (m/p)",
+          "answer": {
+            "arabic": "مَسْئُوْلُوْن",
+            "sigha": "جَمْع الْمُذَكَّر",
+            "root": "سَأَلَ",
+            "note": "Uses verbal meaning of اِسْمُ الْمَفْعُوْل — near future passive."
+          },
+          "unclear": false
+        },
+        {
+          "number": 12,
+          "english": "One who is hit (m/s)",
+          "answer": { "arabic": "مَضْرُوْب", "sigha": "الْمُفْرَد", "root": "ضَرَبَ" },
+          "unclear": false
+        },
+        {
+          "number": 13,
+          "english": "Those who are lied to (f/p)",
+          "answer": { "arabic": "مَكْذُوْبَات", "sigha": "جَمْع الْمُؤَنَّث", "root": "كَذَبَ" },
+          "unclear": false
+        },
+        {
+          "number": 14,
+          "english": "That which is done (f/s)",
+          "answer": { "arabic": "مَعْمُوْلَة", "sigha": "الْمُفْرَدَة", "root": "عَمِلَ" },
+          "unclear": false
+        },
+        {
+          "number": 15,
+          "english": "One who is shown mercy (f/s)",
+          "answer": { "arabic": "مَرْحُوْمَة", "sigha": "الْمُفْرَدَة", "root": "رَحِمَ" },
+          "unclear": false
+        },
+        {
+          "number": 16,
+          "english": "Those who are witnessed (m/p)",
+          "answer": { "arabic": "مَشْهُوْدُوْن", "sigha": "جَمْع الْمُذَكَّر", "root": "شَهِدَ" },
+          "unclear": false
+        },
+        {
+          "number": 17,
+          "english": "Those who are oppressed (f/d)",
+          "answer": { "arabic": "مَظْلُوْمَتَان", "sigha": "الْمُثَنَّاة", "root": "ظَلَمَ" },
+          "unclear": false
+        },
+        {
+          "number": 18,
+          "english": "Those who are recognised (m/d)",
+          "answer": { "arabic": "مَعْرُوفَان", "sigha": "الْمُثَنَّى الْمُذَكَّر", "root": "عَرَفَ" },
+          "unclear": false
+        }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p9-ex1",
+      "exerciseNumber": 1,
+      "page": 70,
+      "unit": 1,
+      "part": "Part 9: التَّصْرِيفُ الصَّغِيْر",
+      "instructionText": "Fill in the table below by completing the تَصْرِيف صَغِيْر of the following مَصْدَر.",
+      "exerciseType": "fill-tasrif-saghir",
+      "note": "The مَصْدَر is given (column 3 / column 6). Students fill the remaining 8 columns. Table columns right-to-left: (1) الْمَاضِي الْمَعْلُوْم | (2) الْمُضَارِع الْمَعْلُوْم | (3) الْمَصْدَر | (4) الْمَاضِي الْمَجْهُوْل | (5) الْمُضَارِع الْمَجْهُوْل | (6) الْمَصْدَر | (7) الْأَمْر | (8) النَّهْي | (9) اِسْمُ الْفَاعِل | (10) اِسْمُ الْمَفْعُوْل. بَاب كَرُم has no مجهول and no اِسْمُ الْمَفْعُوْل; اِسْمُ الْفَاعِل follows a different pattern (e.g. كَبِير). The given مَصَادِر identify both the verb and its بَاب.",
+      "referenceTable": {
+        "note": "Completed example rows from page 70 (for reference)",
+        "rows": [
+          { "madi_maloom": "فَتَحَ", "mudari_maloom": "يَفْتَح", "masdar": "فَتْحًا", "madi_majhool": "فُتِح", "mudari_majhool": "يُفْتَح", "amr": "اِفْتَح", "nahy": "لَا تَفْتَح", "ism_fail": "فَاتِح", "ism_mafool": "مَفْتُوْح" },
+          { "madi_maloom": "سَمِع", "mudari_maloom": "يَسْمَع", "masdar": "سَمْعًا", "madi_majhool": "سُمِع", "mudari_majhool": "يُسْمَع", "amr": "اِسْمَع", "nahy": "لَا تَسْمَع", "ism_fail": "سَامِع", "ism_mafool": "مَسْمُوْع" },
+          { "madi_maloom": "ضَرَب", "mudari_maloom": "يَضْرِب", "masdar": "ضَرْبًا", "madi_majhool": "ضُرِب", "mudari_majhool": "يُضْرَب", "amr": "اِضْرِب", "nahy": "لَا تَضْرِب", "ism_fail": "ضَارِب", "ism_mafool": "مَضْرُوْب" },
+          { "madi_maloom": "نَصَر", "mudari_maloom": "يَنْصُر", "masdar": "نَصْرًا", "madi_majhool": "نُصِر", "mudari_majhool": "يُنْصَر", "amr": "اُنْصُر", "nahy": "لَا تَنْصُر", "ism_fail": "نَاصِر", "ism_mafool": "مَنْصُور" },
+          { "madi_maloom": "كَرُم", "mudari_maloom": "يَكْرُم", "masdar": "كَرَامَةً", "madi_majhool": "—", "mudari_majhool": "—", "amr": "اُكْرُم", "nahy": "لَا تَكْرُم", "ism_fail": "كَرِيْم", "ism_mafool": "—" },
+          { "madi_maloom": "حَسِب", "mudari_maloom": "يَحْسِب", "masdar": "حِسْبَانًا", "madi_majhool": "حُسِب", "mudari_majhool": "يُحْسَب", "amr": "اِحْسِب", "nahy": "لَا تَحْسِب", "ism_fail": "حَاسِب", "ism_mafool": "مَحْسُوْب" }
+        ]
+      },
+      "items": [
+        {
+          "number": 1,
+          "masdar": "بَعْثًا",
+          "bab": "بَاب فَتَح يَفْتَح",
+          "answer": {
+            "madiMaloom": "بَعَثَ",
+            "mudariMaloom": "يَبْعَثُ",
+            "masdar": "بَعْثًا",
+            "madiMajhool": "بُعِثَ",
+            "mudariMajhool": "يُبْعَثُ",
+            "amr": "اِبْعَثْ",
+            "nahy": "لَا تَبْعَثْ",
+            "ismFail": "بَاعِث",
+            "ismMafool": "مَبْعُوْث"
+          },
+          "unclear": false
+        },
+        {
+          "number": 2,
+          "masdar": "رَحْمَةً",
+          "bab": "بَاب سَمِع يَسْمَع",
+          "answer": {
+            "madiMaloom": "رَحِمَ",
+            "mudariMaloom": "يَرْحَمُ",
+            "masdar": "رَحْمَةً",
+            "madiMajhool": "رُحِمَ",
+            "mudariMajhool": "يُرْحَمُ",
+            "amr": "اِرْحَمْ",
+            "nahy": "لَا تَرْحَمْ",
+            "ismFail": "رَاحِم",
+            "ismMafool": "مَرْحُوْم"
+          },
+          "unclear": false
+        },
+        {
+          "number": 3,
+          "masdar": "صَبْرًا",
+          "bab": "بَاب ضَرَب يَضْرِب",
+          "answer": {
+            "madiMaloom": "صَبَرَ",
+            "mudariMaloom": "يَصْبِرُ",
+            "masdar": "صَبْرًا",
+            "madiMajhool": "صُبِرَ",
+            "mudariMajhool": "يُصْبَرُ",
+            "amr": "اِصْبِرْ",
+            "nahy": "لَا تَصْبِرْ",
+            "ismFail": "صَابِر",
+            "ismMafool": "مَصْبُور"
+          },
+          "unclear": false
+        },
+        {
+          "number": 4,
+          "masdar": "تَرْكًا",
+          "bab": "بَاب نَصَر يَنْصُر",
+          "answer": {
+            "madiMaloom": "تَرَكَ",
+            "mudariMaloom": "يَتْرُكُ",
+            "masdar": "تَرْكًا",
+            "madiMajhool": "تُرِكَ",
+            "mudariMajhool": "يُتْرَكُ",
+            "amr": "اُتْرُكْ",
+            "nahy": "لَا تَتْرُكْ",
+            "ismFail": "تَارِك",
+            "ismMafool": "مَتْرُوْك"
+          },
+          "unclear": false
+        },
+        {
+          "number": 5,
+          "masdar": "كِبَرًا",
+          "bab": "بَاب كَرُم يَكْرُم",
+          "answer": {
+            "madiMaloom": "كَبُرَ",
+            "mudariMaloom": "يَكْبُرُ",
+            "masdar": "كِبَرًا",
+            "madiMajhool": "—",
+            "mudariMajhool": "—",
+            "amr": "اُكْبُرْ",
+            "nahy": "لَا تَكْبُرْ",
+            "ismFail": "كَبِير",
+            "ismMafool": "—",
+            "note": "بَاب كَرُم has no مجهول form and no standard اِسْمُ الْمَفْعُوْل. اِسْمُ الْفَاعِل follows the كَرِيْم pattern (فَعِيْل), not فَاعِل."
+          },
+          "unclear": false
+        }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p10-ex1",
+      "exerciseNumber": 1,
+      "page": 71,
+      "unit": 1,
+      "part": "Part 10: التَّصْرِيفُ الْكَبِيْر",
+      "instructionText": "Practice the تَصْرِيف كَبِيْر with two verbs from each بَاب.",
+      "exerciseType": "verbal-practice",
+      "note": "No written table to fill. Students choose any two vocabulary verbs from each of the 6 أَبْوَاب and orally produce the full 14-sigha conjugation across all columns. The complete تَصْرِيف كَبِيْر table is shown on page 71 using فَتَحَ as the example, with 8 columns: الْمَاضِي الْمَعْلُوْم | الْمُضَارِع الْمَعْلُوْم | الْمَاضِي الْمَجْهُوْل | الْمُضَارِع الْمَجْهُوْل | الْأَمْر | النَّهْي | اِسْمُ الْفَاعِل | اِسْمُ الْمَفْعُوْل.",
+      "referenceTable": {
+        "note": "Full تَصْرِيف كَبِيْر for فَتَحَ as shown on page 71 (14 sigha rows × 8 columns). Only الْمُخَاطَب-through-الْمُتَكَلِّمُوْن rows include أَمْر، نَهْي، اِسْمُ الْفَاعِل، اِسْمُ الْمَفْعُوْل per the layout shown.",
+        "exampleVerb": "فَتَحَ يَفْتَح فَتْحًا"
+      },
+      "items": [],
+      "unclear": false
+    }
+  ]
+}

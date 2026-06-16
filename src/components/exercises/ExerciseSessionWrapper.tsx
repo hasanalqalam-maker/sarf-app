@@ -4,20 +4,32 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 interface Props {
-  gameId: string;
+  exerciseId: string;
   title: string;
+  page: number;
   score: number;
   total: number;
   completed: boolean;
+  pendingReview: number;
   onRetry: () => void;
   backHref?: string;
   children: React.ReactNode;
 }
 
-export default function GameSessionWrapper({ gameId, title, score, total, completed, onRetry, backHref = '/exercises/unit-1', children }: Props) {
+export default function ExerciseSessionWrapper({
+  title,
+  page,
+  score,
+  total,
+  completed,
+  pendingReview,
+  onRetry,
+  backHref = '/exercises/unit-1',
+  children,
+}: Props) {
   const router = useRouter();
   const pct = total > 0 ? Math.round((score / total) * 100) : 0;
-  const passed = pct >= 80;
+  const passed = pct >= 70;
 
   if (completed) {
     return (
@@ -28,20 +40,28 @@ export default function GameSessionWrapper({ gameId, title, score, total, comple
           </div>
           <h2 className="font-heading text-2xl text-ink mb-1">{passed ? 'Well done!' : 'Keep practising'}</h2>
           <p className="text-ink-muted font-sans text-sm mb-2">{title}</p>
-          <p className={`font-heading text-4xl mb-6 ${passed ? 'text-teal' : 'text-gold'}`}>{pct}%</p>
-          <p className="text-ink-muted font-sans text-xs mb-8">
-            {score} / {total} correct{pct >= 80 ? ' — game marked as completed' : ' — score 80% or above to complete'}
+          <p className={`font-heading text-4xl mb-2 ${passed ? 'text-teal' : 'text-gold'}`}>{pct}%</p>
+          <p className="text-ink-muted font-sans text-xs mb-1">
+            {score} / {total} correct{passed ? ' — exercise completed' : ' — score 70% or above to complete'}
           </p>
+          {pendingReview > 0 && (
+            <p className="text-ink-muted font-sans text-xs mb-6 italic">
+              {pendingReview} item{pendingReview > 1 ? 's' : ''} pending review (skipped)
+            </p>
+          )}
+          {!pendingReview && <div className="mb-6" />}
           <div className="flex gap-3">
-            <button
-              onClick={onRetry}
-              className="flex-1 py-3 rounded-lg border border-gold/30 text-sm font-sans font-medium text-ink hover:bg-gold/5 transition-colors"
-            >
-              Try again
-            </button>
+            {!passed && (
+              <button
+                onClick={onRetry}
+                className="flex-1 py-3 rounded-xl border border-gold/30 text-sm font-sans font-medium text-ink hover:bg-gold/5 transition-colors"
+              >
+                Try again
+              </button>
+            )}
             <Link
               href={backHref}
-              className="flex-1 py-3 rounded-lg bg-teal text-parchment text-sm font-sans font-medium text-center hover:bg-teal-dark transition-colors"
+              className="flex-1 py-3 rounded-xl bg-teal text-parchment text-sm font-sans font-medium text-center hover:bg-teal-dark transition-colors"
             >
               Back to hub
             </Link>
@@ -65,7 +85,10 @@ export default function GameSessionWrapper({ gameId, title, score, total, comple
           </svg>
         </button>
         <div className="flex-1 min-w-0">
-          <p className="font-sans font-medium text-sm text-ink truncate">{title}</p>
+          <div className="flex items-center gap-2 min-w-0">
+            <p className="font-sans font-medium text-sm text-ink truncate flex-1">{title}</p>
+            <span className="shrink-0 text-[10px] font-sans text-ink-muted bg-parchment-darker px-2 py-0.5 rounded-full">p.{page}</span>
+          </div>
           {total > 0 && (
             <div className="mt-1 h-1.5 bg-parchment-darker rounded-full overflow-hidden">
               <div
@@ -82,7 +105,7 @@ export default function GameSessionWrapper({ gameId, title, score, total, comple
         )}
       </div>
 
-      {/* Game content */}
+      {/* Content */}
       <div className="flex-1 overflow-y-auto">
         {children}
       </div>

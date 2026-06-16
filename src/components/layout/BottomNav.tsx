@@ -15,8 +15,8 @@ const NAV_ITEMS = [
     ),
   },
   {
-    href: '/sarf-map',
-    label: 'Sarf Map',
+    href: '/progress',
+    label: 'Progress',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} className="w-5 h-5">
         <rect x="3" y="3" width="7" height="7" strokeLinecap="round" strokeLinejoin="round" />
@@ -27,12 +27,13 @@ const NAV_ITEMS = [
     ),
   },
   {
-    href: '/games',
-    label: 'Games',
+    href: '/exercises',
+    label: 'Exercises',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} className="w-5 h-5">
-        <rect x="2" y="6" width="20" height="12" rx="2" strokeLinecap="round" strokeLinejoin="round" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M6 12h4m-2-2v4M15 11h.01M18 13h.01" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" />
+        <rect x="9" y="3" width="6" height="4" rx="1" strokeLinecap="round" strokeLinejoin="round" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6M9 16h4" />
       </svg>
     ),
   },

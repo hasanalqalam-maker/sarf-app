@@ -15,7 +15,7 @@ export default function Unit2GamesPage() {
     <div className="px-4 py-8 max-w-2xl lg:max-w-3xl">
       {/* Header */}
       <nav className="flex items-center gap-2 text-sm font-sans text-ink-muted mb-6">
-        <Link href="/games" className="hover:text-teal transition-colors">Games</Link>
+        <Link href="/exercises" className="hover:text-teal transition-colors">Exercises</Link>
         <span className="text-gold/40">›</span>
         <span className="text-ink">Unit 2</span>
       </nav>

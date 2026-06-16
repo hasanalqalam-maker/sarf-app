@@ -1,0 +1,1113 @@
+{
+  "unit": 1,
+  "parts": ["Part 5: إِعْرَابُ الْفِعْل", "Part 6: نَفْيُ الْفِعْل", "Part 7: الْأَمْر والنَّهْي"],
+  "pdfPages": "51-64",
+  "exercises": [
+    {
+      "id": "u1-p5-ex1",
+      "exerciseNumber": 1,
+      "page": 56,
+      "unit": 1,
+      "part": "Part 5: إِعْرَابُ الْفِعْل",
+      "instructionText": "State the صِيْغَة and the grammatical state of the following verbs.",
+      "exerciseType": "identify-sigha-and-irab",
+      "example": {
+        "arabic": "لَمْ نَذْهَبْ",
+        "answer": { "sigha": "الْمُتَكَلِّمُوْن", "irab": "مَجْزُوْم", "tense": "مضارع" }
+      },
+      "note": "All items are مضارع. Each must be identified by: (1) صِيْغَة, (2) grammatical state (مَرْفُوْع / مَنْصُوْب / مَجْزُوْم). الغَائِبَات and الْمُخَاطَبَات are مَبْنِي and do not change. Items with لَمْ → مَجْزُوْم; with لَنْ → مَنْصُوْب; with لَ (نَفْي) → مَرْفُوْع; bare → مَرْفُوْع.",
+      "items": [
+        {
+          "number": 1,
+          "arabic": "لَمْ أَذْهَبْ",
+          "answer": { "sigha": "الْمُتَكَلِّم", "irab": "مَجْزُوْم", "particle": "لَمْ" },
+          "unclear": false
+        },
+        {
+          "number": 2,
+          "arabic": "لَنْ يَعْقِلْنَ",
+          "answer": { "sigha": "الْغَائِبَات", "irab": "مَبْنِي (لا تتغير)", "particle": "لَنْ" },
+          "unclear": true,
+          "unclearNote": "PDF shows عْقِلْن ي لَن (garbled RTL). Reconstructed as لَنْ يَعْقِلْنَ (الْغَائِبَات — مَبْنِي)."
+        },
+        {
+          "number": 3,
+          "arabic": "لَمْ تَرْزُقَا",
+          "answer": { "sigha": "الْغَائِبَتَان أَو الْمُخَاطَبَان أَو الْمُخَاطَبَتَان", "irab": "مَجْزُوْم (نُوْن الإِعْرَاب حُذِفَت)", "particle": "لَمْ" },
+          "unclear": false,
+          "note": "تَفْعَلَا is shared by three sighas; all three are valid answers."
+        },
+        {
+          "number": 4,
+          "arabic": "تَنْفَعْنَ",
+          "answer": { "sigha": "الْمُخَاطَبَات", "irab": "مَبْنِي (لا تتغير)", "particle": null },
+          "unclear": false
+        },
+        {
+          "number": 5,
+          "arabic": "لَنْ تَكْذِبَ",
+          "answer": { "sigha": "الْغَائِبَة أَو الْمُخَاطَب", "irab": "مَنْصُوْب (لَمُ الْكَلِمَة فتحة)", "particle": "لَنْ" },
+          "unclear": false,
+          "note": "Ambiguous: تَفْعَلَ is shared by الْغَائِبَة and الْمُخَاطَب."
+        },
+        {
+          "number": 6,
+          "arabic": "لَمْ تَخْرُجْ",
+          "answer": { "sigha": "الْغَائِبَة أَو الْمُخَاطَب", "irab": "مَجْزُوْم (لَمُ الْكَلِمَة سُكُون)", "particle": "لَمْ" },
+          "unclear": false,
+          "note": "Ambiguous form."
+        },
+        {
+          "number": 7,
+          "arabic": "لَمْ تَجْعَلَ",
+          "answer": { "sigha": "الْغَائِبَة أَو الْمُخَاطَب", "irab": "مَجْزُوْم", "particle": "لَمْ" },
+          "unclear": true,
+          "unclearNote": "PDF shows تَجْعَل َ لَم — the fatha on ل may indicate مَنْصُوْب or may be a PDF artefact. Reconstructed as لَمْ تَجْعَلْ (مَجْزُوْم, sukoon). Verify against book."
+        },
+        {
+          "number": 8,
+          "arabic": "تَكْسِبَان",
+          "answer": { "sigha": "الْغَائِبَتَان أَو الْمُخَاطَبَان أَو الْمُخَاطَبَتَان", "irab": "مَرْفُوْع (نُوْن الإِعْرَاب موجودة)", "particle": null },
+          "unclear": false,
+          "note": "Bare مُضَارِع with نُوْن الإِعْرَاب → مَرْفُوْع."
+        },
+        {
+          "number": 9,
+          "arabic": "لَنْ يَكْرُمُوا",
+          "answer": { "sigha": "الْغَائِبُوْن", "irab": "مَنْصُوْب (نُوْن الإِعْرَاب حُذِفَت)", "particle": "لَنْ" },
+          "unclear": true,
+          "unclearNote": "PDF shows يَّكْرُمُوْا لَن — the shadda on ي is a PDF artefact. Reconstructed as لَنْ يَكْرُمُوا."
+        },
+        {
+          "number": 10,
+          "arabic": "لَمْ تَلْبَثِي",
+          "answer": { "sigha": "الْمُخَاطَبَة", "irab": "مَجْزُوْم (نُوْن الإِعْرَاب حُذِفَت → تَلْبَثِي)", "particle": "لَمْ" },
+          "unclear": false
+        },
+        {
+          "number": 11,
+          "arabic": "نَكْثُرُ",
+          "answer": { "sigha": "الْمُتَكَلِّمُوْن", "irab": "مَرْفُوْع", "particle": null },
+          "unclear": false
+        },
+        {
+          "number": 12,
+          "arabic": "لَمْ يَحْرُمْ",
+          "answer": { "sigha": "الْغَائِب", "irab": "مَجْزُوْم", "particle": "لَمْ" },
+          "unclear": true,
+          "unclearNote": "PDF shows مَا حْر ي لَم (garbled). Reconstructed as لَمْ يَحْرُمْ (الْغَائِب)."
+        },
+        {
+          "number": 13,
+          "arabic": "تُرْحَمُوْن",
+          "answer": { "sigha": "الْمُخَاطَبُوْن مِن الْمُضَارِع الْمَجْهُوْل", "irab": "مَرْفُوْع", "particle": null },
+          "unclear": false,
+          "note": "مَجْهُوْل form — تُفْعَلُوْن pattern."
+        },
+        {
+          "number": 14,
+          "arabic": "لَمْ نَبْعُدْ",
+          "answer": { "sigha": "الْمُتَكَلِّمُوْن", "irab": "مَجْزُوْم", "particle": "لَمْ" },
+          "unclear": false
+        },
+        {
+          "number": 15,
+          "arabic": "لَمْ يَبْصُرْ",
+          "answer": { "sigha": "الْغَائِب", "irab": "مَجْزُوْم", "particle": "لَمْ" },
+          "unclear": false
+        }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p6-ex1",
+      "exerciseNumber": 1,
+      "page": 57,
+      "unit": 1,
+      "part": "Part 6: نَفْيُ الْفِعْل",
+      "instructionText": "Make the following verbs negative and then translate.",
+      "exerciseType": "negate-and-translate",
+      "note": "All items are ماضي. Negative particle for ماضي is مَا. Students prefix مَا and translate the resulting negative sentence.",
+      "items": [
+        {
+          "number": 1,
+          "arabic": "بَعَثْتُنَّ",
+          "answer": { "negated": "مَا بَعَثْتُنَّ", "english": "You (f/p) did not send / resurrect", "sigha": "الْمُخَاطَبَات" },
+          "unclear": false
+        },
+        {
+          "number": 2,
+          "arabic": "جَعَلْتَ",
+          "answer": { "negated": "مَا جَعَلْتَ", "english": "You (m/s) did not make", "sigha": "الْمُخَاطَب" },
+          "unclear": true,
+          "unclearNote": "PDF shows جَعَلْت without clear fatha on ت. Reconstructed as جَعَلْتَ (الْمُخَاطَب)."
+        },
+        {
+          "number": 3,
+          "arabic": "ذَهَبْتُمْ",
+          "answer": { "negated": "مَا ذَهَبْتُمْ", "english": "You (m/p) did not go", "sigha": "الْمُخَاطَبُوْن" },
+          "unclear": false
+        },
+        {
+          "number": 4,
+          "arabic": "رَفَعْتُمَا",
+          "answer": { "negated": "مَا رَفَعْتُمَا", "english": "You (m/d or f/d) did not elevate", "sigha": "الْمُخَاطَبَان أَو الْمُخَاطَبَتَان" },
+          "unclear": true,
+          "unclearNote": "PDF shows عْتُمَا ف ر (garbled RTL). Reconstructed as رَفَعْتُمَا."
+        },
+        {
+          "number": 5,
+          "arabic": "رَكَعْتَ",
+          "answer": { "negated": "مَا رَكَعْتَ", "english": "You (m/s) did not bow", "sigha": "الْمُخَاطَب" },
+          "unclear": false
+        },
+        {
+          "number": 6,
+          "arabic": "سَأَلْنَ",
+          "answer": { "negated": "مَا سَأَلْنَ", "english": "They (f/p) did not ask", "sigha": "الْغَائِبَات" },
+          "unclear": true,
+          "unclearNote": "PDF shows لْن أ س (garbled). Reconstructed as سَأَلْنَ."
+        },
+        {
+          "number": 7,
+          "arabic": "سَحَرَتَا",
+          "answer": { "negated": "مَا سَحَرَتَا", "english": "They (f/d) did not bewitch", "sigha": "الْغَائِبَتَان" },
+          "unclear": false
+        },
+        {
+          "number": 8,
+          "arabic": "سَمِعْنَا",
+          "answer": { "negated": "مَا سَمِعْنَا", "english": "We did not hear / listen", "sigha": "الْمُتَكَلِّمُوْن" },
+          "unclear": false
+        },
+        {
+          "number": 9,
+          "arabic": "صَلَحَتْ",
+          "answer": { "negated": "مَا صَلَحَتْ", "english": "She did not act righteously", "sigha": "الْغَائِبَة" },
+          "unclear": false
+        },
+        {
+          "number": 10,
+          "arabic": "فَتَحْتُ",
+          "answer": { "negated": "مَا فَتَحْتُ", "english": "I did not open", "sigha": "الْمُتَكَلِّم" },
+          "unclear": false
+        },
+        {
+          "number": 11,
+          "arabic": "قَرَءُوا",
+          "answer": { "negated": "مَا قَرَءُوا", "english": "They (m/p) did not read", "sigha": "الْغَائِبُوْن" },
+          "unclear": true,
+          "unclearNote": "PDF shows وْا ؤ قَر (garbled). Reconstructed as قَرَءُوا."
+        },
+        {
+          "number": 12,
+          "arabic": "لَعَلْنَا",
+          "answer": { "negated": "مَا لَعَلْنَا", "english": "We did not curse", "sigha": "الْمُتَكَلِّمُوْن" },
+          "unclear": true,
+          "unclearNote": "PDF shows نَا ع ل (garbled). This appears to be لَعَنَّا → more likely لَعَنَّا or رَفَعْنَا. Given the vocabulary set and exercise context, reconstructed as لَعَنَّا but verify against book — the Arabic root is likely لَعَنَ (to curse)."
+        }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p6-ex2",
+      "exerciseNumber": 2,
+      "page": 58,
+      "unit": 1,
+      "part": "Part 6: نَفْيُ الْفِعْل",
+      "instructionText": "Translate the following. If there is more than one possible translation, mention all of them.",
+      "exerciseType": "translate-arabic-to-english",
+      "note": "All items are مضارع منفي. Particles: لَمْ (past negative, مجزوم), مَا (present negative, مرفوع), لَ (present/future negative, مرفوع), لَنْ (future emphatic negative, منصوب). Some forms are مجهول.",
+      "items": [
+        {
+          "number": 1,
+          "arabic": "لَمْ يَحْزَنْ",
+          "answer": {
+            "english": "He did not become grieved",
+            "sigha": "الْغَائِب مِن الْمُضَارِع الْمَجْزُوْم",
+            "particle": "لَمْ",
+            "irab": "مَجْزُوْم"
+          },
+          "unclear": false
+        },
+        {
+          "number": 2,
+          "arabic": "لَا يَرْكَبَان",
+          "answer": {
+            "english": "They (m/d) do not ride / are not riding / will not ride",
+            "sigha": "الْغَائِبَان مِن الْمُضَارِع الْمَرْفُوْع",
+            "particle": "لَا (نَفْي)",
+            "irab": "مَرْفُوْع",
+            "note": "لَا here is حَرْف نَفْي → مرفوع. The نُوْن الإِعْرَاب remains."
+          },
+          "unclear": false
+        },
+        {
+          "number": 3,
+          "arabic": "مَا يَحْزَنُوْن",
+          "answer": {
+            "english": "They (m/p) do not become grieved / are not becoming grieved",
+            "sigha": "الْغَائِبُوْن مِن الْمُضَارِع الْمَرْفُوْع",
+            "particle": "مَا",
+            "irab": "مَرْفُوْع"
+          },
+          "unclear": false
+        },
+        {
+          "number": 4,
+          "arabic": "لَنْ تَسْخَرَ",
+          "answer": {
+            "english": "She / You (m/s) will not ridicule (emphatic)",
+            "sigha": "الْغَائِبَة أَو الْمُخَاطَب مِن الْمُضَارِع الْمَنْصُوْب",
+            "particle": "لَنْ",
+            "irab": "مَنْصُوْب",
+            "note": "Ambiguous: تَفْعَلَ shared by الْغَائِبَة and الْمُخَاطَب."
+          },
+          "unclear": false
+        },
+        {
+          "number": 5,
+          "arabic": "لَا تَشْهَدَان",
+          "answer": {
+            "english": "They (f/d) / You (m/d) / You (f/d) do not bear witness / are not bearing witness / will not bear witness",
+            "sigha": "الْغَائِبَتَان أَو الْمُخَاطَبَان أَو الْمُخَاطَبَتَان مِن الْمُضَارِع الْمَرْفُوْع",
+            "particle": "لَا (نَفْي)",
+            "irab": "مَرْفُوْع",
+            "note": "Ambiguous: three sighas share تَفْعَلَان."
+          },
+          "unclear": false
+        },
+        {
+          "number": 6,
+          "arabic": "مَا يَلْبَثْنَ",
+          "answer": {
+            "english": "They (f/p) do not stay / remain  OR  are not staying / remaining",
+            "sigha": "الْغَائِبَات مِن الْمُضَارِع (مَبْنِي)",
+            "particle": "مَا",
+            "irab": "مَبْنِي"
+          },
+          "unclear": false
+        },
+        {
+          "number": 7,
+          "arabic": "لَمْ تُحْفَظُوا",
+          "answer": {
+            "english": "You (m/p) were not protected / guarded",
+            "sigha": "الْمُخَاطَبُوْن مِن الْمُضَارِع الْمَجْهُوْل الْمَجْزُوْم",
+            "particle": "لَمْ",
+            "irab": "مَجْزُوْم (نُوْن حُذِفَت)"
+          },
+          "unclear": false
+        },
+        {
+          "number": 8,
+          "arabic": "لَنْ تَعْلَمِي",
+          "answer": {
+            "english": "You (f/s) will not know (emphatic)",
+            "sigha": "الْمُخَاطَبَة مِن الْمُضَارِع الْمَنْصُوْب",
+            "particle": "لَنْ",
+            "irab": "مَنْصُوْب (نُوْن حُذِفَت)"
+          },
+          "unclear": false
+        },
+        {
+          "number": 9,
+          "arabic": "لَا تَعْمَلْنَ",
+          "answer": {
+            "english": "You (f/p) do not do / are not doing / will not do",
+            "sigha": "الْمُخَاطَبَات مِن الْمُضَارِع (مَبْنِي)",
+            "particle": "لَا (نَفْي)",
+            "irab": "مَبْنِي"
+          },
+          "unclear": false
+        },
+        {
+          "number": 10,
+          "arabic": "مَا نُرْحَمُ",
+          "answer": {
+            "english": "We are not shown mercy / We are not being shown mercy",
+            "sigha": "الْمُتَكَلِّمُوْن مِن الْمُضَارِع الْمَجْهُوْل الْمَرْفُوْع",
+            "particle": "مَا",
+            "irab": "مَرْفُوْع"
+          },
+          "unclear": false
+        },
+        {
+          "number": 11,
+          "arabic": "لَمْ يُكْرَهْ",
+          "answer": {
+            "english": "He was not disliked",
+            "sigha": "الْغَائِب مِن الْمُضَارِع الْمَجْهُوْل الْمَجْزُوْم",
+            "particle": "لَمْ",
+            "irab": "مَجْزُوْم"
+          },
+          "unclear": false
+        },
+        {
+          "number": 12,
+          "arabic": "لَا يُحْمَلَنَّ",
+          "answer": {
+            "english": "He / It will not be carried (emphatic — with نُوْن التَّوْكِيد)",
+            "sigha": "الْغَائِب مِن الْمُضَارِع الْمَجْهُوْل",
+            "particle": "لَا (نَفْي)",
+            "note": "This item contains نُوْن التَّوْكِيد الثَّقِيلَة which is not covered until Unit 12. Flag for teacher attention."
+          },
+          "unclear": true,
+          "unclearNote": "PDF shows ل َ يُحْمَلَن — not clear whether final letter is نُوْن التَّوْكِيد or نُوْن النِّسْوَة. Reconstructed as لَا يُحْمَلَنَّ based on context."
+        }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p6-ex3",
+      "exerciseNumber": 3,
+      "page": 59,
+      "unit": 1,
+      "part": "Part 6: نَفْيُ الْفِعْل",
+      "instructionText": "Make the following verbs negative by prefixing the حَرْفُ النَّفْي given in brackets. Adjust the irab of the verb where necessary.",
+      "exerciseType": "negate-with-particle",
+      "note": "Particle given in brackets. Where particle is لَمْ → verb becomes مجزوم (drop نُوْن الإِعْرَاب or add سُكُون). Where لَنْ → verb becomes منصوب (drop نُوْن الإِعْرَاب or add فتحة). Where مَا or لَا (نَفْي) → verb stays مرفوع. Some items are ماضي (مَا only).",
+      "items": [
+        {
+          "number": 1,
+          "arabic": "يَقْدِرَان",
+          "particle": "لَا",
+          "answer": { "negated": "لَا يَقْدِرَان", "irabChange": "مَرْفُوْع — no change (نُوْن الإِعْرَاب retained)", "english": "They (m/d) cannot / do not have power" },
+          "unclear": false
+        },
+        {
+          "number": 2,
+          "arabic": "صَبَرَ",
+          "particle": "مَا",
+          "answer": { "negated": "مَا صَبَرَ", "irabChange": "ماضي — no irab change", "english": "He did not bear with patience" },
+          "unclear": false
+        },
+        {
+          "number": 3,
+          "arabic": "يُضْرَبُوْن",
+          "particle": "لَنْ",
+          "answer": { "negated": "لَنْ يُضْرَبُوا", "irabChange": "مَنْصُوْب — نُوْن الإِعْرَاب حُذِفَت", "english": "They (m/p) will not be hit (emphatic)" },
+          "unclear": false
+        },
+        {
+          "number": 4,
+          "arabic": "كُذِبَتْ",
+          "particle": "مَا",
+          "answer": { "negated": "مَا كُذِبَتْ", "irabChange": "ماضي — no irab change", "english": "She was not lied to" },
+          "unclear": false
+        },
+        {
+          "number": 5,
+          "arabic": "ظُلِمَتَا",
+          "particle": "مَا",
+          "answer": { "negated": "مَا ظُلِمَتَا", "irabChange": "ماضي — no irab change", "english": "They (f/d) were not oppressed" },
+          "unclear": false
+        },
+        {
+          "number": 6,
+          "arabic": "يَعْرِفْنَ",
+          "particle": "لَمْ",
+          "answer": { "negated": "لَمْ يَعْرِفْنَ", "irabChange": "مَبْنِي — no change", "english": "They (f/p) did not recognise" },
+          "unclear": false
+        },
+        {
+          "number": 7,
+          "arabic": "تَكْسِبُ",
+          "particle": "مَا",
+          "answer": { "negated": "مَا تَكْسِبُ", "irabChange": "مَرْفُوْع — no change", "english": "She / You (m/s) does not earn / is not earning" },
+          "unclear": false
+        },
+        {
+          "number": 8,
+          "arabic": "تَمْلِكَان",
+          "particle": "لَنْ",
+          "answer": { "negated": "لَنْ تَمْلِكَا", "irabChange": "مَنْصُوْب — نُوْن الإِعْرَاب حُذِفَت", "english": "They (f/d) / You (m/d) / You (f/d) will not own (emphatic)" },
+          "unclear": false
+        },
+        {
+          "number": 9,
+          "arabic": "نُقْتَلُ",
+          "particle": "لَمْ",
+          "answer": { "negated": "لَمْ نُقْتَلْ", "irabChange": "مَجْزُوْم — سُكُون على لَمِ الكلمة", "english": "We were not killed" },
+          "unclear": false
+        },
+        {
+          "number": 10,
+          "arabic": "هَبَطْتُمْ",
+          "particle": "مَا",
+          "answer": { "negated": "مَا هَبَطْتُمْ", "irabChange": "ماضي — no irab change", "english": "You (m/p) did not descend" },
+          "unclear": true,
+          "unclearNote": "PDF shows هَبَطتُّم (extra shadda). Reconstructed as هَبَطْتُمْ."
+        },
+        {
+          "number": 11,
+          "arabic": "تُنْصَرِيْن",
+          "particle": "لَا",
+          "answer": { "negated": "لَا تُنْصَرِيْن", "irabChange": "مَرْفُوْع — no change (but نُوْن retained only in مرفوع; this form is already مجزوم-shaped — see note)", "english": "You (f/s) are not helped / will not be helped" },
+          "unclear": false,
+          "note": "لَا here is حَرْف نَفْي → مرفوع. تُنْصَرِيْن is already the مرفوع form of الْمُخَاطَبَة from الْمُضَارِع الْمَجْهُوْل."
+        },
+        {
+          "number": 12,
+          "arabic": "خَلَقْتُمَا",
+          "particle": "مَا",
+          "answer": { "negated": "مَا خَلَقْتُمَا", "irabChange": "ماضي — no irab change", "english": "You (m/d or f/d) did not create" },
+          "unclear": true,
+          "unclearNote": "PDF shows لَقْتُمَا خ (garbled). Reconstructed as خَلَقْتُمَا."
+        },
+        {
+          "number": 13,
+          "arabic": "تَعْبُدْنَ",
+          "particle": "لَا",
+          "answer": { "negated": "لَا تَعْبُدْنَ", "irabChange": "مَبْنِي — no change", "english": "You (f/p) do not worship / will not worship" },
+          "unclear": false
+        },
+        {
+          "number": 14,
+          "arabic": "أَدْخُلُ",
+          "particle": "لَنْ",
+          "answer": { "negated": "لَنْ أَدْخُلَ", "irabChange": "مَنْصُوْب — فتحة على لَمِ الكلمة", "english": "I will not enter (emphatic)" },
+          "unclear": false
+        },
+        {
+          "number": 15,
+          "arabic": "نَخْرُجُ",
+          "particle": "لَمْ",
+          "answer": { "negated": "لَمْ نَخْرُجْ", "irabChange": "مَجْزُوْم — سُكُون على لَمِ الكلمة", "english": "We did not come out" },
+          "unclear": false
+        }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p7-ex1",
+      "exerciseNumber": 1,
+      "page": 61,
+      "unit": 1,
+      "part": "Part 7: الْأَمْر والنَّهْي — الْأَمْر",
+      "instructionText": "Practice verbally conjugating the following verbs of الْأَمْر. Thereafter, fill in the table below.",
+      "exerciseType": "fill-table",
+      "note": "الْمُخَاطَب row is given with all five أَمْر verbs. Students fill الْمُخَاطَبَان, الْمُخَاطَبُوْن, الْمُخَاطَبَة, الْمُخَاطَبَتَان, الْمُخَاطَبَات rows. الْأَمْر only exists for مُخَاطَب sighas.",
+      "givenRow": {
+        "sigha": "الْمُخَاطَب",
+        "verb1": "اِفْتَحْ",
+        "verb2": "اِسْمَعْ",
+        "verb3": "اِضْرِبْ",
+        "verb4": "اُنْصُرْ",
+        "verb5": "اُكْرُمْ"
+      },
+      "items": [
+        {
+          "number": 1,
+          "sigha": "الْمُخَاطَبَان",
+          "answer": {
+            "اِفْتَحْ": "اِفْتَحَا",
+            "اِسْمَعْ": "اِسْمَعَا",
+            "اِضْرِبْ": "اِضْرِبَا",
+            "اُنْصُرْ": "اُنْصُرَا",
+            "اُكْرُمْ": "اُكْرُمَا"
+          },
+          "unclear": false
+        },
+        {
+          "number": 2,
+          "sigha": "الْمُخَاطَبُوْن",
+          "answer": {
+            "اِفْتَحْ": "اِفْتَحُوا",
+            "اِسْمَعْ": "اِسْمَعُوا",
+            "اِضْرِبْ": "اِضْرِبُوا",
+            "اُنْصُرْ": "اُنْصُرُوا",
+            "اُكْرُمْ": "اُكْرُمُوا"
+          },
+          "unclear": false
+        },
+        {
+          "number": 3,
+          "sigha": "الْمُخَاطَبَة",
+          "answer": {
+            "اِفْتَحْ": "اِفْتَحِي",
+            "اِسْمَعْ": "اِسْمَعِي",
+            "اِضْرِبْ": "اِضْرِبِي",
+            "اُنْصُرْ": "اُنْصُرِي",
+            "اُكْرُمْ": "اُكْرُمِي"
+          },
+          "unclear": false
+        },
+        {
+          "number": 4,
+          "sigha": "الْمُخَاطَبَتَان",
+          "answer": {
+            "اِفْتَحْ": "اِفْتَحَا",
+            "اِسْمَعْ": "اِسْمَعَا",
+            "اِضْرِبْ": "اِضْرِبَا",
+            "اُنْصُرْ": "اُنْصُرَا",
+            "اُكْرُمْ": "اُكْرُمَا"
+          },
+          "unclear": false
+        },
+        {
+          "number": 5,
+          "sigha": "الْمُخَاطَبَات",
+          "answer": {
+            "اِفْتَحْ": "اِفْتَحْنَ",
+            "اِسْمَعْ": "اِسْمَعْنَ",
+            "اِضْرِبْ": "اِضْرِبْنَ",
+            "اُنْصُرْ": "اُنْصُرْنَ",
+            "اُكْرُمْ": "اُكْرُمْنَ"
+          },
+          "unclear": false
+        }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p7-ex2",
+      "exerciseNumber": 2,
+      "page": 61,
+      "unit": 1,
+      "part": "Part 7: الْأَمْر والنَّهْي — الْأَمْر",
+      "instructionText": "Translate the verbs below into English and write the صِيْغَة.",
+      "exerciseType": "translate-arabic-to-english",
+      "note": "All items are أَمْر. Many are Quranic (marked with ﴿﴾). Translation = imperative English. Some items have prefixes (وَ، فَ) which are conjunctions — strip for translation but note them.",
+      "items": [
+        {
+          "number": 1,
+          "arabic": "أُنْصُرْنَ",
+          "answer": { "english": "Help! (f/p command)", "sigha": "الْمُخَاطَبَات مِن الْأَمْر" },
+          "unclear": false
+        },
+        {
+          "number": 2,
+          "arabic": "﴿وَاشْهَدُوا﴾",
+          "answer": { "english": "And bear witness! (m/p command)", "sigha": "الْمُخَاطَبُوْن مِن الْأَمْر" },
+          "unclear": false
+        },
+        {
+          "number": 3,
+          "arabic": "﴿وَاعْلَمْ﴾",
+          "answer": { "english": "And know! (m/s command)", "sigha": "الْمُخَاطَب مِن الْأَمْر" },
+          "unclear": false
+        },
+        {
+          "number": 4,
+          "arabic": "﴿ارْكَبُوا﴾",
+          "answer": { "english": "Ride! (m/p command)", "sigha": "الْمُخَاطَبُوْن مِن الْأَمْر" },
+          "unclear": false
+        },
+        {
+          "number": 5,
+          "arabic": "﴿فَاصْبِرُوا﴾",
+          "answer": { "english": "So bear patience! (m/p command)", "sigha": "الْمُخَاطَبُوْن مِن الْأَمْر" },
+          "unclear": false
+        },
+        {
+          "number": 6,
+          "arabic": "﴿وَاصْبِرْ﴾",
+          "answer": { "english": "And be patient! (m/s command)", "sigha": "الْمُخَاطَب مِن الْأَمْر" },
+          "unclear": false
+        },
+        {
+          "number": 7,
+          "arabic": "﴿احْفَظُوا﴾",
+          "answer": { "english": "Guard! (m/p command)", "sigha": "الْمُخَاطَبُوْن مِن الْأَمْر" },
+          "unclear": false
+        },
+        {
+          "number": 8,
+          "arabic": "﴿اذْهَبَا﴾",
+          "answer": { "english": "Go! (m/d or f/d command)", "sigha": "الْمُخَاطَبَان أَو الْمُخَاطَبَتَان مِن الْأَمْر" },
+          "unclear": false
+        },
+        {
+          "number": 9,
+          "arabic": "﴿اغْفِرْ﴾",
+          "answer": { "english": "Forgive! (m/s command)", "sigha": "الْمُخَاطَب مِن الْأَمْر" },
+          "unclear": false
+        },
+        {
+          "number": 10,
+          "arabic": "اُتْرُكْنَ",
+          "answer": { "english": "Leave! (f/p command)", "sigha": "الْمُخَاطَبَات مِن الْأَمْر" },
+          "unclear": false
+        },
+        {
+          "number": 11,
+          "arabic": "﴿وَارْكَعِي﴾",
+          "answer": { "english": "And bow! (f/s command)", "sigha": "الْمُخَاطَبَة مِن الْأَمْر" },
+          "unclear": false
+        },
+        {
+          "number": 12,
+          "arabic": "﴿وَاذْكُرْنَ﴾",
+          "answer": { "english": "And remember! (f/p command)", "sigha": "الْمُخَاطَبَات مِن الْأَمْر" },
+          "unclear": false
+        },
+        {
+          "number": 13,
+          "arabic": "﴿ادْخُلُوا﴾",
+          "answer": { "english": "Enter! (m/p command)", "sigha": "الْمُخَاطَبُوْن مِن الْأَمْر" },
+          "unclear": false
+        },
+        {
+          "number": 14,
+          "arabic": "﴿فَادْخُلِي﴾",
+          "answer": { "english": "So enter! (f/s command)", "sigha": "الْمُخَاطَبَة مِن الْأَمْر" },
+          "unclear": false
+        },
+        {
+          "number": 15,
+          "arabic": "﴿اهْبِطُوا﴾",
+          "answer": { "english": "Descend! (m/p command)", "sigha": "الْمُخَاطَبُوْن مِن الْأَمْر" },
+          "unclear": false
+        },
+        {
+          "number": 16,
+          "arabic": "﴿اهْبِطَا﴾",
+          "answer": { "english": "Descend! (m/d or f/d command)", "sigha": "الْمُخَاطَبَان أَو الْمُخَاطَبَتَان مِن الْأَمْر" },
+          "unclear": false
+        }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p7-ex3",
+      "exerciseNumber": 3,
+      "page": 61,
+      "unit": 1,
+      "part": "Part 7: الْأَمْر والنَّهْي — الْأَمْر",
+      "instructionText": "Translate the verbs below into Arabic and write the صِيْغَة.",
+      "exerciseType": "translate-english-to-arabic",
+      "note": "All items are أَمْر. Vocabulary from بَاب ضَرَب, بَاب نَصَر, بَاب سَمِع, بَاب فَتَح. هَمْزَة الْوَصْل carries كَسْرَة unless عَيْن has ضَمَّة.",
+      "items": [
+        {
+          "number": 1,
+          "english": "Do (m/s)",
+          "answer": { "arabic": "اِفْعَلْ", "sigha": "الْمُخَاطَب مِن الْأَمْر", "verb": "فَعَلَ" },
+          "unclear": false
+        },
+        {
+          "number": 2,
+          "english": "Earn (f/s)",
+          "answer": { "arabic": "اِكْسِبِي", "sigha": "الْمُخَاطَبَة مِن الْأَمْر", "verb": "كَسَبَ" },
+          "unclear": false
+        },
+        {
+          "number": 3,
+          "english": "Listen (f/p)",
+          "answer": { "arabic": "اِسْمَعْنَ", "sigha": "الْمُخَاطَبَات مِن الْأَمْر", "verb": "سَمِعَ" },
+          "unclear": false
+        },
+        {
+          "number": 4,
+          "english": "Bow (m/p)",
+          "answer": { "arabic": "اِرْكَعُوا", "sigha": "الْمُخَاطَبُوْن مِن الْأَمْر", "verb": "رَكَعَ" },
+          "unclear": false
+        },
+        {
+          "number": 5,
+          "english": "Read (m/d)",
+          "answer": { "arabic": "اِقْرَءَا", "sigha": "الْمُخَاطَبَان مِن الْأَمْر", "verb": "قَرَأَ" },
+          "unclear": false
+        },
+        {
+          "number": 6,
+          "english": "Guard (f/s)",
+          "answer": { "arabic": "اِحْفَظِي", "sigha": "الْمُخَاطَبَة مِن الْأَمْر", "verb": "حَفِظَ" },
+          "unclear": false
+        },
+        {
+          "number": 7,
+          "english": "Help (f/p)",
+          "answer": { "arabic": "اُنْصُرْنَ", "sigha": "الْمُخَاطَبَات مِن الْأَمْر", "verb": "نَصَرَ", "note": "هَمْزَة الْوَصْل has ضَمَّة because عَيْن المضارع has ضَمَّة." },
+          "unclear": false
+        },
+        {
+          "number": 8,
+          "english": "Carry (f/d)",
+          "answer": { "arabic": "اِحْمِلَا", "sigha": "الْمُخَاطَبَتَان مِن الْأَمْر", "verb": "حَمَلَ" },
+          "unclear": false
+        },
+        {
+          "number": 9,
+          "english": "Leave (m/d)",
+          "answer": { "arabic": "اُتْرُكَا", "sigha": "الْمُخَاطَبَان مِن الْأَمْر", "verb": "تَرَكَ", "note": "هَمْزَة الْوَصْل has ضَمَّة." },
+          "unclear": false
+        },
+        {
+          "number": 10,
+          "english": "Worship (m/p)",
+          "answer": { "arabic": "اُعْبُدُوا", "sigha": "الْمُخَاطَبُوْن مِن الْأَمْر", "verb": "عَبَدَ", "note": "هَمْزَة الْوَصْل has ضَمَّة." },
+          "unclear": false
+        },
+        {
+          "number": 11,
+          "english": "Recognise (f/d)",
+          "answer": { "arabic": "اِعْرِفَا", "sigha": "الْمُخَاطَبَتَان مِن الْأَمْر", "verb": "عَرَفَ" },
+          "unclear": false
+        },
+        {
+          "number": 12,
+          "english": "Have mercy (m/s)",
+          "answer": { "arabic": "اِرْحَمْ", "sigha": "الْمُخَاطَب مِن الْأَمْر", "verb": "رَحِمَ" },
+          "unclear": false
+        }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p7-ex4",
+      "exerciseNumber": 4,
+      "page": 62,
+      "unit": 1,
+      "part": "Part 7: الْأَمْر والنَّهْي — النَّهْي",
+      "instructionText": "Practice verbally conjugating the following verbs of النَّهْي. Thereafter, fill in the table below.",
+      "exerciseType": "fill-table",
+      "note": "الْمُخَاطَب row is given. Students fill the remaining 5 مُخَاطَب sigha rows. النَّهْي = لَا + مضارع مجزوم.",
+      "givenRow": {
+        "sigha": "الْمُخَاطَب",
+        "verb1": "لَا تَسْأَلْ",
+        "verb2": "لَا تَحْزَنْ",
+        "verb3": "لَا تَظْلِمْ",
+        "verb4": "لَا تَخْرُجْ",
+        "verb5": "لَا تَفْحُشْ"
+      },
+      "items": [
+        {
+          "number": 1,
+          "sigha": "الْمُخَاطَبَان",
+          "answer": {
+            "لَا تَسْأَلْ": "لَا تَسْأَلَا",
+            "لَا تَحْزَنْ": "لَا تَحْزَنَا",
+            "لَا تَظْلِمْ": "لَا تَظْلِمَا",
+            "لَا تَخْرُجْ": "لَا تَخْرُجَا",
+            "لَا تَفْحُشْ": "لَا تَفْحُشَا"
+          },
+          "unclear": false
+        },
+        {
+          "number": 2,
+          "sigha": "الْمُخَاطَبُوْن",
+          "answer": {
+            "لَا تَسْأَلْ": "لَا تَسْأَلُوا",
+            "لَا تَحْزَنْ": "لَا تَحْزَنُوا",
+            "لَا تَظْلِمْ": "لَا تَظْلِمُوا",
+            "لَا تَخْرُجْ": "لَا تَخْرُجُوا",
+            "لَا تَفْحُشْ": "لَا تَفْحُشُوا"
+          },
+          "unclear": false
+        },
+        {
+          "number": 3,
+          "sigha": "الْمُخَاطَبَة",
+          "answer": {
+            "لَا تَسْأَلْ": "لَا تَسْأَلِي",
+            "لَا تَحْزَنْ": "لَا تَحْزَنِي",
+            "لَا تَظْلِمْ": "لَا تَظْلِمِي",
+            "لَا تَخْرُجْ": "لَا تَخْرُجِي",
+            "لَا تَفْحُشْ": "لَا تَفْحُشِي"
+          },
+          "unclear": false
+        },
+        {
+          "number": 4,
+          "sigha": "الْمُخَاطَبَتَان",
+          "answer": {
+            "لَا تَسْأَلْ": "لَا تَسْأَلَا",
+            "لَا تَحْزَنْ": "لَا تَحْزَنَا",
+            "لَا تَظْلِمْ": "لَا تَظْلِمَا",
+            "لَا تَخْرُجْ": "لَا تَخْرُجَا",
+            "لَا تَفْحُشْ": "لَا تَفْحُشَا"
+          },
+          "unclear": false
+        },
+        {
+          "number": 5,
+          "sigha": "الْمُخَاطَبَات",
+          "answer": {
+            "لَا تَسْأَلْ": "لَا تَسْأَلْنَ",
+            "لَا تَحْزَنْ": "لَا تَحْزَنَّ",
+            "لَا تَظْلِمْ": "لَا تَظْلِمْنَ",
+            "لَا تَخْرُجْ": "لَا تَخْرُجْنَ",
+            "لَا تَفْحُشْ": "لَا تَفْحُشْنَ"
+          },
+          "unclear": false
+        }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p7-ex5",
+      "exerciseNumber": 5,
+      "page": 63,
+      "unit": 1,
+      "part": "Part 7: الْأَمْر والنَّهْي — النَّهْي",
+      "instructionText": "Translate the verbs below into English and write the صِيْغَة.",
+      "exerciseType": "translate-arabic-to-english",
+      "note": "All items are نَهْي (لَا + مضارع مجزوم). Many are Quranic. Translation = 'Do not …'.",
+      "items": [
+        {
+          "number": 1,
+          "arabic": "لَا تَكْذِبِي",
+          "answer": { "english": "Do not lie! (f/s)", "sigha": "الْمُخَاطَبَة مِن النَّهْي" },
+          "unclear": false
+        },
+        {
+          "number": 2,
+          "arabic": "﴿لَا تَجْعَلُوا﴾",
+          "answer": { "english": "Do not make! (m/p)", "sigha": "الْمُخَاطَبُوْن مِن النَّهْي" },
+          "unclear": false
+        },
+        {
+          "number": 3,
+          "arabic": "﴿لَا تَجْعَلْ﴾",
+          "answer": { "english": "Do not make! (m/s)", "sigha": "الْمُخَاطَب مِن النَّهْي" },
+          "unclear": false
+        },
+        {
+          "number": 4,
+          "arabic": "﴿لَا تَسْأَلُوا﴾",
+          "answer": { "english": "Do not ask! (m/p)", "sigha": "الْمُخَاطَبُوْن مِن النَّهْي" },
+          "unclear": false
+        },
+        {
+          "number": 5,
+          "arabic": "﴿وَلَا تَحْزَنُوا﴾",
+          "answer": { "english": "And do not grieve! (m/p)", "sigha": "الْمُخَاطَبُوْن مِن النَّهْي" },
+          "unclear": false
+        },
+        {
+          "number": 6,
+          "arabic": "﴿لَا تَحْزَنْ﴾",
+          "answer": { "english": "Do not grieve! (m/s)", "sigha": "الْمُخَاطَب مِن النَّهْي" },
+          "unclear": false
+        },
+        {
+          "number": 7,
+          "arabic": "﴿لَا تَحْزَنِي﴾",
+          "answer": { "english": "Do not grieve! (f/s)", "sigha": "الْمُخَاطَبَة مِن النَّهْي" },
+          "unclear": false
+        },
+        {
+          "number": 8,
+          "arabic": "﴿لَا تَضْرِبُوا﴾",
+          "answer": { "english": "Do not hit! (m/p)", "sigha": "الْمُخَاطَبُوْن مِن النَّهْي" },
+          "unclear": false
+        },
+        {
+          "number": 9,
+          "arabic": "لَا تَظْلِمْنَ",
+          "answer": { "english": "Do not oppress! (f/p)", "sigha": "الْمُخَاطَبَات مِن النَّهْي" },
+          "unclear": false
+        },
+        {
+          "number": 10,
+          "arabic": "﴿لَا تَظْلِمُوا﴾",
+          "answer": { "english": "Do not oppress! (m/p)", "sigha": "الْمُخَاطَبُوْن مِن النَّهْي" },
+          "unclear": false
+        },
+        {
+          "number": 11,
+          "arabic": "لَا تَخْرُجَا",
+          "answer": { "english": "Do not come out! (m/d or f/d)", "sigha": "الْمُخَاطَبَان أَو الْمُخَاطَبَتَان مِن النَّهْي" },
+          "unclear": true,
+          "unclearNote": "PDF shows جَا ل َ تَخْر (garbled). Reconstructed as لَا تَخْرُجَا."
+        },
+        {
+          "number": 12,
+          "arabic": "﴿لَا تَقْتُلُوا﴾",
+          "answer": { "english": "Do not kill! (m/p)", "sigha": "الْمُخَاطَبُوْن مِن النَّهْي" },
+          "unclear": false
+        }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p7-ex6",
+      "exerciseNumber": 6,
+      "page": 63,
+      "unit": 1,
+      "part": "Part 7: الْأَمْر والنَّهْي — النَّهْي",
+      "instructionText": "Translate the verbs below into Arabic and write the صِيْغَة.",
+      "exerciseType": "translate-english-to-arabic",
+      "note": "All items are نَهْي. Form = لَا + مضارع المخاطب مجزوم.",
+      "items": [
+        { "number": 1,  "english": "Don't lie (m/s)",       "answer": { "arabic": "لَا تَكْذِبْ",    "sigha": "الْمُخَاطَب مِن النَّهْي",     "verb": "كَذَبَ" }, "unclear": false },
+        { "number": 2,  "english": "Don't kill (f/p)",       "answer": { "arabic": "لَا تَقْتُلْنَ",  "sigha": "الْمُخَاطَبَات مِن النَّهْي",  "verb": "قَتَلَ" }, "unclear": false },
+        { "number": 3,  "english": "Don't hit (m/p)",        "answer": { "arabic": "لَا تَضْرِبُوا",  "sigha": "الْمُخَاطَبُوْن مِن النَّهْي", "verb": "ضَرَبَ" }, "unclear": false },
+        { "number": 4,  "english": "Don't carry (f/d)",      "answer": { "arabic": "لَا تَحْمِلَا",   "sigha": "الْمُخَاطَبَتَان مِن النَّهْي","verb": "حَمَلَ" }, "unclear": false },
+        { "number": 5,  "english": "Don't open (m/s)",       "answer": { "arabic": "لَا تَفْتَحْ",    "sigha": "الْمُخَاطَب مِن النَّهْي",     "verb": "فَتَحَ" }, "unclear": false },
+        { "number": 6,  "english": "Don't oppress (f/p)",    "answer": { "arabic": "لَا تَظْلِمْنَ",  "sigha": "الْمُخَاطَبَات مِن النَّهْي",  "verb": "ظَلَمَ" }, "unclear": false },
+        { "number": 7,  "english": "Don't worship (f/s)",    "answer": { "arabic": "لَا تَعْبُدِي",   "sigha": "الْمُخَاطَبَة مِن النَّهْي",   "verb": "عَبَدَ" }, "unclear": false },
+        { "number": 8,  "english": "Don't judge (m/p)",      "answer": { "arabic": "لَا تَحْكُمُوا",  "sigha": "الْمُخَاطَبُوْن مِن النَّهْي", "verb": "حَكَمَ" }, "unclear": false },
+        { "number": 9,  "english": "Don't leave (m/d)",      "answer": { "arabic": "لَا تَتْرُكَا",   "sigha": "الْمُخَاطَبَان مِن النَّهْي",  "verb": "تَرَكَ" }, "unclear": false },
+        { "number": 10, "english": "Don't curse (m/d)",      "answer": { "arabic": "لَا تَلْعَنَا",   "sigha": "الْمُخَاطَبَان مِن النَّهْي",  "verb": "لَعَنَ" }, "unclear": false },
+        { "number": 11, "english": "Don't enter (f/d)",      "answer": { "arabic": "لَا تَدْخُلَا",   "sigha": "الْمُخَاطَبَتَان مِن النَّهْي","verb": "دَخَلَ" }, "unclear": false },
+        { "number": 12, "english": "Don't be grieved (f/s)", "answer": { "arabic": "لَا تَحْزَنِي",   "sigha": "الْمُخَاطَبَة مِن النَّهْي",   "verb": "حَزِنَ" }, "unclear": false }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p7-ex7",
+      "exerciseNumber": 7,
+      "page": 64,
+      "unit": 1,
+      "part": "Part 7: الْأَمْر والنَّهْي",
+      "instructionText": "Translate the following. Ensure you differentiate between the different types of verbs.",
+      "exerciseType": "translate-arabic-to-english",
+      "example": {
+        "arabic": "دَخَلْتُمْ",
+        "answer": { "english": "You entered (m/p)", "verbType": "الْمَاضِي" }
+      },
+      "note": "Mixed exercise: ماضي معلوم, ماضي مجهول, مضارع معلوم, مضارع مجهول, أَمْر, نَهْي, مضارع منفي (لَا/لَمْ/لَنْ/مَا). All items use the root سَمِعَ/سَمِع or رَحِمَ/رَحِم/لَعَنَ — grouped in three triplets. Students must identify verb type precisely.",
+      "items": [
+        {
+          "number": 1,
+          "arabic": "سَمِعْتُمْ",
+          "answer": { "english": "You (m/p) heard", "verbType": "ماضي معلوم", "sigha": "الْمُخَاطَبُوْن" },
+          "unclear": false
+        },
+        {
+          "number": 2,
+          "arabic": "سُمِعْتُمْ",
+          "answer": { "english": "You (m/p) were heard", "verbType": "ماضي مجهول", "sigha": "الْمُخَاطَبُوْن" },
+          "unclear": false
+        },
+        {
+          "number": 3,
+          "arabic": "تَسْمَعُوْن",
+          "answer": { "english": "You (m/p) hear / are hearing / will hear", "verbType": "مضارع معلوم مرفوع", "sigha": "الْمُخَاطَبُوْن" },
+          "unclear": false
+        },
+        {
+          "number": 4,
+          "arabic": "تُسْمَعُوْن",
+          "answer": { "english": "You (m/p) are heard / are being heard / will be heard", "verbType": "مضارع مجهول مرفوع", "sigha": "الْمُخَاطَبُوْن" },
+          "unclear": false
+        },
+        {
+          "number": 5,
+          "arabic": "اِسْمَعُوا",
+          "answer": { "english": "Listen! / Hear! (m/p)", "verbType": "أَمْر", "sigha": "الْمُخَاطَبُوْن مِن الْأَمْر" },
+          "unclear": false
+        },
+        {
+          "number": 6,
+          "arabic": "لَا تَسْمَعُوا",
+          "answer": { "english": "Do not listen! (m/p)", "verbType": "نَهْي", "sigha": "الْمُخَاطَبُوْن مِن النَّهْي" },
+          "unclear": false
+        },
+        {
+          "number": 7,
+          "arabic": "لَا تَسْمَعُوْن",
+          "answer": { "english": "You (m/p) do not hear / are not hearing / will not hear", "verbType": "مضارع معلوم مرفوع منفي (لَا نَفْي)", "sigha": "الْمُخَاطَبُوْن" },
+          "unclear": false,
+          "note": "لَا here is حَرْف نَفْي (not نَهْي) — verb is مَرْفُوْع, نُوْن الإِعْرَاب retained."
+        },
+        {
+          "number": 8,
+          "arabic": "لَمْ تَسْمَعُوا",
+          "answer": { "english": "You (m/p) did not hear", "verbType": "مضارع معلوم مجزوم", "sigha": "الْمُخَاطَبُوْن" },
+          "unclear": false
+        },
+        {
+          "number": 9,
+          "arabic": "لَنْ تَسْمَعُوا",
+          "answer": { "english": "You (m/p) will certainly not hear", "verbType": "مضارع معلوم منصوب", "sigha": "الْمُخَاطَبُوْن" },
+          "unclear": false
+        },
+        {
+          "number": 10,
+          "arabic": "مَا سَمِعْتُمْ",
+          "answer": { "english": "You (m/p) did not hear", "verbType": "ماضي معلوم منفي", "sigha": "الْمُخَاطَبُوْن" },
+          "unclear": false
+        },
+        {
+          "number": 11,
+          "arabic": "رَحِمَتْ",
+          "answer": { "english": "She had mercy / showed mercy", "verbType": "ماضي معلوم", "sigha": "الْغَائِبَة" },
+          "unclear": false
+        },
+        {
+          "number": 12,
+          "arabic": "مَا رَحِمَتْ",
+          "answer": { "english": "She did not have mercy", "verbType": "ماضي معلوم منفي", "sigha": "الْغَائِبَة" },
+          "unclear": false
+        },
+        {
+          "number": 13,
+          "arabic": "تَرْحَمُ",
+          "answer": { "english": "She has mercy / is having mercy / will have mercy  OR  You (m/s) have mercy", "verbType": "مضارع معلوم مرفوع", "sigha": "الْغَائِبَة أَو الْمُخَاطَب" },
+          "unclear": false
+        },
+        {
+          "number": 14,
+          "arabic": "لَا تَرْحَمْ",
+          "answer": { "english": "Do not have mercy! (m/s)  OR  Do not have mercy! (f/s inferred)", "verbType": "نَهْي", "sigha": "الْمُخَاطَب مِن النَّهْي" },
+          "unclear": false
+        },
+        {
+          "number": 15,
+          "arabic": "لَمْ تُرْحَمْ",
+          "answer": { "english": "She / You (m/s) was not shown mercy", "verbType": "مضارع مجهول مجزوم", "sigha": "الْغَائِبَة أَو الْمُخَاطَب" },
+          "unclear": false
+        },
+        {
+          "number": 16,
+          "arabic": "لَنْ تُرْحَمَ",
+          "answer": { "english": "She / You (m/s) will certainly not be shown mercy", "verbType": "مضارع مجهول منصوب", "sigha": "الْغَائِبَة أَو الْمُخَاطَب" },
+          "unclear": false
+        },
+        {
+          "number": 17,
+          "arabic": "رُحِمَتْ",
+          "answer": { "english": "She was shown mercy", "verbType": "ماضي مجهول", "sigha": "الْغَائِبَة" },
+          "unclear": false
+        },
+        {
+          "number": 18,
+          "arabic": "تُرْحَمُ",
+          "answer": { "english": "She / You (m/s) is shown mercy / is being shown mercy / will be shown mercy", "verbType": "مضارع مجهول مرفوع", "sigha": "الْغَائِبَة أَو الْمُخَاطَب" },
+          "unclear": false
+        },
+        {
+          "number": 19,
+          "arabic": "يَلْعَنُ",
+          "answer": { "english": "He curses / is cursing / will curse", "verbType": "مضارع معلوم مرفوع", "sigha": "الْغَائِب" },
+          "unclear": false
+        },
+        {
+          "number": 20,
+          "arabic": "يُلْعَنُ",
+          "answer": { "english": "He is cursed / is being cursed / will be cursed", "verbType": "مضارع مجهول مرفوع", "sigha": "الْغَائِب" },
+          "unclear": false
+        },
+        {
+          "number": 21,
+          "arabic": "لُعِنَ",
+          "answer": { "english": "He was cursed", "verbType": "ماضي مجهول", "sigha": "الْغَائِب" },
+          "unclear": false
+        },
+        {
+          "number": 22,
+          "arabic": "لُعِنَتْ",
+          "answer": { "english": "She was cursed", "verbType": "ماضي مجهول", "sigha": "الْغَائِبَة" },
+          "unclear": false
+        },
+        {
+          "number": 23,
+          "arabic": "لَا يُلْعَنُ",
+          "answer": { "english": "He is not cursed / will not be cursed", "verbType": "مضارع مجهول مرفوع منفي (لَا نَفْي)", "sigha": "الْغَائِب" },
+          "unclear": true,
+          "unclearNote": "PDF shows لْعَن ي ل (garbled). Reconstructed as لَا يُلْعَنُ based on the pattern of the exercise (negated مجهول مضارع for الغائب)."
+        },
+        {
+          "number": 24,
+          "arabic": "لَمْ يَلْعَنْ",
+          "answer": { "english": "He did not curse", "verbType": "مضارع معلوم مجزوم", "sigha": "الْغَائِب" },
+          "unclear": false
+        }
+      ],
+      "unclear": false
+    }
+  ]
+}

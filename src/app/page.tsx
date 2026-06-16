@@ -89,7 +89,7 @@ export default function HomePage() {
         <div>
           <p className="font-sans text-xs font-semibold text-ink-muted uppercase tracking-wide mb-2">Continue</p>
           <Link
-            href={`/games/unit-1/session/${encodeURIComponent(continueGame.id)}`}
+            href={`/exercises/unit-1/session/${encodeURIComponent(continueGame.id)}`}
             className="card-parchment p-4 block hover:border-teal/40 transition-colors group"
           >
             <div className="flex items-center justify-between">
@@ -108,7 +108,7 @@ export default function HomePage() {
         <div>
           <p className="font-sans text-xs font-semibold text-ink-muted uppercase tracking-wide mb-2">Up next</p>
           <Link
-            href={`/games/unit-1/session/${encodeURIComponent(suggestedGame.id)}`}
+            href={`/exercises/unit-1/session/${encodeURIComponent(suggestedGame.id)}`}
             className="card-parchment p-4 block hover:border-gold/40 transition-colors group"
           >
             <div className="flex items-center justify-between">
@@ -126,9 +126,9 @@ export default function HomePage() {
       <div>
         <div className="flex items-center justify-between mb-2">
           <p className="font-sans text-xs font-semibold text-ink-muted uppercase tracking-wide">Sarf Map</p>
-          <Link href="/sarf-map" className="text-xs font-sans text-teal hover:underline">View full map →</Link>
+          <Link href="/progress" className="text-xs font-sans text-teal hover:underline">View full map →</Link>
         </div>
-        <Link href="/sarf-map" className="card-parchment p-4 block hover:border-teal/30 transition-colors">
+        <Link href="/progress" className="card-parchment p-4 block hover:border-teal/30 transition-colors">
           <div className="flex items-center gap-4">
             <div className="flex-1">
               <div className="flex gap-1 flex-wrap">
@@ -169,8 +169,8 @@ export default function HomePage() {
         <div className="card-parchment p-6 text-center">
           <p dir="rtl" className="arabic text-xl text-ink-muted mb-2">اِبْدَأِ الْآن</p>
           <p className="font-sans text-sm text-ink-muted mb-4">Start your first game to track progress here.</p>
-          <Link href="/games/unit-1" className="inline-block bg-teal text-parchment font-sans text-sm px-5 py-2.5 rounded-xl hover:bg-teal-dark transition-colors">
-            Go to Games
+          <Link href="/exercises/unit-1" className="inline-block bg-teal text-parchment font-sans text-sm px-5 py-2.5 rounded-xl hover:bg-teal-dark transition-colors">
+            Go to Exercises
           </Link>
         </div>
       )}

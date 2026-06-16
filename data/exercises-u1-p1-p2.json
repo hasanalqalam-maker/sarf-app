@@ -1,0 +1,928 @@
+{
+  "unit": 1,
+  "parts": ["Part 1: الْمَاضِي", "Part 2: الْمُضَارِع"],
+  "pdfPages": "19-28",
+  "exercises": [
+    {
+      "id": "u1-p1-ex1",
+      "exerciseNumber": 1,
+      "page": 21,
+      "unit": 1,
+      "part": "Part 1: الْمَاضِي",
+      "instructionText": "Practice verbally conjugating the following verbs of الْمَاضِي. Thereafter, fill in the table below.",
+      "exerciseType": "fill-table",
+      "note": "الغَائِب row is given; students fill the remaining 13 sigha rows. All four verbs are from بَاب فَتَح (فَعَلَ يَفْعَلُ).",
+      "givenRow": {
+        "sigha": "الغَائِب",
+        "verb1": "بَعَثَ",
+        "verb2": "جَعَلَ",
+        "verb3": "ذَهَبَ",
+        "verb4": "رَفَعَ"
+      },
+      "items": [
+        {
+          "number": 1,
+          "sigha": "الْغَائِبَان",
+          "answer": { "بَعَثَ": "بَعَثَا", "جَعَلَ": "جَعَلَا", "ذَهَبَ": "ذَهَبَا", "رَفَعَ": "رَفَعَا" },
+          "unclear": false
+        },
+        {
+          "number": 2,
+          "sigha": "الْغَائِبُوْن",
+          "answer": { "بَعَثَ": "بَعَثُوا", "جَعَلَ": "جَعَلُوا", "ذَهَبَ": "ذَهَبُوا", "رَفَعَ": "رَفَعُوا" },
+          "unclear": false
+        },
+        {
+          "number": 3,
+          "sigha": "الْغَائِبَة",
+          "answer": { "بَعَثَ": "بَعَثَتْ", "جَعَلَ": "جَعَلَتْ", "ذَهَبَ": "ذَهَبَتْ", "رَفَعَ": "رَفَعَتْ" },
+          "unclear": false
+        },
+        {
+          "number": 4,
+          "sigha": "الْغَائِبَتَان",
+          "answer": { "بَعَثَ": "بَعَثَتَا", "جَعَلَ": "جَعَلَتَا", "ذَهَبَ": "ذَهَبَتَا", "رَفَعَ": "رَفَعَتَا" },
+          "unclear": false
+        },
+        {
+          "number": 5,
+          "sigha": "الْغَائِبَات",
+          "answer": { "بَعَثَ": "بَعَثْنَ", "جَعَلَ": "جَعَلْنَ", "ذَهَبَ": "ذَهَبْنَ", "رَفَعَ": "رَفَعْنَ" },
+          "unclear": false
+        },
+        {
+          "number": 6,
+          "sigha": "الْمُخَاطَب",
+          "answer": { "بَعَثَ": "بَعَثْتَ", "جَعَلَ": "جَعَلْتَ", "ذَهَبَ": "ذَهَبْتَ", "رَفَعَ": "رَفَعْتَ" },
+          "unclear": false
+        },
+        {
+          "number": 7,
+          "sigha": "الْمُخَاطَبَان",
+          "answer": { "بَعَثَ": "بَعَثْتُمَا", "جَعَلَ": "جَعَلْتُمَا", "ذَهَبَ": "ذَهَبْتُمَا", "رَفَعَ": "رَفَعْتُمَا" },
+          "unclear": false
+        },
+        {
+          "number": 8,
+          "sigha": "الْمُخَاطَبُوْن",
+          "answer": { "بَعَثَ": "بَعَثْتُمْ", "جَعَلَ": "جَعَلْتُمْ", "ذَهَبَ": "ذَهَبْتُمْ", "رَفَعَ": "رَفَعْتُمْ" },
+          "unclear": false
+        },
+        {
+          "number": 9,
+          "sigha": "الْمُخَاطَبَة",
+          "answer": { "بَعَثَ": "بَعَثْتِ", "جَعَلَ": "جَعَلْتِ", "ذَهَبَ": "ذَهَبْتِ", "رَفَعَ": "رَفَعْتِ" },
+          "unclear": false
+        },
+        {
+          "number": 10,
+          "sigha": "الْمُخَاطَبَتَان",
+          "answer": { "بَعَثَ": "بَعَثْتُمَا", "جَعَلَ": "جَعَلْتُمَا", "ذَهَبَ": "ذَهَبْتُمَا", "رَفَعَ": "رَفَعْتُمَا" },
+          "unclear": false
+        },
+        {
+          "number": 11,
+          "sigha": "الْمُخَاطَبَات",
+          "answer": { "بَعَثَ": "بَعَثْتُنَّ", "جَعَلَ": "جَعَلْتُنَّ", "ذَهَبَ": "ذَهَبْتُنَّ", "رَفَعَ": "رَفَعْتُنَّ" },
+          "unclear": false
+        },
+        {
+          "number": 12,
+          "sigha": "الْمُتَكَلِّم",
+          "answer": { "بَعَثَ": "بَعَثْتُ", "جَعَلَ": "جَعَلْتُ", "ذَهَبَ": "ذَهَبْتُ", "رَفَعَ": "رَفَعْتُ" },
+          "unclear": false
+        },
+        {
+          "number": 13,
+          "sigha": "الْمُتَكَلِّمُوْن",
+          "answer": { "بَعَثَ": "بَعَثْنَا", "جَعَلَ": "جَعَلْنَا", "ذَهَبَ": "ذَهَبْنَا", "رَفَعَ": "رَفَعْنَا" },
+          "unclear": false
+        }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p1-ex2",
+      "exerciseNumber": 2,
+      "page": 21,
+      "unit": 1,
+      "part": "Part 1: الْمَاضِي",
+      "instructionText": "Write the صِيْغَة and English pronoun corresponding to the following Arabic pronouns. One has been done for you.",
+      "exerciseType": "identify-sigha",
+      "example": { "ending": "ـتُمْ", "answer": { "sigha": "الْمُخَاطَبُوْن", "english": "You (m/p)", "partOf": "الْمَاضِي" } },
+      "note": "Items are pronoun endings visible on الْمَاضِي verb forms. الغَائِب is excluded (hidden pronoun). الْمُخَاطَبُوْن (ـتُمْ) is the worked example.",
+      "items": [
+        {
+          "number": 1,
+          "arabic": "ـتُ",
+          "answer": { "sigha": "الْمُتَكَلِّم", "english": "I", "partOf": "الْمَاضِي" },
+          "unclear": false
+        },
+        {
+          "number": 2,
+          "arabic": "ـتِ",
+          "answer": { "sigha": "الْمُخَاطَبَة", "english": "You (f/s)", "partOf": "الْمَاضِي" },
+          "unclear": true,
+          "unclearNote": "PDF extraction shows bare ت without a clear kasra; form reconstructed from conjugation system as ـتِ (الْمُخَاطَبَة)."
+        },
+        {
+          "number": 3,
+          "arabic": "ـتْ",
+          "answer": { "sigha": "الْغَائِبَة", "english": "She/It", "partOf": "الْمَاضِي" },
+          "unclear": false,
+          "note": "This is تَاء التَّأْنِيث (sign of femininity), not a pronoun, but it identifies الْغَائِبَة."
+        },
+        {
+          "number": 4,
+          "arabic": "ـتَ",
+          "answer": { "sigha": "الْمُخَاطَب", "english": "You (m/s)", "partOf": "الْمَاضِي" },
+          "unclear": true,
+          "unclearNote": "PDF extraction shows bare ت without a clear fatha; form reconstructed as ـتَ (الْمُخَاطَب)."
+        },
+        {
+          "number": 5,
+          "arabic": "ـا",
+          "answer": { "sigha": "الْغَائِبَان", "english": "They (m/d)", "partOf": "الْمَاضِي" },
+          "unclear": false
+        },
+        {
+          "number": 6,
+          "arabic": "ـتَا",
+          "answer": { "sigha": "الْغَائِبَتَان", "english": "They (f/d)", "partOf": "الْمَاضِي" },
+          "unclear": false
+        },
+        {
+          "number": 7,
+          "arabic": "ـتُمَا",
+          "answer": { "sigha": "الْمُخَاطَبَان", "english": "You (m/d)", "partOf": "الْمَاضِي" },
+          "unclear": false
+        },
+        {
+          "number": 8,
+          "arabic": "ـوْا",
+          "answer": { "sigha": "الْغَائِبُوْن", "english": "They (m/p)", "partOf": "الْمَاضِي" },
+          "unclear": false
+        },
+        {
+          "number": 9,
+          "arabic": "ـنَ",
+          "answer": { "sigha": "الْغَائِبَات", "english": "They (f/p)", "partOf": "الْمَاضِي" },
+          "unclear": false
+        },
+        {
+          "number": 10,
+          "arabic": "ـتُنَّ",
+          "answer": { "sigha": "الْمُخَاطَبَات", "english": "You (f/p)", "partOf": "الْمَاضِي" },
+          "unclear": false
+        },
+        {
+          "number": 11,
+          "arabic": "ـنَا",
+          "answer": { "sigha": "الْمُتَكَلِّمُوْن", "english": "We", "partOf": "الْمَاضِي" },
+          "unclear": true,
+          "unclearNote": "PDF extraction shows ـتُمْ for this item, which duplicates the worked example. Based on the conjugation system, the missing sigha is الْمُتَكَلِّمُوْن (ـنَا). Verify against the printed book."
+        },
+        {
+          "number": 12,
+          "arabic": "ـتُمَا",
+          "answer": { "sigha": "الْمُخَاطَبَتَان", "english": "You (f/d)", "partOf": "الْمَاضِي" },
+          "unclear": false,
+          "note": "Same ending ـتُمَا as item 7; this one refers to الْمُخَاطَبَتَان."
+        }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p1-ex3",
+      "exerciseNumber": 3,
+      "page": 22,
+      "unit": 1,
+      "part": "Part 1: الْمَاضِي",
+      "instructionText": "Translate the following, write the صِيْغَة, and point out the ضَمِيْر.",
+      "exerciseType": "translate-arabic-to-english",
+      "example": {
+        "arabic": "فَتَحُوا",
+        "answer": { "english": "They (m/p) opened", "sigha": "الْغَائِبُوْن مِن الْمَاضِي", "dameer": "و" }
+      },
+      "items": [
+        {
+          "number": 1,
+          "arabic": "فَتَحَ",
+          "answer": { "english": "He/It opened", "sigha": "الْغَائِب مِن الْمَاضِي", "dameer": "هُو (مُسْتَتِر)" },
+          "unclear": false
+        },
+        {
+          "number": 2,
+          "arabic": "بَعَثَا",
+          "answer": { "english": "They (m/d) sent / resurrected", "sigha": "الْغَائِبَان مِن الْمَاضِي", "dameer": "ا" },
+          "unclear": false
+        },
+        {
+          "number": 3,
+          "arabic": "جَعَلُوا",
+          "answer": { "english": "They (m/p) made", "sigha": "الْغَائِبُوْن مِن الْمَاضِي", "dameer": "و" },
+          "unclear": false
+        },
+        {
+          "number": 4,
+          "arabic": "ذَهَبَتْ",
+          "answer": { "english": "She/It went", "sigha": "الْغَائِبَة مِن الْمَاضِي", "dameer": "هِي (مُسْتَتِر)" },
+          "unclear": true,
+          "unclearNote": "PDF extraction shows ذَهَبَت without a visible sukoon on the final ت. Form reconstructed as ذَهَبَتْ based on context."
+        },
+        {
+          "number": 5,
+          "arabic": "رَفَعَتَا",
+          "answer": { "english": "They (f/d) elevated", "sigha": "الْغَائِبَتَان مِن الْمَاضِي", "dameer": "ا" },
+          "unclear": false
+        },
+        {
+          "number": 6,
+          "arabic": "رَكَعْنَ",
+          "answer": { "english": "They (f/p) bowed", "sigha": "الْغَائِبَات مِن الْمَاضِي", "dameer": "ن" },
+          "unclear": false
+        },
+        {
+          "number": 7,
+          "arabic": "رَكَعْتَ",
+          "answer": { "english": "You (m/s) bowed", "sigha": "الْمُخَاطَب مِن الْمَاضِي", "dameer": "تَ" },
+          "unclear": true,
+          "unclearNote": "PDF extraction shows رَكَعْت without a clear fatha on the final ت. Reconstructed as رَكَعْتَ (الْمُخَاطَب)."
+        },
+        {
+          "number": 8,
+          "arabic": "رَفَعْتُمَا",
+          "answer": { "english": "You (m/d) elevated", "sigha": "الْمُخَاطَبَان مِن الْمَاضِي", "dameer": "تُمَا" },
+          "unclear": false
+        },
+        {
+          "number": 9,
+          "arabic": "ذَهَبْتُمْ",
+          "answer": { "english": "You (m/p) went", "sigha": "الْمُخَاطَبُوْن مِن الْمَاضِي", "dameer": "تُمْ" },
+          "unclear": false
+        },
+        {
+          "number": 10,
+          "arabic": "جَعَلْتِ",
+          "answer": { "english": "You (f/s) made", "sigha": "الْمُخَاطَبَة مِن الْمَاضِي", "dameer": "تِ" },
+          "unclear": true,
+          "unclearNote": "PDF extraction shows جَعَلْت as fragmented text (ت ل جَع). Reconstructed as جَعَلْتِ (الْمُخَاطَبَة) based on context."
+        },
+        {
+          "number": 11,
+          "arabic": "بَعَثْتُمَا",
+          "answer": { "english": "You (f/d) sent / resurrected", "sigha": "الْمُخَاطَبَتَان مِن الْمَاضِي", "dameer": "تُمَا" },
+          "unclear": false
+        },
+        {
+          "number": 12,
+          "arabic": "فَتَحْتُنَّ",
+          "answer": { "english": "You (f/p) opened", "sigha": "الْمُخَاطَبَات مِن الْمَاضِي", "dameer": "تُنَّ" },
+          "unclear": true,
+          "unclearNote": "PDF extraction shows فَتَحْتُن without the shadda on ن. Reconstructed as فَتَحْتُنَّ."
+        },
+        {
+          "number": 13,
+          "arabic": "جَعَلْتُمْ",
+          "answer": { "english": "You (m/p) made", "sigha": "الْمُخَاطَبُوْن مِن الْمَاضِي", "dameer": "تُمْ" },
+          "unclear": false
+        },
+        {
+          "number": 14,
+          "arabic": "ذَهَبْنَا",
+          "answer": { "english": "We went", "sigha": "الْمُتَكَلِّمُوْن مِن الْمَاضِي", "dameer": "نَا" },
+          "unclear": false
+        },
+        {
+          "number": 15,
+          "arabic": "رَفَعْتُ",
+          "answer": { "english": "I elevated", "sigha": "الْمُتَكَلِّم مِن الْمَاضِي", "dameer": "تُ" },
+          "unclear": false
+        }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p1-ex4",
+      "exerciseNumber": 4,
+      "page": 22,
+      "unit": 1,
+      "part": "Part 1: الْمَاضِي",
+      "instructionText": "Translate the following and write their صِيْغَة.",
+      "exerciseType": "translate-english-to-arabic",
+      "note": "All verbs are from بَاب فَتَح. Vocabulary from page 22.",
+      "items": [
+        { "number": 1,  "english": "I bowed",              "answer": { "arabic": "رَكَعْتُ",    "sigha": "الْمُتَكَلِّم" },    "unclear": false },
+        { "number": 2,  "english": "We went",              "answer": { "arabic": "ذَهَبْنَا",   "sigha": "الْمُتَكَلِّمُوْن" }, "unclear": false },
+        { "number": 3,  "english": "You (m/d) made",       "answer": { "arabic": "جَعَلْتُمَا", "sigha": "الْمُخَاطَبَان" },   "unclear": false },
+        { "number": 4,  "english": "They (f/p) read",      "answer": { "arabic": "قَرَأْنَ",    "sigha": "الْغَائِبَات" },      "unclear": false },
+        { "number": 5,  "english": "You (m/d) read",       "answer": { "arabic": "قَرَأْتُمَا", "sigha": "الْمُخَاطَبَان" },   "unclear": false },
+        { "number": 6,  "english": "They (f/d) asked",     "answer": { "arabic": "سَأَلَتَا",   "sigha": "الْغَائِبَتَان" },    "unclear": false },
+        { "number": 7,  "english": "You (m/s) asked",      "answer": { "arabic": "سَأَلْتَ",    "sigha": "الْمُخَاطَب" },      "unclear": false },
+        { "number": 8,  "english": "You (m/p) cursed",     "answer": { "arabic": "لَعَنْتُمْ",  "sigha": "الْمُخَاطَبُوْن" },  "unclear": false },
+        { "number": 9,  "english": "They (m/p) cursed",    "answer": { "arabic": "لَعَنُوا",    "sigha": "الْغَائِبُوْن" },     "unclear": false },
+        { "number": 10, "english": "You (f/p) benefitted", "answer": { "arabic": "نَفَعْتُنَّ", "sigha": "الْمُخَاطَبَات" },   "unclear": false },
+        { "number": 11, "english": "I asked",              "answer": { "arabic": "سَأَلْتُ",    "sigha": "الْمُتَكَلِّم" },    "unclear": false },
+        { "number": 12, "english": "You (f/d) read",       "answer": { "arabic": "قَرَأْتُمَا", "sigha": "الْمُخَاطَبَتَان" }, "unclear": false },
+        { "number": 13, "english": "We bewitched",         "answer": { "arabic": "سَحَرْنَا",   "sigha": "الْمُتَكَلِّمُوْن" }, "unclear": false },
+        { "number": 14, "english": "He resurrected",       "answer": { "arabic": "بَعَثَ",      "sigha": "الْغَائِب" },         "unclear": false },
+        { "number": 15, "english": "You (f/s) profited",   "answer": { "arabic": "نَفَعْتِ",    "sigha": "الْمُخَاطَبَة" },    "unclear": false },
+        { "number": 16, "english": "They (m/p) asked",     "answer": { "arabic": "سَأَلُوا",    "sigha": "الْغَائِبُوْن" },     "unclear": false },
+        { "number": 17, "english": "They (f/p) opened",    "answer": { "arabic": "فَتَحْنَ",    "sigha": "الْغَائِبَات" },      "unclear": false },
+        { "number": 18, "english": "He acted righteously", "answer": { "arabic": "صَلَحَ",      "sigha": "الْغَائِب" },         "unclear": false },
+        { "number": 19, "english": "She acted righteously","answer": { "arabic": "صَلَحَتْ",    "sigha": "الْغَائِبَة" },       "unclear": false },
+        { "number": 20, "english": "They (m/d) bewitched", "answer": { "arabic": "سَحَرَا",     "sigha": "الْغَائِبَان" },      "unclear": false }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p1-ex5",
+      "exerciseNumber": 5,
+      "page": 23,
+      "unit": 1,
+      "part": "Part 1: الْمَاضِي",
+      "instructionText": "Change the gender of the following صِيَغ of الْمَاضِي whilst keeping the number and person the same.",
+      "exerciseType": "change-gender",
+      "example": { "arabic": "فَعَلْتُمْ", "answer": { "arabic": "فَعَلْتُنَّ", "sigha": "الْمُخَاطَبَات" } },
+      "note": "الْمُتَكَلِّمُوْن and الْمُتَكَلِّم are shared between masculine and feminine; their forms do not change. الْمُخَاطَبَان and الْمُخَاطَبَتَان share the same ـتُمَا ending.",
+      "items": [
+        {
+          "number": 1,
+          "arabic": "سَأَلْنَ",
+          "answer": { "arabic": "سَأَلُوا", "fromSigha": "الْغَائِبَات", "toSigha": "الْغَائِبُوْن" },
+          "unclear": false
+        },
+        {
+          "number": 2,
+          "arabic": "سَحَرْتُمْ",
+          "answer": { "arabic": "سَحَرْتُنَّ", "fromSigha": "الْمُخَاطَبُوْن", "toSigha": "الْمُخَاطَبَات" },
+          "unclear": false
+        },
+        {
+          "number": 3,
+          "arabic": "لَعَنَتْ",
+          "answer": { "arabic": "لَعَنَ", "fromSigha": "الْغَائِبَة", "toSigha": "الْغَائِب" },
+          "unclear": false
+        },
+        {
+          "number": 4,
+          "arabic": "جَعَلَ",
+          "answer": { "arabic": "جَعَلَتْ", "fromSigha": "الْغَائِب", "toSigha": "الْغَائِبَة" },
+          "unclear": false
+        },
+        {
+          "number": 5,
+          "arabic": "نَفَعَ",
+          "answer": { "arabic": "نَفَعَتْ", "fromSigha": "الْغَائِب", "toSigha": "الْغَائِبَة" },
+          "unclear": false
+        },
+        {
+          "number": 6,
+          "arabic": "قَرَأَتَا",
+          "answer": { "arabic": "قَرَأَا", "fromSigha": "الْغَائِبَتَان", "toSigha": "الْغَائِبَان" },
+          "unclear": false
+        },
+        {
+          "number": 7,
+          "arabic": "فَتَحْتُمَا",
+          "answer": { "arabic": "فَتَحْتُمَا", "fromSigha": "الْمُخَاطَبَان", "toSigha": "الْمُخَاطَبَتَان", "note": "Form is identical — both dual second-person sighas share ـتُمَا." },
+          "unclear": false
+        },
+        {
+          "number": 8,
+          "arabic": "رَكَعُوا",
+          "answer": { "arabic": "رَكَعْنَ", "fromSigha": "الْغَائِبُوْن", "toSigha": "الْغَائِبَات" },
+          "unclear": false
+        },
+        {
+          "number": 9,
+          "arabic": "ذَهَبْنَا",
+          "answer": { "arabic": "ذَهَبْنَا", "fromSigha": "الْمُتَكَلِّمُوْن", "toSigha": "الْمُتَكَلِّمُوْن", "note": "الْمُتَكَلِّمُوْن is shared for both genders; form does not change." },
+          "unclear": false
+        },
+        {
+          "number": 10,
+          "arabic": "جَعَلْتُمْ",
+          "answer": { "arabic": "جَعَلْتُنَّ", "fromSigha": "الْمُخَاطَبُوْن", "toSigha": "الْمُخَاطَبَات" },
+          "unclear": false
+        },
+        {
+          "number": 11,
+          "arabic": "بَعَثْنَا",
+          "answer": { "arabic": "بَعَثْنَا", "fromSigha": "الْمُتَكَلِّمُوْن", "toSigha": "الْمُتَكَلِّمُوْن", "note": "الْمُتَكَلِّمُوْن is shared for both genders; form does not change." },
+          "unclear": false
+        },
+        {
+          "number": 12,
+          "arabic": "فَعَلْتَ",
+          "answer": { "arabic": "فَعَلْتِ", "fromSigha": "الْمُخَاطَب", "toSigha": "الْمُخَاطَبَة" },
+          "unclear": false,
+          "note": "Uses the generic فَعَلَ pattern verb, not a vocabulary word."
+        }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p2-ex1",
+      "exerciseNumber": 1,
+      "page": 26,
+      "unit": 1,
+      "part": "Part 2: الْمُضَارِع",
+      "instructionText": "Practice verbally conjugating the following verbs of الْمُضَارِع. Thereafter, fill in the table below.",
+      "exerciseType": "fill-table",
+      "note": "الغَائِب row is given; students fill the remaining 13 sigha rows. All four verbs are from بَاب فَتَح (يَفْعَلُ pattern).",
+      "givenRow": {
+        "sigha": "الغَائِب",
+        "verb1": "يَبْعَثُ",
+        "verb2": "يَجْعَلُ",
+        "verb3": "يَذْهَبُ",
+        "verb4": "يَرْفَعُ"
+      },
+      "items": [
+        {
+          "number": 1,
+          "sigha": "الْغَائِبَان",
+          "answer": { "يَبْعَثُ": "يَبْعَثَان", "يَجْعَلُ": "يَجْعَلَان", "يَذْهَبُ": "يَذْهَبَان", "يَرْفَعُ": "يَرْفَعَان" },
+          "unclear": false
+        },
+        {
+          "number": 2,
+          "sigha": "الْغَائِبُوْن",
+          "answer": { "يَبْعَثُ": "يَبْعَثُوْن", "يَجْعَلُ": "يَجْعَلُوْن", "يَذْهَبُ": "يَذْهَبُوْن", "يَرْفَعُ": "يَرْفَعُوْن" },
+          "unclear": false
+        },
+        {
+          "number": 3,
+          "sigha": "الْغَائِبَة",
+          "answer": { "يَبْعَثُ": "تَبْعَثُ", "يَجْعَلُ": "تَجْعَلُ", "يَذْهَبُ": "تَذْهَبُ", "يَرْفَعُ": "تَرْفَعُ" },
+          "unclear": false
+        },
+        {
+          "number": 4,
+          "sigha": "الْغَائِبَتَان",
+          "answer": { "يَبْعَثُ": "تَبْعَثَان", "يَجْعَلُ": "تَجْعَلَان", "يَذْهَبُ": "تَذْهَبَان", "يَرْفَعُ": "تَرْفَعَان" },
+          "unclear": false
+        },
+        {
+          "number": 5,
+          "sigha": "الْغَائِبَات",
+          "answer": { "يَبْعَثُ": "يَبْعَثْنَ", "يَجْعَلُ": "يَجْعَلْنَ", "يَذْهَبُ": "يَذْهَبْنَ", "يَرْفَعُ": "يَرْفَعْنَ" },
+          "unclear": false
+        },
+        {
+          "number": 6,
+          "sigha": "الْمُخَاطَب",
+          "answer": { "يَبْعَثُ": "تَبْعَثُ", "يَجْعَلُ": "تَجْعَلُ", "يَذْهَبُ": "تَذْهَبُ", "يَرْفَعُ": "تَرْفَعُ" },
+          "unclear": false
+        },
+        {
+          "number": 7,
+          "sigha": "الْمُخَاطَبَان",
+          "answer": { "يَبْعَثُ": "تَبْعَثَان", "يَجْعَلُ": "تَجْعَلَان", "يَذْهَبُ": "تَذْهَبَان", "يَرْفَعُ": "تَرْفَعَان" },
+          "unclear": false
+        },
+        {
+          "number": 8,
+          "sigha": "الْمُخَاطَبُوْن",
+          "answer": { "يَبْعَثُ": "تَبْعَثُوْن", "يَجْعَلُ": "تَجْعَلُوْن", "يَذْهَبُ": "تَذْهَبُوْن", "يَرْفَعُ": "تَرْفَعُوْن" },
+          "unclear": false
+        },
+        {
+          "number": 9,
+          "sigha": "الْمُخَاطَبَة",
+          "answer": { "يَبْعَثُ": "تَبْعَثِيْن", "يَجْعَلُ": "تَجْعَلِيْن", "يَذْهَبُ": "تَذْهَبِيْن", "يَرْفَعُ": "تَرْفَعِيْن" },
+          "unclear": false
+        },
+        {
+          "number": 10,
+          "sigha": "الْمُخَاطَبَتَان",
+          "answer": { "يَبْعَثُ": "تَبْعَثَان", "يَجْعَلُ": "تَجْعَلَان", "يَذْهَبُ": "تَذْهَبَان", "يَرْفَعُ": "تَرْفَعَان" },
+          "unclear": false
+        },
+        {
+          "number": 11,
+          "sigha": "الْمُخَاطَبَات",
+          "answer": { "يَبْعَثُ": "تَبْعَثْنَ", "يَجْعَلُ": "تَجْعَلْنَ", "يَذْهَبُ": "تَذْهَبْنَ", "يَرْفَعُ": "تَرْفَعْنَ" },
+          "unclear": false
+        },
+        {
+          "number": 12,
+          "sigha": "الْمُتَكَلِّم",
+          "answer": { "يَبْعَثُ": "أَبْعَثُ", "يَجْعَلُ": "أَجْعَلُ", "يَذْهَبُ": "أَذْهَبُ", "يَرْفَعُ": "أَرْفَعُ" },
+          "unclear": false
+        },
+        {
+          "number": 13,
+          "sigha": "الْمُتَكَلِّمُوْن",
+          "answer": { "يَبْعَثُ": "نَبْعَثُ", "يَجْعَلُ": "نَجْعَلُ", "يَذْهَبُ": "نَذْهَبُ", "يَرْفَعُ": "نَرْفَعُ" },
+          "unclear": false
+        }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p2-ex2",
+      "exerciseNumber": 2,
+      "page": 26,
+      "unit": 1,
+      "part": "Part 2: الْمُضَارِع",
+      "instructionText": "Write the صِيْغَة and English pronoun corresponding to the following حَرْف الْمُضَارِع and pronoun.",
+      "exerciseType": "identify-sigha",
+      "example": { "pattern": "تَـ + ـُوْن", "answer": { "sigha": "الْمُخَاطَبُوْن", "english": "You (m/p)", "partOf": "الْمُضَارِع" } },
+      "note": "Items show حَرْف الْمُضَارِع combined with the visible pronoun suffix. Some patterns are inherently ambiguous (shared by multiple sighas). الْمُخَاطَبُوْن (تَـ + ـُوْن) is the worked example.",
+      "items": [
+        {
+          "number": 1,
+          "arabic": "تَـ + ـُ",
+          "answer": { "sigha": "الْغَائِبَة أَو الْمُخَاطَب", "english": "She/It  OR  You (m/s)", "partOf": "الْمُضَارِع" },
+          "unclear": false,
+          "note": "Inherently ambiguous: both الْغَائِبَة and الْمُخَاطَب share the pattern تَفْعَلُ."
+        },
+        {
+          "number": 2,
+          "arabic": "يَـ + ـُ",
+          "answer": { "sigha": "الْغَائِب", "english": "He/It", "partOf": "الْمُضَارِع" },
+          "unclear": false
+        },
+        {
+          "number": 3,
+          "arabic": "نَـ + ـُ",
+          "answer": { "sigha": "الْمُتَكَلِّمُوْن", "english": "We", "partOf": "الْمُضَارِع" },
+          "unclear": false
+        },
+        {
+          "number": 4,
+          "arabic": "تَـ + ـَان",
+          "answer": { "sigha": "الْغَائِبَتَان أَو الْمُخَاطَبَان أَو الْمُخَاطَبَتَان", "english": "They (f/d)  OR  You (m/d)  OR  You (f/d)", "partOf": "الْمُضَارِع" },
+          "unclear": false,
+          "note": "Inherently ambiguous: three sighas share the pattern تَفْعَلَان."
+        },
+        {
+          "number": 5,
+          "arabic": "تَـ + ـْن",
+          "answer": { "sigha": "الْمُخَاطَبَات", "english": "You (f/p)", "partOf": "الْمُضَارِع" },
+          "unclear": false,
+          "note": "مَبْنِي — form does not change with irab."
+        },
+        {
+          "number": 6,
+          "arabic": "أَـ + ـُ",
+          "answer": { "sigha": "الْمُتَكَلِّم", "english": "I", "partOf": "الْمُضَارِع" },
+          "unclear": true,
+          "unclearNote": "PDF extraction shows this item as تَـ + ـُوْن (identical to the worked example). Based on the logic of the exercise — all 14 sighas must be covered — the missing sigha is الْمُتَكَلِّم (أَفْعَلُ, pattern أَـ + ـُ). Verify against the printed book."
+        },
+        {
+          "number": 7,
+          "arabic": "تَـ + ـِيْن",
+          "answer": { "sigha": "الْمُخَاطَبَة", "english": "You (f/s)", "partOf": "الْمُضَارِع" },
+          "unclear": false
+        },
+        {
+          "number": 8,
+          "arabic": "يَـ + ـَان",
+          "answer": { "sigha": "الْغَائِبَان", "english": "They (m/d)", "partOf": "الْمُضَارِع" },
+          "unclear": false
+        },
+        {
+          "number": 9,
+          "arabic": "يَـ + ـُوْن",
+          "answer": { "sigha": "الْغَائِبُوْن", "english": "They (m/p)", "partOf": "الْمُضَارِع" },
+          "unclear": false
+        },
+        {
+          "number": 10,
+          "arabic": "يَـ + ـْن",
+          "answer": { "sigha": "الْغَائِبَات", "english": "They (f/p)", "partOf": "الْمُضَارِع" },
+          "unclear": false,
+          "note": "مَبْنِي — form does not change with irab."
+        }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p2-ex3",
+      "exerciseNumber": 3,
+      "page": 27,
+      "unit": 1,
+      "part": "Part 2: الْمُضَارِع",
+      "instructionText": "Translate the following, write the صِيْغَة, and point out the ضَمِيْر.",
+      "exerciseType": "translate-arabic-to-english",
+      "note": "All verbs are from بَاب فَتَح. Some forms are inherently ambiguous between two sighas.",
+      "items": [
+        {
+          "number": 1,
+          "arabic": "تَرْكَعُوْنَ",
+          "answer": { "english": "You (m/p) bow / are bowing / will bow", "sigha": "الْمُخَاطَبُوْن مِن الْمُضَارِع", "dameer": "و (نُوْن الإِعْرَاب)" },
+          "unclear": false
+        },
+        {
+          "number": 2,
+          "arabic": "تَبْعَثَان",
+          "answer": { "english": "You (f/d) send OR They (f/d) send / are sending / will send", "sigha": "الْمُخَاطَبَتَان أَو الْغَائِبَتَان مِن الْمُضَارِع", "dameer": "ا (نُوْن الإِعْرَاب)" },
+          "unclear": false,
+          "note": "Form تَفْعَلَان is shared by الْغَائِبَتَان, الْمُخَاطَبَان, and الْمُخَاطَبَتَان."
+        },
+        {
+          "number": 3,
+          "arabic": "نَرْفَعُ",
+          "answer": { "english": "We elevate / are elevating / will elevate", "sigha": "الْمُتَكَلِّمُوْن مِن الْمُضَارِع", "dameer": "نَحْن (مُسْتَتِر)" },
+          "unclear": false
+        },
+        {
+          "number": 4,
+          "arabic": "تَفْتَحْنَ",
+          "answer": { "english": "You (f/p) open / will open", "sigha": "الْمُخَاطَبَات مِن الْمُضَارِع", "dameer": "ن (نُوْن النِّسْوَة)" },
+          "unclear": false
+        },
+        {
+          "number": 5,
+          "arabic": "يَلْعَنَان",
+          "answer": { "english": "They (m/d) curse / are cursing / will curse", "sigha": "الْغَائِبَان مِن الْمُضَارِع", "dameer": "ا (نُوْن الإِعْرَاب)" },
+          "unclear": false
+        },
+        {
+          "number": 6,
+          "arabic": "يَقْرَءُوْن",
+          "answer": { "english": "They (m/p) read / are reading / will read", "sigha": "الْغَائِبُوْن مِن الْمُضَارِع", "dameer": "و (نُوْن الإِعْرَاب)" },
+          "unclear": true,
+          "unclearNote": "PDF extraction shows وْن ؤ ُ يَقْر (garbled). Reconstructed as يَقْرَءُوْن based on context."
+        },
+        {
+          "number": 7,
+          "arabic": "تَذْهَبُ",
+          "answer": { "english": "She goes / is going / will go  OR  You (m/s) go / are going / will go", "sigha": "الْغَائِبَة أَو الْمُخَاطَب مِن الْمُضَارِع", "dameer": "هِي أَو أَنْت (مُسْتَتِر)" },
+          "unclear": false,
+          "note": "Inherently ambiguous: تَفْعَلُ serves both الْغَائِبَة and الْمُخَاطَب."
+        },
+        {
+          "number": 8,
+          "arabic": "تَرْفَعَان",
+          "answer": { "english": "They (f/d) elevate OR You (m/d) elevate OR You (f/d) elevate", "sigha": "الْغَائِبَتَان أَو الْمُخَاطَبَان أَو الْمُخَاطَبَتَان مِن الْمُضَارِع", "dameer": "ا (نُوْن الإِعْرَاب)" },
+          "unclear": false,
+          "note": "Inherently ambiguous: three sighas share تَفْعَلَان."
+        },
+        {
+          "number": 9,
+          "arabic": "تَجْعَلْنَ",
+          "answer": { "english": "You (f/p) make / are making / will make", "sigha": "الْمُخَاطَبَات مِن الْمُضَارِع", "dameer": "ن (نُوْن النِّسْوَة)" },
+          "unclear": false
+        },
+        {
+          "number": 10,
+          "arabic": "تَصْلَحُ",
+          "answer": { "english": "She acts righteously  OR  You (m/s) act righteously", "sigha": "الْغَائِبَة أَو الْمُخَاطَب مِن الْمُضَارِع", "dameer": "هِي أَو أَنْت (مُسْتَتِر)" },
+          "unclear": false,
+          "note": "Inherently ambiguous."
+        },
+        {
+          "number": 11,
+          "arabic": "أَسْأَلُ",
+          "answer": { "english": "I ask / am asking / will ask", "sigha": "الْمُتَكَلِّم مِن الْمُضَارِع", "dameer": "أَنَا (مُسْتَتِر)" },
+          "unclear": false
+        },
+        {
+          "number": 12,
+          "arabic": "يَرْكَعُ",
+          "answer": { "english": "He bows / is bowing / will bow", "sigha": "الْغَائِب مِن الْمُضَارِع", "dameer": "هُو (مُسْتَتِر)" },
+          "unclear": false
+        },
+        {
+          "number": 13,
+          "arabic": "يَنْفَعُ",
+          "answer": { "english": "He benefits / is benefiting / will benefit", "sigha": "الْغَائِب مِن الْمُضَارِع", "dameer": "هُو (مُسْتَتِر)" },
+          "unclear": false
+        },
+        {
+          "number": 14,
+          "arabic": "تَسْحَرَان",
+          "answer": { "english": "They (f/d) bewitch OR You (m/d) bewitch OR You (f/d) bewitch", "sigha": "الْغَائِبَتَان أَو الْمُخَاطَبَان أَو الْمُخَاطَبَتَان مِن الْمُضَارِع", "dameer": "ا (نُوْن الإِعْرَاب)" },
+          "unclear": false,
+          "note": "Inherently ambiguous."
+        },
+        {
+          "number": 15,
+          "arabic": "يَسْأَلْنَ",
+          "answer": { "english": "They (f/p) ask / are asking / will ask", "sigha": "الْغَائِبَات مِن الْمُضَارِع", "dameer": "ن (نُوْن النِّسْوَة)" },
+          "unclear": false
+        }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p2-ex4",
+      "exerciseNumber": 4,
+      "page": 27,
+      "unit": 1,
+      "part": "Part 2: الْمُضَارِع",
+      "instructionText": "Translate the following and write the صِيْغَة.",
+      "exerciseType": "translate-english-to-arabic",
+      "note": "All verbs are from بَاب فَتَح. Vocabulary from page 22.",
+      "items": [
+        { "number": 1,  "english": "You (m/d) go",          "answer": { "arabic": "تَذْهَبَان",   "sigha": "الْمُخَاطَبَان" },   "unclear": false },
+        { "number": 2,  "english": "You (f/s) bow",          "answer": { "arabic": "تَرْكَعِيْن",  "sigha": "الْمُخَاطَبَة" },   "unclear": false },
+        { "number": 3,  "english": "She bewitches",          "answer": { "arabic": "تَسْحَرُ",    "sigha": "الْغَائِبَة" },      "unclear": false },
+        { "number": 4,  "english": "They (m/d) ask",         "answer": { "arabic": "يَسْأَلَان",  "sigha": "الْغَائِبَان" },     "unclear": false },
+        { "number": 5,  "english": "You (f/d) profit",       "answer": { "arabic": "تَنْفَعَان",  "sigha": "الْمُخَاطَبَتَان" }, "unclear": false },
+        { "number": 6,  "english": "You (m/s) make",         "answer": { "arabic": "تَجْعَلُ",    "sigha": "الْمُخَاطَب" },     "unclear": false },
+        { "number": 7,  "english": "They (m/p) read",        "answer": { "arabic": "يَقْرَءُوْن", "sigha": "الْغَائِبُوْن" },    "unclear": false },
+        { "number": 8,  "english": "I open",                 "answer": { "arabic": "أَفْتَحُ",    "sigha": "الْمُتَكَلِّم" },   "unclear": false },
+        { "number": 9,  "english": "We send",                "answer": { "arabic": "نَبْعَثُ",    "sigha": "الْمُتَكَلِّمُوْن" },"unclear": false },
+        { "number": 10, "english": "You (f/p) curse",        "answer": { "arabic": "تَلْعَنَّ",  "sigha": "الْمُخَاطَبَات" },   "unclear": false },
+        { "number": 11, "english": "They (f/p) bow",         "answer": { "arabic": "يَرْكَعْنَ",  "sigha": "الْغَائِبَات" },     "unclear": false },
+        { "number": 12, "english": "They (f/d) make",        "answer": { "arabic": "تَجْعَلَان",  "sigha": "الْغَائِبَتَان" },   "unclear": false },
+        { "number": 13, "english": "You (m/p) elevate",      "answer": { "arabic": "تَرْفَعُوْن", "sigha": "الْمُخَاطَبُوْن" }, "unclear": false },
+        { "number": 14, "english": "He acts righteously",    "answer": { "arabic": "يَصْلَحُ",    "sigha": "الْغَائِب" },        "unclear": false }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p2-ex5",
+      "exerciseNumber": 5,
+      "page": 27,
+      "unit": 1,
+      "part": "Part 2: الْمُضَارِع",
+      "instructionText": "Change the gender of the following صِيَغ whilst keeping the number and person the same.",
+      "exerciseType": "change-gender",
+      "note": "Some items use تَفْعَلُ which is inherently ambiguous between الْغَائِبَة and الْمُخَاطَب; both interpretations are provided.",
+      "items": [
+        {
+          "number": 1,
+          "arabic": "تَلْعَنُ",
+          "answer": [
+            { "interpretation": "الْغَائِبَة (She)", "arabic": "يَلْعَنُ", "toSigha": "الْغَائِب" },
+            { "interpretation": "الْمُخَاطَب (You m/s)", "arabic": "تَلْعَنِيْن", "toSigha": "الْمُخَاطَبَة" }
+          ],
+          "unclear": false,
+          "note": "Ambiguous form — answer depends on which sigha is identified."
+        },
+        {
+          "number": 2,
+          "arabic": "تَقْرَئِيْن",
+          "answer": { "arabic": "تَقْرَأُ", "fromSigha": "الْمُخَاطَبَة", "toSigha": "الْمُخَاطَب" },
+          "unclear": true,
+          "unclearNote": "PDF extraction shows يْن ئ تَقْر (garbled RTL fragments). Reconstructed as تَقْرَئِيْن (الْمُخَاطَبَة)."
+        },
+        {
+          "number": 3,
+          "arabic": "تَصْلَحُوْن",
+          "answer": { "arabic": "تَصْلَحْنَ", "fromSigha": "الْمُخَاطَبُوْن", "toSigha": "الْمُخَاطَبَات" },
+          "unclear": false
+        },
+        {
+          "number": 4,
+          "arabic": "تَسْأَلُ",
+          "answer": [
+            { "interpretation": "الْغَائِبَة (She)", "arabic": "يَسْأَلُ", "toSigha": "الْغَائِب" },
+            { "interpretation": "الْمُخَاطَب (You m/s)", "arabic": "تَسْأَلِيْن", "toSigha": "الْمُخَاطَبَة" }
+          ],
+          "unclear": false,
+          "note": "Ambiguous form."
+        },
+        {
+          "number": 5,
+          "arabic": "يَرْكَعْنَ",
+          "answer": { "arabic": "يَرْكَعُوْن", "fromSigha": "الْغَائِبَات", "toSigha": "الْغَائِبُوْن" },
+          "unclear": false
+        },
+        {
+          "number": 6,
+          "arabic": "تَذْهَبُ",
+          "answer": [
+            { "interpretation": "الْغَائِبَة (She)", "arabic": "يَذْهَبُ", "toSigha": "الْغَائِب" },
+            { "interpretation": "الْمُخَاطَب (You m/s)", "arabic": "تَذْهَبِيْن", "toSigha": "الْمُخَاطَبَة" }
+          ],
+          "unclear": false,
+          "note": "Ambiguous form."
+        },
+        {
+          "number": 7,
+          "arabic": "يَجْعَلُوْن",
+          "answer": { "arabic": "يَجْعَلْنَ", "fromSigha": "الْغَائِبُوْن", "toSigha": "الْغَائِبَات" },
+          "unclear": false
+        },
+        {
+          "number": 8,
+          "arabic": "يَبْعَثَان",
+          "answer": { "arabic": "تَبْعَثَان", "fromSigha": "الْغَائِبَان", "toSigha": "الْغَائِبَتَان" },
+          "unclear": false
+        },
+        {
+          "number": 9,
+          "arabic": "يَنْفَعُ",
+          "answer": { "arabic": "تَنْفَعُ", "fromSigha": "الْغَائِب", "toSigha": "الْغَائِبَة" },
+          "unclear": false
+        }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p2-ex6",
+      "exerciseNumber": 6,
+      "page": 27,
+      "unit": 1,
+      "part": "Part 2: الْمُضَارِع",
+      "instructionText": "Change the following الْمَاضِي to الْمُضَارِع whilst keeping the number, gender, and person the same.",
+      "exerciseType": "change-tense",
+      "changeDirection": "ماضي → مضارع",
+      "example": { "arabic": "فَعَلْتُنَّ", "answer": { "arabic": "تَفْعَلْنَ", "sigha": "الْمُخَاطَبَات" } },
+      "note": "All verbs are from بَاب فَتَح; مضارع pattern is يَفْعَلُ.",
+      "items": [
+        { "number": 1,  "arabic": "بَعَثُوا",    "answer": { "arabic": "يَبْعَثُوْن",  "sigha": "الْغَائِبُوْن" },   "unclear": false },
+        { "number": 2,  "arabic": "جَعَلَتَا",   "answer": { "arabic": "تَجْعَلَان",   "sigha": "الْغَائِبَتَان" },  "unclear": false },
+        { "number": 3,  "arabic": "رَفَعْتُمْ",  "answer": { "arabic": "تَرْفَعُوْن",  "sigha": "الْمُخَاطَبُوْن" }, "unclear": false },
+        { "number": 4,  "arabic": "سَأَلَ",      "answer": { "arabic": "يَسْأَلُ",     "sigha": "الْغَائِب" },       "unclear": false },
+        { "number": 5,  "arabic": "سَحَرَتْ",    "answer": { "arabic": "تَسْحَرُ",     "sigha": "الْغَائِبَة" },     "unclear": false },
+        { "number": 6,  "arabic": "لَعَنْتِ",    "answer": { "arabic": "تَلْعَنِيْن",  "sigha": "الْمُخَاطَبَة" },  "unclear": false },
+        {
+          "number": 7,
+          "arabic": "قَرَأْتُمَا",
+          "answer": { "arabic": "تَقْرَءَان", "sigha": "الْمُخَاطَبَان أَو الْمُخَاطَبَتَان" },
+          "unclear": false,
+          "note": "ـتُمَا ماضي ending is shared by الْمُخَاطَبَان and الْمُخَاطَبَتَان; مضارع form is the same (تَقْرَءَان) for both."
+        },
+        { "number": 8,  "arabic": "صَلَحْنَ",    "answer": { "arabic": "يَصْلَحْنَ",  "sigha": "الْغَائِبَات" },    "unclear": false },
+        { "number": 9,  "arabic": "رَكَعْتُنَّ", "answer": { "arabic": "تَرْكَعْنَ",  "sigha": "الْمُخَاطَبَات" },  "unclear": false },
+        { "number": 10, "arabic": "رَفَعْتُ",    "answer": { "arabic": "أَرْفَعُ",     "sigha": "الْمُتَكَلِّم" },  "unclear": false },
+        { "number": 11, "arabic": "ذَهَبْتَ",    "answer": { "arabic": "تَذْهَبُ",     "sigha": "الْمُخَاطَب" },    "unclear": false },
+        { "number": 12, "arabic": "نَفَعْنَا",   "answer": { "arabic": "نَنْفَعُ",     "sigha": "الْمُتَكَلِّمُوْن" }, "unclear": false }
+      ],
+      "unclear": false
+    },
+    {
+      "id": "u1-p2-ex7",
+      "exerciseNumber": 7,
+      "page": 28,
+      "unit": 1,
+      "part": "Part 2: الْمُضَارِع",
+      "instructionText": "Change the following الْمُضَارِع to الْمَاضِي whilst keeping the number, gender, and person the same.",
+      "exerciseType": "change-tense",
+      "changeDirection": "مضارع → ماضي",
+      "note": "All verbs are from بَاب فَتَح. Items 6, 10, 12 use ambiguous تَفْعَلُ form (shared by الْغَائِبَة and الْمُخَاطَب).",
+      "items": [
+        { "number": 1,  "arabic": "أَرْكَعُ",    "answer": { "arabic": "رَكَعْتُ",    "sigha": "الْمُتَكَلِّم" },   "unclear": false },
+        {
+          "number": 2,
+          "arabic": "تَجْعَلْنَ",
+          "answer": { "arabic": "جَعَلْتُنَّ", "sigha": "الْمُخَاطَبَات" },
+          "unclear": true,
+          "unclearNote": "PDF extraction shows تَجْعَلَن without a clear vowel on ن. Reconstructed as تَجْعَلْنَ (الْمُخَاطَبَات, sukoon) based on context; could theoretically be تَجْعَلَنَّ (with نُوْن التَّوْكِيد) but that topic is not covered until Unit 12."
+        },
+        { "number": 3,  "arabic": "تَفْتَحِيْن", "answer": { "arabic": "فَتَحْتِ",    "sigha": "الْمُخَاطَبَة" },  "unclear": false },
+        { "number": 4,  "arabic": "نَرْفَعُ",    "answer": { "arabic": "رَفَعْنَا",   "sigha": "الْمُتَكَلِّمُوْن" }, "unclear": false },
+        { "number": 5,  "arabic": "يَبْعَثُ",    "answer": { "arabic": "بَعَثَ",      "sigha": "الْغَائِب" },       "unclear": false },
+        {
+          "number": 6,
+          "arabic": "تَذْهَبُ",
+          "answer": [
+            { "interpretation": "الْغَائِبَة", "arabic": "ذَهَبَتْ" },
+            { "interpretation": "الْمُخَاطَب", "arabic": "ذَهَبْتَ" }
+          ],
+          "unclear": false,
+          "note": "Ambiguous مضارع form."
+        },
+        {
+          "number": 7,
+          "arabic": "تَذْهَبْنَ",
+          "answer": { "arabic": "ذَهَبْتُنَّ", "sigha": "الْمُخَاطَبَات" },
+          "unclear": false
+        },
+        { "number": 8,  "arabic": "تَنْفَعُوْن", "answer": { "arabic": "نَفَعْتُمْ",  "sigha": "الْمُخَاطَبُوْن" }, "unclear": false },
+        {
+          "number": 9,
+          "arabic": "يَقْرَآن",
+          "answer": { "arabic": "قَرَأَا", "sigha": "الْغَائِبَان" },
+          "unclear": true,
+          "unclearNote": "PDF extraction shows ن آ يَقْر (garbled). Reconstructed as يَقْرَآن (الْغَائِبَان مِن الْمُضَارِع) based on context."
+        },
+        {
+          "number": 10,
+          "arabic": "تَسْحَرُ",
+          "answer": [
+            { "interpretation": "الْغَائِبَة", "arabic": "سَحَرَتْ" },
+            { "interpretation": "الْمُخَاطَب", "arabic": "سَحَرْتَ" }
+          ],
+          "unclear": false,
+          "note": "Ambiguous مضارع form."
+        },
+        {
+          "number": 11,
+          "arabic": "تَسْأَلْنَ",
+          "answer": { "arabic": "سَأَلْتُنَّ", "sigha": "الْمُخَاطَبَات" },
+          "unclear": true,
+          "unclearNote": "PDF extraction shows تَسْأَلَن without a clear vowel on ن. Reconstructed as تَسْأَلْنَ (المُخَاطَبَات) — same reasoning as item 2."
+        },
+        {
+          "number": 12,
+          "arabic": "تَلْعَنُ",
+          "answer": [
+            { "interpretation": "الْغَائِبَة", "arabic": "لَعَنَتْ" },
+            { "interpretation": "الْمُخَاطَب", "arabic": "لَعَنْتَ" }
+          ],
+          "unclear": false,
+          "note": "Ambiguous مضارع form."
+        }
+      ],
+      "unclear": false
+    }
+  ]
+}
