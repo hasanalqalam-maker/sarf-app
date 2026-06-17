@@ -85,21 +85,17 @@ export default function ExFillTableSession({ exercise, onComplete }: Props) {
   const [activeCell, setActiveCell] = useState<ActiveCell | null>(null);
   const [done, setDone] = useState(false);
 
-  // fill-tasrif-saghir reveal state
-  const [revealed, setRevealed] = useState<Set<string>>(new Set());
-  const [manualReveals, setManualReveals] = useState(0);
-
   const correctCount = Object.values(cellStates).filter(s => s === 'correct').length;
   const firstAttemptScore = correctCount
     - Object.keys(cellStates).filter(k => cellStates[k] === 'correct' && hadWrong.has(k)).length;
 
-  // Auto-complete fill-table when all cells filled correctly
+  // Auto-complete when all cells filled correctly
   useEffect(() => {
-    if (!isTasrif && !done && totalCells > 0 && correctCount === totalCells) {
+    if (!done && totalCells > 0 && correctCount === totalCells) {
       setDone(true);
       onComplete(firstAttemptScore, totalCells);
     }
-  }, [correctCount, totalCells, done, isTasrif, firstAttemptScore, onComplete]);
+  }, [correctCount, totalCells, done, firstAttemptScore, onComplete]);
 
   // ── open MCQ picker ────────────────────────────────────────────────────────
 
@@ -166,44 +162,41 @@ export default function ExFillTableSession({ exercise, onComplete }: Props) {
     }
   }
 
+  function openTasrifCell(ri: number, colKey: string) {
+    const key = `t|${ri}|${colKey}`;
+    if (cellStates[key] === 'correct') return;
+    const a = exercise.items?.[ri]?.answer as Record<string, string> | undefined;
+    const correct = a?.[colKey];
+    if (!correct) return;
+    const others = (exercise.items ?? [])
+      .filter((_, i) => i !== ri)
+      .map(item => (item.answer as Record<string, string>)?.[colKey])
+      .filter((v): v is string => !!v && v !== correct);
+    const distractors = shuffle([...new Set(others)]).slice(0, 3);
+    while (distractors.length < 3) distractors.push('—');
+    setActiveCell({
+      key,
+      correct,
+      options: shuffle([correct, ...distractors]),
+      sigha: exercise.items?.[ri]?.masdar ?? '',
+      verb: colKey,
+    });
+  }
+
   function handleDone() {
     setDone(true);
-    if (isTasrif) {
-      const score = Math.round((manualReveals / Math.max(totalCells, 1)) * 100);
-      onComplete(score, 100);
-    } else {
-      onComplete(firstAttemptScore, totalCells);
-    }
-  }
-
-  // tasrif helpers
-  function toggleTasrifCell(key: string) {
-    if (revealed.has(key)) return;
-    setRevealed(r => new Set([...r, key]));
-    setManualReveals(c => c + 1);
-  }
-
-  function revealAllTasrif() {
-    const allKeys: string[] = [];
-    exercise.items?.forEach((_, ri) => {
-      ['madiMaloom', 'mudariMaloom', 'madiMajhool', 'mudariMajhool', 'amr', 'nahy', 'ismFail', 'ismMafool'].forEach(
-        col => allKeys.push(`${ri}|${col}`),
-      );
-    });
-    setRevealed(new Set(allKeys));
+    onComplete(firstAttemptScore, totalCells);
   }
 
   const reset = useCallback(() => {
     setCellStates({});
     setHadWrong(new Set());
     setActiveCell(null);
-    setRevealed(new Set());
-    setManualReveals(0);
     setDone(false);
   }, []);
 
   const title = `Ex ${exercise.exerciseNumber} · ${TYPE_LABELS[exercise.exerciseType] ?? exercise.exerciseType}`;
-  const headerScore = isTasrif ? revealed.size : correctCount;
+  const headerScore = correctCount;
 
   return (
     <ExerciseSessionWrapper
@@ -375,23 +368,30 @@ export default function ExFillTableSession({ exercise, onComplete }: Props) {
                 <div key={ri} className="card-parchment p-4">
                   <p className="text-[11px] font-sans font-semibold text-gold uppercase tracking-wide mb-3">
                     مَصْدَر: <span dir="rtl" className="arabic text-sm text-ink">{item.masdar ?? ''}</span>
+                    {item.bab && (
+                      <span className="ml-2 text-ink-muted font-normal normal-case tracking-normal">({item.bab})</span>
+                    )}
                   </p>
                   <div className="grid grid-cols-2 gap-2">
                     {cols.map(({ key, label }) => {
-                      const cellKey = `${ri}|${key}`;
-                      const isRev = revealed.has(cellKey);
+                      const cellKey = `t|${ri}|${key}`;
+                      const state = cellStates[cellKey];
                       const val = a?.[key] ?? '';
                       return (
                         <div key={key} className="flex flex-col gap-1">
                           <span className="text-[9px] font-sans text-ink-muted">{label}</span>
-                          {isRev ? (
-                            <span dir="rtl" className="arabic text-sm text-ink">{val || '—'}</span>
+                          {state === 'correct' ? (
+                            <span dir="rtl" className="arabic text-sm text-teal">{val || '—'}</span>
                           ) : (
                             <button
-                              onClick={() => toggleTasrifCell(cellKey)}
-                              className="flex items-center justify-center h-8 rounded-lg bg-teal/15 border border-teal/30 text-teal text-[10px] font-sans font-medium hover:bg-teal/25 transition-colors"
+                              onClick={() => openTasrifCell(ri, key)}
+                              className={`flex items-center justify-center h-8 rounded-lg text-[11px] font-sans font-medium transition-all ${
+                                state === 'wrong'
+                                  ? 'bg-red-100 border border-red-300 text-red-600'
+                                  : 'bg-teal/10 border border-teal/25 text-teal hover:bg-teal/20'
+                              }`}
                             >
-                              Reveal
+                              {state === 'wrong' ? '✗' : 'Fill'}
                             </button>
                           )}
                         </div>
@@ -405,23 +405,13 @@ export default function ExFillTableSession({ exercise, onComplete }: Props) {
         )}
 
         {/* ── Footer ────────────────────────────────────────────────────────── */}
-        <div className="flex gap-2 mt-6">
-          {isTasrif && (
-            <button
-              onClick={revealAllTasrif}
-              className="flex-1 py-2.5 rounded-xl border border-gold/30 text-xs font-sans font-medium text-ink-muted hover:bg-gold/5 transition-colors"
-            >
-              Reveal all
-            </button>
-          )}
+        <div className="mt-6">
           <button
             onClick={handleDone}
-            disabled={!isTasrif && done}
-            className="flex-1 py-2.5 rounded-xl bg-teal text-parchment text-xs font-sans font-medium hover:bg-teal-dark transition-colors disabled:opacity-50"
+            disabled={done}
+            className="w-full py-2.5 rounded-xl bg-teal text-parchment text-xs font-sans font-medium hover:bg-teal-dark transition-colors disabled:opacity-50"
           >
-            {isTasrif
-              ? `Done (${revealed.size}/${totalCells})`
-              : `Done (${correctCount}/${totalCells})`}
+            Done ({correctCount}/{totalCells})
           </button>
         </div>
       </div>
@@ -431,15 +421,25 @@ export default function ExFillTableSession({ exercise, onComplete }: Props) {
         <div className="fixed inset-0 z-50 flex items-end">
           <div className="absolute inset-0 bg-black/40" onClick={() => setActiveCell(null)} />
           <div className="relative w-full bg-parchment rounded-t-2xl p-5 pb-8 shadow-xl">
-            <p className="text-center text-xs font-sans text-ink-muted mb-1">
-              What is the form of
-            </p>
-            <p className="text-center mb-4">
-              <span dir="rtl" className="arabic text-base text-ink">{activeCell.verb}</span>
-              <span className="mx-2 text-gold font-sans">for</span>
-              <span dir="rtl" className="arabic text-base text-ink">{activeCell.sigha}</span>
-              <span className="text-gold font-sans">?</span>
-            </p>
+            {activeCell.key.startsWith('t|') ? (
+              <p className="text-center text-xs font-sans text-ink-muted mb-4">
+                {({'madiMaloom':'مَاضِي مَعْلُوم','mudariMaloom':'مُضَارِع مَعْلُوم','madiMajhool':'مَاضِي مَجْهُوْل','mudariMajhool':'مُضَارِع مَجْهُوْل','amr':'أَمْر','nahy':'نَهْي','ismFail':'اسْم الْفَاعِل','ismMafool':'اسْم الْمَفْعُوْل'} as Record<string,string>)[activeCell.verb] ?? activeCell.verb}
+                {' '}of{' '}
+                <span dir="rtl" className="arabic text-base text-ink">{activeCell.sigha}</span>?
+              </p>
+            ) : (
+              <>
+                <p className="text-center text-xs font-sans text-ink-muted mb-1">
+                  What is the form of
+                </p>
+                <p className="text-center mb-4">
+                  <span dir="rtl" className="arabic text-base text-ink">{activeCell.verb}</span>
+                  <span className="mx-2 text-gold font-sans">for</span>
+                  <span dir="rtl" className="arabic text-base text-ink">{activeCell.sigha}</span>
+                  <span className="text-gold font-sans">?</span>
+                </p>
+              </>
+            )}
             <div className="grid grid-cols-2 gap-2.5">
               {activeCell.options.map((opt, i) => (
                 <button

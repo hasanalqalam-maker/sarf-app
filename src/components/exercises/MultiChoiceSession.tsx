@@ -11,7 +11,6 @@ interface Props {
   onComplete: (score: number, total: number) => void;
 }
 
-// Return the correct answer text for an item given an exercise type
 function correctFor(item: ExerciseItem, type: string): string | null {
   const a = item.answer as Record<string, unknown> | unknown[] | undefined;
   if (!a) return null;
@@ -30,20 +29,21 @@ function correctFor(item: ExerciseItem, type: string): string | null {
       return (a as Record<string, string>).negated ?? null;
     case 'active-passive-table':
       return (a as Record<string, string>).passive ?? null;
-    case 'fill-tasrif-saghir':
-      return (a as Record<string, unknown>).madiMaloom as string ?? null;
     default:
       return null;
   }
 }
 
-// Irab secondary question for identify-sigha-and-irab
 function irabFor(item: ExerciseItem): string | null {
   const a = item.answer as Record<string, string> | undefined;
   return a?.irab ?? null;
 }
 
-// Build 4-option MCQ for bāb identification
+function englishFor(item: ExerciseItem): string | null {
+  const a = item.answer as Record<string, string> | undefined;
+  return a?.english ?? null;
+}
+
 function babOptions(correct: string): MCOption[] {
   const correctBab = BAB_OPTIONS.find(b => b.code === correct || b.pattern === correct || b.madi === correct);
   if (!correctBab) return [];
@@ -70,10 +70,19 @@ function irabOptions(correct: string): MCOption[] {
   ]);
 }
 
-type AnswerState = 'idle' | 'correct' | 'wrong';
+function englishPronounOptions(correct: string, items: ExerciseItem[]): MCOption[] {
+  const pool = items
+    .filter(i => !i.unclear)
+    .map(i => englishFor(i))
+    .filter((e): e is string => !!e && e !== correct);
+  const unique = [...new Set(pool)];
+  const distractors = shuffle(unique).slice(0, 3);
+  while (distractors.length < 3) distractors.push('?');
+  return shuffle([{ text: correct, correct: true }, ...distractors.map(d => ({ text: d, correct: false }))]);
+}
 
-// For identify-sigha-and-irab we ask sigha then irab as two steps
-type Step = 'sigha' | 'irab' | 'done';
+type AnswerState = 'idle' | 'correct' | 'wrong';
+type Step = 'sigha' | 'irab' | 'english' | 'done';
 
 export default function MultiChoiceSession({ exercise, onComplete }: Props) {
   const { recordAnswer } = useProgress();
@@ -84,8 +93,18 @@ export default function MultiChoiceSession({ exercise, onComplete }: Props) {
   );
   const pendingReview = exercise.items.length - scoreable.length;
 
+  const isSighaType = exercise.exerciseType === 'identify-sigha';
+  const isIrabType = exercise.exerciseType === 'identify-sigha-and-irab';
+
+  // identify-sigha: 2 scored steps per item (sigha + english pronoun)
+  const total = isSighaType ? scoreable.length * 2 : scoreable.length;
+
+  // Worked example intro for identify-sigha exercises
+  const hasWorkedExample = isSighaType && !!(exercise.instructionText ?? '').includes('One has been done for you');
+  const [showIntro, setShowIntro] = useState(hasWorkedExample);
+
   const [index, setIndex] = useState(0);
-  const [step, setStep] = useState<Step>('sigha'); // for irab exercises
+  const [step, setStep] = useState<Step>('sigha');
   const [score, setScore] = useState(0);
   const [answerState, setAnswerState] = useState<AnswerState>('idle');
   const [chosen, setChosen] = useState<string | null>(null);
@@ -93,12 +112,11 @@ export default function MultiChoiceSession({ exercise, onComplete }: Props) {
 
   const current: ExerciseItem | undefined = scoreable[index];
 
-  // Build options for current item / step
   const options: MCOption[] = useMemo(() => {
     if (!current) return [];
     const type = exercise.exerciseType;
 
-    if (type === 'identify-sigha-and-irab') {
+    if (isIrabType) {
       if (step === 'sigha') {
         const correct = (current.answer as Record<string, string>)?.sigha;
         return correct ? sighaOptions(correct) : [];
@@ -107,9 +125,16 @@ export default function MultiChoiceSession({ exercise, onComplete }: Props) {
       return irabOptions(correct);
     }
 
-    if (type === 'identify-sigha') {
-      const correct = (current.answer as Record<string, string>)?.sigha;
-      return correct ? sighaOptions(correct) : [];
+    if (isSighaType) {
+      if (step === 'sigha') {
+        const correct = (current.answer as Record<string, string>)?.sigha;
+        return correct ? sighaOptions(correct) : [];
+      }
+      if (step === 'english') {
+        const correct = englishFor(current);
+        return correct ? englishPronounOptions(correct, scoreable) : [];
+      }
+      return [];
     }
 
     if (type === 'identify-bab') {
@@ -129,15 +154,19 @@ export default function MultiChoiceSession({ exercise, onComplete }: Props) {
     const correct = correctFor(current, type);
     if (!correct) return [];
     return buildOptions(correct, scoreable, exercise.exerciseType);
-  }, [current, exercise, step, scoreable]);
+  }, [current, exercise, step, scoreable, isIrabType, isSighaType]);
 
-  // Correct text for current step
   const correctText: string = useMemo(() => {
     if (!current) return '';
     const type = exercise.exerciseType;
-    if (type === 'identify-sigha-and-irab') {
+    if (isIrabType) {
       if (step === 'sigha') return (current.answer as Record<string, string>)?.sigha ?? '';
       return (current.answer as Record<string, string>)?.irab ?? 'مَرْفُوْع';
+    }
+    if (isSighaType) {
+      if (step === 'sigha') return (current.answer as Record<string, string>)?.sigha ?? '';
+      if (step === 'english') return englishFor(current) ?? '';
+      return '';
     }
     if (type === 'identify-bab') {
       const possibleBabs: string[] = (current.answer as Record<string, string[]>)?.possibleBabs ?? [];
@@ -145,18 +174,13 @@ export default function MultiChoiceSession({ exercise, onComplete }: Props) {
       return b ? `${b.madi} ${b.mudari}` : possibleBabs[0] ?? '';
     }
     return correctFor(current, type) ?? '';
-  }, [current, exercise.exerciseType, step]);
+  }, [current, exercise.exerciseType, step, isIrabType, isSighaType]);
 
-  // Question prompt (what to show in the Arabic card)
   const prompt = useMemo(() => {
     if (!current) return '';
-    if (exercise.exerciseType === 'identify-sigha-and-irab' && step === 'irab') {
-      // Show the form again
-      return current.arabic ?? current.pattern ?? '';
-    }
-    if (exercise.exerciseType === 'translate-english-to-arabic') return null; // handled in grid
+    if (isIrabType && step === 'irab') return current.arabic ?? current.pattern ?? '';
     return current.arabic ?? current.pattern ?? current.masdar ?? '';
-  }, [current, exercise.exerciseType, step]);
+  }, [current, isIrabType, step]);
 
   const englishPrompt = useMemo(() => {
     if (!current) return null;
@@ -165,25 +189,24 @@ export default function MultiChoiceSession({ exercise, onComplete }: Props) {
       return `Add (${current.particle}) and adjust iʿrāb`;
     }
     if (exercise.exerciseType === 'fill-tasrif-saghir') return current.masdar ?? null;
-    if (exercise.exerciseType === 'identify-sigha-and-irab' && step === 'irab') {
+    if (isIrabType && step === 'irab') {
       return `صِيْغَة: ${(a as Record<string, string>)?.sigha ?? ''}`;
     }
     return null;
-  }, [current, exercise.exerciseType, step]);
+  }, [current, exercise.exerciseType, step, isIrabType]);
 
-  // Step label
   const stepLabel = useMemo(() => {
-    if (exercise.exerciseType !== 'identify-sigha-and-irab') return null;
+    if (isSighaType) {
+      return step === 'sigha' ? 'Name the sīgha' : 'English pronoun';
+    }
+    if (!isIrabType) return null;
     return step === 'sigha' ? 'Name the sīgha' : 'What is its grammatical state?';
-  }, [exercise.exerciseType, step]);
+  }, [exercise.exerciseType, step, isSighaType, isIrabType]);
 
   function handleAnswer(text: string) {
     if (answerState !== 'idle' || !current) return;
     setChosen(text);
 
-    const isIrabType = exercise.exerciseType === 'identify-sigha-and-irab';
-
-    // For identify-bab, any of the possibleBabs counts as correct
     let correct = false;
     if (exercise.exerciseType === 'identify-bab') {
       const possibleBabs: string[] = (current.answer as Record<string, string[]>)?.possibleBabs ?? [];
@@ -197,39 +220,52 @@ export default function MultiChoiceSession({ exercise, onComplete }: Props) {
 
     setAnswerState(correct ? 'correct' : 'wrong');
 
-    // Record progress if it's the final step
-    if (!isIrabType || step === 'irab') {
+    if (isSighaType) {
+      // Score each step independently for identify-sigha
+      if (correct) setScore(s => s + 1);
+      recordAnswer('unit1-exercise', exercise.id, exercise.exerciseType, current.arabic ?? current.pattern ?? '', correct);
+    } else if (isIrabType) {
+      // For irab: only record on final step (irab or when sigha is wrong)
+      if (step === 'irab') {
+        if (correct) setScore(s => s + 1);
+        recordAnswer('unit1-exercise', exercise.id, exercise.exerciseType, current.arabic ?? current.pattern ?? '', correct);
+      }
+    } else {
       if (correct) setScore(s => s + 1);
       recordAnswer('unit1-exercise', exercise.id, exercise.exerciseType, current.arabic ?? current.pattern ?? '', correct);
     }
   }
 
   function advance() {
-    const type = exercise.exerciseType;
-    const isIrabType = type === 'identify-sigha-and-irab';
-
-    // For irab exercises: correct on sigha step → move to irab step
-    if (isIrabType && step === 'sigha' && answerState === 'correct' && current) {
-      const hasIrab = !!(current.answer as Record<string, string>)?.irab;
-      if (hasIrab) {
-        setStep('irab');
+    if (isSighaType) {
+      if (step === 'sigha') {
+        // Always proceed to English pronoun step regardless of sigha result
+        setStep('english');
         setAnswerState('idle');
         setChosen(null);
         return;
       }
-    }
-
-    // Wrong on sigha step for irab: skip irab, don't count
-    if (isIrabType && step === 'sigha' && answerState === 'wrong') {
-      // count as wrong already handled above (nothing recorded yet)
-      recordAnswer('unit1-exercise', exercise.id, exercise.exerciseType, current?.arabic ?? '', false);
+      // step === 'english': go to next item
+    } else if (isIrabType) {
+      if (step === 'sigha' && answerState === 'correct' && current) {
+        const hasIrab = !!(current.answer as Record<string, string>)?.irab;
+        if (hasIrab) {
+          setStep('irab');
+          setAnswerState('idle');
+          setChosen(null);
+          return;
+        }
+      }
+      if (step === 'sigha' && answerState === 'wrong') {
+        recordAnswer('unit1-exercise', exercise.id, exercise.exerciseType, current?.arabic ?? '', false);
+      }
     }
 
     // Move to next item
     const next = index + 1;
     if (next >= scoreable.length) {
       setDone(true);
-      onComplete(score + (answerState === 'correct' && (!isIrabType || step === 'irab') ? 1 : 0), scoreable.length);
+      onComplete(score, total);
     } else {
       setIndex(next);
       setStep('sigha');
@@ -245,7 +281,8 @@ export default function MultiChoiceSession({ exercise, onComplete }: Props) {
     setAnswerState('idle');
     setChosen(null);
     setDone(false);
-  }, []);
+    if (hasWorkedExample) setShowIntro(true);
+  }, [hasWorkedExample]);
 
   const isRTL = (text: string) => /[؀-ۿ]/.test(text);
 
@@ -260,87 +297,119 @@ export default function MultiChoiceSession({ exercise, onComplete }: Props) {
       title={title}
       page={exercise.page}
       score={score}
-      total={scoreable.length}
+      total={total}
       completed={done}
       pendingReview={pendingReview}
       onRetry={reset}
     >
       <div className="flex flex-col min-h-full px-4 py-6">
 
-        {/* Counter */}
-        <p className="text-center text-xs font-sans text-ink-muted mb-3">
-          {index + 1} of {scoreable.length}
-          {stepLabel && <span className="ml-2 text-gold">· {stepLabel}</span>}
-        </p>
-
-        {/* Instruction card */}
-        <div className="bg-ink/5 rounded-xl px-4 py-3 mb-5">
-          <p className="text-xs font-sans text-ink-muted leading-relaxed">{exercise.instructionText}</p>
-        </div>
-
-        {/* Prompt */}
-        <div className="flex-1 flex flex-col items-center justify-center mb-6 gap-2">
-          {prompt && (
-            <p dir="rtl" className="arabic text-5xl leading-[4rem] text-ink text-center">
-              {prompt}
-            </p>
-          )}
-          {englishPrompt && (
-            <p className="text-sm font-sans text-ink-muted text-center mt-1">{englishPrompt}</p>
-          )}
-          {current.note && !englishPrompt && (
-            <p className="text-xs font-sans text-gold/80 text-center italic max-w-xs">{current.note}</p>
-          )}
-        </div>
-
-        {/* Options */}
-        <div className="grid grid-cols-2 gap-2 mb-4">
-          {options.map((opt, i) => {
-            const isChosen = chosen === opt.text;
-            const isCorrect = opt.correct;
-            let cls = 'border-gold/20 bg-parchment-dark text-ink';
-            if (answerState !== 'idle') {
-              if (isCorrect) cls = 'border-teal bg-teal/10 text-teal';
-              else if (isChosen && !isCorrect) cls = 'border-red-400 bg-red-50 text-red-700';
-            }
-            const arabic = isRTL(opt.text);
-            return (
-              <button
-                key={i}
-                onClick={() => handleAnswer(opt.text)}
-                disabled={answerState !== 'idle'}
-                className={`px-3 py-3 rounded-xl border font-sans text-sm transition-colors text-center ${cls}`}
-              >
-                <span
-                  dir={arabic ? 'rtl' : undefined}
-                  className={arabic ? 'arabic text-base leading-relaxed' : ''}
-                >
-                  {opt.text}
-                </span>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Feedback */}
-        {answerState !== 'idle' && (
-          <div className={`rounded-xl px-4 py-3 mb-4 text-sm font-sans ${answerState === 'correct' ? 'bg-teal/10 text-teal-dark' : 'bg-red-50 text-red-700'}`}>
-            <p className="font-semibold mb-1">{answerState === 'correct' ? 'Correct!' : 'Not quite.'}</p>
-            <p className="text-xs leading-relaxed">
-              {answerState === 'wrong' && (
-                <>Correct answer: <span dir="rtl" className="arabic">{correctText}</span></>
-              )}
-            </p>
+        {/* ── Worked example intro ─────────────────────────────────────────── */}
+        {showIntro && (
+          <div className="flex flex-col min-h-full justify-between">
+            <div>
+              <div className="bg-ink/5 rounded-xl px-4 py-3 mb-5">
+                <p className="text-xs font-sans text-ink-muted leading-relaxed">{exercise.instructionText}</p>
+              </div>
+              <div className="bg-teal/10 border border-teal/30 rounded-xl px-4 py-4 mb-4">
+                <p className="text-[11px] font-sans font-semibold text-teal uppercase tracking-wide mb-2">
+                  Worked Example
+                </p>
+                <p className="text-xs font-sans text-ink leading-relaxed">{exercise.note}</p>
+              </div>
+            </div>
+            <button
+              onClick={() => setShowIntro(false)}
+              className="w-full py-3 rounded-xl bg-ink text-parchment font-sans font-medium text-sm hover:bg-ink-light transition-colors"
+            >
+              Got it — start the exercise →
+            </button>
           </div>
         )}
 
-        {answerState !== 'idle' && (
-          <button
-            onClick={advance}
-            className="w-full py-3 rounded-xl bg-ink text-parchment font-sans font-medium text-sm hover:bg-ink-light transition-colors"
-          >
-            {index + 1 >= scoreable.length ? 'See results' : 'Next →'}
-          </button>
+        {/* ── Main MCQ ─────────────────────────────────────────────────────── */}
+        {!showIntro && (
+          <>
+            {/* Counter */}
+            <p className="text-center text-xs font-sans text-ink-muted mb-3">
+              {index + 1} of {scoreable.length}
+              {stepLabel && <span className="ml-2 text-gold">· {stepLabel}</span>}
+            </p>
+
+            {/* Instruction card */}
+            <div className="bg-ink/5 rounded-xl px-4 py-3 mb-5">
+              <p className="text-xs font-sans text-ink-muted leading-relaxed">{exercise.instructionText}</p>
+            </div>
+
+            {/* Prompt */}
+            <div className="flex-1 flex flex-col items-center justify-center mb-6 gap-2">
+              {prompt && (
+                <p dir="rtl" className="arabic text-5xl leading-[4rem] text-ink text-center">
+                  {prompt}
+                </p>
+              )}
+              {englishPrompt && (
+                <p className="text-sm font-sans text-ink-muted text-center mt-1">{englishPrompt}</p>
+              )}
+              {current.note && !englishPrompt && (
+                <p className="text-xs font-sans text-gold/80 text-center italic max-w-xs">{current.note}</p>
+              )}
+            </div>
+
+            {/* Options */}
+            <div className="grid grid-cols-2 gap-2 mb-4">
+              {options.map((opt, i) => {
+                const isChosen = chosen === opt.text;
+                const isCorrect = opt.correct;
+                let cls = 'border-gold/20 bg-parchment-dark text-ink';
+                if (answerState !== 'idle') {
+                  if (isCorrect) cls = 'border-teal bg-teal/10 text-teal';
+                  else if (isChosen && !isCorrect) cls = 'border-red-400 bg-red-50 text-red-700';
+                }
+                const arabic = isRTL(opt.text);
+                return (
+                  <button
+                    key={i}
+                    onClick={() => handleAnswer(opt.text)}
+                    disabled={answerState !== 'idle'}
+                    className={`px-3 py-3 rounded-xl border font-sans text-sm transition-colors text-center ${cls}`}
+                  >
+                    <span
+                      dir={arabic ? 'rtl' : undefined}
+                      className={arabic ? 'arabic text-base leading-relaxed' : ''}
+                    >
+                      {opt.text}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Feedback */}
+            {answerState !== 'idle' && (
+              <div className={`rounded-xl px-4 py-3 mb-4 text-sm font-sans ${answerState === 'correct' ? 'bg-teal/10 text-teal-dark' : 'bg-red-50 text-red-700'}`}>
+                <p className="font-semibold mb-1">{answerState === 'correct' ? 'Correct!' : 'Not quite.'}</p>
+                <p className="text-xs leading-relaxed">
+                  {answerState === 'wrong' && (
+                    <>Correct answer: <span dir="rtl" className="arabic">{correctText}</span></>
+                  )}
+                </p>
+              </div>
+            )}
+
+            {answerState !== 'idle' && (
+              <button
+                onClick={advance}
+                className="w-full py-3 rounded-xl bg-ink text-parchment font-sans font-medium text-sm hover:bg-ink-light transition-colors"
+              >
+                {isSighaType && step === 'sigha'
+                  ? 'English pronoun →'
+                  : index + 1 >= scoreable.length
+                    ? 'See results'
+                    : 'Next →'}
+              </button>
+            )}
+          </>
         )}
       </div>
     </ExerciseSessionWrapper>

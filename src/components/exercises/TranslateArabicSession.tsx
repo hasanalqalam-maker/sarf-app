@@ -20,7 +20,6 @@ function isTranslationCorrect(student: string, model: string): boolean {
   const s = norm(student);
   if (!s || s.length < 2) return false;
 
-  // Try each "/" alternative in the model answer
   const alternatives = model.split('/').map(a => norm(a.trim()));
 
   const stopWords = new Set([
@@ -39,21 +38,25 @@ function isTranslationCorrect(student: string, model: string): boolean {
       continue;
     }
 
-    // Passive check: if model uses was/were, student must too
     const modelIsPassive = ['was', 'were'].some(w => m.split(' ').includes(w));
     if (modelIsPassive) {
       const studentHasPassive = ['was', 'were'].some(w => s.split(' ').includes(w));
       if (!studentHasPassive) continue;
     }
 
-    // Accept if student answer contains any content word from this model alternative
     if (modelWords.some(w => s.includes(w))) return true;
   }
 
   return false;
 }
 
-// ── MCQ option builder ────────────────────────────────────────────────────────
+// ── strip Arabic diacritics ───────────────────────────────────────────────────
+
+function stripDiacritics(s: string): string {
+  return s.replace(/[ً-ٰٟ]/g, '');
+}
+
+// ── MCQ option builders ───────────────────────────────────────────────────────
 
 function buildSighaOptions(correct: string, items: ExerciseItem[]): { text: string; correct: boolean }[] {
   const pool = items
@@ -77,9 +80,20 @@ function buildDameerOptions(correct: string, items: ExerciseItem[]): { text: str
   return shuffle([{ text: correct, correct: true }, ...distractors.map(d => ({ text: d, correct: false }))]);
 }
 
+function buildVerbTypeOptions(correct: string, items: ExerciseItem[]): { text: string; correct: boolean }[] {
+  const pool = items
+    .filter(i => !i.unclear)
+    .map(i => (i.answer as Record<string, string>)?.verbType)
+    .filter((v): v is string => !!v && v !== correct);
+  const unique = [...new Set(pool)];
+  const distractors = shuffle(unique).slice(0, 3);
+  while (distractors.length < 3) distractors.push('—');
+  return shuffle([{ text: correct, correct: true }, ...distractors.map(d => ({ text: d, correct: false }))]);
+}
+
 // ── step type ─────────────────────────────────────────────────────────────────
 
-type Step = 'translation' | 'sigha' | 'dameer';
+type Step = 'translation' | 'sigha' | 'dameer' | 'verbType';
 
 // ── main component ────────────────────────────────────────────────────────────
 
@@ -90,22 +104,33 @@ export default function TranslateArabicSession({ exercise, onComplete }: Props) 
   const scoreable = useMemo(() => exercise.items.filter(i => !i.unclear), [exercise.items]);
   const pendingReview = exercise.items.length - scoreable.length;
 
+  // Determine steps from instruction text (not from data presence alone)
+  const instructionStripped = useMemo(
+    () => stripDiacritics(exercise.instructionText ?? ''),
+    [exercise.instructionText],
+  );
+
   const hasSigha = useMemo(
-    () => scoreable.some(i => !!(i.answer as Record<string, string>)?.sigha),
-    [scoreable],
+    () => instructionStripped.includes('صيغة') && scoreable.some(i => !!(i.answer as Record<string, string>)?.sigha),
+    [instructionStripped, scoreable],
   );
   const hasDameer = useMemo(
-    () => scoreable.some(i => !!(i.answer as Record<string, string>)?.dameer),
+    () => instructionStripped.includes('ضمير') && scoreable.some(i => !!(i.answer as Record<string, string>)?.dameer),
+    [instructionStripped, scoreable],
+  );
+  // verbType: data-driven (only one exercise has this field)
+  const hasVerbType = useMemo(
+    () => scoreable.some(i => !!(i.answer as Record<string, string>)?.verbType),
     [scoreable],
   );
 
-  // steps per item
   const steps: Step[] = useMemo(() => {
     const s: Step[] = ['translation'];
     if (hasSigha) s.push('sigha');
     if (hasDameer) s.push('dameer');
+    if (hasVerbType) s.push('verbType');
     return s;
-  }, [hasSigha, hasDameer]);
+  }, [hasSigha, hasDameer, hasVerbType]);
 
   const stepsPerItem = steps.length;
   const total = scoreable.length * stepsPerItem;
@@ -131,16 +156,21 @@ export default function TranslateArabicSession({ exercise, onComplete }: Props) 
   const modelEnglish = answer?.english ?? '';
   const modelSigha = answer?.sigha ?? '';
   const modelDameer = answer?.dameer ?? '';
+  const modelVerbType = answer?.verbType ?? '';
 
   // MCQ options for current step
   const mcqOptions = useMemo(() => {
     if (!current || currentStep === 'translation') return [];
     if (currentStep === 'sigha') return buildSighaOptions(modelSigha, scoreable);
     if (currentStep === 'dameer') return buildDameerOptions(modelDameer, scoreable);
+    if (currentStep === 'verbType') return buildVerbTypeOptions(modelVerbType, scoreable);
     return [];
-  }, [current, currentStep, modelSigha, modelDameer, scoreable]);
+  }, [current, currentStep, modelSigha, modelDameer, modelVerbType, scoreable]);
 
-  const mcqCorrectText = currentStep === 'sigha' ? modelSigha : modelDameer;
+  const mcqCorrectText =
+    currentStep === 'sigha' ? modelSigha :
+    currentStep === 'dameer' ? modelDameer :
+    modelVerbType;
 
   function handleCheckTranslation() {
     if (!typedAnswer.trim() || translationChecked) return;
@@ -168,7 +198,6 @@ export default function TranslateArabicSession({ exercise, onComplete }: Props) 
       setMcqAnswered(false);
       return;
     }
-    // Move to next item
     const nextIndex = index + 1;
     if (nextIndex >= scoreable.length) {
       setDone(true);
@@ -201,11 +230,11 @@ export default function TranslateArabicSession({ exercise, onComplete }: Props) 
 
   const title = `Ex ${exercise.exerciseNumber} · ${TYPE_LABELS[exercise.exerciseType] ?? exercise.exerciseType}`;
 
-  // Step label
   const stepLabel =
     currentStep === 'translation' ? 'Translate'
     : currentStep === 'sigha' ? 'Write the sīgha'
-    : 'Identify the ḍamīr';
+    : currentStep === 'dameer' ? 'Identify the ḍamīr'
+    : 'What type of verb is this?';
 
   const itemProgress = index * stepsPerItem + stepIdx + 1;
 
@@ -262,7 +291,6 @@ export default function TranslateArabicSession({ exercise, onComplete }: Props) 
               />
             </div>
 
-            {/* Feedback */}
             {translationChecked && (
               <div className={`rounded-xl px-4 py-3 mb-3 text-sm font-sans ${translationCorrect ? 'bg-teal/10 text-teal-dark' : 'bg-red-50 text-red-700'}`}>
                 <p className="font-semibold mb-1">{translationCorrect ? 'Correct!' : 'Not quite.'}</p>
@@ -291,8 +319,8 @@ export default function TranslateArabicSession({ exercise, onComplete }: Props) 
           </>
         )}
 
-        {/* ── Sigha / Dameer MCQ step ──────────────────────────────────────── */}
-        {(currentStep === 'sigha' || currentStep === 'dameer') && (
+        {/* ── MCQ step (sigha / dameer / verbType) ─────────────────────────── */}
+        {(currentStep === 'sigha' || currentStep === 'dameer' || currentStep === 'verbType') && (
           <>
             <div className="grid grid-cols-2 gap-2 mb-4">
               {mcqOptions.map((opt, i) => {

@@ -22,8 +22,15 @@ interface ActiveCell {
 export default function ActivePassiveTableSession({ exercise, onComplete }: Props) {
   const { recordAnswer } = useProgress();
 
-  const scoreable = useMemo(() => exercise.items.filter(i => !i.unclear), [exercise.items]);
-  const pendingReview = exercise.items.length - scoreable.length;
+  const hasWorkedExample = (exercise.instructionText ?? '').includes('One has been done for you');
+
+  const allClear = useMemo(() => exercise.items.filter(i => !i.unclear), [exercise.items]);
+  const workedExampleItem = hasWorkedExample ? allClear[0] : null;
+  const scoreable = useMemo(
+    () => hasWorkedExample ? allClear.slice(1) : allClear,
+    [allClear, hasWorkedExample],
+  );
+  const pendingReview = exercise.items.length - allClear.length;
 
   // Two cells per row: active + passive
   const totalCells = scoreable.length * 2;
@@ -146,6 +153,27 @@ export default function ActivePassiveTableSession({ exercise, onComplete }: Prop
               </tr>
             </thead>
             <tbody>
+              {/* Worked example row (pre-filled, non-interactive) */}
+              {workedExampleItem && (() => {
+                const wa = workedExampleItem.answer as Record<string, string>;
+                return (
+                  <tr className="border-b border-teal/20 bg-teal/8">
+                    <td className="py-2.5 pr-2">
+                      <p className="font-sans text-xs text-teal leading-snug">{workedExampleItem.english}</p>
+                      <span className="text-[9px] font-sans text-teal/60 uppercase tracking-wide">example</span>
+                    </td>
+                    <td className="py-2.5 px-2 text-center">
+                      <span dir="rtl" className="arabic text-xs text-teal">{wa.sigha}</span>
+                    </td>
+                    <td className="py-2.5 px-2 text-center">
+                      <span dir="rtl" className="arabic text-sm text-teal">{wa.active}</span>
+                    </td>
+                    <td className="py-2.5 px-2 text-center">
+                      <span dir="rtl" className="arabic text-sm text-teal">{wa.passive}</span>
+                    </td>
+                  </tr>
+                );
+              })()}
               {scoreable.map((item, ri) => {
                 const answer = item.answer as Record<string, string>;
                 const activeKey = `${ri}|active`;
