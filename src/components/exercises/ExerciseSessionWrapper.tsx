@@ -33,14 +33,14 @@ export default function ExerciseSessionWrapper({
 
   if (completed) {
     return (
-      <div className="fixed inset-0 bg-parchment flex flex-col items-center justify-center px-6 z-50">
-        <div className="w-full max-w-sm text-center">
-          <div className={`w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center text-3xl ${passed ? 'bg-teal/15' : 'bg-gold/15'}`}>
+      <div className="fixed inset-0 bg-parchment-dark flex flex-col items-center justify-center px-6 z-50">
+        <div className="w-full max-w-sm text-center bg-white rounded-2xl p-8 border border-parchment-darker shadow-sm">
+          <div className={`w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center text-3xl ${passed ? 'bg-gold/10' : 'bg-crimson/10'}`}>
             {passed ? '✓' : '○'}
           </div>
           <h2 className="font-heading text-2xl text-ink mb-1">{passed ? 'Well done!' : 'Keep practising'}</h2>
-          <p className="text-ink-muted font-sans text-sm mb-2">{title}</p>
-          <p className={`font-heading text-4xl mb-2 ${passed ? 'text-teal' : 'text-gold'}`}>{pct}%</p>
+          <p className="text-ink-muted font-sans text-sm mb-3">{title}</p>
+          <p className={`font-heading text-5xl mb-2 ${passed ? 'text-gold' : 'text-crimson'}`}>{pct}%</p>
           <p className="text-ink-muted font-sans text-xs mb-1">
             {score} / {total} correct{passed ? ' — exercise completed' : ' — score 70% or above to complete'}
           </p>
@@ -54,14 +54,14 @@ export default function ExerciseSessionWrapper({
             {!passed && (
               <button
                 onClick={onRetry}
-                className="flex-1 py-3 rounded-xl border border-gold/30 text-sm font-sans font-medium text-ink hover:bg-gold/5 transition-colors"
+                className="flex-1 py-3 rounded-xl border border-parchment-darker bg-white text-sm font-sans font-medium text-gold hover:bg-parchment-dark transition-colors"
               >
                 Try again
               </button>
             )}
             <Link
               href={backHref}
-              className="flex-1 py-3 rounded-xl bg-teal text-parchment text-sm font-sans font-medium text-center hover:bg-teal-dark transition-colors"
+              className="flex-1 py-3 rounded-xl bg-gold text-white text-sm font-sans font-medium text-center hover:opacity-90 transition-opacity"
             >
               Back to hub
             </Link>
@@ -72,36 +72,45 @@ export default function ExerciseSessionWrapper({
   }
 
   return (
-    <div className="fixed inset-0 bg-parchment flex flex-col z-50">
-      {/* Header */}
-      <div className="flex items-center gap-3 px-4 py-3 border-b border-gold/10 bg-parchment shrink-0">
-        <button
-          onClick={() => router.back()}
-          className="p-1.5 rounded-lg hover:bg-gold/10 transition-colors text-ink-muted"
-          aria-label="Back"
-        >
-          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 min-w-0">
-            <p className="font-sans font-medium text-sm text-ink truncate flex-1">{title}</p>
-            <span className="shrink-0 text-[10px] font-sans text-ink-muted bg-parchment-darker px-2 py-0.5 rounded-full">p.{page}</span>
+    <div className="fixed inset-0 bg-parchment-dark flex flex-col z-50">
+      {/* Top bar */}
+      <div className="bg-white border-b border-parchment-darker shrink-0">
+        <div className="relative flex items-center h-12 px-4">
+          {/* Back arrow — plain icon, no button chrome */}
+          <button
+            onClick={() => router.back()}
+            className="shrink-0 text-ink-muted hover:text-ink transition-colors z-10"
+            aria-label="Back"
+          >
+            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          {/* Title + page pill — absolutely centred */}
+          <div className="absolute inset-0 flex items-center justify-center gap-2 pointer-events-none px-14">
+            <p className="font-sans font-medium text-sm text-ink truncate">{title}</p>
+            <span className="shrink-0 text-[10px] font-sans font-medium text-gold bg-[var(--color-primary-light)] px-2 py-0.5 rounded-full">
+              p.{page}
+            </span>
           </div>
+
+          {/* Score */}
           {total > 0 && (
-            <div className="mt-1 h-1.5 bg-parchment-darker rounded-full overflow-hidden">
-              <div
-                className="h-full bg-teal rounded-full transition-all duration-300"
-                style={{ width: `${(score / total) * 100}%` }}
-              />
-            </div>
+            <span className="ml-auto shrink-0 text-xs font-sans font-semibold text-ink-muted z-10">
+              {score}/{total}
+            </span>
           )}
         </div>
+
+        {/* Progress bar — 3px, flush under top bar */}
         {total > 0 && (
-          <span className="shrink-0 text-xs font-sans font-semibold text-teal bg-teal/10 px-2 py-0.5 rounded-full">
-            {score}/{total}
-          </span>
+          <div className="h-[3px] bg-parchment-darker">
+            <div
+              className="h-full bg-gold transition-all duration-300"
+              style={{ width: `${(score / total) * 100}%` }}
+            />
+          </div>
         )}
       </div>
 

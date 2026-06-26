@@ -105,10 +105,11 @@ export default function NameThatSigha({ config, onComplete }: Props) {
             {current.options.map((opt) => {
               const isChosen = chosenId === opt.sighaId;
               const isCorrect = opt.sighaId === current.correctSighaId;
-              let cls = 'border-gold/20 bg-parchment-dark text-ink';
+              let cls = 'border-parchment-darker bg-white text-ink';
               if (answerState !== 'idle') {
-                if (isCorrect) cls = 'border-teal bg-teal/10 text-teal';
-                else if (isChosen) cls = 'border-red-400 bg-red-50 text-red-700';
+                if (isCorrect) cls = 'border-teal bg-[var(--color-secondary-light)] text-teal-dark';
+                else if (isChosen) cls = 'border-crimson/40 bg-[var(--color-accent-light)] text-crimson-dark';
+                else cls = 'border-parchment-darker bg-white text-ink opacity-40';
               }
               return (
                 <button
@@ -129,7 +130,7 @@ export default function NameThatSigha({ config, onComplete }: Props) {
 
           {/* Feedback */}
           {answerState !== 'idle' && (
-            <div className={`rounded-xl px-4 py-3 mb-4 text-sm font-sans ${answerState === 'correct' ? 'bg-teal/10 text-teal-dark' : 'bg-red-50 text-red-700'}`}>
+            <div className={`rounded-xl px-4 py-3 mb-4 text-sm font-sans ${answerState === 'correct' ? 'bg-[var(--color-secondary-light)] text-teal-dark' : 'bg-[var(--color-accent-light)] text-crimson-dark'}`}>
               <p className="font-semibold mb-1">{answerState === 'correct' ? 'Correct!' : 'Not quite.'}</p>
               <p className="leading-relaxed">{current.rule}</p>
             </div>
@@ -138,7 +139,7 @@ export default function NameThatSigha({ config, onComplete }: Props) {
           {answerState !== 'idle' && (
             <button
               onClick={advance}
-              className="w-full py-3 rounded-xl bg-ink text-parchment font-sans font-medium text-sm hover:bg-ink-light transition-colors"
+              className="w-full py-3 rounded-[10px] bg-gold text-white font-sans font-medium text-sm hover:opacity-90 transition-opacity"
             >
               {index + 1 >= questions.length ? 'See results' : 'Next →'}
             </button>

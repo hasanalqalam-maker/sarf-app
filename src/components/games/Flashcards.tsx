@@ -143,10 +143,10 @@ export default function Flashcards({ config, onComplete, initialCards }: Props) 
                 <button onClick={() => rate('again')} className="flex-1 py-3 rounded-xl border border-red-200 bg-red-50 text-red-600 text-xs font-sans font-medium hover:bg-red-100 transition-colors">
                   Again
                 </button>
-                <button onClick={() => rate('hard')} className="flex-1 py-3 rounded-xl border border-gold/30 bg-gold/5 text-gold text-xs font-sans font-medium hover:bg-gold/10 transition-colors">
+                <button onClick={() => rate('hard')} className="flex-1 py-3 rounded-xl border border-parchment-darker bg-white text-ink-muted text-xs font-sans font-medium hover:bg-parchment-dark transition-colors">
                   Hard
                 </button>
-                <button onClick={() => rate('easy')} className="flex-1 py-3 rounded-xl border border-teal/30 bg-teal/10 text-teal text-xs font-sans font-medium hover:bg-teal/20 transition-colors">
+                <button onClick={() => rate('easy')} className="flex-1 py-3 rounded-xl border border-teal/30 bg-[var(--color-secondary-light)] text-teal-dark text-xs font-sans font-medium hover:bg-teal/10 transition-colors">
                   Easy
                 </button>
               </div>

@@ -39,9 +39,9 @@ export default function VerbalPracticeSession({ exercise, onComplete }: Props) {
     >
       <div className="px-4 py-6">
         {/* Instruction */}
-        <div className="bg-ink/5 rounded-xl px-4 py-3 mb-6">
-          <p dir="rtl" className="arabic text-base text-ink mb-1">تَمْرِيْنٌ شَفَوِيٌّ</p>
-          <p className="text-xs font-sans text-ink-muted leading-relaxed">{exercise.instructionText}</p>
+        <div className="bg-[var(--color-secondary-light)] border-l-[3px] border-l-teal px-4 py-3 mb-6">
+          <p dir="rtl" className="arabic text-base text-teal-dark mb-1">تَمْرِيْنٌ شَفَوِيٌّ</p>
+          <p className="text-xs font-sans text-teal-dark leading-relaxed">{exercise.instructionText}</p>
         </div>
 
         {/* Vocab verbs table */}
@@ -50,10 +50,10 @@ export default function VerbalPracticeSession({ exercise, onComplete }: Props) {
             <p className="text-[11px] font-sans font-semibold text-ink-muted uppercase tracking-wide mb-3">
               Vocabulary for this section
             </p>
-            <div className="rounded-xl overflow-hidden border border-gold/20">
+            <div className="rounded-xl overflow-hidden border border-parchment-darker">
               <table className="w-full border-collapse">
                 <thead>
-                  <tr className="bg-parchment-darker border-b border-gold/20">
+                  <tr className="bg-parchment-dark border-b border-parchment-darker">
                     <th className="py-2 px-3 text-right text-[10px] font-sans font-semibold text-ink-muted uppercase tracking-wide">
                       مَاضِي
                     </th>
@@ -70,7 +70,7 @@ export default function VerbalPracticeSession({ exercise, onComplete }: Props) {
                 </thead>
                 <tbody>
                   {vocabVerbs.map((v, i) => (
-                    <tr key={i} className="border-b border-gold/10 last:border-0 hover:bg-gold/3 transition-colors">
+                    <tr key={i} className="border-b border-parchment-darker/60 last:border-0 hover:bg-parchment-dark transition-colors">
                       <td className="py-2.5 px-3 text-right">
                         <span dir="rtl" className="arabic text-sm text-ink">{v.madi}</span>
                       </td>
@@ -91,9 +91,9 @@ export default function VerbalPracticeSession({ exercise, onComplete }: Props) {
           </div>
         )}
 
-        {/* Reference table note (for p10 with no vocabVerbs) */}
+        {/* Reference table note */}
         {vocabVerbs.length === 0 && referenceTable && (
-          <div className="mb-6 p-4 rounded-xl bg-parchment-darker border border-gold/20">
+          <div className="mb-6 p-4 rounded-xl bg-white border border-parchment-darker">
             <p className="text-xs font-sans text-ink-muted leading-relaxed">{referenceTable.note}</p>
             {referenceTable.exampleVerb && (
               <p className="mt-2 text-xs font-sans text-ink-muted">
@@ -103,9 +103,9 @@ export default function VerbalPracticeSession({ exercise, onComplete }: Props) {
           </div>
         )}
 
-        {/* No data at all */}
+        {/* No data fallback */}
         {vocabVerbs.length === 0 && !referenceTable && (
-          <div className="mb-6 p-4 rounded-xl bg-parchment-darker border border-gold/20">
+          <div className="mb-6 p-4 rounded-xl bg-white border border-parchment-darker">
             <p className="text-xs font-sans text-ink-muted">
               Conjugate verbs aloud with your teacher or study partner using the reference tables in the book.
             </p>
@@ -125,12 +125,12 @@ export default function VerbalPracticeSession({ exercise, onComplete }: Props) {
         {!confirmed ? (
           <button
             onClick={handlePractised}
-            className="w-full py-3.5 rounded-xl bg-teal text-parchment font-sans font-semibold text-sm hover:bg-teal-dark transition-colors"
+            className="w-full py-3.5 rounded-xl bg-gold text-white font-sans font-semibold text-sm transition-opacity hover:opacity-90"
           >
             Practised it ✓
           </button>
         ) : (
-          <div className="w-full py-3.5 rounded-xl bg-teal/15 border border-teal/30 text-center">
+          <div className="w-full py-3.5 rounded-xl bg-[var(--color-secondary-light)] border border-teal/30 text-center">
             <p className="font-sans text-sm font-medium text-teal">Marked as practised ✓</p>
           </div>
         )}

@@ -36,18 +36,14 @@ export default function ExFillTableSession({ exercise, onComplete }: Props) {
   const givenRow = exercise.givenRow as Record<string, string> | undefined;
   const givenWords = exercise.given_words ?? [];
 
-  // Variant A: givenRow + item.answer dict (most fill-table exercises)
   const hasDictAnswers = !isTasrif && !!givenRow && givenWords.length === 0;
-  // Variant B: given_words + item.word_1/2/3/4 (u1-p8-ex4 ism-mafool)
   const hasWordCols = !isTasrif && givenWords.length > 0;
 
-  // Columns for variant A
   const verbKeys = useMemo(
     () => (hasDictAnswers && givenRow ? parseVerbKeys(givenRow) : []),
     [hasDictAnswers, givenRow],
   );
 
-  // Rows for variant A: {sigha, answers}
   const dictRows = useMemo(() => {
     if (!hasDictAnswers) return [];
     return (exercise.items ?? []).map(item => ({
@@ -56,7 +52,6 @@ export default function ExFillTableSession({ exercise, onComplete }: Props) {
     }));
   }, [hasDictAnswers, exercise.items]);
 
-  // Rows for variant B: {sigha, words[]}
   const wordRows = useMemo(() => {
     if (!hasWordCols) return [];
     return (exercise.items ?? []).map(item => ({
@@ -65,10 +60,8 @@ export default function ExFillTableSession({ exercise, onComplete }: Props) {
     }));
   }, [hasWordCols, exercise.items]);
 
-  // Given sigha label for variant B
   const givenSigha = givenRow?.sigha ?? '';
 
-  // Total empty cells
   const totalCells = useMemo(() => {
     if (isTasrif) return (exercise.items?.length ?? 0) * 8;
     if (hasDictAnswers) return dictRows.length * verbKeys.length;
@@ -79,7 +72,6 @@ export default function ExFillTableSession({ exercise, onComplete }: Props) {
     return 0;
   }, [isTasrif, hasDictAnswers, hasWordCols, dictRows, verbKeys, wordRows, givenSigha, givenWords, exercise.items]);
 
-  // ── cell state ─────────────────────────────────────────────────────────────
   const [cellStates, setCellStates] = useState<Record<string, 'correct' | 'wrong'>>({});
   const [hadWrong, setHadWrong] = useState<Set<string>>(new Set());
   const [activeCell, setActiveCell] = useState<ActiveCell | null>(null);
@@ -89,15 +81,12 @@ export default function ExFillTableSession({ exercise, onComplete }: Props) {
   const firstAttemptScore = correctCount
     - Object.keys(cellStates).filter(k => cellStates[k] === 'correct' && hadWrong.has(k)).length;
 
-  // Auto-complete when all cells filled correctly
   useEffect(() => {
     if (!done && totalCells > 0 && correctCount === totalCells) {
       setDone(true);
       onComplete(firstAttemptScore, totalCells);
     }
   }, [correctCount, totalCells, done, firstAttemptScore, onComplete]);
-
-  // ── open MCQ picker ────────────────────────────────────────────────────────
 
   function openDictCell(ri: number, vk: string) {
     if (cellStates[`d|${ri}|${vk}`] === 'correct') return;
@@ -211,8 +200,8 @@ export default function ExFillTableSession({ exercise, onComplete }: Props) {
     >
       <div className="px-4 py-6">
         {/* Instruction */}
-        <div className="bg-ink/5 rounded-xl px-4 py-3 mb-5">
-          <p className="text-xs font-sans text-ink-muted leading-relaxed">{exercise.instructionText}</p>
+        <div className="bg-[var(--color-secondary-light)] border-l-[3px] border-l-teal px-4 py-3 mb-5">
+          <p className="text-xs font-sans text-teal-dark leading-relaxed">{exercise.instructionText}</p>
         </div>
 
         {exercise.pdfDiscrepancyNote && (
@@ -221,131 +210,139 @@ export default function ExFillTableSession({ exercise, onComplete }: Props) {
 
         {/* ── Variant A: givenRow + answer-dict ─────────────────────────── */}
         {hasDictAnswers && givenRow && (
-          <div className="overflow-x-auto -mx-4 px-4">
-            <table className="w-full min-w-max border-collapse">
-              <thead>
-                <tr className="border-b border-gold/20">
-                  <th className="pb-2 text-left text-[10px] font-sans font-semibold text-ink-muted uppercase tracking-wide pr-3 min-w-[90px]">
-                    صِيْغَة
-                  </th>
-                  {verbKeys.map((vk, i) => (
-                    <th key={i} className="pb-2 text-center px-2 min-w-[72px]">
-                      <span dir="rtl" className="arabic text-sm text-ink">{vk}</span>
+          <div className="overflow-x-auto -mx-4">
+            <div className="min-w-max mx-4 rounded-t-[8px] overflow-hidden border border-parchment-darker">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-gold text-white">
+                    <th className="py-2.5 px-3 text-left text-[10px] font-sans font-semibold uppercase tracking-wide text-white/80 min-w-[90px] sticky left-0 bg-gold z-10">
+                      صِيْغَة
                     </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {/* Given row */}
-                <tr className="border-b border-teal/20 bg-teal/8">
-                  <td className="py-2.5 pr-3">
-                    <span dir="rtl" className="arabic text-sm text-teal">{givenRow.sigha}</span>
-                    <span className="ml-1.5 text-[9px] font-sans text-teal/60 uppercase tracking-wide">given</span>
-                  </td>
-                  {verbKeys.map((vk, i) => (
-                    <td key={i} className="py-2.5 px-2 text-center">
-                      <span dir="rtl" className="arabic text-sm text-teal">{vk}</span>
-                    </td>
-                  ))}
-                </tr>
-                {/* Fill rows */}
-                {dictRows.map((row, ri) => (
-                  <tr key={ri} className="border-b border-gold/10 last:border-0">
-                    <td className="py-2.5 pr-3">
-                      <span dir="rtl" className="arabic text-sm text-ink">{row.sigha}</span>
-                    </td>
-                    {verbKeys.map((vk, ci) => {
-                      const key = `d|${ri}|${vk}`;
-                      const state = cellStates[key];
-                      return (
-                        <td key={ci} className="py-2 px-1.5 text-center">
-                          {state === 'correct' ? (
-                            <span dir="rtl" className="arabic text-sm text-teal">{row.answers[vk]}</span>
-                          ) : (
-                            <button
-                              onClick={() => openDictCell(ri, vk)}
-                              className={`inline-flex items-center justify-center w-[60px] h-8 rounded-lg text-[11px] font-sans font-medium transition-all ${
-                                state === 'wrong'
-                                  ? 'bg-red-100 border border-red-300 text-red-600'
-                                  : 'bg-teal/10 border border-teal/25 text-teal hover:bg-teal/20'
-                              }`}
-                            >
-                              {state === 'wrong' ? '✗' : 'Fill'}
-                            </button>
-                          )}
-                        </td>
-                      );
-                    })}
+                    {verbKeys.map((vk, i) => (
+                      <th key={i} className="py-2.5 px-2 text-center min-w-[72px]">
+                        <span dir="rtl" className="arabic text-sm text-white">{vk}</span>
+                      </th>
+                    ))}
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {/* Given row */}
+                  <tr>
+                    <td className="py-2.5 px-3 sticky left-0 z-10 font-medium border-b border-parchment-darker/40" style={{ background: 'var(--color-primary-light)' }}>
+                      <span dir="rtl" className="arabic text-sm text-gold">{givenRow.sigha}</span>
+                      <span className="ml-1.5 text-[9px] font-sans text-gold/60 uppercase tracking-wide">given</span>
+                    </td>
+                    {verbKeys.map((vk, i) => (
+                      <td key={i} className="py-2.5 px-2 text-center border-b border-parchment-darker/40" style={{ background: 'var(--color-primary-light)' }}>
+                        <span dir="rtl" className="arabic text-sm text-gold">{vk}</span>
+                      </td>
+                    ))}
+                  </tr>
+                  {/* Fill rows */}
+                  {dictRows.map((row, ri) => {
+                    const rowBg = ri % 2 === 0 ? '#ffffff' : '#F8F9FA';
+                    return (
+                      <tr key={ri} className="border-b border-parchment-darker/40 last:border-0">
+                        <td className="py-2.5 px-3 sticky left-0 z-10 font-medium" style={{ background: rowBg }}>
+                          <span dir="rtl" className="arabic text-sm text-ink">{row.sigha}</span>
+                        </td>
+                        {verbKeys.map((vk, ci) => {
+                          const key = `d|${ri}|${vk}`;
+                          const state = cellStates[key];
+                          return (
+                            <td key={ci} className="py-2 px-1.5 text-center" style={{ background: state === 'correct' ? 'var(--color-secondary-light)' : rowBg }}>
+                              {state === 'correct' ? (
+                                <span dir="rtl" className="arabic text-sm text-teal-dark">{row.answers[vk]}</span>
+                              ) : (
+                                <button
+                                  onClick={() => openDictCell(ri, vk)}
+                                  className={`inline-flex items-center justify-center w-[60px] h-8 rounded border border-dashed text-sm font-medium transition-all ${
+                                    state === 'wrong'
+                                      ? 'border-crimson/60 bg-[var(--color-accent-light)] text-crimson'
+                                      : 'border-parchment-darker bg-white text-parchment-darker'
+                                  }`}
+                                >
+                                  {state === 'wrong' ? '✗' : '—'}
+                                </button>
+                              )}
+                            </td>
+                          );
+                        })}
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
           </div>
         )}
 
         {/* ── Variant B: given_words + word_X ────────────────────────────── */}
         {hasWordCols && (
-          <div className="overflow-x-auto -mx-4 px-4">
-            <table className="w-full min-w-max border-collapse">
-              <thead>
-                <tr className="border-b border-gold/20">
-                  <th className="pb-2 text-left text-[10px] font-sans font-semibold text-ink-muted uppercase tracking-wide pr-3 min-w-[90px]">
-                    صِيْغَة
-                  </th>
-                  {givenWords.map((w, i) => (
-                    <th key={i} className="pb-2 text-center px-2 min-w-[72px]">
-                      <span dir="rtl" className="arabic text-sm text-ink">{w}</span>
+          <div className="overflow-x-auto -mx-4">
+            <div className="min-w-max mx-4 rounded-t-[8px] overflow-hidden border border-parchment-darker">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-gold text-white">
+                    <th className="py-2.5 px-3 text-left text-[10px] font-sans font-semibold uppercase tracking-wide text-white/80 min-w-[90px] sticky left-0 bg-gold z-10">
+                      صِيْغَة
                     </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {wordRows.map((row, ri) => {
-                  const isGiven = row.sigha === givenSigha;
-                  const fillRows = wordRows.filter(r => r.sigha !== givenSigha);
-                  const fillRowIdx = fillRows.indexOf(row);
-                  return (
-                    <tr key={ri} className={`border-b border-gold/10 last:border-0 ${isGiven ? 'bg-teal/8 border-teal/20' : ''}`}>
-                      <td className="py-2.5 pr-3">
-                        <span dir="rtl" className="arabic text-sm text-ink">{row.sigha}</span>
-                        {isGiven && (
-                          <span className="ml-1.5 text-[9px] font-sans text-teal/60 uppercase tracking-wide">given</span>
-                        )}
-                      </td>
-                      {row.words.map((w, ci) => {
-                        if (isGiven) {
+                    {givenWords.map((w, i) => (
+                      <th key={i} className="py-2.5 px-2 text-center min-w-[72px]">
+                        <span dir="rtl" className="arabic text-sm text-white">{w}</span>
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {wordRows.map((row, ri) => {
+                    const isGiven = row.sigha === givenSigha;
+                    const fillRows = wordRows.filter(r => r.sigha !== givenSigha);
+                    const fillRowIdx = fillRows.indexOf(row);
+                    const rowBg = isGiven ? 'var(--color-primary-light)' : (ri % 2 === 0 ? '#ffffff' : '#F8F9FA');
+                    return (
+                      <tr key={ri} className="border-b border-parchment-darker/40 last:border-0">
+                        <td className="py-2.5 px-3 sticky left-0 z-10 font-medium" style={{ background: rowBg }}>
+                          <span dir="rtl" className="arabic text-sm" style={{ color: isGiven ? 'var(--color-primary)' : 'var(--color-text)' }}>{row.sigha}</span>
+                          {isGiven && (
+                            <span className="ml-1.5 text-[9px] font-sans text-gold/60 uppercase tracking-wide">given</span>
+                          )}
+                        </td>
+                        {row.words.map((w, ci) => {
+                          if (isGiven) {
+                            return (
+                              <td key={ci} className="py-2.5 px-2 text-center" style={{ background: rowBg }}>
+                                <span dir="rtl" className="arabic text-sm text-gold">{w}</span>
+                              </td>
+                            );
+                          }
+                          const key = `w|${fillRowIdx}|${ci}`;
+                          const state = cellStates[key];
                           return (
-                            <td key={ci} className="py-2.5 px-2 text-center">
-                              <span dir="rtl" className="arabic text-sm text-teal">{w}</span>
+                            <td key={ci} className="py-2 px-1.5 text-center" style={{ background: state === 'correct' ? 'var(--color-secondary-light)' : rowBg }}>
+                              {state === 'correct' ? (
+                                <span dir="rtl" className="arabic text-sm text-teal-dark">{w}</span>
+                              ) : (
+                                <button
+                                  onClick={() => openWordCell(fillRowIdx, ci)}
+                                  className={`inline-flex items-center justify-center w-[60px] h-8 rounded border border-dashed text-sm font-medium transition-all ${
+                                    state === 'wrong'
+                                      ? 'border-crimson/60 bg-[var(--color-accent-light)] text-crimson'
+                                      : 'border-parchment-darker bg-white text-parchment-darker'
+                                  }`}
+                                >
+                                  {state === 'wrong' ? '✗' : '—'}
+                                </button>
+                              )}
                             </td>
                           );
-                        }
-                        const key = `w|${fillRowIdx}|${ci}`;
-                        const state = cellStates[key];
-                        return (
-                          <td key={ci} className="py-2 px-1.5 text-center">
-                            {state === 'correct' ? (
-                              <span dir="rtl" className="arabic text-sm text-teal">{w}</span>
-                            ) : (
-                              <button
-                                onClick={() => openWordCell(fillRowIdx, ci)}
-                                className={`inline-flex items-center justify-center w-[60px] h-8 rounded-lg text-[11px] font-sans font-medium transition-all ${
-                                  state === 'wrong'
-                                    ? 'bg-red-100 border border-red-300 text-red-600'
-                                    : 'bg-teal/10 border border-teal/25 text-teal hover:bg-teal/20'
-                                }`}
-                              >
-                                {state === 'wrong' ? '✗' : 'Fill'}
-                              </button>
-                            )}
-                          </td>
-                        );
-                      })}
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
+                        })}
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
           </div>
         )}
 
@@ -365,7 +362,7 @@ export default function ExFillTableSession({ exercise, onComplete }: Props) {
                 { key: 'ismMafool',     label: 'اسْم الْمَفْعُوْل' },
               ];
               return (
-                <div key={ri} className="card-parchment p-4">
+                <div key={ri} className="bg-white border border-parchment-darker rounded-xl p-4">
                   <p className="text-[11px] font-sans font-semibold text-gold uppercase tracking-wide mb-3">
                     مَصْدَر: <span dir="rtl" className="arabic text-sm text-ink">{item.masdar ?? ''}</span>
                     {item.bab && (
@@ -381,17 +378,17 @@ export default function ExFillTableSession({ exercise, onComplete }: Props) {
                         <div key={key} className="flex flex-col gap-1">
                           <span className="text-[9px] font-sans text-ink-muted">{label}</span>
                           {state === 'correct' ? (
-                            <span dir="rtl" className="arabic text-sm text-teal">{val || '—'}</span>
+                            <span dir="rtl" className="arabic text-sm text-teal-dark">{val || '—'}</span>
                           ) : (
                             <button
                               onClick={() => openTasrifCell(ri, key)}
-                              className={`flex items-center justify-center h-8 rounded-lg text-[11px] font-sans font-medium transition-all ${
+                              className={`flex items-center justify-center h-8 rounded border border-dashed text-sm font-medium transition-all ${
                                 state === 'wrong'
-                                  ? 'bg-red-100 border border-red-300 text-red-600'
-                                  : 'bg-teal/10 border border-teal/25 text-teal hover:bg-teal/20'
+                                  ? 'border-crimson/60 bg-[var(--color-accent-light)] text-crimson'
+                                  : 'border-parchment-darker bg-white text-parchment-darker'
                               }`}
                             >
-                              {state === 'wrong' ? '✗' : 'Fill'}
+                              {state === 'wrong' ? '✗' : '—'}
                             </button>
                           )}
                         </div>
@@ -409,7 +406,7 @@ export default function ExFillTableSession({ exercise, onComplete }: Props) {
           <button
             onClick={handleDone}
             disabled={done}
-            className="w-full py-2.5 rounded-xl bg-teal text-parchment text-xs font-sans font-medium hover:bg-teal-dark transition-colors disabled:opacity-50"
+            className="w-full py-2.5 rounded-xl bg-gold text-white text-xs font-sans font-medium transition-opacity hover:opacity-90 disabled:opacity-50"
           >
             Done ({correctCount}/{totalCells})
           </button>
@@ -420,7 +417,7 @@ export default function ExFillTableSession({ exercise, onComplete }: Props) {
       {activeCell && (
         <div className="fixed inset-0 z-50 flex items-end">
           <div className="absolute inset-0 bg-black/40" onClick={() => setActiveCell(null)} />
-          <div className="relative w-full bg-parchment rounded-t-2xl p-5 pb-8 shadow-xl">
+          <div className="relative w-full bg-white rounded-t-2xl border-t border-parchment-darker p-5 pb-8 shadow-xl">
             {activeCell.key.startsWith('t|') ? (
               <p className="text-center text-xs font-sans text-ink-muted mb-4">
                 {({'madiMaloom':'مَاضِي مَعْلُوم','mudariMaloom':'مُضَارِع مَعْلُوم','madiMajhool':'مَاضِي مَجْهُوْل','mudariMajhool':'مُضَارِع مَجْهُوْل','amr':'أَمْر','nahy':'نَهْي','ismFail':'اسْم الْفَاعِل','ismMafool':'اسْم الْمَفْعُوْل'} as Record<string,string>)[activeCell.verb] ?? activeCell.verb}
@@ -445,7 +442,7 @@ export default function ExFillTableSession({ exercise, onComplete }: Props) {
                 <button
                   key={i}
                   onClick={() => handleCellAnswer(opt)}
-                  className="py-3 px-2 rounded-xl border border-gold/20 bg-parchment-dark hover:bg-gold/8 text-center transition-colors active:scale-95"
+                  className="py-3 px-2 rounded-[10px] border border-parchment-darker bg-white hover:bg-parchment-dark text-center transition-colors active:scale-95"
                 >
                   <span dir="rtl" className="arabic text-lg text-ink leading-relaxed">{opt}</span>
                 </button>

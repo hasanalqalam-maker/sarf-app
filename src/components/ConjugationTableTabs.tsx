@@ -47,10 +47,10 @@ export default function ConjugationTableTabs({ conjugation, sighas, hasMajhul, n
               className={`
                 arabic px-3 py-1.5 rounded-md text-sm transition-colors duration-150
                 ${activeTab === tab.key
-                  ? 'bg-teal text-parchment'
+                  ? 'bg-gold text-white'
                   : disabled
                     ? 'text-ink-muted/40 cursor-not-allowed'
-                    : 'bg-parchment-dark text-ink hover:bg-gold/10 hover:text-ink'
+                    : 'bg-parchment-dark text-ink hover:bg-[var(--color-primary-light)] hover:text-gold'
                 }
               `}
             >
@@ -62,7 +62,7 @@ export default function ConjugationTableTabs({ conjugation, sighas, hasMajhul, n
 
       {/* Note banner */}
       {note && (
-        <div className="mb-4 px-4 py-2.5 bg-gold/10 border border-gold/30 rounded-lg text-sm font-sans text-ink-muted">
+        <div className="mb-4 px-4 py-2.5 bg-[var(--color-primary-light)] border border-gold/30 rounded-lg text-sm font-sans text-ink-muted">
           {note}
         </div>
       )}
@@ -80,7 +80,7 @@ export default function ConjugationTableTabs({ conjugation, sighas, hasMajhul, n
       ) : (
         <table className="w-full">
           <thead>
-            <tr className="border-b border-gold/20">
+            <tr className="border-b border-parchment-darker">
               <th className="pb-2 text-left text-[11px] font-sans font-semibold text-ink-muted uppercase tracking-wide w-1/3">
                 Sīgha
               </th>
@@ -96,7 +96,7 @@ export default function ConjugationTableTabs({ conjugation, sighas, hasMajhul, n
             {rows.map((entry, i) => {
               const sigha = sighaMap[entry.sigha_id];
               return (
-                <tr key={entry.sigha_id + i} className="conjugation-row border-b border-gold/10 last:border-0">
+                <tr key={entry.sigha_id + i} className="conjugation-row border-b border-parchment-darker/60 last:border-0">
                   <td className="py-3 pr-4">
                     {sigha ? (
                       <span dir="rtl" className="arabic text-base text-ink leading-relaxed">

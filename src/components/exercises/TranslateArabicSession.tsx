@@ -53,7 +53,7 @@ function isTranslationCorrect(student: string, model: string): boolean {
 // ── strip Arabic diacritics ───────────────────────────────────────────────────
 
 function stripDiacritics(s: string): string {
-  return s.replace(/[ً-ٰٟ]/g, '');
+  return s.replace(/[ً-ٰٟ]/g, '');
 }
 
 // ── MCQ option builders ───────────────────────────────────────────────────────
@@ -104,7 +104,6 @@ export default function TranslateArabicSession({ exercise, onComplete }: Props) 
   const scoreable = useMemo(() => exercise.items.filter(i => !i.unclear), [exercise.items]);
   const pendingReview = exercise.items.length - scoreable.length;
 
-  // Determine steps from instruction text (not from data presence alone)
   const instructionStripped = useMemo(
     () => stripDiacritics(exercise.instructionText ?? ''),
     [exercise.instructionText],
@@ -118,7 +117,6 @@ export default function TranslateArabicSession({ exercise, onComplete }: Props) 
     () => instructionStripped.includes('ضمير') && scoreable.some(i => !!(i.answer as Record<string, string>)?.dameer),
     [instructionStripped, scoreable],
   );
-  // verbType: data-driven (only one exercise has this field)
   const hasVerbType = useMemo(
     () => scoreable.some(i => !!(i.answer as Record<string, string>)?.verbType),
     [scoreable],
@@ -140,12 +138,10 @@ export default function TranslateArabicSession({ exercise, onComplete }: Props) 
   const [score, setScore] = useState(0);
   const [done, setDone] = useState(false);
 
-  // Translation step state
   const [typedAnswer, setTypedAnswer] = useState('');
   const [translationChecked, setTranslationChecked] = useState(false);
   const [translationCorrect, setTranslationCorrect] = useState(false);
 
-  // MCQ step state
   const [mcqChosen, setMcqChosen] = useState<string | null>(null);
   const [mcqAnswered, setMcqAnswered] = useState(false);
 
@@ -158,7 +154,6 @@ export default function TranslateArabicSession({ exercise, onComplete }: Props) 
   const modelDameer = answer?.dameer ?? '';
   const modelVerbType = answer?.verbType ?? '';
 
-  // MCQ options for current step
   const mcqOptions = useMemo(() => {
     if (!current || currentStep === 'translation') return [];
     if (currentStep === 'sigha') return buildSighaOptions(modelSigha, scoreable);
@@ -260,18 +255,20 @@ export default function TranslateArabicSession({ exercise, onComplete }: Props) 
         </p>
 
         {/* Instruction */}
-        <div className="bg-ink/5 rounded-xl px-4 py-3 mb-5">
-          <p className="text-xs font-sans text-ink-muted leading-relaxed">{exercise.instructionText}</p>
+        <div className="bg-[var(--color-secondary-light)] border-l-[3px] border-l-teal px-4 py-3 mb-5">
+          <p className="text-xs font-sans text-teal-dark leading-relaxed">{exercise.instructionText}</p>
         </div>
 
-        {/* Arabic prompt */}
-        <div className="flex-1 flex flex-col items-center justify-center mb-6">
-          <p dir="rtl" className="arabic text-5xl leading-[4.5rem] text-ink text-center">
-            {current.arabic ?? current.pattern ?? ''}
-          </p>
-          {current.note && (
-            <p className="text-xs font-sans text-gold/80 italic text-center mt-2 max-w-xs">{current.note}</p>
-          )}
+        {/* Arabic prompt card */}
+        <div className="flex-1 flex items-center justify-center mb-6">
+          <div className="w-full bg-white border border-parchment-darker rounded-xl px-6 py-8 text-center">
+            <p dir="rtl" className="arabic text-ink text-center" style={{ fontSize: '38px', lineHeight: '3.5rem' }}>
+              {current.arabic ?? current.pattern ?? ''}
+            </p>
+            {current.note && (
+              <p className="text-xs font-sans text-gold/80 italic text-center mt-3 max-w-xs mx-auto">{current.note}</p>
+            )}
+          </div>
         </div>
 
         {/* ── Translation step ─────────────────────────────────────────────── */}
@@ -285,18 +282,21 @@ export default function TranslateArabicSession({ exercise, onComplete }: Props) 
                 onChange={e => !translationChecked && setTypedAnswer(e.target.value)}
                 onKeyDown={e => e.key === 'Enter' && !translationChecked && handleCheckTranslation()}
                 placeholder="Type your English translation…"
-                className="w-full px-4 py-3 rounded-xl border border-gold/30 bg-parchment-dark font-sans text-sm text-ink placeholder:text-ink-muted/50 focus:outline-none focus:border-teal/50 transition-colors"
+                className="w-full px-4 py-3 rounded-[10px] border border-parchment-darker bg-white font-sans text-[15px] text-ink placeholder:text-ink-muted/50 focus:outline-none focus:border-gold transition-colors"
                 disabled={translationChecked}
                 autoFocus
               />
             </div>
 
             {translationChecked && (
-              <div className={`rounded-xl px-4 py-3 mb-3 text-sm font-sans ${translationCorrect ? 'bg-teal/10 text-teal-dark' : 'bg-red-50 text-red-700'}`}>
-                <p className="font-semibold mb-1">{translationCorrect ? 'Correct!' : 'Not quite.'}</p>
-                <p className="text-xs leading-relaxed">
-                  Model answer: <span className="font-medium">{modelEnglish}</span>
-                </p>
+              <div className={`rounded-xl px-4 py-3 mb-3 text-sm font-sans flex items-start gap-2 ${translationCorrect ? 'bg-[var(--color-secondary-light)] text-teal-dark' : 'bg-[var(--color-accent-light)] text-crimson-dark'}`}>
+                <span className="shrink-0 font-bold mt-0.5">{translationCorrect ? '✓' : '✗'}</span>
+                <div>
+                  <p className="font-semibold mb-0.5">{translationCorrect ? 'Correct!' : 'Not quite.'}</p>
+                  <p className="text-xs leading-relaxed">
+                    Model answer: <span className="font-medium">{modelEnglish}</span>
+                  </p>
+                </div>
               </div>
             )}
 
@@ -304,14 +304,14 @@ export default function TranslateArabicSession({ exercise, onComplete }: Props) 
               <button
                 onClick={handleCheckTranslation}
                 disabled={!typedAnswer.trim()}
-                className="w-full py-3 rounded-xl bg-ink text-parchment font-sans font-medium text-sm hover:bg-ink-light transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                className="w-full py-3 rounded-[10px] bg-gold text-white font-sans font-medium text-sm transition-opacity hover:opacity-90 disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 Check
               </button>
             ) : (
               <button
                 onClick={advance}
-                className="w-full py-3 rounded-xl bg-ink text-parchment font-sans font-medium text-sm hover:bg-ink-light transition-colors"
+                className="w-full py-3 rounded-[10px] bg-gold text-white font-sans font-medium text-sm transition-opacity hover:opacity-90"
               >
                 {itemProgress >= total ? 'See results' : 'Next →'}
               </button>
@@ -326,10 +326,11 @@ export default function TranslateArabicSession({ exercise, onComplete }: Props) 
               {mcqOptions.map((opt, i) => {
                 const isChosen = mcqChosen === opt.text;
                 const isCorrect = opt.correct;
-                let cls = 'border-gold/20 bg-parchment-dark text-ink';
+                let cls = 'border-parchment-darker bg-white text-ink';
                 if (mcqAnswered) {
-                  if (isCorrect) cls = 'border-teal bg-teal/10 text-teal';
-                  else if (isChosen) cls = 'border-red-400 bg-red-50 text-red-700';
+                  if (isCorrect) cls = 'border-teal bg-[var(--color-secondary-light)] text-teal-dark';
+                  else if (isChosen) cls = 'border-crimson/40 bg-[var(--color-accent-light)] text-crimson-dark';
+                  else cls = 'border-parchment-darker bg-white text-ink opacity-40';
                 }
                 const isArabic = /[؀-ۿ]/.test(opt.text);
                 return (
@@ -337,7 +338,7 @@ export default function TranslateArabicSession({ exercise, onComplete }: Props) 
                     key={i}
                     onClick={() => handleMcqAnswer(opt.text)}
                     disabled={mcqAnswered}
-                    className={`px-3 py-3 rounded-xl border font-sans text-sm transition-colors text-center ${cls}`}
+                    className={`px-3 py-3 rounded-[10px] border font-sans text-sm transition-colors text-center ${cls}`}
                   >
                     <span
                       dir={isArabic ? 'rtl' : undefined}
@@ -353,7 +354,8 @@ export default function TranslateArabicSession({ exercise, onComplete }: Props) 
             {mcqAnswered && (
               <>
                 {mcqChosen !== mcqCorrectText && (
-                  <div className="rounded-xl px-4 py-3 mb-3 text-sm font-sans bg-red-50 text-red-700">
+                  <div className="rounded-xl px-4 py-3 mb-3 text-sm font-sans bg-[var(--color-accent-light)] text-crimson-dark flex items-center gap-2">
+                    <span className="font-bold">✗</span>
                     <p className="text-xs">
                       Correct: <span dir="rtl" className="arabic">{mcqCorrectText}</span>
                     </p>
@@ -361,7 +363,7 @@ export default function TranslateArabicSession({ exercise, onComplete }: Props) 
                 )}
                 <button
                   onClick={advance}
-                  className="w-full py-3 rounded-xl bg-ink text-parchment font-sans font-medium text-sm hover:bg-ink-light transition-colors"
+                  className="w-full py-3 rounded-[10px] bg-gold text-white font-sans font-medium text-sm transition-opacity hover:opacity-90"
                 >
                   {itemProgress >= total ? 'See results' : 'Next →'}
                 </button>

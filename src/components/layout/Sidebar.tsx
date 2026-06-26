@@ -64,18 +64,18 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="hidden lg:flex fixed inset-y-0 left-0 z-40 w-60 flex-col bg-ink border-r border-gold/10">
+    <aside className="hidden lg:flex fixed inset-y-0 left-0 z-40 w-60 flex-col bg-white border-r border-parchment-darker">
       {/* Logo */}
-      <div className="px-6 py-5 border-b border-gold/10">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-crimson flex items-center justify-center">
-            <span className="text-parchment text-sm font-bold font-heading">ص</span>
-          </div>
-          <div>
-            <p className="text-parchment font-heading font-semibold text-sm leading-none">Sarf App</p>
-            <p className="text-ink-muted text-[11px] mt-0.5 font-sans">Al-Qalam Institute</p>
-          </div>
-        </div>
+      <div className="px-6 py-5 border-b border-parchment-darker">
+        <p
+          className="arabic text-[1.75rem] font-bold text-gold leading-none"
+          dir="rtl"
+        >
+          الصَّرْفُ
+        </p>
+        <p className="text-ink-muted text-[11px] mt-2 font-sans tracking-wide">
+          Sarf App · Al-Qalam Institute
+        </p>
       </div>
 
       {/* Navigation */}
@@ -92,14 +92,14 @@ export default function Sidebar() {
                   href={item.href}
                   className={`
                     flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-sans font-medium
-                    transition-colors duration-150
+                    transition-colors duration-150 border-l-2
                     ${isActive
-                      ? 'bg-teal/15 text-teal-light border-r-2 border-teal'
-                      : 'text-parchment/60 hover:text-parchment hover:bg-white/5'
+                      ? 'bg-gold/10 text-gold border-gold'
+                      : 'text-ink-muted hover:text-ink hover:bg-parchment-dark border-transparent'
                     }
                   `}
                 >
-                  <span className={isActive ? 'text-teal-light' : 'text-parchment/40'}>
+                  <span className={isActive ? 'text-gold' : 'text-ink-muted'}>
                     {item.icon}
                   </span>
                   {item.label}
@@ -111,7 +111,7 @@ export default function Sidebar() {
       </nav>
 
       {/* Footer */}
-      <div className="px-6 py-4 border-t border-gold/10">
+      <div className="px-6 py-4 border-t border-parchment-darker">
         <p className="text-ink-muted text-[11px] font-sans">
           FSTU Sarf 2023 · Units 1–2
         </p>

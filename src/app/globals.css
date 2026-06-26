@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── CSS custom properties ────────────────────────────────────────────────── */
+:root {
+  --color-primary:        #0e60ba;
+  --color-primary-light:  #EFF6FF;
+  --color-secondary:      #4e8542;
+  --color-secondary-light: #F0FDF4;
+  --color-accent:         #a30000;
+  --color-accent-light:   #FFF1F0;
+  --color-bg:             #FFFFFF;
+  --color-bg-sub:         #F8F9FA;
+  --color-text:           #1A1A2E;
+  --color-text-muted:     #6B7280;
+  --color-border:         #E5E7EB;
+}
+
 /* ── Base resets ──────────────────────────────────────────────────────────── */
 @layer base {
   *,
@@ -16,7 +31,7 @@
   }
 
   body {
-    @apply bg-parchment text-ink font-sans;
+    @apply bg-parchment-dark text-ink font-sans;
     min-height: 100dvh;
   }
 
@@ -39,19 +54,19 @@
     text-align: right;
   }
 
-  /* Gold divider line */
+  /* Primary divider line */
   .gold-divider {
     @apply border-gold/30;
   }
 
-  /* Parchment card */
+  /* White card on bg-sub surface */
   .card-parchment {
-    @apply bg-parchment-dark border border-gold/20 rounded-xl shadow-sm;
+    @apply bg-white border border-parchment-darker rounded-xl;
   }
 
   /* Sidebar link active state */
   .nav-active {
-    @apply bg-teal/10 text-teal border-r-2 border-teal;
+    @apply bg-gold/10 text-gold border-l-2 border-gold;
   }
 
   /* Table row hover */
@@ -67,7 +82,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #EDE8DC;
+  background: #F8F9FA;
 }
 
 ::-webkit-scrollbar-thumb {

@@ -99,8 +99,8 @@ export default function MatchUp({ config, onComplete }: Props) {
                 onClick={() => handleChipTap(chip.chipId)}
                 className={`px-4 py-2.5 rounded-xl border font-sans text-sm transition-all ${
                   selected === chip.chipId
-                    ? 'border-teal bg-teal text-parchment shadow-md scale-105'
-                    : 'border-gold/30 bg-parchment-dark text-ink hover:border-gold/60'
+                    ? 'border-gold bg-gold text-white shadow-md scale-105'
+                    : 'border-parchment-darker bg-white text-ink hover:border-gold/40'
                 }`}
               >
                 <span dir="rtl" className="arabic text-lg leading-relaxed">{chip.chipArabic}</span>
@@ -123,10 +123,10 @@ export default function MatchUp({ config, onComplete }: Props) {
                   className={`
                     flex items-center justify-between px-4 py-3 rounded-xl border transition-all
                     ${zone.correct === true
-                      ? 'border-teal bg-teal/10 cursor-default'
+                      ? 'border-teal bg-[var(--color-secondary-light)] cursor-default'
                       : selected
-                      ? 'border-gold/50 bg-parchment-dark hover:bg-gold/10 cursor-pointer'
-                      : 'border-gold/20 bg-parchment-dark cursor-default'
+                      ? 'border-gold/50 bg-white hover:bg-parchment-dark cursor-pointer'
+                      : 'border-parchment-darker bg-white cursor-default'
                     }
                     ${isShaking ? 'animate-bounce' : ''}
                   `}

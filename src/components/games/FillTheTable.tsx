@@ -101,10 +101,10 @@ export default function FillTheTable({ config, onComplete }: Props) {
                   onClick={() => setActiveBabIdx(i)}
                   className={`shrink-0 px-3 py-1.5 rounded-lg text-xs font-sans font-medium transition-colors ${
                     i === activeBabIdx
-                      ? 'bg-teal text-parchment'
+                      ? 'bg-gold text-white'
                       : complete
-                      ? 'bg-teal/10 text-teal'
-                      : 'bg-parchment-dark text-ink-muted hover:bg-gold/10'
+                      ? 'bg-[var(--color-secondary-light)] text-teal'
+                      : 'bg-parchment-dark text-ink-muted hover:bg-[var(--color-primary-light)]'
                   }`}
                 >
                   <span dir="rtl" className="arabic text-sm">{b.babId === 'fataha' ? 'فَتَحَ' : b.babId === 'samiʿa' ? 'سَمِعَ' : b.babId === 'daraba' ? 'ضَرَبَ' : b.babId === 'nasara' ? 'نَصَرَ' : b.babId === 'karuma' ? 'كَرُمَ' : 'حَسِبَ'}</span>
@@ -123,7 +123,7 @@ export default function FillTheTable({ config, onComplete }: Props) {
           <div className="flex-1 px-4 overflow-y-auto">
             <table className="w-full mb-4">
               <thead>
-                <tr className="border-b border-gold/20">
+                <tr className="border-b border-parchment-darker">
                   <th className="pb-2 text-left text-[10px] font-sans font-semibold text-ink-muted uppercase tracking-wide">Sīgha</th>
                   <th className="pb-2 text-right text-[10px] font-sans font-semibold text-ink-muted uppercase tracking-wide">Form</th>
                 </tr>
@@ -132,7 +132,7 @@ export default function FillTheTable({ config, onComplete }: Props) {
                 {currentBab.rows.map((row) => {
                   const isRevealed = revealedForBab(currentBab.babId).has(row.sighaId);
                   return (
-                    <tr key={row.sighaId} className="border-b border-gold/10 last:border-0">
+                    <tr key={row.sighaId} className="border-b border-parchment-darker/60 last:border-0">
                       <td className="py-2.5 pr-3">
                         <div dir="rtl" className="flex items-baseline gap-1.5">
                           <span className="arabic text-sm text-ink leading-relaxed">{row.sighaArabicName}</span>
@@ -147,7 +147,7 @@ export default function FillTheTable({ config, onComplete }: Props) {
                         ) : (
                           <button
                             onClick={() => toggleCell(currentBab.babId, row.sighaId)}
-                            className="inline-flex items-center justify-center w-24 h-9 rounded-lg bg-teal/15 border border-teal/30 text-teal text-xs font-sans font-medium hover:bg-teal/25 transition-colors"
+                            className="inline-flex items-center justify-center w-24 h-9 rounded-lg bg-[var(--color-primary-light)] border border-gold/30 text-gold text-xs font-sans font-medium hover:bg-gold/10 transition-colors"
                           >
                             Tap to reveal
                           </button>
@@ -161,18 +161,18 @@ export default function FillTheTable({ config, onComplete }: Props) {
           </div>
 
           {/* Footer actions */}
-          <div className="px-4 pb-6 pt-2 flex gap-2 shrink-0 border-t border-gold/10">
+          <div className="px-4 pb-6 pt-2 flex gap-2 shrink-0 border-t border-parchment-darker">
             {!allRevealedForCurrent && (
               <button
                 onClick={() => revealAll(currentBab.babId, currentBab.rows)}
-                className="flex-1 py-2.5 rounded-lg border border-gold/30 text-xs font-sans font-medium text-ink-muted hover:bg-gold/5 transition-colors"
+                className="flex-1 py-2.5 rounded-lg border border-parchment-darker text-xs font-sans font-medium text-ink-muted hover:bg-parchment-dark transition-colors"
               >
                 Reveal all
               </button>
             )}
             <button
               onClick={handleDone}
-              className="flex-1 py-2.5 rounded-lg bg-teal text-parchment text-xs font-sans font-medium hover:bg-teal-dark transition-colors"
+              className="flex-1 py-2.5 rounded-[10px] bg-gold text-white text-xs font-sans font-medium hover:opacity-90 transition-opacity"
             >
               Done ({totalRevealed}/{totalForms})
             </button>

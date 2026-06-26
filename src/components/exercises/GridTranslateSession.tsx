@@ -27,8 +27,7 @@ export default function GridTranslateSession({ exercise, onComplete }: Props) {
   const scoreable = useMemo(() => exercise.items.filter(i => !i.unclear), [exercise.items]);
   const pendingReview = exercise.items.length - scoreable.length;
 
-  // Grid + focused state
-  const [focused, setFocused] = useState<number | null>(null); // index into scoreable
+  const [focused, setFocused] = useState<number | null>(null);
   const [results, setResults] = useState<Record<number, boolean>>({});
   const [answerState, setAnswerState] = useState<AnswerState>('idle');
   const [chosen, setChosen] = useState<string | null>(null);
@@ -64,9 +63,7 @@ export default function GridTranslateSession({ exercise, onComplete }: Props) {
     setFocused(null);
     setAnswerState('idle');
     setChosen(null);
-    // Check if all answered
     if (answered + 1 >= scoreable.length) {
-      // will be set on next render via useEffect pattern — just call onComplete directly
       const finalScore = score + (answerState === 'correct' ? 1 : 0);
       setDone(true);
       onComplete(finalScore, scoreable.length);
@@ -99,8 +96,7 @@ export default function GridTranslateSession({ exercise, onComplete }: Props) {
       {/* Focused item overlay */}
       {currentItem && focused !== null && (
         <div className="fixed inset-0 bg-black/40 z-50 flex items-end sm:items-center justify-center px-4 pb-6">
-          <div className="bg-parchment rounded-2xl w-full max-w-sm p-5 shadow-2xl">
-            {/* Item number badge */}
+          <div className="bg-white rounded-2xl w-full max-w-sm p-5 shadow-2xl border border-parchment-darker">
             <p className="text-xs font-sans text-ink-muted mb-3 text-center">{focused + 1} of {scoreable.length}</p>
 
             {/* Prompt */}
@@ -119,7 +115,7 @@ export default function GridTranslateSession({ exercise, onComplete }: Props) {
                   <button
                     key={i}
                     onClick={() => handleAnswer(opt.text)}
-                    className="px-4 py-3 rounded-xl border border-gold/20 bg-parchment-dark text-sm font-sans text-ink hover:border-teal/40 transition-colors text-left"
+                    className="px-4 py-3 rounded-[10px] border border-parchment-darker bg-white text-sm font-sans text-ink hover:border-gold/40 transition-colors text-left"
                   >
                     <span dir={isRTL(opt.text) ? 'rtl' : undefined} className={isRTL(opt.text) ? 'arabic text-base' : ''}>
                       {opt.text}
@@ -129,20 +125,23 @@ export default function GridTranslateSession({ exercise, onComplete }: Props) {
               </div>
             ) : (
               <div className="space-y-3">
-                <div className={`rounded-xl px-4 py-3 text-sm font-sans ${answerState === 'correct' ? 'bg-teal/10 text-teal-dark' : 'bg-red-50 text-red-700'}`}>
-                  <p className="font-semibold mb-1">{answerState === 'correct' ? 'Correct!' : 'Not quite.'}</p>
-                  {answerState === 'wrong' && (
-                    <p className="text-xs">
-                      Answer:{' '}
-                      <span dir={isRTL(correctText) ? 'rtl' : undefined} className={isRTL(correctText) ? 'arabic' : ''}>
-                        {correctText}
-                      </span>
-                    </p>
-                  )}
+                <div className={`rounded-xl px-4 py-3 text-sm font-sans flex items-start gap-2 ${answerState === 'correct' ? 'bg-[var(--color-secondary-light)] text-teal-dark' : 'bg-[var(--color-accent-light)] text-crimson-dark'}`}>
+                  <span className="shrink-0 font-bold mt-0.5">{answerState === 'correct' ? '✓' : '✗'}</span>
+                  <div>
+                    <p className="font-semibold mb-0.5">{answerState === 'correct' ? 'Correct!' : 'Not quite.'}</p>
+                    {answerState === 'wrong' && (
+                      <p className="text-xs">
+                        Answer:{' '}
+                        <span dir={isRTL(correctText) ? 'rtl' : undefined} className={isRTL(correctText) ? 'arabic' : ''}>
+                          {correctText}
+                        </span>
+                      </p>
+                    )}
+                  </div>
                 </div>
                 <button
                   onClick={dismissFocused}
-                  className="w-full py-3 rounded-xl bg-ink text-parchment font-sans font-medium text-sm hover:bg-ink-light transition-colors"
+                  className="w-full py-3 rounded-[10px] bg-gold text-white font-sans font-medium text-sm transition-opacity hover:opacity-90"
                 >
                   {answered + 1 >= scoreable.length ? 'See results' : 'Next →'}
                 </button>
@@ -155,8 +154,8 @@ export default function GridTranslateSession({ exercise, onComplete }: Props) {
       {/* Grid */}
       <div className="px-4 py-6">
         {/* Instruction */}
-        <div className="bg-ink/5 rounded-xl px-4 py-3 mb-5">
-          <p className="text-xs font-sans text-ink-muted leading-relaxed">{exercise.instructionText}</p>
+        <div className="bg-[var(--color-secondary-light)] border-l-[3px] border-l-teal px-4 py-3 mb-5">
+          <p className="text-xs font-sans text-teal-dark leading-relaxed">{exercise.instructionText}</p>
         </div>
 
         <p className="text-xs font-sans text-ink-muted mb-4">
@@ -164,7 +163,7 @@ export default function GridTranslateSession({ exercise, onComplete }: Props) {
           {pendingReview > 0 && ` · ${pendingReview} skipped (unclear)`}
         </p>
 
-        {/* Item grid — matches book layout */}
+        {/* Item grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
           {scoreable.map((item, idx) => {
             const res = results[idx];
@@ -175,7 +174,7 @@ export default function GridTranslateSession({ exercise, onComplete }: Props) {
               <button
                 key={item.number}
                 onClick={() => {
-                  if (isAnswered) return; // don't re-answer
+                  if (isAnswered) return;
                   setFocused(idx);
                   setAnswerState('idle');
                   setChosen(null);
@@ -185,9 +184,9 @@ export default function GridTranslateSession({ exercise, onComplete }: Props) {
                   relative p-3 rounded-xl border text-left transition-all
                   ${isAnswered
                     ? isCorrect
-                      ? 'border-teal bg-teal/10 cursor-default'
-                      : 'border-red-200 bg-red-50 cursor-default'
-                    : 'border-gold/20 bg-parchment-dark hover:border-teal/40 cursor-pointer'
+                      ? 'border-teal bg-[var(--color-secondary-light)] cursor-default'
+                      : 'border-crimson/40 bg-[var(--color-accent-light)] cursor-default'
+                    : 'border-parchment-darker bg-white hover:border-gold/40 cursor-pointer'
                   }
                 `}
               >
@@ -198,7 +197,7 @@ export default function GridTranslateSession({ exercise, onComplete }: Props) {
                   <span className="text-xs font-sans text-ink block leading-snug">{item.english}</span>
                 )}
                 {isAnswered && (
-                  <span className={`absolute top-2 right-2 text-xs font-bold ${isCorrect ? 'text-teal' : 'text-red-500'}`}>
+                  <span className={`absolute top-2 right-2 text-xs font-bold ${isCorrect ? 'text-teal' : 'text-crimson'}`}>
                     {isCorrect ? '✓' : '✗'}
                   </span>
                 )}
@@ -211,7 +210,7 @@ export default function GridTranslateSession({ exercise, onComplete }: Props) {
         {answered >= scoreable.length && !done && (
           <button
             onClick={() => { setDone(true); onComplete(score, scoreable.length); }}
-            className="w-full mt-6 py-3 rounded-xl bg-teal text-parchment font-sans font-medium text-sm hover:bg-teal-dark transition-colors"
+            className="w-full mt-6 py-3 rounded-[10px] bg-gold text-white font-sans font-medium text-sm transition-opacity hover:opacity-90"
           >
             See results
           </button>

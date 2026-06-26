@@ -64,7 +64,7 @@ export default async function BabDetailPage({ params }: Props) {
 
         {/* Ism fāʿil / Ism mafʿūl */}
         {(bab.ism_fail || bab.ism_maful) && (
-          <div className="mt-4 pt-4 border-t border-gold/15 flex flex-wrap gap-x-6 gap-y-1" dir="rtl">
+          <div className="mt-4 pt-4 border-t border-parchment-darker flex flex-wrap gap-x-6 gap-y-1" dir="rtl">
             {bab.ism_fail && (
               <div className="flex items-center gap-2">
                 <span dir="rtl" className="arabic text-[11px] text-ink-muted">اسم فاعل</span>

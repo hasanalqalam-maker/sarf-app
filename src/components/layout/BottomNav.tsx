@@ -64,7 +64,7 @@ export default function BottomNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-teal-dark border-t border-teal/30">
+    <nav className="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-white border-t border-parchment-darker">
       <ul className="flex">
         {NAV_ITEMS.map((item) => {
           const isActive = item.href === '/'
@@ -78,10 +78,10 @@ export default function BottomNav() {
                 className={`
                   flex flex-col items-center gap-1 py-2.5 text-[10px] font-sans font-medium
                   transition-colors duration-150
-                  ${isActive ? 'text-parchment' : 'text-parchment/50 hover:text-parchment/80'}
+                  ${isActive ? 'text-gold' : 'text-ink-muted hover:text-ink'}
                 `}
               >
-                <span className={isActive ? 'text-parchment' : 'text-parchment/40'}>
+                <span className={isActive ? 'text-gold' : 'text-ink-muted/70'}>
                   {item.icon}
                 </span>
                 {item.label}

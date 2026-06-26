@@ -34,12 +34,12 @@ export default function ProfilePage() {
       {/* Stats grid */}
       <div className="grid grid-cols-2 gap-4 mb-8">
         <div className="card-parchment p-5 flex flex-col gap-1">
-          <p className="font-heading text-3xl text-teal">{hydrated ? gamesCompleted : '—'}</p>
+          <p className="font-heading text-3xl text-gold">{hydrated ? gamesCompleted : '—'}</p>
           <p className="text-xs font-sans text-ink-muted">Games completed</p>
           <p className="text-xs font-sans text-ink-muted/60">of {UNIT1_GAMES.length} in Unit 1</p>
         </div>
         <div className="card-parchment p-5 flex flex-col gap-1">
-          <p className="font-heading text-3xl text-teal">{hydrated ? totalMastered : '—'}</p>
+          <p className="font-heading text-3xl text-gold">{hydrated ? totalMastered : '—'}</p>
           <p className="text-xs font-sans text-ink-muted">Forms mastered</p>
           <p className="text-xs font-sans text-ink-muted/60">3 correct in a row</p>
         </div>
@@ -54,7 +54,7 @@ export default function ProfilePage() {
           <p className="text-xs font-sans text-ink-muted/60">Current: {hydrated ? currentStreak : '—'} days</p>
         </div>
         <div className="card-parchment p-5 flex flex-col gap-1">
-          <p className="font-heading text-3xl text-teal">{hydrated ? `${accuracy}%` : '—'}</p>
+          <p className="font-heading text-3xl text-gold">{hydrated ? `${accuracy}%` : '—'}</p>
           <p className="text-xs font-sans text-ink-muted">Accuracy</p>
           <p className="text-xs font-sans text-ink-muted/60">
             {hydrated ? `${totalCorrect} / ${totalAnswered} correct` : '—'}
@@ -63,7 +63,7 @@ export default function ProfilePage() {
       </div>
 
       {/* Reset section */}
-      <div className="card-parchment p-5 border border-red-100">
+      <div className="card-parchment p-5">
         <p className="font-heading text-base text-ink mb-1">Reset progress</p>
         <p className="text-xs font-sans text-ink-muted mb-4">
           Clears all game scores, mastery data, streaks, and activity history. This cannot be undone.
@@ -86,7 +86,7 @@ export default function ProfilePage() {
             </button>
             <button
               onClick={() => setConfirmReset(false)}
-              className="px-4 py-2 rounded-xl border border-gold/30 text-ink font-sans text-sm hover:bg-parchment-dark transition-colors"
+              className="px-4 py-2 rounded-xl border border-parchment-darker text-ink-muted font-sans text-sm hover:bg-parchment-dark transition-colors"
             >
               Cancel
             </button>

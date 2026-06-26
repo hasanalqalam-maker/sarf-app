@@ -57,15 +57,15 @@ export default function WhichBab({ config, onComplete }: Props) {
 
   function optionClass(opt: WhichBabOption): string {
     if (!revealed) {
-      return 'border-gold/30 bg-parchment-dark text-ink hover:border-gold/60 cursor-pointer';
+      return 'border-parchment-darker bg-white text-ink hover:border-gold/40 cursor-pointer';
     }
     if (opt.babId === q.correctBabId) {
-      return 'border-teal bg-teal/10 text-teal cursor-default';
+      return 'border-teal bg-[var(--color-secondary-light)] text-teal-dark cursor-default';
     }
     if (opt.babId === selected) {
-      return 'border-red-300 bg-red-50 text-red-600 cursor-default';
+      return 'border-crimson/40 bg-[var(--color-accent-light)] text-crimson-dark cursor-default';
     }
-    return 'border-gold/15 bg-parchment-dark/50 text-ink-muted cursor-default opacity-60';
+    return 'border-parchment-darker/50 bg-white/60 text-ink-muted cursor-default opacity-60';
   }
 
   return (
@@ -114,17 +114,17 @@ export default function WhichBab({ config, onComplete }: Props) {
             {revealed && (
               <div className="mt-2">
                 {selected === q.correctBabId ? (
-                  <p className="text-sm font-sans text-teal text-center mb-4">Correct!</p>
+                  <p className="text-sm font-sans text-teal-dark text-center mb-4">Correct!</p>
                 ) : (
                   <p className="text-sm font-sans text-center mb-4">
-                    <span className="text-red-500">Incorrect. </span>
+                    <span className="text-crimson">Incorrect. </span>
                     <span className="text-ink-muted">The answer is </span>
                     <span dir="rtl" className="arabic text-ink"> {q.correctBabArabicName}</span>
                   </p>
                 )}
                 <button
                   onClick={handleNext}
-                  className="w-full py-3 rounded-xl bg-teal text-parchment text-sm font-sans font-medium hover:bg-teal/90 transition-colors"
+                  className="w-full py-3 rounded-[10px] bg-gold text-white text-sm font-sans font-medium hover:opacity-90 transition-opacity"
                 >
                   {current + 1 >= questions.length ? 'Finish' : 'Next →'}
                 </button>

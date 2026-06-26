@@ -81,11 +81,16 @@ export default function TenseVoiceSession({ exercise, onComplete }: Props) {
   const canSubmit = tenseChoice !== null && voiceChoice !== null && !submitted;
 
   function optionCls(selected: boolean, correctValue: string, chosenValue: string | null, isSubmitted: boolean): string {
-    if (!isSubmitted) return selected ? 'border-teal bg-teal/10 text-teal' : 'border-gold/20 bg-parchment-dark text-ink hover:border-teal/30';
-    if (chosenValue === correctValue && selected) return 'border-teal bg-teal/10 text-teal';
-    if (selected && chosenValue !== correctValue) return 'border-red-400 bg-red-50 text-red-700';
-    if (chosenValue !== correctValue && correctValue === (selected ? chosenValue : correctValue)) return 'border-teal/40 bg-teal/5 text-teal';
-    return 'border-gold/10 bg-parchment-dark text-ink-muted opacity-50';
+    if (!isSubmitted) {
+      return selected
+        ? 'border-gold bg-[var(--color-primary-light)] text-gold'
+        : 'border-parchment-darker bg-white text-ink hover:border-gold/30';
+    }
+    if (chosenValue === correctValue && selected) return 'border-teal bg-[var(--color-secondary-light)] text-teal-dark';
+    if (selected && chosenValue !== correctValue) return 'border-crimson/40 bg-[var(--color-accent-light)] text-crimson-dark';
+    if (chosenValue !== correctValue && !selected && correctValue === (TENSE_OPTIONS.find(o => o.value === correctValue) ? correctValue : correctValue))
+      return 'border-teal/40 bg-teal/5 text-teal opacity-70';
+    return 'border-parchment-darker bg-white text-ink-muted opacity-40';
   }
 
   return (
@@ -107,8 +112,8 @@ export default function TenseVoiceSession({ exercise, onComplete }: Props) {
         </p>
 
         {/* Instruction card */}
-        <div className="bg-ink/5 rounded-xl px-4 py-3 mb-5">
-          <p className="text-xs font-sans text-ink-muted leading-relaxed">{exercise.instructionText}</p>
+        <div className="bg-[var(--color-secondary-light)] border-l-[3px] border-l-teal px-4 py-3 mb-5">
+          <p className="text-xs font-sans text-teal-dark leading-relaxed">{exercise.instructionText}</p>
         </div>
 
         {/* Pattern */}
@@ -172,14 +177,17 @@ export default function TenseVoiceSession({ exercise, onComplete }: Props) {
 
         {/* Feedback */}
         {submitted && (
-          <div className={`rounded-xl px-4 py-3 mb-4 text-sm font-sans ${bothCorrect ? 'bg-teal/10 text-teal-dark' : 'bg-red-50 text-red-700'}`}>
-            <p className="font-semibold mb-1">{bothCorrect ? 'Correct!' : 'Not quite.'}</p>
-            {!bothCorrect && (
-              <p className="text-xs">
-                {!tenseCorrect && <>Tense: <span dir="rtl" className="arabic">{TENSE_OPTIONS.find(o => o.value === correctTense)?.ar}</span> · </>}
-                {!voiceCorrect && <>Voice: <span dir="rtl" className="arabic">{VOICE_OPTIONS.find(o => o.value === correctVoice)?.ar}</span></>}
-              </p>
-            )}
+          <div className={`rounded-xl px-4 py-3 mb-4 text-sm font-sans flex items-start gap-2 ${bothCorrect ? 'bg-[var(--color-secondary-light)] text-teal-dark' : 'bg-[var(--color-accent-light)] text-crimson-dark'}`}>
+            <span className="shrink-0 font-bold mt-0.5">{bothCorrect ? '✓' : '✗'}</span>
+            <div>
+              <p className="font-semibold mb-0.5">{bothCorrect ? 'Correct!' : 'Not quite.'}</p>
+              {!bothCorrect && (
+                <p className="text-xs">
+                  {!tenseCorrect && <>Tense: <span dir="rtl" className="arabic">{TENSE_OPTIONS.find(o => o.value === correctTense)?.ar}</span> · </>}
+                  {!voiceCorrect && <>Voice: <span dir="rtl" className="arabic">{VOICE_OPTIONS.find(o => o.value === correctVoice)?.ar}</span></>}
+                </p>
+              )}
+            </div>
           </div>
         )}
 
@@ -188,14 +196,14 @@ export default function TenseVoiceSession({ exercise, onComplete }: Props) {
           <button
             onClick={handleSubmit}
             disabled={!canSubmit}
-            className="w-full py-3 rounded-xl bg-ink text-parchment font-sans font-medium text-sm hover:bg-ink-light transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+            className="w-full py-3 rounded-[10px] bg-gold text-white font-sans font-medium text-sm transition-opacity hover:opacity-90 disabled:opacity-40 disabled:cursor-not-allowed"
           >
             Check
           </button>
         ) : (
           <button
             onClick={advance}
-            className="w-full py-3 rounded-xl bg-ink text-parchment font-sans font-medium text-sm hover:bg-ink-light transition-colors"
+            className="w-full py-3 rounded-[10px] bg-gold text-white font-sans font-medium text-sm transition-opacity hover:opacity-90"
           >
             {index + 1 >= scoreable.length ? 'See results' : 'Next →'}
           </button>

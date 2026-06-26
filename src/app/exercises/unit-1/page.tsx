@@ -7,7 +7,6 @@ import ExerciseCard from '@/components/exercises/ExerciseCard';
 import { getGameSections } from '@/lib/gameData';
 import { isGameUnlocked, computeUnit1Completion } from '@/lib/gameState';
 import {
-  getAllExercises,
   getExerciseParts,
   getExercisesByPart,
   isExerciseUnlocked,
@@ -36,25 +35,25 @@ export default function Unit1HubPage() {
 
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm font-sans text-ink-muted mb-6">
-        <Link href="/exercises" className="hover:text-teal transition-colors">Exercises</Link>
-        <span className="text-gold/40">›</span>
+        <Link href="/exercises" className="hover:text-gold transition-colors">Exercises</Link>
+        <span className="text-parchment-darker">›</span>
         <span className="text-ink">Unit 1</span>
       </nav>
 
       <h1 className="font-heading text-2xl text-ink mb-1">Unit 1 — Thulāthī Mujarrad</h1>
-      <p className="text-ink-muted font-sans text-sm mb-5">
+      <p className="text-ink-muted font-sans text-sm mb-6">
         Six bābs of the unmixed trilateral verb — exercises and games.
       </p>
 
-      {/* Combined progress bar */}
-      <div className="card-parchment p-4 mb-6">
+      {/* Progress card */}
+      <div className="bg-white border border-parchment-darker rounded-xl p-4 mb-6">
         <div className="flex items-center justify-between mb-2">
           <p className="font-sans text-xs font-semibold text-ink-muted uppercase tracking-wide">Overall progress</p>
-          <p className="font-heading text-lg text-teal">{combined}%</p>
+          <p className="font-heading text-lg text-gold">{combined}%</p>
         </div>
-        <div className="h-2 bg-parchment-darker rounded-full overflow-hidden mb-2">
+        <div className="h-2 bg-parchment-darker rounded-full overflow-hidden mb-3">
           <div
-            className="h-full bg-teal rounded-full transition-all duration-500"
+            className="h-full bg-gold rounded-full transition-all duration-500"
             style={{ width: `${combined}%` }}
           />
         </div>
@@ -71,12 +70,12 @@ export default function Unit1HubPage() {
       </div>
 
       {/* Segmented control */}
-      <div className="flex bg-parchment-darker rounded-xl p-1 mb-8 gap-1">
+      <div className="flex bg-parchment-dark border border-parchment-darker rounded-xl p-1 mb-8 gap-1">
         <button
           onClick={() => setTab('exercises')}
           className={`flex-1 py-2 rounded-lg text-sm font-sans font-medium transition-colors ${
             tab === 'exercises'
-              ? 'bg-parchment text-ink shadow-sm'
+              ? 'bg-white text-ink shadow-sm'
               : 'text-ink-muted hover:text-ink'
           }`}
         >
@@ -86,7 +85,7 @@ export default function Unit1HubPage() {
           onClick={() => setTab('games')}
           className={`flex-1 py-2 rounded-lg text-sm font-sans font-medium transition-colors ${
             tab === 'games'
-              ? 'bg-parchment text-ink shadow-sm'
+              ? 'bg-white text-ink shadow-sm'
               : 'text-ink-muted hover:text-ink'
           }`}
         >
@@ -104,7 +103,7 @@ export default function Unit1HubPage() {
             const scoreable = exercises.filter(e => e.exerciseType !== 'verbal-practice').length;
 
             return (
-              <section key={part} className="mb-10">
+              <section key={part} className="mb-8">
                 {/* Part heading */}
                 <div className="flex items-center gap-3 mb-4">
                   <div className="min-w-0">
@@ -118,11 +117,11 @@ export default function Unit1HubPage() {
                   <span className="text-xs font-sans text-ink-muted shrink-0 whitespace-nowrap">
                     {done}/{scoreable} complete
                   </span>
-                  <div className="flex-1 border-t border-gold/20 min-w-0" />
+                  <div className="flex-1 border-t border-parchment-darker min-w-0" />
                 </div>
 
-                {/* Exercise cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {/* Exercise cards — 24px gap */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {exercises.map((ex) => (
                     <ExerciseCard
                       key={ex.id}
@@ -158,9 +157,9 @@ export default function Unit1HubPage() {
                   <span className="text-xs font-sans text-ink-muted">
                     {sectionDone}/{games.length} complete
                   </span>
-                  <div className="flex-1 border-t border-gold/20" />
+                  <div className="flex-1 border-t border-parchment-darker" />
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {games.map((game) => (
                     <GameCard
                       key={game.id}

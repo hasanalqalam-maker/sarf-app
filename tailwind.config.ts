@@ -9,30 +9,35 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Surface / background colours
         parchment: {
-          DEFAULT: '#F7F2EA',
-          dark: '#EDE8DC',
-          darker: '#E0D9CC',
+          DEFAULT: '#FFFFFF',   // white (was warm cream #F7F2EA)
+          dark: '#F8F9FA',      // light grey (was #EDE8DC)
+          darker: '#E5E7EB',    // border grey (was #E0D9CC)
         },
+        // Text colours
         ink: {
-          DEFAULT: '#052547',  // book cover navy
-          light: '#07325f',    // book body-text navy
-          muted: '#4a6a8a',    // muted steel blue
+          DEFAULT: '#1A1A2E',   // near-black (was dark navy #052547)
+          light: '#374151',     // dark grey (was #07325f)
+          muted: '#6B7280',     // medium grey (was steel blue #4a6a8a)
         },
+        // Primary — book grammar-heading blue
         gold: {
-          DEFAULT: '#0e60ba',  // book grammar-heading blue
-          light: '#1a81ee',    // lighter blue
-          muted: '#07325f',    // dark navy-blue
+          DEFAULT: '#0e60ba',
+          light: '#1a81ee',
+          muted: '#07325f',
         },
+        // Secondary — book institution green
         teal: {
-          DEFAULT: '#4e8542',  // book institution green
-          light: '#7c9163',    // book olive green
-          dark: '#2d5a25',     // deeper green
+          DEFAULT: '#4e8542',
+          light: '#6ba35e',
+          dark: '#2d5a25',
         },
+        // Accent — book unit-banner red
         crimson: {
-          DEFAULT: '#a30000',  // book unit-banner red (dominant colour)
-          light: '#c00000',    // slightly lighter red
-          dark: '#7a0000',     // deeper red
+          DEFAULT: '#a30000',
+          light: '#c00000',
+          dark: '#7a0000',
         },
       },
       fontFamily: {

@@ -120,7 +120,6 @@ export default function TileBuildSession({ exercise, onComplete }: Props) {
   const pendingReview = exercise.items.length - scoreable.length;
   const type = exercise.exerciseType;
 
-  // Check if any item has a sigha answer (instruction always says "write sigha" for these types)
   const hasSigha = useMemo(
     () => scoreable.some(i => !!getSigha(i)),
     [scoreable],
@@ -135,7 +134,6 @@ export default function TileBuildSession({ exercise, onComplete }: Props) {
   const [score, setScore] = useState(0);
   const [done, setDone] = useState(false);
 
-  // Sigha MCQ state
   const [sighaChosen, setSighaChosen] = useState<string | null>(null);
   const [sighaAnswered, setSighaAnswered] = useState(false);
 
@@ -203,7 +201,6 @@ export default function TileBuildSession({ exercise, onComplete }: Props) {
   }
 
   function advance() {
-    // Tile phase done → go to sigha phase (if applicable)
     if (hasSigha && phase === 'tile') {
       setPhase('sigha');
       setSighaChosen(null);
@@ -211,7 +208,6 @@ export default function TileBuildSession({ exercise, onComplete }: Props) {
       return;
     }
 
-    // Move to next item
     const next = index + 1;
     if (next >= scoreable.length) {
       setDone(true);
@@ -259,7 +255,6 @@ export default function TileBuildSession({ exercise, onComplete }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [placedIds.length, targetLength, phase]);
 
-  // Step counter label
   const stepLabel = phase === 'tile' ? null : 'Write the sīgha';
   const itemNum = index + 1;
 
@@ -283,8 +278,8 @@ export default function TileBuildSession({ exercise, onComplete }: Props) {
         </p>
 
         {/* Instruction */}
-        <div className="bg-ink/5 rounded-xl px-4 py-3 mb-5">
-          <p className="text-xs font-sans text-ink-muted leading-relaxed">{exercise.instructionText}</p>
+        <div className="bg-[var(--color-secondary-light)] border-l-[3px] border-l-teal px-4 py-3 mb-5">
+          <p className="text-xs font-sans text-teal-dark leading-relaxed">{exercise.instructionText}</p>
         </div>
 
         {/* ── Tile phase ────────────────────────────────────────────────────── */}
@@ -312,20 +307,23 @@ export default function TileBuildSession({ exercise, onComplete }: Props) {
               )}
             </div>
 
-            {/* Assembly area */}
-            <div className={`min-h-[52px] mb-4 px-4 py-3 rounded-xl border-2 flex items-center justify-center flex-wrap gap-1 transition-colors ${
-              checkState === 'correct' ? 'border-teal bg-teal/8' :
-              checkState === 'wrong' ? 'border-red-400 bg-red-50' :
-              'border-gold/25 bg-parchment-dark'
-            }`}>
+            {/* Assembly area — dashed border, RTL fill */}
+            <div
+              dir="rtl"
+              className={`min-h-[52px] mb-4 px-4 py-3 rounded-xl border-2 border-dashed flex items-center justify-center flex-wrap gap-1 transition-colors ${
+                checkState === 'correct' ? 'border-teal bg-[var(--color-secondary-light)]' :
+                checkState === 'wrong' ? 'border-crimson/40 bg-[var(--color-accent-light)]' :
+                'border-parchment-darker'
+              }`}
+            >
               {placedTiles.length === 0 ? (
-                <p className="text-[11px] font-sans text-ink-muted/50">Tap tiles below to build the form</p>
+                <p className="text-[11px] font-sans text-ink-muted/50" dir="ltr">Tap tiles below to build the form</p>
               ) : (
                 placedTiles.map(tile => (
                   <button
                     key={tile.id}
                     onClick={() => removeTile(tile.id)}
-                    className="px-2 py-1 rounded-lg bg-parchment border border-gold/30 hover:bg-red-50 hover:border-red-300 transition-colors"
+                    className="px-2 py-1 rounded-lg bg-white border border-parchment-darker hover:bg-crimson/5 hover:border-crimson/30 transition-colors"
                     title="Tap to remove"
                   >
                     <span dir="rtl" className="arabic text-xl text-ink">{tile.text}</span>
@@ -336,13 +334,16 @@ export default function TileBuildSession({ exercise, onComplete }: Props) {
 
             {/* Feedback */}
             {checkState !== 'idle' && (
-              <div className={`rounded-xl px-4 py-3 mb-3 text-sm font-sans ${checkState === 'correct' ? 'bg-teal/10 text-teal-dark' : 'bg-red-50 text-red-700'}`}>
-                <p className="font-semibold mb-1">{checkState === 'correct' ? 'Correct!' : 'Not quite.'}</p>
-                {checkState === 'wrong' && (
-                  <p className="text-xs">
-                    Answer: <span dir="rtl" className="arabic text-base ml-1">{correctWord}</span>
-                  </p>
-                )}
+              <div className={`rounded-xl px-4 py-3 mb-3 text-sm font-sans flex items-start gap-2 ${checkState === 'correct' ? 'bg-[var(--color-secondary-light)] text-teal-dark' : 'bg-[var(--color-accent-light)] text-crimson-dark'}`}>
+                <span className="shrink-0 font-bold mt-0.5">{checkState === 'correct' ? '✓' : '✗'}</span>
+                <div>
+                  <p className="font-semibold mb-0.5">{checkState === 'correct' ? 'Correct!' : 'Not quite.'}</p>
+                  {checkState === 'wrong' && (
+                    <p className="text-xs">
+                      Answer: <span dir="rtl" className="arabic text-base ml-1">{correctWord}</span>
+                    </p>
+                  )}
+                </div>
               </div>
             )}
 
@@ -353,7 +354,7 @@ export default function TileBuildSession({ exercise, onComplete }: Props) {
                   <button
                     key={tile.id}
                     onClick={() => placeTile(tile.id)}
-                    className="px-3 py-2 rounded-xl bg-parchment border border-gold/30 hover:bg-teal/10 hover:border-teal/40 transition-colors active:scale-95"
+                    className="px-3 py-2 rounded-lg bg-white border border-parchment-darker hover:border-gold/40 transition-colors active:scale-95"
                   >
                     <span dir="rtl" className="arabic text-2xl text-ink">{tile.text}</span>
                   </button>
@@ -368,14 +369,14 @@ export default function TileBuildSession({ exercise, onComplete }: Props) {
                   <button
                     onClick={() => setPlacedIds([])}
                     disabled={placedIds.length === 0}
-                    className="px-4 py-3 rounded-xl border border-gold/20 text-xs font-sans text-ink-muted hover:bg-gold/5 transition-colors disabled:opacity-30"
+                    className="px-4 py-3 rounded-[10px] border border-parchment-darker text-xs font-sans text-ink-muted hover:bg-parchment-dark transition-colors disabled:opacity-30"
                   >
                     Clear
                   </button>
                   <button
                     onClick={handleCheck}
                     disabled={!canCheck}
-                    className="flex-1 py-3 rounded-xl bg-ink text-parchment font-sans font-medium text-sm hover:bg-ink-light transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                    className="flex-1 py-3 rounded-[10px] bg-gold text-white font-sans font-medium text-sm transition-opacity hover:opacity-90 disabled:opacity-40 disabled:cursor-not-allowed"
                   >
                     Check
                   </button>
@@ -384,7 +385,7 @@ export default function TileBuildSession({ exercise, onComplete }: Props) {
               {checkState !== 'idle' && (
                 <button
                   onClick={advance}
-                  className="flex-1 py-3 rounded-xl bg-ink text-parchment font-sans font-medium text-sm hover:bg-ink-light transition-colors"
+                  className="flex-1 py-3 rounded-[10px] bg-gold text-white font-sans font-medium text-sm transition-opacity hover:opacity-90"
                 >
                   {hasSigha ? 'Write sīgha →' : (index + 1 >= scoreable.length ? 'See results' : 'Next →')}
                 </button>
@@ -397,7 +398,6 @@ export default function TileBuildSession({ exercise, onComplete }: Props) {
         {phase === 'sigha' && (
           <>
             <div className="flex-1 flex flex-col items-center justify-center mb-6 gap-2">
-              {/* Show the Arabic form (correct or assembled) as reference */}
               <p dir="rtl" className="arabic text-4xl leading-[4rem] text-ink text-center">
                 {correctWord}
               </p>
@@ -410,17 +410,18 @@ export default function TileBuildSession({ exercise, onComplete }: Props) {
               {sighaOptions.map((opt, i) => {
                 const isChosen = sighaChosen === opt.text;
                 const isCorrect = opt.correct;
-                let cls = 'border-gold/20 bg-parchment-dark text-ink';
+                let cls = 'border-parchment-darker bg-white text-ink';
                 if (sighaAnswered) {
-                  if (isCorrect) cls = 'border-teal bg-teal/10 text-teal';
-                  else if (isChosen) cls = 'border-red-400 bg-red-50 text-red-700';
+                  if (isCorrect) cls = 'border-teal bg-[var(--color-secondary-light)] text-teal-dark';
+                  else if (isChosen) cls = 'border-crimson/40 bg-[var(--color-accent-light)] text-crimson-dark';
+                  else cls = 'border-parchment-darker bg-white text-ink opacity-40';
                 }
                 return (
                   <button
                     key={i}
                     onClick={() => handleSighaAnswer(opt.text)}
                     disabled={sighaAnswered}
-                    className={`px-3 py-3 rounded-xl border font-sans text-sm transition-colors text-center ${cls}`}
+                    className={`px-3 py-3 rounded-[10px] border font-sans text-sm transition-colors text-center ${cls}`}
                   >
                     <span dir="rtl" className="arabic text-base leading-relaxed">{opt.text}</span>
                   </button>
@@ -431,7 +432,8 @@ export default function TileBuildSession({ exercise, onComplete }: Props) {
             {sighaAnswered && (
               <>
                 {sighaChosen !== correctSigha && (
-                  <div className="rounded-xl px-4 py-3 mb-3 text-sm font-sans bg-red-50 text-red-700">
+                  <div className="rounded-xl px-4 py-3 mb-3 text-sm font-sans bg-[var(--color-accent-light)] text-crimson-dark flex items-center gap-2">
+                    <span className="font-bold">✗</span>
                     <p className="text-xs">
                       Correct: <span dir="rtl" className="arabic">{correctSigha}</span>
                     </p>
@@ -439,7 +441,7 @@ export default function TileBuildSession({ exercise, onComplete }: Props) {
                 )}
                 <button
                   onClick={advance}
-                  className="w-full py-3 rounded-xl bg-ink text-parchment font-sans font-medium text-sm hover:bg-ink-light transition-colors"
+                  className="w-full py-3 rounded-[10px] bg-gold text-white font-sans font-medium text-sm transition-opacity hover:opacity-90"
                 >
                   {index + 1 >= scoreable.length ? 'See results' : 'Next →'}
                 </button>

@@ -52,7 +52,7 @@ function GridCell({ state }: { state: CellState }) {
       </div>
     );
   }
-  return <div className="w-8 h-8 mx-auto rounded-md border-2 border-dashed border-gold/25 bg-parchment-darker/60" />;
+  return <div className="w-8 h-8 mx-auto rounded-md border-2 border-dashed border-parchment-darker/60 bg-white" />;
 }
 
 // ── Main component ────────────────────────────────────────────────────────────
@@ -100,9 +100,9 @@ export default function SarfMapGrid() {
   function changeUnit(unit: UnitKey){ setActiveUnit(unit); setDrill(null); }
 
   // ── Row background helpers ─────────────────────────────────────────────────
-  const evenBg   = '#F7F2EA';
-  const oddBg    = 'rgba(237,232,220,0.55)';
-  const activeBg = 'rgba(27,107,90,0.055)';
+  const evenBg   = '#FFFFFF';
+  const oddBg    = 'rgba(248,249,250,0.9)';
+  const activeBg = 'rgba(78,133,66,0.06)';
 
   return (
     <div className="w-full">
@@ -140,7 +140,7 @@ export default function SarfMapGrid() {
         {([
           ['Mastered',    'bg-teal'],
           ['In Progress', 'bg-gold/15 border border-gold/50'],
-          ['Not Started', 'border-2 border-dashed border-gold/25 bg-parchment-darker/60'],
+          ['Not Started', 'border-2 border-dashed border-parchment-darker/60 bg-white'],
         ] as [string, string][]).map(([label, cls]) => (
           <span key={label} className="flex items-center gap-1 text-[10px] font-sans text-ink-muted">
             <span className={`inline-block w-3 h-3 rounded-sm ${cls}`} />
@@ -150,14 +150,14 @@ export default function SarfMapGrid() {
       </div>
 
       {/* Grid */}
-      <div className={`rounded-xl border border-gold/20 ${
+      <div className={`rounded-xl border border-parchment-darker ${
         activeUnit === 2 ? 'overflow-x-auto' : 'overflow-hidden'
       }`}>
         <table className="w-full border-collapse">
           <thead>
-            <tr className="border-b border-gold/20 bg-parchment-dark">
+            <tr className="border-b border-parchment-darker bg-parchment-dark">
               {/* Form header */}
-              <th className="sticky left-0 z-20 bg-parchment-dark pl-3 pr-5 py-2.5 text-left border-r border-gold/15 min-w-[96px]">
+              <th className="sticky left-0 z-20 bg-parchment-dark pl-3 pr-5 py-2.5 text-left border-r border-parchment-darker/50 min-w-[96px]">
                 <span className="text-[9px] font-sans font-semibold text-ink-muted/70 uppercase tracking-widest">
                   Form
                 </span>
@@ -165,7 +165,7 @@ export default function SarfMapGrid() {
               {/* Bāb column headers */}
               {babs.map((bab) => (
                 <th key={bab.id}
-                  className="w-9 min-w-[36px] px-0.5 py-2 text-center border-l border-gold/10 align-bottom">
+                  className="w-9 min-w-[36px] px-0.5 py-2 text-center border-l border-parchment-darker/40 align-bottom">
                   <div dir="rtl" className="arabic text-ink leading-tight"
                     style={{ fontSize: '10px' }}>
                     {bab.madi}
@@ -187,10 +187,10 @@ export default function SarfMapGrid() {
               const rowBg = open ? activeBg : ri % 2 === 0 ? evenBg : oddBg;
 
               return (
-                <tr key={sigha.id} className="border-b border-gold/10">
+                <tr key={sigha.id} className="border-b border-parchment-darker/40">
                   {/* Row label — tap target */}
                   <td
-                    className="sticky left-0 z-10 pl-3 pr-5 py-2.5 border-r border-gold/10 cursor-pointer relative select-none"
+                    className="sticky left-0 z-10 pl-3 pr-5 py-2.5 border-r border-parchment-darker/40 cursor-pointer relative select-none"
                     style={{ background: rowBg }}
                     onClick={() => openDrill(sigha)}
                   >
@@ -211,7 +211,7 @@ export default function SarfMapGrid() {
                   {/* Cells */}
                   {babs.map((bab) => (
                     <td key={bab.id}
-                      className="p-[3px] border-l border-gold/10 text-center"
+                      className="p-[3px] border-l border-parchment-darker/40 text-center"
                       style={{ background: rowBg }}>
                       <GridCell state={cellState(bab.id, sigha.id, isNA(bab))} />
                     </td>
@@ -239,7 +239,7 @@ export default function SarfMapGrid() {
 
           {/* Drawer */}
           <div className="fixed bottom-0 inset-x-0 z-[60] max-h-[70vh] flex flex-col
-            bg-parchment rounded-t-2xl shadow-2xl border-t border-gold/30">
+            bg-white rounded-t-2xl shadow-2xl border-t border-parchment-darker">
 
             {/* Pull handle */}
             <div className="flex justify-center pt-3 pb-1 shrink-0">
@@ -247,7 +247,7 @@ export default function SarfMapGrid() {
             </div>
 
             {/* Drawer header */}
-            <div className="px-4 pb-3 border-b border-gold/20 shrink-0 relative">
+            <div className="px-4 pb-3 border-b border-parchment-darker shrink-0 relative">
               <button
                 onClick={() => setDrill(null)}
                 className="absolute right-4 top-0 w-8 h-8 flex items-center justify-center text-xl text-ink-muted hover:text-ink leading-none">
@@ -272,12 +272,12 @@ export default function SarfMapGrid() {
                 <div key={bab.id}
                   className={`flex items-center gap-3 rounded-xl px-3 py-3 border ${
                     state === 'mastered'
-                      ? 'border-teal/30 bg-teal/10'
+                      ? 'border-teal/30 bg-[var(--color-secondary-light)]'
                       : state === 'in-progress'
-                      ? 'border-gold/30 bg-gold/10'
+                      ? 'border-gold/30 bg-[var(--color-primary-light)]'
                       : state === 'na'
                       ? 'border-transparent bg-parchment-dark/60 opacity-50'
-                      : 'border-gold/15 bg-parchment-darker'
+                      : 'border-parchment-darker bg-white'
                   }`}>
 
                   {/* Bāb label */}

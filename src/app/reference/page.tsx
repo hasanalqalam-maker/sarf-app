@@ -19,7 +19,7 @@ export default function ReferencePage() {
         <div className="flex items-center gap-3 mb-5">
           <h2 className="font-heading text-xl text-ink">Unit 1</h2>
           <span className="text-ink-muted font-sans text-sm">Thulāthī Mujarrad</span>
-          <div className="flex-1 border-t border-gold/20" />
+          <div className="flex-1 border-t border-parchment-darker" />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {unit1Babs.map((bab) => (
@@ -34,7 +34,7 @@ export default function ReferencePage() {
           <div className="flex items-center gap-3 mb-5">
             <h2 className="font-heading text-xl text-ink">Unit 2</h2>
             <span className="text-ink-muted font-sans text-sm">Thulāthī Mazīd Fīh</span>
-            <div className="flex-1 border-t border-gold/20" />
+            <div className="flex-1 border-t border-parchment-darker" />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {unit2Babs.map((bab) => (

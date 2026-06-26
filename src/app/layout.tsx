@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${dmSans.variable} ${playfair.variable} ${scheherazade.variable}`}>
-      <body className="bg-parchment text-ink font-sans">
+      <body className="bg-parchment-dark text-ink font-sans">
         <Providers>
           <Sidebar />
           <main className="lg:pl-60 min-h-dvh pb-16 lg:pb-0">

@@ -221,11 +221,9 @@ export default function MultiChoiceSession({ exercise, onComplete }: Props) {
     setAnswerState(correct ? 'correct' : 'wrong');
 
     if (isSighaType) {
-      // Score each step independently for identify-sigha
       if (correct) setScore(s => s + 1);
       recordAnswer('unit1-exercise', exercise.id, exercise.exerciseType, current.arabic ?? current.pattern ?? '', correct);
     } else if (isIrabType) {
-      // For irab: only record on final step (irab or when sigha is wrong)
       if (step === 'irab') {
         if (correct) setScore(s => s + 1);
         recordAnswer('unit1-exercise', exercise.id, exercise.exerciseType, current.arabic ?? current.pattern ?? '', correct);
@@ -239,13 +237,11 @@ export default function MultiChoiceSession({ exercise, onComplete }: Props) {
   function advance() {
     if (isSighaType) {
       if (step === 'sigha') {
-        // Always proceed to English pronoun step regardless of sigha result
         setStep('english');
         setAnswerState('idle');
         setChosen(null);
         return;
       }
-      // step === 'english': go to next item
     } else if (isIrabType) {
       if (step === 'sigha' && answerState === 'correct' && current) {
         const hasIrab = !!(current.answer as Record<string, string>)?.irab;
@@ -261,7 +257,6 @@ export default function MultiChoiceSession({ exercise, onComplete }: Props) {
       }
     }
 
-    // Move to next item
     const next = index + 1;
     if (next >= scoreable.length) {
       setDone(true);
@@ -308,8 +303,8 @@ export default function MultiChoiceSession({ exercise, onComplete }: Props) {
         {showIntro && (
           <div className="flex flex-col min-h-full justify-between">
             <div>
-              <div className="bg-ink/5 rounded-xl px-4 py-3 mb-5">
-                <p className="text-xs font-sans text-ink-muted leading-relaxed">{exercise.instructionText}</p>
+              <div className="bg-[var(--color-secondary-light)] border-l-[3px] border-l-teal px-4 py-3 mb-5">
+                <p className="text-xs font-sans text-teal-dark leading-relaxed">{exercise.instructionText}</p>
               </div>
               <div className="bg-teal/10 border border-teal/30 rounded-xl px-4 py-4 mb-4">
                 <p className="text-[11px] font-sans font-semibold text-teal uppercase tracking-wide mb-2">
@@ -320,7 +315,7 @@ export default function MultiChoiceSession({ exercise, onComplete }: Props) {
             </div>
             <button
               onClick={() => setShowIntro(false)}
-              className="w-full py-3 rounded-xl bg-ink text-parchment font-sans font-medium text-sm hover:bg-ink-light transition-colors"
+              className="w-full py-3 rounded-[10px] bg-gold text-white font-sans font-medium text-sm transition-opacity hover:opacity-90"
             >
               Got it — start the exercise →
             </button>
@@ -337,8 +332,8 @@ export default function MultiChoiceSession({ exercise, onComplete }: Props) {
             </p>
 
             {/* Instruction card */}
-            <div className="bg-ink/5 rounded-xl px-4 py-3 mb-5">
-              <p className="text-xs font-sans text-ink-muted leading-relaxed">{exercise.instructionText}</p>
+            <div className="bg-[var(--color-secondary-light)] border-l-[3px] border-l-teal px-4 py-3 mb-5">
+              <p className="text-xs font-sans text-teal-dark leading-relaxed">{exercise.instructionText}</p>
             </div>
 
             {/* Prompt */}
@@ -361,10 +356,11 @@ export default function MultiChoiceSession({ exercise, onComplete }: Props) {
               {options.map((opt, i) => {
                 const isChosen = chosen === opt.text;
                 const isCorrect = opt.correct;
-                let cls = 'border-gold/20 bg-parchment-dark text-ink';
+                let cls = 'border-parchment-darker bg-white text-ink';
                 if (answerState !== 'idle') {
-                  if (isCorrect) cls = 'border-teal bg-teal/10 text-teal';
-                  else if (isChosen && !isCorrect) cls = 'border-red-400 bg-red-50 text-red-700';
+                  if (isCorrect) cls = 'border-teal bg-[var(--color-secondary-light)] text-teal-dark';
+                  else if (isChosen && !isCorrect) cls = 'border-crimson/40 bg-[var(--color-accent-light)] text-crimson-dark';
+                  else cls = 'border-parchment-darker bg-white text-ink opacity-40';
                 }
                 const arabic = isRTL(opt.text);
                 return (
@@ -372,7 +368,7 @@ export default function MultiChoiceSession({ exercise, onComplete }: Props) {
                     key={i}
                     onClick={() => handleAnswer(opt.text)}
                     disabled={answerState !== 'idle'}
-                    className={`px-3 py-3 rounded-xl border font-sans text-sm transition-colors text-center ${cls}`}
+                    className={`px-3 py-3 rounded-[10px] border font-sans text-sm transition-colors text-center ${cls}`}
                   >
                     <span
                       dir={arabic ? 'rtl' : undefined}
@@ -387,20 +383,23 @@ export default function MultiChoiceSession({ exercise, onComplete }: Props) {
 
             {/* Feedback */}
             {answerState !== 'idle' && (
-              <div className={`rounded-xl px-4 py-3 mb-4 text-sm font-sans ${answerState === 'correct' ? 'bg-teal/10 text-teal-dark' : 'bg-red-50 text-red-700'}`}>
-                <p className="font-semibold mb-1">{answerState === 'correct' ? 'Correct!' : 'Not quite.'}</p>
-                <p className="text-xs leading-relaxed">
+              <div className={`rounded-xl px-4 py-3 mb-4 text-sm font-sans flex items-start gap-2 ${answerState === 'correct' ? 'bg-[var(--color-secondary-light)] text-teal-dark' : 'bg-[var(--color-accent-light)] text-crimson-dark'}`}>
+                <span className="shrink-0 font-bold mt-0.5">{answerState === 'correct' ? '✓' : '✗'}</span>
+                <div>
+                  <p className="font-semibold mb-0.5">{answerState === 'correct' ? 'Correct!' : 'Not quite.'}</p>
                   {answerState === 'wrong' && (
-                    <>Correct answer: <span dir="rtl" className="arabic">{correctText}</span></>
+                    <p className="text-xs leading-relaxed">
+                      Correct answer: <span dir="rtl" className="arabic">{correctText}</span>
+                    </p>
                   )}
-                </p>
+                </div>
               </div>
             )}
 
             {answerState !== 'idle' && (
               <button
                 onClick={advance}
-                className="w-full py-3 rounded-xl bg-ink text-parchment font-sans font-medium text-sm hover:bg-ink-light transition-colors"
+                className="w-full py-3 rounded-[10px] bg-gold text-white font-sans font-medium text-sm transition-opacity hover:opacity-90"
               >
                 {isSighaType && step === 'sigha'
                   ? 'English pronoun →'
