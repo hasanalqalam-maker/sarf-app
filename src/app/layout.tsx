@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { DM_Sans, Playfair_Display, Scheherazade_New } from 'next/font/google';
 import './globals.css';
-import Sidebar from '@/components/layout/Sidebar';
-import BottomNav from '@/components/layout/BottomNav';
+import NavWrapper from '@/components/layout/NavWrapper';
+import MainWrapper from '@/components/layout/MainWrapper';
 import Providers from '@/components/Providers';
 
 const dmSans = DM_Sans({
@@ -34,11 +34,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${dmSans.variable} ${playfair.variable} ${scheherazade.variable}`}>
       <body className="bg-parchment-dark text-ink font-sans">
         <Providers>
-          <Sidebar />
-          <main className="lg:pl-60 min-h-dvh pb-16 lg:pb-0">
-            {children}
-          </main>
-          <BottomNav />
+          <NavWrapper />
+          <MainWrapper>{children}</MainWrapper>
         </Providers>
       </body>
     </html>

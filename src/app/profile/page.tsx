@@ -1,7 +1,9 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { useProgress } from '@/lib/progressContext';
+import { useAuth } from '@/context/AuthContext';
 import { UNIT1_GAMES } from '@/lib/gameData';
 
 export default function ProfilePage() {
@@ -16,8 +18,17 @@ export default function ProfilePage() {
     totalCorrect,
     resetAll,
   } = useProgress();
+  const { user, profile, signOut } = useAuth();
+  const router = useRouter();
 
   const [confirmReset, setConfirmReset] = useState(false);
+  const [signingOut, setSigningOut] = useState(false);
+
+  async function handleSignOut() {
+    setSigningOut(true);
+    await signOut();
+    router.push('/login');
+  }
 
   const gamesCompleted = UNIT1_GAMES.filter((g) => gameSessions[g.id]?.completed).length;
 
@@ -60,6 +71,30 @@ export default function ProfilePage() {
             {hydrated ? `${totalCorrect} / ${totalAnswered} correct` : '—'}
           </p>
         </div>
+      </div>
+
+      {/* Account section */}
+      <div className="card-parchment p-5 mb-4">
+        <div className="flex items-start justify-between mb-3">
+          <div>
+            <p className="font-heading text-base text-ink">
+              {profile?.display_name ?? user?.email ?? 'Account'}
+            </p>
+            <p className="text-xs font-sans text-ink-muted mt-0.5">{user?.email}</p>
+          </div>
+          {profile?.role && (
+            <span className="text-xs font-sans px-2 py-0.5 rounded-full bg-gold/10 text-gold capitalize">
+              {profile.role}
+            </span>
+          )}
+        </div>
+        <button
+          onClick={handleSignOut}
+          disabled={signingOut}
+          className="px-4 py-2 rounded-xl border border-parchment-darker text-ink-muted font-sans text-sm hover:bg-parchment-dark transition-colors disabled:opacity-60"
+        >
+          {signingOut ? 'Signing out…' : 'Sign out'}
+        </button>
       </div>
 
       {/* Reset section */}
