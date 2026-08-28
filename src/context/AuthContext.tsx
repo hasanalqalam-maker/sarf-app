@@ -34,12 +34,42 @@ const AuthContext = createContext<AuthContextValue>({
   signOut: async () => {},
 });
 
-async function fetchProfile(userId: string): Promise<Profile | null> {
+const PROFILE_COLUMNS = 'id, display_name, role, created_at';
+
+async function selectProfile(userId: string): Promise<Profile | null> {
   const { data } = await supabase
     .from('profiles')
-    .select('id, display_name, role, created_at')
+    .select(PROFILE_COLUMNS)
     .eq('id', userId)
+    .maybeSingle();
+  return (data as Profile) ?? null;
+}
+
+/**
+ * Load the caller's profile row. The `on_auth_user_created` trigger normally
+ * creates it at signup; if that failed or hasn't fired yet, fall back to
+ * inserting it here from the signup metadata (allowed by the
+ * "Users can insert own profile" RLS policy).
+ */
+async function loadProfile(user: User): Promise<Profile | null> {
+  const existing = await selectProfile(user.id);
+  if (existing) return existing;
+
+  const meta = user.user_metadata ?? {};
+  const role = meta.role === 'teacher' || meta.role === 'student' ? meta.role : 'student';
+
+  const { data, error } = await supabase
+    .from('profiles')
+    .insert({
+      id: user.id,
+      display_name: (meta.display_name as string) ?? null,
+      role,
+    })
+    .select(PROFILE_COLUMNS)
     .single();
+
+  // A concurrent trigger insert wins the race → unique violation; re-read it.
+  if (error) return selectProfile(user.id);
   return (data as Profile) ?? null;
 }
 
@@ -52,7 +82,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     supabase.auth.getSession().then(async ({ data: { session } }) => {
       const u = session?.user ?? null;
       setUser(u);
-      if (u) setProfile(await fetchProfile(u.id));
+      if (u) setProfile(await loadProfile(u));
       setIsLoading(false);
     });
 
@@ -60,7 +90,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       async (_event, session) => {
         const u = session?.user ?? null;
         setUser(u);
-        setProfile(u ? await fetchProfile(u.id) : null);
+        setProfile(u ? await loadProfile(u) : null);
         setIsLoading(false);
       }
     );

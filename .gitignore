@@ -33,3 +33,7 @@ Thumbs.db
 *.tsbuildinfo
 
 .vercel
+
+# supabase CLI
+supabase/.temp/
+supabase/.branches/

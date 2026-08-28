@@ -11,12 +11,29 @@ create table public.profiles (
   created_at  timestamptz not null default now()
 );
 
--- Auto-create a profile row whenever a new auth user signs up
+-- Auto-create a profile row whenever a new auth user signs up.
+-- Copies display_name and role from the signup metadata; role is
+-- validated against the allowed values and defaults to 'student'.
 create or replace function public.handle_new_user()
-returns trigger language plpgsql security definer as $$
+returns trigger
+language plpgsql
+security definer
+set search_path = public
+as $$
 begin
-  insert into public.profiles (id, display_name)
-  values (new.id, new.raw_user_meta_data->>'display_name');
+  insert into public.profiles (id, display_name, role)
+  values (
+    new.id,
+    new.raw_user_meta_data->>'display_name',
+    coalesce(
+      case
+        when new.raw_user_meta_data->>'role' in ('student', 'teacher')
+          then new.raw_user_meta_data->>'role'
+      end,
+      'student'
+    )
+  )
+  on conflict (id) do nothing;
   return new;
 end;
 $$;
@@ -105,6 +122,13 @@ alter table public.streaks           enable row level security;
 create policy "Users can view own profile"
   on public.profiles for select
   using (auth.uid() = id);
+
+-- Fallback for when the on_auth_user_created trigger fails or doesn't fire:
+-- an authenticated user may insert their own profile row.
+create policy "Users can insert own profile"
+  on public.profiles for insert
+  to authenticated
+  with check (auth.uid() = id);
 
 create policy "Users can update own profile"
   on public.profiles for update
