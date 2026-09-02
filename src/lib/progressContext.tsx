@@ -1,9 +1,11 @@
 'use client';
 
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { UNIT1_GAMES } from './gameData';
 import { getAllExercises, computeUnit1ExerciseCompletion } from './exerciseData';
 import type { ExerciseSessionEntry } from './exerciseData';
+import { useAuth } from '@/context/AuthContext';
+import * as sync from './progressSync';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -29,7 +31,7 @@ export interface GameSessionEntry {
   attempts: number;
 }
 
-interface StoredState {
+export interface StoredState {
   sighaProgress: Record<string, SighaProgressEntry>;
   gameSessions: Record<string, GameSessionEntry>;
   exerciseSessions: Record<string, ExerciseSessionEntry>;
@@ -109,13 +111,57 @@ function computeStreak(streak: number, longest: number, lastDate: string): { str
 const ProgressContext = createContext<ProgressContextValue | null>(null);
 
 export function ProgressProvider({ children }: { children: React.ReactNode }) {
+  const { user, isLoading: authLoading } = useAuth();
   const [state, setState] = useState<StoredState>(INITIAL);
   const [hydrated, setHydrated] = useState(false);
+
+  // Latest values for use inside stable useCallback closures.
+  const stateRef = useRef(state);
+  const userIdRef = useRef<string | null>(null);
+  useEffect(() => { stateRef.current = state; }, [state]);
+  useEffect(() => { userIdRef.current = user?.id ?? null; }, [user?.id]);
 
   useEffect(() => {
     setState(load());
     setHydrated(true);
   }, []);
+
+  // Reconcile the local cache with the signed-in user's account: pull their
+  // rows, merge, then push the merged result back so any local-only progress
+  // is saved. Runs once per user id. On sign-out, drop the local cache so the
+  // next account doesn't inherit it.
+  const reconciledFor = useRef<string | null>(null);
+  useEffect(() => {
+    if (!hydrated || authLoading) return;
+    const uid = user?.id ?? null;
+
+    if (!uid) {
+      if (reconciledFor.current !== null) {
+        reconciledFor.current = null;
+        setState(INITIAL);
+        persist(INITIAL);
+      }
+      return;
+    }
+
+    if (reconciledFor.current === uid) return;
+    reconciledFor.current = uid;
+
+    let cancelled = false;
+    (async () => {
+      try {
+        const remote = await sync.hydrateFromSupabase(uid);
+        if (cancelled) return;
+        const merged = sync.mergeStates(stateRef.current, remote);
+        setState(merged);
+        persist(merged);
+        sync.pushAll(uid, merged).catch((e) => console.error('progress sync: pushAll failed', e));
+      } catch (e) {
+        console.error('progress sync: hydrate failed', e);
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [user?.id, hydrated, authLoading]);
 
   const recordAnswer = useCallback((babId: string, sighaId: string, paradigm: string, form: string, correct: boolean) => {
     setState((prev) => {
@@ -137,6 +183,11 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
         totalCorrect: prev.totalCorrect + (correct ? 1 : 0),
       };
       persist(next);
+      const uid = userIdRef.current;
+      if (uid) {
+        sync.pushSighaMastery(uid, key, newEntry).catch((e) => console.error('progress sync: sigha', e));
+        sync.pushUserStats(uid, next).catch((e) => console.error('progress sync: stats', e));
+      }
       return next;
     });
   }, []);
@@ -157,6 +208,11 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
         lastPlayedGameId: gameId,
       };
       persist(next);
+      const uid = userIdRef.current;
+      if (uid) {
+        sync.pushGameCompletion(uid, gameId, next.gameSessions[gameId]).catch((e) => console.error('progress sync: game', e));
+        sync.pushUserStats(uid, next).catch((e) => console.error('progress sync: stats', e));
+      }
       return next;
     });
   }, []);
@@ -186,6 +242,11 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
         totalCorrect: prev.totalCorrect + score,
       };
       persist(next);
+      const uid = userIdRef.current;
+      if (uid) {
+        sync.pushExerciseCompletion(uid, exerciseId, next.exerciseSessions[exerciseId]).catch((e) => console.error('progress sync: exercise', e));
+        sync.pushUserStats(uid, next).catch((e) => console.error('progress sync: stats', e));
+      }
       return next;
     });
   }, []);
@@ -193,6 +254,8 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
   const resetAll = useCallback(() => {
     persist(INITIAL);
     setState(INITIAL);
+    const uid = userIdRef.current;
+    if (uid) sync.wipeRemote(uid).catch((e) => console.error('progress sync: wipe', e));
   }, []);
 
   const unit1Completion = useMemo(() => {
