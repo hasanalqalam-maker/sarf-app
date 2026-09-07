@@ -166,7 +166,7 @@ export default function Unit1HubPage() {
                       config={game}
                       progress={gameSessions[game.id]}
                       locked={!isGameUnlocked(game, gameSessions)}
-                      basePath="/exercises/unit-1/session"
+                      basePath="/exercises/unit-1"
                     />
                   ))}
                 </div>

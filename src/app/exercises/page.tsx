@@ -21,10 +21,13 @@ export default function ExercisesPage() {
         </Link>
 
         {/* Unit 2 — secondary top border */}
-        <div className="bg-white border border-parchment-darker border-t-[3px] border-t-teal rounded-xl p-5 opacity-40 cursor-not-allowed">
-          <p className="font-heading text-lg text-ink mb-1">Unit 2</p>
-          <p className="text-ink-muted text-sm font-sans">Thulāthī Mazīd — 10 bābs</p>
-        </div>
+        <Link
+          href="/exercises/unit-2"
+          className="bg-white border border-parchment-darker border-t-[3px] border-t-teal rounded-xl p-5 hover:shadow-sm transition-shadow group block"
+        >
+          <p className="font-heading text-lg text-ink mb-1 group-hover:text-teal transition-colors">Unit 2</p>
+          <p className="text-ink-muted text-sm font-sans">Thulāthī Mazīd — 10 bābs · 13 games</p>
+        </Link>
 
         {/* Units 3–12 — neutral, spanning full row */}
         <div className="bg-white border border-parchment-darker rounded-xl p-5 opacity-40 cursor-not-allowed sm:col-span-2">
