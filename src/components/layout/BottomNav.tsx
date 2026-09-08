@@ -2,6 +2,19 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useAuth } from '@/context/AuthContext';
+
+const STUDENTS_ITEM = {
+  href: '/students',
+  label: 'Students',
+  icon: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} className="w-5 h-5">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M17 20v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" strokeLinecap="round" strokeLinejoin="round" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M23 20v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+    </svg>
+  ),
+};
 
 const NAV_ITEMS = [
   {
@@ -62,11 +75,17 @@ const NAV_ITEMS = [
 
 export default function BottomNav() {
   const pathname = usePathname();
+  const { profile } = useAuth();
+
+  const navItems =
+    profile?.role === 'teacher'
+      ? [NAV_ITEMS[0], NAV_ITEMS[1], STUDENTS_ITEM, ...NAV_ITEMS.slice(2)]
+      : NAV_ITEMS;
 
   return (
     <nav className="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-white border-t border-parchment-darker">
       <ul className="flex">
-        {NAV_ITEMS.map((item) => {
+        {navItems.map((item) => {
           const isActive = item.href === '/'
             ? pathname === '/'
             : pathname.startsWith(item.href);
