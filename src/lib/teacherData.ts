@@ -48,8 +48,8 @@ export async function addStudentByEmail(
   if (!row) return { student: null, error: 'No account found for that email' };
   return {
     student: {
-      id: row.student_id as string,
-      displayName: (row.display_name as string | null) ?? null,
+      id: row.student as string,
+      displayName: (row.student_name as string | null) ?? null,
       linkedAt: new Date().toISOString(),
     },
     error: null,

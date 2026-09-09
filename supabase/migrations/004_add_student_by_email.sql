@@ -6,8 +6,12 @@
 -- This security-definer RPC resolves the email, checks the caller is a
 -- teacher, and creates the teacher_students link.
 
-create or replace function public.add_student_by_email(p_email text)
-returns table (student_id uuid, display_name text)
+-- Return-column names are changed from an earlier version, so drop first
+-- (create-or-replace can't change a function's return type).
+drop function if exists public.add_student_by_email(text);
+
+create function public.add_student_by_email(p_email text)
+returns table (student uuid, student_name text)
 language plpgsql
 security definer
 set search_path = public
