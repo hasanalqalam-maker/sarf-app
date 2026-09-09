@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useMemo } from 'react';
 import { useProgress } from '@/lib/progressContext';
+import { useAuth } from '@/context/AuthContext';
 import { UNIT1_GAMES, getGameConfig } from '@/lib/gameData';
 import { isGameUnlocked } from '@/lib/gameState';
 
@@ -17,6 +18,9 @@ export default function HomePage() {
     recentActivity,
     gameSessions,
   } = useProgress();
+
+  const { profile } = useAuth();
+  const firstName = profile?.display_name?.trim().split(/\s+/)[0];
 
   const continueGame = useMemo(() => {
     if (!lastPlayedGameId) return null;
@@ -46,7 +50,9 @@ export default function HomePage() {
       {/* Greeting */}
       <div>
         <p dir="rtl" className="arabic text-2xl text-ink mb-0.5">اَلسَّلَامُ عَلَيْكُمْ</p>
-        <p className="font-heading text-lg text-ink-muted">Welcome back, student.</p>
+        <p className="font-heading text-lg text-ink-muted">
+          {firstName ? `Welcome back, ${firstName}.` : 'Welcome back.'}
+        </p>
       </div>
 
       {/* Streak + progress bar */}
@@ -118,10 +124,10 @@ export default function HomePage() {
         </div>
       )}
 
-      {/* Mini Sarf Map */}
+      {/* Mini progress map */}
       <div>
         <div className="flex items-center justify-between mb-2">
-          <p className="font-sans text-xs font-semibold text-ink-muted uppercase tracking-wide">Sarf Map</p>
+          <p className="font-sans text-xs font-semibold text-ink-muted uppercase tracking-wide">Progress</p>
           <Link href="/progress" className="text-xs font-sans text-gold hover:underline">View full map →</Link>
         </div>
         <Link href="/progress" className="bg-white border border-parchment-darker rounded-xl p-4 block hover:shadow-sm transition-shadow">
