@@ -29,9 +29,18 @@ export default function ExercisesPage() {
           <p className="text-ink-muted text-sm font-sans">Thulāthī Mazīd — 10 bābs · 13 games</p>
         </Link>
 
-        {/* Units 3–12 — neutral, spanning full row */}
+        {/* Unit 3 */}
+        <Link
+          href="/exercises/unit-3"
+          className="bg-white border border-parchment-darker border-t-[3px] border-t-crimson rounded-xl p-5 hover:shadow-sm transition-shadow group block"
+        >
+          <p className="font-heading text-lg text-ink mb-1 group-hover:text-crimson transition-colors">Unit 3</p>
+          <p className="text-ink-muted text-sm font-sans">اَلْمَهْمُوْز — hamzated verbs</p>
+        </Link>
+
+        {/* Units 4–12 — neutral, spanning full row */}
         <div className="bg-white border border-parchment-darker rounded-xl p-5 opacity-40 cursor-not-allowed sm:col-span-2">
-          <p className="font-heading text-lg text-ink mb-1">Units 3–12</p>
+          <p className="font-heading text-lg text-ink mb-1">Units 4–12</p>
           <p className="text-ink-muted text-sm font-sans">Coming in a later stage.</p>
         </div>
       </div>

@@ -2,9 +2,9 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import GameSessionWrapper from './GameSessionWrapper';
-import { generateWhichBabQuestions } from '@/lib/unit2GameData';
+import { generateWhichBabQuestions } from '@/lib/unitGameData';
 import type { GameConfig, Paradigm } from '@/lib/gameData';
-import type { WhichBabQuestion, WhichBabOption } from '@/lib/unit2GameData';
+import type { WhichBabQuestion, WhichBabOption } from '@/lib/unitGameData';
 
 interface Props {
   config: GameConfig;
@@ -22,7 +22,7 @@ export default function WhichBab({ config, onComplete }: Props) {
   const COUNT = 10;
 
   const reset = useCallback(() => {
-    const qs = generateWhichBabQuestions(config.paradigm as Paradigm, COUNT);
+    const qs = generateWhichBabQuestions(config.unit ?? 2, config.paradigm as Paradigm, COUNT);
     setQuestions(qs);
     setCurrent(0);
     setSelected(null);

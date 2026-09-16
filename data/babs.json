@@ -1,7 +1,6 @@
 {
   "_source": "FSTU Sarf 2023 Oct.pdf — Unit 1 babs: pages 30-40 (introduction and individual bab pages); Unit 2 babs: pages 77-98 (overview table page 78, individual bab intro pages). Tashreef sagheer summary table: page 70.",
   "_note": "All Arabic text extracted directly from PDF. Vowel pattern uses the textbook's own ف-ع-ل scale notation (page 29-30). The 'masdar' field shows the sample masdar form used in the textbook's tashreef sagheer table (page 70) with ف-ع-ل root letters. Bab IX (ifʿilal) and XI (ifʿeelal) are listed in the overview table (page 78) but are not taught in the main units of this textbook.",
-
   "babs": [
     {
       "id": "fataha",
@@ -282,6 +281,62 @@
       "verb_type": "رُبَاعِيّ مَزِيْد فِيْه (quadrilateral mazid)",
       "zaid_harf": "تَاء before فَاء الْكَلِمَة",
       "example_verb": "تَدَحْرَجَ يَتَدَحْرَجُ تَدَحْرُجًا"
+    },
+    {
+      "id": "u3-mahmuz-lam-fataha",
+      "unit": 3,
+      "arabic_name": "الْمَهْمُوْزُ مِنْ بَابِ فَتَحَ يَفْتَحُ",
+      "madi": "قَرَأَ",
+      "mudari": "يَقْرَأُ",
+      "masdar": "قِرَاءَةً",
+      "ism_fail": "قَارِئ",
+      "ism_maful": "مَقْرُوْء",
+      "roman_numeral": null,
+      "page": 113,
+      "has_majhul": true,
+      "_note": "Part 1 — مَهْمُوْز"
+    },
+    {
+      "id": "u3-mahmuz-fa-samia",
+      "unit": 3,
+      "arabic_name": "الْمَهْمُوْزُ مِنْ بَابِ سَمِعَ يَسْمَعُ",
+      "madi": "أَمِنَ",
+      "mudari": "يَأْمَنُ",
+      "masdar": "أَمْنًا",
+      "ism_fail": "آمِن",
+      "ism_maful": "مَأْمُوْن",
+      "roman_numeral": null,
+      "page": 114,
+      "has_majhul": true,
+      "_note": "Part 2 — مَهْمُوْز"
+    },
+    {
+      "id": "u3-mahmuz-fa-daraba",
+      "unit": 3,
+      "arabic_name": "الْمَهْمُوْزُ مِنْ بَابِ ضَرَبَ يَضْرِبُ",
+      "madi": "أَبَقَ",
+      "mudari": "يَأْبِقُ",
+      "masdar": "إِبَاقًا",
+      "ism_fail": "آبِق",
+      "ism_maful": "مَأْبُوْق",
+      "roman_numeral": null,
+      "page": 115,
+      "has_majhul": true,
+      "_note": "Part 3 — مَهْمُوْز"
+    },
+    {
+      "id": "u3-mahmuz-fa-nasara",
+      "unit": 3,
+      "arabic_name": "الْمَهْمُوْزُ مِنْ بَابِ نَصَرَ يَنْصُرُ",
+      "madi": "أَفَلَ",
+      "mudari": "يَأْفُلُ",
+      "masdar": "أُفُوْلًا",
+      "ism_fail": "آفِل",
+      "ism_maful": "مَأْفُوْل",
+      "roman_numeral": null,
+      "page": 116,
+      "has_majhul": true,
+      "_note": "Part 4 — مَهْمُوْز"
     }
   ]
 }

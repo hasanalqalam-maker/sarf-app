@@ -6,6 +6,7 @@ export const metadata = { title: 'Reference Library — Sarf App' };
 export default function ReferencePage() {
   const unit1Babs = getBabsByUnit(1);
   const unit2Babs = getBabsByUnit(2);
+  const unit3Babs = getBabsByUnit(3);
 
   return (
     <div className="px-6 py-10 max-w-5xl">
@@ -38,6 +39,22 @@ export default function ReferencePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {unit2Babs.map((bab) => (
+              <BabCard key={bab.id} bab={bab} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Unit 3 */}
+      {unit3Babs.length > 0 && (
+        <section>
+          <div className="flex items-center gap-3 mb-5">
+            <h2 className="font-heading text-xl text-ink">Unit 3</h2>
+            <span className="text-ink-muted font-sans text-sm">اَلْمَهْمُوْز</span>
+            <div className="flex-1 border-t border-parchment-darker" />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {unit3Babs.map((bab) => (
               <BabCard key={bab.id} bab={bab} />
             ))}
           </div>
