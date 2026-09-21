@@ -69,12 +69,12 @@ const SECTION_ORDERS: Record<number, string[]> = {};
 export const UNIT3_SECTION_ORDER = ['التَّصْرِيْف', 'التَّعَرُّف عَلَى الأَبْوَاب'];
 
 export const UNIT3_GAMES: GameConfig[] = [
-  { id: 'u3-madi-fill', unit: 3, section: 'التَّصْرِيْف', title: 'Fill the Table — Māḍī Maʿlūm', description: 'Reveal all 14 māḍī forms for each of the 4 mahmūz example verbs.', type: 'fill-table', format: 'fill-table', paradigm: 'madi_malum', unlockAfter: [] },
+  { id: 'u3-madi-fill', unit: 3, section: 'التَّصْرِيْف', title: 'Fill the Table — Māḍī Maʿlūm', description: 'Reveal all 14 māḍī forms for each of the 11 mahmūz example verbs.', type: 'fill-table', format: 'fill-table', paradigm: 'madi_malum', unlockAfter: [] },
   { id: 'u3-mudari-fill', unit: 3, section: 'التَّصْرِيْف', title: 'Fill the Table — Muḍāriʿ Maʿlūm', description: 'Reveal all 14 muḍāriʿ forms for each verb.', type: 'fill-table', format: 'fill-table', paradigm: 'mudari_malum', unlockAfter: ['u3-madi-fill'] },
   { id: 'u3-majhul-madi-fill', unit: 3, section: 'التَّصْرِيْف', title: 'Fill the Table — Māḍī Majhūl', description: 'Reveal the passive māḍī table for each verb.', type: 'fill-table', format: 'fill-table', paradigm: 'madi_majhul', unlockAfter: ['u3-mudari-fill'] },
   { id: 'u3-majhul-mudari-fill', unit: 3, section: 'التَّصْرِيْف', title: 'Fill the Table — Muḍāriʿ Majhūl', description: 'Reveal the passive muḍāriʿ table for each verb.', type: 'fill-table', format: 'fill-table', paradigm: 'mudari_majhul', unlockAfter: ['u3-majhul-madi-fill'] },
   { id: 'u3-amr-fill', unit: 3, section: 'التَّصْرِيْف', title: 'Fill the Table — Amr', description: 'Reveal all 6 command forms. Note the taḵẖfīf and ḥaḏf changes.', type: 'fill-table', format: 'fill-table', paradigm: 'amr', unlockAfter: ['u3-majhul-mudari-fill'] },
-  { id: 'u3-bab-flashcards', unit: 3, section: 'التَّعَرُّف عَلَى الأَبْوَاب', title: 'Flashcards — Mahmūz Verbs', description: 'Review the 4 mahmūz example verbs with flip cards.', type: 'flashcards', format: 'flashcards', paradigm: 'madi_malum', unlockAfter: ['u3-amr-fill'] },
+  { id: 'u3-bab-flashcards', unit: 3, section: 'التَّعَرُّف عَلَى الأَبْوَاب', title: 'Flashcards — Mahmūz Verbs', description: 'Review all 11 mahmūz example verbs with flip cards.', type: 'flashcards', format: 'flashcards', paradigm: 'madi_malum', unlockAfter: ['u3-amr-fill'] },
   { id: 'u3-bab-mudari-matchup', unit: 3, section: 'التَّعَرُّف عَلَى الأَبْوَاب', title: 'Match: Māḍī ↔ Muḍāriʿ', description: 'Match each mahmūz māḍī form to its muḍāriʿ counterpart.', type: 'match-up', format: 'match-up', paradigm: 'mudari_malum', matchType: 'bab-mudari', unlockAfter: ['u3-bab-flashcards'] },
   { id: 'u3-which-bab-madi', unit: 3, section: 'التَّعَرُّف عَلَى الأَبْوَاب', title: 'Which Verb? — Māḍī', description: 'Given a māḍī form, identify which mahmūz example it belongs to.', type: 'which-bab', format: 'quiz', paradigm: 'madi_malum', unlockAfter: ['u3-bab-mudari-matchup'] },
 ];
