@@ -38,9 +38,18 @@ export default function ExercisesPage() {
           <p className="text-ink-muted text-sm font-sans">اَلْمَهْمُوْز — hamzated verbs</p>
         </Link>
 
-        {/* Units 4–12 — neutral, spanning full row */}
+        {/* Unit 4 */}
+        <Link
+          href="/exercises/unit-4"
+          className="bg-white border border-parchment-darker border-t-[3px] border-t-gold rounded-xl p-5 hover:shadow-sm transition-shadow group block"
+        >
+          <p className="font-heading text-lg text-ink mb-1 group-hover:text-gold transition-colors">Unit 4</p>
+          <p className="text-ink-muted text-sm font-sans">اَلْمِثَالُ — assimilated verbs</p>
+        </Link>
+
+        {/* Units 5–12 — neutral, spanning full row */}
         <div className="bg-white border border-parchment-darker rounded-xl p-5 opacity-40 cursor-not-allowed sm:col-span-2">
-          <p className="font-heading text-lg text-ink mb-1">Units 4–12</p>
+          <p className="font-heading text-lg text-ink mb-1">Units 5–12</p>
           <p className="text-ink-muted text-sm font-sans">Coming in a later stage.</p>
         </div>
       </div>
