@@ -10690,6 +10690,2762 @@
           "form": "لَا تَسْتَوْقِدْنَ"
         }
       ]
+    },
+    {
+      "bab_id": "u4-mithal-yai-fataha",
+      "madi_malum": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يَنَعَ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يَنَعَا"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يَنَعُوْا"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "يَنَعَتْ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "يَنَعَتَا"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يَنَعْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "يَنَعْتَ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "يَنَعْتُمَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "يَنَعْتُمْ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "يَنَعْتِ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "يَنَعْتُمَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "يَنَعْتُنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "يَنَعْتُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "يَنَعْنَا"
+        }
+      ],
+      "mudari_malum": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يَيْنَعُ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يَيْنَعَانِ"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يَيْنَعُوْنَ"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "تَيْنَعُ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "تَيْنَعَانِ"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يَيْنَعْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "تَيْنَعُ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تَيْنَعَانِ"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تَيْنَعُوْنَ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تَيْنَعِيْنَ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تَيْنَعَانِ"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تَيْنَعْنَ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "أَيْنَعُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "نَيْنَعُ"
+        }
+      ],
+      "madi_majhul": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يُنِعَ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يُنِعَا"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يُنِعُوْا"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "يُنِعَتْ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "يُنِعَتَا"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يُنِعْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "يُنِعْتَ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "يُنِعْتُمَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "يُنِعْتُمْ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "يُنِعْتِ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "يُنِعْتُمَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "يُنِعْتُنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "يُنِعْتُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "يُنِعْنَا"
+        }
+      ],
+      "mudari_majhul": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يُوْنَعُ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يُوْنَعَانِ"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يُوْنَعُوْنَ"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "تُوْنَعُ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "تُوْنَعَانِ"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يُوْنَعْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "تُوْنَعُ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تُوْنَعَانِ"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تُوْنَعُوْنَ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تُوْنَعِيْنَ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تُوْنَعَانِ"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تُوْنَعْنَ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "أُوْنَعُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "نُوْنَعُ"
+        }
+      ],
+      "amr": [
+        {
+          "sigha_id": "muxatab",
+          "form": "اِيْنَعْ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "اِيْنَعَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "اِيْنَعُوْا"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "اِيْنَعِيْ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "اِيْنَعَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "اِيْنَعْنَ"
+        }
+      ],
+      "nahy": [
+        {
+          "sigha_id": "muxatab",
+          "form": "لَا تَيْنَعْ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "لَا تَيْنَعَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "لَا تَيْنَعُوْا"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "لَا تَيْنَعِيْ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "لَا تَيْنَعَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "لَا تَيْنَعْنَ"
+        }
+      ]
+    },
+    {
+      "bab_id": "u4-mithal-yai-samia",
+      "madi_malum": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يَبِسَ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يَبِسَا"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يَبِسُوْا"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "يَبِسَتْ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "يَبِسَتَا"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يَبِسْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "يَبِسْتَ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "يَبِسْتُمَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "يَبِسْتُمْ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "يَبِسْتِ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "يَبِسْتُمَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "يَبِسْتُنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "يَبِسْتُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "يَبِسْنَا"
+        }
+      ],
+      "mudari_malum": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يَيْبَسُ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يَيْبَسَانِ"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يَيْبَسُوْنَ"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "تَيْبَسُ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "تَيْبَسَانِ"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يَيْبَسْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "تَيْبَسُ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تَيْبَسَانِ"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تَيْبَسُوْنَ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تَيْبَسِيْنَ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تَيْبَسَانِ"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تَيْبَسْنَ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "أَيْبَسُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "نَيْبَسُ"
+        }
+      ],
+      "madi_majhul": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يُبِسَ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يُبِسَا"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يُبِسُوْا"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "يُبِسَتْ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "يُبِسَتَا"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يُبِسْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "يُبِسْتَ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "يُبِسْتُمَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "يُبِسْتُمْ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "يُبِسْتِ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "يُبِسْتُمَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "يُبِسْتُنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "يُبِسْتُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "يُبِسْنَا"
+        }
+      ],
+      "mudari_majhul": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يُوْبَسُ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يُوْبَسَانِ"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يُوْبَسُوْنَ"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "تُوْبَسُ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "تُوْبَسَانِ"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يُوْبَسْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "تُوْبَسُ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تُوْبَسَانِ"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تُوْبَسُوْنَ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تُوْبَسِيْنَ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تُوْبَسَانِ"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تُوْبَسْنَ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "أُوْبَسُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "نُوْبَسُ"
+        }
+      ],
+      "amr": [
+        {
+          "sigha_id": "muxatab",
+          "form": "اِيْبَسْ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "اِيْبَسَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "اِيْبَسُوْا"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "اِيْبَسِيْ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "اِيْبَسَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "اِيْبَسْنَ"
+        }
+      ],
+      "nahy": [
+        {
+          "sigha_id": "muxatab",
+          "form": "لَا تَيْبَسْ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "لَا تَيْبَسَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "لَا تَيْبَسُوْا"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "لَا تَيْبَسِيْ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "لَا تَيْبَسَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "لَا تَيْبَسْنَ"
+        }
+      ]
+    },
+    {
+      "bab_id": "u4-mithal-yai-daraba",
+      "madi_malum": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يَتَمَ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يَتَمَا"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يَتَمُوْا"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "يَتَمَتْ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "يَتَمَتَا"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يَتَمْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "يَتَمْتَ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "يَتَمْتُمَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "يَتَمْتُمْ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "يَتَمْتِ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "يَتَمْتُمَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "يَتَمْتُنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "يَتَمْتُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "يَتَمْنَا"
+        }
+      ],
+      "mudari_malum": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يَيْتِمُ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يَيْتِمَانِ"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يَيْتِمُوْنَ"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "تَيْتِمُ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "تَيْتِمَانِ"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يَيْتِمْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "تَيْتِمُ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تَيْتِمَانِ"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تَيْتِمُوْنَ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تَيْتِمِيْنَ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تَيْتِمَانِ"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تَيْتِمْنَ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "أَيْتِمُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "نَيْتِمُ"
+        }
+      ],
+      "madi_majhul": null,
+      "mudari_majhul": null,
+      "amr": [
+        {
+          "sigha_id": "muxatab",
+          "form": "اِيْتِمْ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "اِيْتِمَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "اِيْتِمُوْا"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "اِيْتِمِيْ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "اِيْتِمَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "اِيْتِمْنَ"
+        }
+      ],
+      "nahy": [
+        {
+          "sigha_id": "muxatab",
+          "form": "لَا تَيْتِمْ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "لَا تَيْتِمَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "لَا تَيْتِمُوْا"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "لَا تَيْتِمِيْ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "لَا تَيْتِمَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "لَا تَيْتِمْنَ"
+        }
+      ]
+    },
+    {
+      "bab_id": "u4-mithal-yai-faaala",
+      "madi_malum": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يَسَّرَ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يَسَّرَا"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يَسَّرُوْا"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "يَسَّرَتْ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "يَسَّرَتَا"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يَسَّرْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "يَسَّرْتَ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "يَسَّرْتُمَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "يَسَّرْتُمْ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "يَسَّرْتِ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "يَسَّرْتُمَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "يَسَّرْتُنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "يَسَّرْتُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "يَسَّرْنَا"
+        }
+      ],
+      "mudari_malum": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يُيَسِّرُ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يُيَسِّرَانِ"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يُيَسِّرُوْنَ"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "تُيَسِّرُ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "تُيَسِّرَانِ"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يُيَسِّرْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "تُيَسِّرُ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تُيَسِّرَانِ"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تُيَسِّرُوْنَ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تُيَسِّرِيْنَ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تُيَسِّرَانِ"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تُيَسِّرْنَ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "أُيَسِّرُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "نُيَسِّرُ"
+        }
+      ],
+      "madi_majhul": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يُسِّرَ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يُسِّرَا"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يُسِّرُوْا"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "يُسِّرَتْ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "يُسِّرَتَا"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يُسِّرْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "يُسِّرْتَ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "يُسِّرْتُمَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "يُسِّرْتُمْ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "يُسِّرْتِ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "يُسِّرْتُمَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "يُسِّرْتُنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "يُسِّرْتُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "يُسِّرْنَا"
+        }
+      ],
+      "mudari_majhul": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يُيَسَّرُ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يُيَسَّرَانِ"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يُيَسَّرُوْنَ"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "تُيَسَّرُ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "تُيَسَّرَانِ"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يُيَسَّرْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "تُيَسَّرُ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تُيَسَّرَانِ"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تُيَسَّرُوْنَ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تُيَسَّرِيْنَ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تُيَسَّرَانِ"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تُيَسَّرْنَ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "أُيَسَّرُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "نُيَسَّرُ"
+        }
+      ],
+      "amr": [
+        {
+          "sigha_id": "muxatab",
+          "form": "يَسِّرْ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "يَسِّرَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "يَسِّرُوْا"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "يَسِّرِيْ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "يَسِّرَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "يَسِّرْنَ"
+        }
+      ],
+      "nahy": [
+        {
+          "sigha_id": "muxatab",
+          "form": "لَا تُيَسِّرْ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "لَا تُيَسِّرَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "لَا تُيَسِّرُوْا"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "لَا تُيَسِّرِيْ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "لَا تُيَسِّرَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "لَا تُيَسِّرْنَ"
+        }
+      ]
+    },
+    {
+      "bab_id": "u4-mithal-yai-faaaala",
+      "madi_malum": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يَاسَرَ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يَاسَرَا"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يَاسَرُوْا"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "يَاسَرَتْ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "يَاسَرَتَا"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يَاسَرْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "يَاسَرْتَ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "يَاسَرْتُمَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "يَاسَرْتُمْ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "يَاسَرْتِ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "يَاسَرْتُمَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "يَاسَرْتُنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "يَاسَرْتُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "يَاسَرْنَا"
+        }
+      ],
+      "mudari_malum": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يُيَاسِرُ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يُيَاسِرَانِ"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يُيَاسِرُوْنَ"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "تُيَاسِرُ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "تُيَاسِرَانِ"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يُيَاسِرْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "تُيَاسِرُ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تُيَاسِرَانِ"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تُيَاسِرُوْنَ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تُيَاسِرِيْنَ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تُيَاسِرَانِ"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تُيَاسِرْنَ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "أُيَاسِرُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "نُيَاسِرُ"
+        }
+      ],
+      "madi_majhul": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يُوْسِرَ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يُوْسِرَا"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يُوْسِرُوْا"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "يُوْسِرَتْ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "يُوْسِرَتَا"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يُوْسِرْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "يُوْسِرْتَ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "يُوْسِرْتُمَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "يُوْسِرْتُمْ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "يُوْسِرْتِ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "يُوْسِرْتُمَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "يُوْسِرْتُنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "يُوْسِرْتُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "يُوْسِرْنَا"
+        }
+      ],
+      "mudari_majhul": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يُيَاسَرُ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يُيَاسَرَانِ"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يُيَاسَرُوْنَ"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "تُيَاسَرُ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "تُيَاسَرَانِ"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يُيَاسَرْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "تُيَاسَرُ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تُيَاسَرَانِ"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تُيَاسَرُوْنَ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تُيَاسَرِيْنَ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تُيَاسَرَانِ"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تُيَاسَرْنَ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "أُيَاسَرُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "نُيَاسَرُ"
+        }
+      ],
+      "amr": [
+        {
+          "sigha_id": "muxatab",
+          "form": "يَاسِرْ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "يَاسِرَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "يَاسِرُوْا"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "يَاسِرِيْ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "يَاسِرَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "يَاسِرْنَ"
+        }
+      ],
+      "nahy": [
+        {
+          "sigha_id": "muxatab",
+          "form": "لَا تُيَاسِرْ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "لَا تُيَاسِرَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "لَا تُيَاسِرُوْا"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "لَا تُيَاسِرِيْ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "لَا تُيَاسِرَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "لَا تُيَاسِرْنَ"
+        }
+      ]
+    },
+    {
+      "bab_id": "u4-mithal-yai-afaala",
+      "madi_malum": [
+        {
+          "sigha_id": "ghaib",
+          "form": "أَيْقَنَ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "أَيْقَنَا"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "أَيْقَنُوْا"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "أَيْقَنَتْ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "أَيْقَنَتَا"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "أَيْقَنَّ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "أَيْقَنْتَ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "أَيْقَنْتُمَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "أَيْقَنْتُمْ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "أَيْقَنْتِ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "أَيْقَنْتُمَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "أَيْقَنْتُنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "أَيْقَنْتُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "أَيْقَنَّا"
+        }
+      ],
+      "mudari_malum": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يُوْقِنُ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يُوْقِنَانِ"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يُوْقِنُوْنَ"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "تُوْقِنُ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "تُوْقِنَانِ"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يُوْقِنَّ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "تُوْقِنُ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تُوْقِنَانِ"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تُوْقِنُوْنَ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تُوْقِنِيْنَ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تُوْقِنَانِ"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تُوْقِنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "أُوْقِنُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "نُوْقِنُ"
+        }
+      ],
+      "madi_majhul": [
+        {
+          "sigha_id": "ghaib",
+          "form": "أُوْقِنَ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "أُوْقِنَا"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "أُوْقِنُوْا"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "أُوْقِنَتْ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "أُوْقِنَتَا"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "أُوْقِنَّ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "أُوْقِنْتَ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "أُوْقِنْتُمَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "أُوْقِنْتُمْ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "أُوْقِنْتِ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "أُوْقِنْتُمَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "أُوْقِنْتُنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "أُوْقِنْتُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "أُوْقِنَّا"
+        }
+      ],
+      "mudari_majhul": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يُوْقَنُ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يُوْقَنَانِ"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يُوْقَنُوْنَ"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "تُوْقَنُ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "تُوْقَنَانِ"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يُوْقَنَّ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "تُوْقَنُ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تُوْقَنَانِ"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تُوْقَنُوْنَ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تُوْقَنِيْنَ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تُوْقَنَانِ"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تُوْقَنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "أُوْقَنُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "نُوْقَنُ"
+        }
+      ],
+      "amr": [
+        {
+          "sigha_id": "muxatab",
+          "form": "أَيْقِنْ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "أَيْقِنَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "أَيْقِنُوْا"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "أَيْقِنِيْ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "أَيْقِنَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "أَيْقِنَّ"
+        }
+      ],
+      "nahy": [
+        {
+          "sigha_id": "muxatab",
+          "form": "لَا تُوْقِنْ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "لَا تُوْقِنَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "لَا تُوْقِنُوْا"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "لَا تُوْقِنِيْ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "لَا تُوْقِنَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "لَا تُوْقِنَّ"
+        }
+      ]
+    },
+    {
+      "bab_id": "u4-mithal-yai-tafaaala",
+      "madi_malum": [
+        {
+          "sigha_id": "ghaib",
+          "form": "تَيَسَّرَ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "تَيَسَّرَا"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "تَيَسَّرُوْا"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "تَيَسَّرَتْ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "تَيَسَّرَتَا"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "تَيَسَّرْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "تَيَسَّرْتَ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تَيَسَّرْتُمَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تَيَسَّرْتُمْ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تَيَسَّرْتِ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تَيَسَّرْتُمَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تَيَسَّرْتُنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "تَيَسَّرْتُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "تَيَسَّرْنَا"
+        }
+      ],
+      "mudari_malum": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يَتَيَسَّرُ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يَتَيَسَّرَانِ"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يَتَيَسَّرُوْنَ"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "تَتَيَسَّرُ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "تَتَيَسَّرَانِ"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يَتَيَسَّرْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "تَتَيَسَّرُ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تَتَيَسَّرَانِ"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تَتَيَسَّرُوْنَ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تَتَيَسَّرِيْنَ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تَتَيَسَّرَانِ"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تَتَيَسَّرْنَ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "أَتَيَسَّرُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "نَتَيَسَّرُ"
+        }
+      ],
+      "madi_majhul": [
+        {
+          "sigha_id": "ghaib",
+          "form": "تُيُسِّرَ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "تُيُسِّرَا"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "تُيُسِّرُوْا"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "تُيُسِّرَتْ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "تُيُسِّرَتَا"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "تُيُسِّرْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "تُيُسِّرْتَ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تُيُسِّرْتُمَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تُيُسِّرْتُمْ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تُيُسِّرْتِ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تُيُسِّرْتُمَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تُيُسِّرْتُنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "تُيُسِّرْتُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "تُيُسِّرْنَا"
+        }
+      ],
+      "mudari_majhul": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يُتَيَسَّرُ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يُتَيَسَّرَانِ"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يُتَيَسَّرُوْنَ"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "تُتَيَسَّرُ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "تُتَيَسَّرَانِ"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يُتَيَسَّرْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "تُتَيَسَّرُ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تُتَيَسَّرَانِ"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تُتَيَسَّرُوْنَ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تُتَيَسَّرِيْنَ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تُتَيَسَّرَانِ"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تُتَيَسَّرْنَ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "أُتَيَسَّرُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "نُتَيَسَّرُ"
+        }
+      ],
+      "amr": [
+        {
+          "sigha_id": "muxatab",
+          "form": "تَيَسَّرْ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تَيَسَّرَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تَيَسَّرُوْا"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تَيَسَّرِيْ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تَيَسَّرَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تَيَسَّرْنَ"
+        }
+      ],
+      "nahy": [
+        {
+          "sigha_id": "muxatab",
+          "form": "لَا تَتَيَسَّرْ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "لَا تَتَيَسَّرَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "لَا تَتَيَسَّرُوْا"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "لَا تَتَيَسَّرِيْ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "لَا تَتَيَسَّرَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "لَا تَتَيَسَّرْنَ"
+        }
+      ]
+    },
+    {
+      "bab_id": "u4-mithal-yai-tafaaaala",
+      "madi_malum": [
+        {
+          "sigha_id": "ghaib",
+          "form": "تَيَامَنَ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "تَيَامَنَا"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "تَيَامَنُوْا"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "تَيَامَنَتْ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "تَيَامَنَتَا"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "تَيَامَنَّ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "تَيَامَنْتَ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تَيَامَنْتُمَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تَيَامَنْتُمْ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تَيَامَنْتِ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تَيَامَنْتُمَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تَيَامَنْتُنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "تَيَامَنْتُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "تَيَامَنَّا"
+        }
+      ],
+      "mudari_malum": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يَتَيَامَنُ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يَتَيَامَنَانِ"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يَتَيَامَنُوْنَ"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "تَتَيَامَنُ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "تَتَيَامَنَانِ"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يَتَيَامَنَّ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "تَتَيَامَنُ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تَتَيَامَنَانِ"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تَتَيَامَنُوْنَ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تَتَيَامَنِيْنَ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تَتَيَامَنَانِ"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تَتَيَامَنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "أَتَيَامَنُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "نَتَيَامَنُ"
+        }
+      ],
+      "madi_majhul": [
+        {
+          "sigha_id": "ghaib",
+          "form": "تُيُوْمِنَ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "تُيُوْمِنَا"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "تُيُوْمِنُوْا"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "تُيُوْمِنَتْ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "تُيُوْمِنَتَا"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "تُيُوْمِنَّ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "تُيُوْمِنْتَ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تُيُوْمِنْتُمَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تُيُوْمِنْتُمْ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تُيُوْمِنْتِ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تُيُوْمِنْتُمَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تُيُوْمِنْتُنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "تُيُوْمِنْتُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "تُيُوْمِنَّا"
+        }
+      ],
+      "mudari_majhul": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يُتَيَامَنُ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يُتَيَامَنَانِ"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يُتَيَامَنُوْنَ"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "تُتَيَامَنُ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "تُتَيَامَنَانِ"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يُتَيَامَنَّ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "تُتَيَامَنُ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تُتَيَامَنَانِ"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تُتَيَامَنُوْنَ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تُتَيَامَنِيْنَ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تُتَيَامَنَانِ"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تُتَيَامَنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "أُتَيَامَنُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "نُتَيَامَنُ"
+        }
+      ],
+      "amr": [
+        {
+          "sigha_id": "muxatab",
+          "form": "تَيَامَنْ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تَيَامَنَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تَيَامَنُوْا"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تَيَامَنِيْ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تَيَامَنَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تَيَامَنَّ"
+        }
+      ],
+      "nahy": [
+        {
+          "sigha_id": "muxatab",
+          "form": "لَا تَتَيَامَنْ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "لَا تَتَيَامَنَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "لَا تَتَيَامَنُوْا"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "لَا تَتَيَامَنِيْ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "لَا تَتَيَامَنَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "لَا تَتَيَامَنَّ"
+        }
+      ]
+    },
+    {
+      "bab_id": "u4-mithal-yai-iftaaala",
+      "madi_malum": [
+        {
+          "sigha_id": "ghaib",
+          "form": "اِتَّسَرَ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "اِتَّسَرَا"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "اِتَّسَرُوْا"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "اِتَّسَرَتْ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "اِتَّسَرَتَا"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "اِتَّسَرْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "اِتَّسَرْتَ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "اِتَّسَرْتُمَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "اِتَّسَرْتُمْ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "اِتَّسَرْتِ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "اِتَّسَرْتُمَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "اِتَّسَرْتُنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "اِتَّسَرْتُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "اِتَّسَرْنَا"
+        }
+      ],
+      "mudari_malum": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يَتَّسِرُ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يَتَّسِرَانِ"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يَتَّسِرُوْنَ"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "تَتَّسِرُ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "تَتَّسِرَانِ"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يَتَّسِرْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "تَتَّسِرُ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تَتَّسِرَانِ"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تَتَّسِرُوْنَ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تَتَّسِرِيْنَ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تَتَّسِرَانِ"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تَتَّسِرْنَ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "أَتَّسِرُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "نَتَّسِرُ"
+        }
+      ],
+      "madi_majhul": [
+        {
+          "sigha_id": "ghaib",
+          "form": "اُتُّسِرَ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "اُتُّسِرَا"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "اُتُّسِرُوْا"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "اُتُّسِرَتْ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "اُتُّسِرَتَا"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "اُتُّسِرْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "اُتُّسِرْتَ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "اُتُّسِرْتُمَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "اُتُّسِرْتُمْ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "اُتُّسِرْتِ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "اُتُّسِرْتُمَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "اُتُّسِرْتُنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "اُتُّسِرْتُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "اُتُّسِرْنَا"
+        }
+      ],
+      "mudari_majhul": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يُتَّسَرُ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يُتَّسَرَانِ"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يُتَّسَرُوْنَ"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "تُتَّسَرُ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "تُتَّسَرَانِ"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يُتَّسَرْنَ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "تُتَّسَرُ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تُتَّسَرَانِ"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تُتَّسَرُوْنَ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تُتَّسَرِيْنَ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تُتَّسَرَانِ"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تُتَّسَرْنَ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "أُتَّسَرُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "نُتَّسَرُ"
+        }
+      ],
+      "amr": [
+        {
+          "sigha_id": "muxatab",
+          "form": "اِتَّسِرْ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "اِتَّسِرَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "اِتَّسِرُوْا"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "اِتَّسِرِيْ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "اِتَّسِرَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "اِتَّسِرْنَ"
+        }
+      ],
+      "nahy": [
+        {
+          "sigha_id": "muxatab",
+          "form": "لَا تَتَّسِرْ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "لَا تَتَّسِرَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "لَا تَتَّسِرُوْا"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "لَا تَتَّسِرِيْ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "لَا تَتَّسِرَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "لَا تَتَّسِرْنَ"
+        }
+      ]
+    },
+    {
+      "bab_id": "u4-mithal-yai-istafaala",
+      "madi_malum": [
+        {
+          "sigha_id": "ghaib",
+          "form": "اِسْتَيْقَنَ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "اِسْتَيْقَنَا"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "اِسْتَيْقَنُوْا"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "اِسْتَيْقَنَتْ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "اِسْتَيْقَنَتَا"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "اِسْتَيْقَنَّ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "اِسْتَيْقَنْتَ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "اِسْتَيْقَنْتُمَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "اِسْتَيْقَنْتُمْ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "اِسْتَيْقَنْتِ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "اِسْتَيْقَنْتُمَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "اِسْتَيْقَنْتُنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "اِسْتَيْقَنْتُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "اِسْتَيْقَنَّا"
+        }
+      ],
+      "mudari_malum": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يَسْتَيْقِنُ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يَسْتَيْقِنَانِ"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يَسْتَيْقِنُوْنَ"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "تَسْتَيْقِنُ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "تَسْتَيْقِنَانِ"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يَسْتَيْقِنَّ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "تَسْتَيْقِنُ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تَسْتَيْقِنَانِ"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تَسْتَيْقِنُوْنَ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تَسْتَيْقِنِيْنَ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تَسْتَيْقِنَانِ"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تَسْتَيْقِنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "أَسْتَيْقِنُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "نَسْتَيْقِنُ"
+        }
+      ],
+      "madi_majhul": [
+        {
+          "sigha_id": "ghaib",
+          "form": "اُسْتُوْقِنَ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "اُسْتُوْقِنَا"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "اُسْتُوْقِنُوْا"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "اُسْتُوْقِنَتْ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "اُسْتُوْقِنَتَا"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "اُسْتُوْقِنَّ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "اُسْتُوْقِنْتَ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "اُسْتُوْقِنْتُمَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "اُسْتُوْقِنْتُمْ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "اُسْتُوْقِنْتِ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "اُسْتُوْقِنْتُمَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "اُسْتُوْقِنْتُنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "اُسْتُوْقِنْتُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "اُسْتُوْقِنَّا"
+        }
+      ],
+      "mudari_majhul": [
+        {
+          "sigha_id": "ghaib",
+          "form": "يُسْتَيْقَنُ"
+        },
+        {
+          "sigha_id": "ghaibaan",
+          "form": "يُسْتَيْقَنَانِ"
+        },
+        {
+          "sigha_id": "ghaiboon",
+          "form": "يُسْتَيْقَنُوْنَ"
+        },
+        {
+          "sigha_id": "ghaiba",
+          "form": "تُسْتَيْقَنُ"
+        },
+        {
+          "sigha_id": "ghaibataan",
+          "form": "تُسْتَيْقَنَانِ"
+        },
+        {
+          "sigha_id": "ghaibaat",
+          "form": "يُسْتَيْقَنَّ"
+        },
+        {
+          "sigha_id": "muxatab",
+          "form": "تُسْتَيْقَنُ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "تُسْتَيْقَنَانِ"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "تُسْتَيْقَنُوْنَ"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "تُسْتَيْقَنِيْنَ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "تُسْتَيْقَنَانِ"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "تُسْتَيْقَنَّ"
+        },
+        {
+          "sigha_id": "mutakallim",
+          "form": "أُسْتَيْقَنُ"
+        },
+        {
+          "sigha_id": "mutakallimoon",
+          "form": "نُسْتَيْقَنُ"
+        }
+      ],
+      "amr": [
+        {
+          "sigha_id": "muxatab",
+          "form": "اِسْتَيْقِنْ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "اِسْتَيْقِنَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "اِسْتَيْقِنُوْا"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "اِسْتَيْقِنِيْ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "اِسْتَيْقِنَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "اِسْتَيْقِنَّ"
+        }
+      ],
+      "nahy": [
+        {
+          "sigha_id": "muxatab",
+          "form": "لَا تَسْتَيْقِنْ"
+        },
+        {
+          "sigha_id": "muxaatabaan",
+          "form": "لَا تَسْتَيْقِنَا"
+        },
+        {
+          "sigha_id": "muxaataboon",
+          "form": "لَا تَسْتَيْقِنُوْا"
+        },
+        {
+          "sigha_id": "muxaataba",
+          "form": "لَا تَسْتَيْقِنِيْ"
+        },
+        {
+          "sigha_id": "muxaatabataan",
+          "form": "لَا تَسْتَيْقِنَا"
+        },
+        {
+          "sigha_id": "muxaatabaat",
+          "form": "لَا تَسْتَيْقِنَّ"
+        }
+      ]
     }
   ]
 }
