@@ -14,26 +14,47 @@ create table public.profiles (
 -- Auto-create a profile row whenever a new auth user signs up.
 -- Copies display_name and role from the signup metadata; role is
 -- validated against the allowed values and defaults to 'student'.
+-- If the student chose a teacher at signup (metadata.teacher_id, a real
+-- teacher's profile id), also link them via teacher_students. A missing
+-- or invalid teacher_id is ignored rather than failing the signup.
+-- (teacher_id is regex-validated before casting, rather than using the
+-- jsonb `?` "key exists" operator, which some SQL client libraries
+-- misparse as a bind-parameter placeholder.)
 create or replace function public.handle_new_user()
 returns trigger
 language plpgsql
 security definer
 set search_path = public
 as $$
+declare
+  v_role text;
+  v_teacher_id_raw text;
+  v_teacher_id uuid;
 begin
+  v_role := coalesce(
+    case
+      when new.raw_user_meta_data->>'role' in ('student', 'teacher')
+        then new.raw_user_meta_data->>'role'
+    end,
+    'student'
+  );
+
   insert into public.profiles (id, display_name, role)
-  values (
-    new.id,
-    new.raw_user_meta_data->>'display_name',
-    coalesce(
-      case
-        when new.raw_user_meta_data->>'role' in ('student', 'teacher')
-          then new.raw_user_meta_data->>'role'
-      end,
-      'student'
-    )
-  )
+  values (new.id, new.raw_user_meta_data->>'display_name', v_role)
   on conflict (id) do nothing;
+
+  v_teacher_id_raw := new.raw_user_meta_data->>'teacher_id';
+
+  if v_role = 'student' and v_teacher_id_raw ~* '^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$' then
+    v_teacher_id := v_teacher_id_raw::uuid;
+
+    if exists (select 1 from public.profiles where id = v_teacher_id and role = 'teacher') then
+      insert into public.teacher_students (teacher_id, student_id)
+      values (v_teacher_id, new.id)
+      on conflict (teacher_id, student_id) do nothing;
+    end if;
+  end if;
+
   return new;
 end;
 $$;
@@ -41,6 +62,25 @@ $$;
 create trigger on_auth_user_created
   after insert on auth.users
   for each row execute procedure public.handle_new_user();
+
+-- Minimal public teacher directory for the signup picker (id + display_name
+-- only) — needed before the account exists, so it must be callable by the
+-- anon role, not gated behind the usual profiles RLS.
+create or replace function public.list_teachers()
+returns table (id uuid, display_name text)
+language sql
+security definer
+set search_path = public
+stable
+as $$
+  select p.id, p.display_name
+  from public.profiles p
+  where p.role = 'teacher'
+  order by p.display_name nulls last;
+$$;
+
+revoke all on function public.list_teachers() from public;
+grant execute on function public.list_teachers() to anon, authenticated;
 
 -- ============================================================
 -- exercise_completions

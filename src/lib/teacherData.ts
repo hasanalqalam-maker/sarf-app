@@ -14,6 +14,25 @@ export interface Student {
   linkedAt: string;
 }
 
+export interface Teacher {
+  id: string;
+  displayName: string | null;
+}
+
+/**
+ * Minimal public teacher directory for the signup picker. Callable before
+ * the caller has a session (anon key) via the list_teachers() RPC, which
+ * only exposes id + display_name.
+ */
+export async function listTeachers(): Promise<Teacher[]> {
+  const { data, error } = await supabase.rpc('list_teachers');
+  if (error) throw error;
+  return (data ?? []).map((row: { id: string; display_name: string | null }) => ({
+    id: row.id,
+    displayName: row.display_name,
+  }));
+}
+
 export async function listStudents(): Promise<Student[]> {
   const { data: links, error } = await supabase
     .from('teacher_students')

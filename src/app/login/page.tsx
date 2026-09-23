@@ -3,8 +3,10 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
+import { listTeachers, type Teacher } from '@/lib/teacherData';
 
 type View = 'signin' | 'signup' | 'reset';
+const INDEPENDENT = ''; // sentinel <select> value for "no teacher"
 
 export default function LoginPage() {
   const router = useRouter();
@@ -20,6 +22,16 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const [displayName, setDisplayName] = useState('');
   const [role, setRole] = useState<'student' | 'teacher'>('student');
+  const [teacherId, setTeacherId] = useState(INDEPENDENT);
+  const [teachers, setTeachers] = useState<Teacher[]>([]);
+
+  // Load the teacher picker once — signup happens before there's a session,
+  // so this goes through the anon-callable list_teachers() RPC.
+  useEffect(() => {
+    listTeachers()
+      .then(setTeachers)
+      .catch((e) => console.error('failed to load teacher list', e));
+  }, []);
 
   // Surface an error passed back from /auth/callback (e.g. expired link).
   useEffect(() => {
@@ -52,7 +64,13 @@ export default function LoginPage() {
     e.preventDefault();
     setLoading(true);
     setError('');
-    const { error, needsConfirmation } = await signUp(email, password, displayName, role);
+    const { error, needsConfirmation } = await signUp(
+      email,
+      password,
+      displayName,
+      role,
+      role === 'student' ? teacherId || null : null
+    );
     if (error) {
       setError(error);
       setLoading(false);
@@ -217,6 +235,27 @@ export default function LoginPage() {
                     ))}
                   </div>
                 </div>
+
+                {role === 'student' && (
+                  <div className="flex flex-col gap-1.5">
+                    <label className="text-xs font-sans text-ink-muted">Teacher (optional)</label>
+                    <select
+                      value={teacherId}
+                      onChange={(e) => setTeacherId(e.target.value)}
+                      className={inputClass}
+                    >
+                      <option value={INDEPENDENT}>Independent student (no teacher)</option>
+                      {teachers.map((t) => (
+                        <option key={t.id} value={t.id}>
+                          {t.displayName ?? 'Unnamed teacher'}
+                        </option>
+                      ))}
+                    </select>
+                    <p className="text-xs text-ink-muted/70 font-sans">
+                      Your teacher will see your progress. You can stay independent if none applies.
+                    </p>
+                  </div>
+                )}
               </>
             )}
 

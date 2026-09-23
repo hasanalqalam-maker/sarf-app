@@ -60,35 +60,8 @@ export default function StudentsPage() {
     <div className="px-4 py-8 max-w-2xl">
       <h1 className="font-heading text-2xl text-ink mb-1">Students</h1>
       <p className="text-ink-muted font-sans text-sm mb-6">
-        Add students by the email they signed up with, then open a student to see their progress.
+        Students who chose you as their teacher at signup show up here automatically.
       </p>
-
-      {/* Add student */}
-      <form onSubmit={handleAdd} className="card-parchment p-4 mb-6 flex flex-col gap-3">
-        <label className="text-xs font-sans text-ink-muted">Student email</label>
-        <div className="flex gap-2">
-          <input
-            type="email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="student@example.com"
-            className={inputClass}
-          />
-          <button
-            type="submit"
-            disabled={adding}
-            className="shrink-0 px-4 py-2 rounded-lg bg-gold text-white font-sans text-sm font-medium hover:bg-gold-light transition-colors disabled:opacity-60"
-          >
-            {adding ? 'Adding…' : 'Add'}
-          </button>
-        </div>
-        {addError && (
-          <p className="text-xs font-sans text-red-600 bg-red-50 border border-red-100 rounded-lg px-3 py-2">
-            {addError}
-          </p>
-        )}
-      </form>
 
       {/* Roster */}
       {loadError && (
@@ -100,9 +73,11 @@ export default function StudentsPage() {
       {students === null ? (
         <p className="text-sm font-sans text-ink-muted">Loading roster…</p>
       ) : students.length === 0 ? (
-        <p className="text-sm font-sans text-ink-muted">No students yet.</p>
+        <p className="text-sm font-sans text-ink-muted mb-8">
+          No students yet — they&apos;ll appear here once they sign up and pick you as their teacher.
+        </p>
       ) : (
-        <ul className="flex flex-col gap-2">
+        <ul className="flex flex-col gap-2 mb-8">
           {students.map((s) => (
             <li
               key={s.id}
@@ -127,6 +102,41 @@ export default function StudentsPage() {
           ))}
         </ul>
       )}
+
+      {/* Link an existing student by email — fallback for students who
+         signed up as independent and want to join later */}
+      <details className="card-parchment p-4">
+        <summary className="text-sm font-sans text-ink cursor-pointer select-none">
+          Link an existing student by email
+        </summary>
+        <form onSubmit={handleAdd} className="flex flex-col gap-3 mt-3">
+          <label className="text-xs font-sans text-ink-muted">
+            For a student who already signed up independently.
+          </label>
+          <div className="flex gap-2">
+            <input
+              type="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="student@example.com"
+              className={inputClass}
+            />
+            <button
+              type="submit"
+              disabled={adding}
+              className="shrink-0 px-4 py-2 rounded-lg bg-gold text-white font-sans text-sm font-medium hover:bg-gold-light transition-colors disabled:opacity-60"
+            >
+              {adding ? 'Adding…' : 'Add'}
+            </button>
+          </div>
+          {addError && (
+            <p className="text-xs font-sans text-red-600 bg-red-50 border border-red-100 rounded-lg px-3 py-2">
+              {addError}
+            </p>
+          )}
+        </form>
+      </details>
     </div>
   );
 }

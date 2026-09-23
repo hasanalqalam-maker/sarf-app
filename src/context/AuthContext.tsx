@@ -20,7 +20,8 @@ interface AuthContextValue {
     email: string,
     password: string,
     displayName: string,
-    role: 'student' | 'teacher'
+    role: 'student' | 'teacher',
+    teacherId?: string | null
   ) => Promise<{ error: string | null; needsConfirmation: boolean }>;
   signOut: () => Promise<void>;
   resetPassword: (email: string) => Promise<{ error: string | null }>;
@@ -114,13 +115,18 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     email: string,
     password: string,
     displayName: string,
-    role: 'student' | 'teacher'
+    role: 'student' | 'teacher',
+    teacherId?: string | null
   ): Promise<{ error: string | null; needsConfirmation: boolean }> {
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
-        data: { display_name: displayName, role },
+        data: {
+          display_name: displayName,
+          role,
+          ...(role === 'student' && teacherId ? { teacher_id: teacherId } : {}),
+        },
         emailRedirectTo: `${window.location.origin}/auth/callback`,
       },
     });
