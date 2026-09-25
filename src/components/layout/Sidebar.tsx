@@ -132,7 +132,7 @@ export default function Sidebar() {
       {/* Footer */}
       <div className="px-6 py-4 border-t border-parchment-darker">
         <p className="text-ink-muted text-[11px] font-sans">
-          FSTU Sarf 2023 · Units 1–2
+          FSTU Sarf 2023 · Units 1–4
         </p>
       </div>
     </aside>
